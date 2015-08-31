@@ -2,6 +2,10 @@
 
 /*Color Pallete
 
+Background Color: 151C2E;
+Primary Font Color: FFFFFF;
+Secondary Font Color: 6A84C6;
+
 Greys
 -----
 #4B4B4B
@@ -27,6 +31,7 @@ body{
 	color: #4b4b4b;
 	font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
 	background-color: #f8f8f8;
+	font-size:100%;
 }
 
 h1{
