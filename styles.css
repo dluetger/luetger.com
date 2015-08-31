@@ -15,10 +15,14 @@ Secondary Font Hover: 405077;
 body{
 	color: #FFFFFF;
 	font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
-	background-color: #151C2E;
 	font-size:100%;
-	background:url("assets/index/starlapseBlue.jpg") no-repeat left center fixed;
+	background: #151C2E url("assets/index/starlapseBlue.jpg") no-repeat left center fixed;
 	background-size: cover;
+	-webkit-animation: fadein 2s;
+	-o-animation: fadein 2s;
+	-moz-animation: fadein 2s;
+	-ms-animation: fadein 2s;
+	animation: fadein 2s;
 }
 
 h1{
@@ -29,11 +33,11 @@ h1{
 	font-size: 2.5em;
 	letter-spacing: .25em;
 	margin:250px 0 40px 0;
-	-o-transition:1s ease-in-out;
-  	-ms-transition:1s ease-in-out;
-  	-moz-transition:1s ease-in-out;
-  	-webkit-transition:1s ease-in-out;
-  	transition: 1s ease-in-out;
+	-o-transition:.2s ease-in-out;
+  	-ms-transition:.2s ease-in-out;
+  	-moz-transition:.2s ease-in-out;
+  	-webkit-transition:.2s ease-in-out;
+  	transition: .2s ease-in-out;
 }
 
 p{
@@ -84,6 +88,30 @@ p.secondary a:focus{
 	color: #405077;
 }
 
+/*-----Animations-----*/
+/*-Page Fade In-*/
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
 /*-----Responsive Behaviors-----*/
 
 @media (max-width:768px){
@@ -92,5 +120,11 @@ p.secondary a:focus{
 	}
 	p{
 		font-size: .9em;
+	}
+}
+
+@media (max-width:400px){
+	h1{
+		margin-top:50px;
 	}
 }
