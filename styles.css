@@ -18,20 +18,20 @@ body{
 	font-size:100%;
 	background: #151C2E;
 	background-size: cover;
-	-webkit-animation: fadein 2s;
-	-o-animation: fadein 2s;
-	-moz-animation: fadein 2s;
-	-ms-animation: fadein 2s;
-	animation: fadein 2s;
+	-webkit-animation: fadein 3s;
+	-o-animation: fadein 3s;
+	-moz-animation: fadein 3s;
+	-ms-animation: fadein 3s;
+	animation: fadein 3s;
 }
 
 h1{
 	font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 50px;
 	height:50px;
 	font-size: 2.5em;
-	letter-spacing: .15em;
+	letter-spacing: .1em;
 	margin:150px 0 40px 0;
 	-o-transition:.2s ease-in-out;
   	-ms-transition:.2s ease-in-out;
