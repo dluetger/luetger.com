@@ -26,12 +26,11 @@ body{
 }
 
 h1{
-	font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
-	font-weight: 400;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-weight: 600;
 	line-height: 50px;
 	height:50px;
-	font-size: 2.5em;
-	letter-spacing: .1em;
+	font-size: 2.25em;
 	margin:150px 0 40px 0;
 	-o-transition:.2s ease-in-out;
   	-ms-transition:.2s ease-in-out;
@@ -65,11 +64,11 @@ a{
 }
 
 a:hover{
-	color: #BBBBBB;
+	color: #405077;
 }
 
 a:focus{
-	color: #BBBBBB;
+	color: #405077;
 }
 
 p.secondary{
@@ -81,7 +80,7 @@ p.secondary a{
 }
 
 p.secondary a:hover{
-	color: #405077;
+	color: #667499;
 }
 
 p.secondary a:focus{
