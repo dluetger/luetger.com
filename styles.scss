@@ -18,19 +18,20 @@ body{
 	font-size:100%;
 	background: #151C2E;
 	background-size: cover;
-	-webkit-animation: fadein 3s;
-	-o-animation: fadein 3s;
-	-moz-animation: fadein 3s;
-	-ms-animation: fadein 3s;
-	animation: fadein 3s;
+	-webkit-animation: fadein 2s;
+	-o-animation: fadein 2s;
+	-moz-animation: fadein 2s;
+	-ms-animation: fadein 2s;
+	animation: fadein 2s;
 }
 
 h1{
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	font-weight: 600;
+	font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+	font-weight: 300;
 	line-height: 50px;
 	height:50px;
-	font-size: 2.25em;
+	font-size: 2.5em;
+	letter-spacing: .15em;
 	margin:150px 0 40px 0;
 	-o-transition:.2s ease-in-out;
   	-ms-transition:.2s ease-in-out;
@@ -64,11 +65,11 @@ a{
 }
 
 a:hover{
-	color: #405077;
+	color: #BBBBBB;
 }
 
 a:focus{
-	color: #405077;
+	color: #BBBBBB;
 }
 
 p.secondary{
@@ -80,7 +81,7 @@ p.secondary a{
 }
 
 p.secondary a:hover{
-	color: #667499;
+	color: #405077;
 }
 
 p.secondary a:focus{
