@@ -1,91 +1,83 @@
 /*styles.css*/
 
-/*Color Pallete
+/*-----Variables & Mixins-----*/
 
-Background Color: 151C2E;
-Primary Font Color: FFFFFF;
-Secondary Font Color: 6A84C6;
-Primary Font Hover: BBBBBB;
-Secondary Font Hover: 405077;
+/*Fonts*/
+$body-font-stack: "Open Sans", Helvetica, Arial, sans-serif;
+$header-font-stack: "Lato", Helvetica, Arial, sans-serif;
 
-*/
+/*Colors*/
+$background-color: #FDFDFD;
+$primary-font-color: #585858;
+$link-color: #444444;
+$link-hover-color: #3F6DE3;
+
+/*Styles*/
+$link-underline: 1px solid rgba(107,107,107,.4);
+$link-hover-underline: 1px solid rgba(79,132,233,.4);
+
+/*Animations & Transitions*/
+@mixin fadein($time){
+	-webkit-animation: fadein $time;
+	-o-animation: fadein $time;
+	-moz-animation: fadein $time;
+	-ms-animation: fadein $time;
+	animation: fadein $time;
+}
+
+@mixin ease-in-out($time){
+	-o-transition: $time ease-in-out;
+  	-ms-transition: $time ease-in-out;
+  	-moz-transition: $time ease-in-out;
+  	-webkit-transition: $time eas e-in-out;
+  	transition: $time ease-in-out;
+}
 
 /*-----Basics-----*/
 
 body{
-	color: #FFFFFF;
-	font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+	color: #585858;
+	font-family: $body-font-stack;
 	font-size:100%;
-	background: #151C2E;
+	background: #FDFDFD;
 	background-size: cover;
-	-webkit-animation: fadein 2s;
-	-o-animation: fadein 2s;
-	-moz-animation: fadein 2s;
-	-ms-animation: fadein 2s;
-	animation: fadein 2s;
+	@include fadein(3s);
 }
 
 h1{
-	font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
-	font-weight: 300;
+	font-weight: 800;
+	font-family: $header-font-stack;
 	line-height: 50px;
 	height:50px;
-	font-size: 2.5em;
-	letter-spacing: .15em;
+	font-size: 2.25em;
 	margin:150px 0 40px 0;
-	-o-transition:.2s ease-in-out;
-  	-ms-transition:.2s ease-in-out;
-  	-moz-transition:.2s ease-in-out;
-  	-webkit-transition:.2s ease-in-out;
-  	transition: .2s ease-in-out;
+	@include ease-in-out(.2s);
 }
 
 p{
-	line-height: 1em;
 	font-size: 1em;
+	font-weight: 400;
 	margin:0 0 30px 0;
 	line-height: 1.75em;
-	font-weight: 300;
-	-o-transition:.2s ease-in-out;
-  	-ms-transition:.2s ease-in-out;
-  	-moz-transition:.2s ease-in-out;
-  	-webkit-transition:.2s ease-in-out;
-  	transition: .2s ease-in-out;
+	@include ease-in-out(.2s);
 }
 
 a{
-	color: #FFFFFF;
+	color: $link-color;
 	text-decoration: none;
-	font-weight:700;
-	-o-transition:.2s ease-in-out;
-  	-ms-transition:.2s ease-in-out;
-  	-moz-transition:.2s ease-in-out;
-  	-webkit-transition:.2s ease-in-out;
-  	transition: .2s ease-in-out;
+	font-weight:400;
+	@include ease-in-out(.1s);
+  	border-bottom: $link-underline;
 }
 
 a:hover{
-	color: #BBBBBB;
+	color: #3F6DE3;
+	border-bottom: $link-hover-underline;
 }
 
 a:focus{
-	color: #BBBBBB;
-}
-
-p.secondary{
-	color:#6A84C6;
-}
-
-p.secondary a{
-	color:#6A84C6;
-}
-
-p.secondary a:hover{
-	color: #405077;
-}
-
-p.secondary a:focus{
-	color: #405077;
+	color: #3F6DE3;
+	border-bottom: $link-hover-underline;
 }
 
 /*-----Animations-----*/
