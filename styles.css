@@ -1,108 +1,106 @@
 /*styles.css*/
-
-/*Color Pallete
-
-Background Color: #FDFDFD;
-Primary Font Color: #585858;
-Secondary Font Color: 6A84C6;
-Link Hover: #3F6DE3 (79,132,233);
-
-*/
-
+/*-----Variables & Mixins-----*/
+/*Fonts*/
+/*Colors*/
+/*Styles*/
+/*Animations & Transitions*/
 /*-----Basics-----*/
+body {
+  color: #585858;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  background: #FDFDFD;
+  background-size: cover;
+  -webkit-animation: fadein 3s;
+  -o-animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -ms-animation: fadein 3s;
+  animation: fadein 3s; }
 
-body{
-	color: #585858;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	font-size:100%;
-	background: #FDFDFD;
-	background-size: cover;
-	-webkit-animation: fadein 3s;
-	-o-animation: fadein 3s;
-	-moz-animation: fadein 3s;
-	-ms-animation: fadein 3s;
-	animation: fadein 3s;
-}
+h1 {
+  font-weight: 800;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  line-height: 50px;
+  height: 50px;
+  font-size: 2.25em;
+  margin: 150px 0 40px 0;
+  -o-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s eas e-in-out;
+  transition: 0.2s ease-in-out; }
 
-h1{
-	font-weight: 800;
-	font-family: "Lato", Helvetica, Arial, sans-serif;
-	line-height: 50px;
-	height:50px;
-	font-size: 2.25em;
-	margin:150px 0 40px 0;
-	-o-transition:.2s ease-in-out;
-  	-ms-transition:.2s ease-in-out;
-  	-moz-transition:.2s ease-in-out;
-  	-webkit-transition:.2s ease-in-out;
-  	transition: .2s ease-in-out;
-}
+p {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+  line-height: 1.75em;
+  -o-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s eas e-in-out;
+  transition: 0.2s ease-in-out; }
 
-p{
-	font-size: 1em;
-	font-weight: 400;
-	margin:0 0 30px 0;
-	line-height: 1.75em;
-	-o-transition:.2s ease-in-out;
-  	-ms-transition:.2s ease-in-out;
-  	-moz-transition:.2s ease-in-out;
-  	-webkit-transition:.2s ease-in-out;
-  	transition: .2s ease-in-out;
-}
+a {
+  color: #444444;
+  text-decoration: none;
+  font-weight: 400;
+  -o-transition: 0.1s ease-in-out;
+  -ms-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -webkit-transition: 0.1s eas e-in-out;
+  transition: 0.1s ease-in-out;
+  border-bottom: 1px solid rgba(107, 107, 107, 0.4); }
 
-a{
-	color: #444444;
-	text-decoration: none;
-	font-weight:400;
-	-o-transition:.1s ease-in-out;
-  	-ms-transition:.1s ease-in-out;
-  	-moz-transition:.1s ease-in-out;
-  	-webkit-transition:.1s ease-in-out;
-  	transition: .1s ease-in-out;
-  	border-bottom: 1px solid rgba(107,107,107,.4);
-}
+a:hover {
+  color: #3F6DE3;
+  border-bottom: 1px solid rgba(79, 132, 233, 0.4); }
 
-a:hover{
-	color: #3F6DE3;
-	border-bottom: 1px solid rgba(79,132,233,.4);
-}
-
-a:focus{
-	color: #3F6DE3;
-	border-bottom: 1px solid rgba(79,132,233,.4);
-}
+a:focus {
+  color: #3F6DE3;
+  border-bottom: 1px solid rgba(79, 132, 233, 0.4); }
 
 /*-----Animations-----*/
 /*-Page Fade In-*/
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+  from {
+    opacity: 0; }
 
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
 
 /*-----Responsive Behaviors-----*/
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em; }
 
-@media (max-width:768px){
-	h1{
-		font-size: 2em;
-	}
-	p{
-		font-size: .9em;
-	}
-}
+  p {
+    font-size: .9em; } }
