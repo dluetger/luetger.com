@@ -1,0 +1,47 @@
+<!doctype html>
+
+<head>
+	<title>About &middot; Dave Luetger</title>
+	<meta name="description" content="Designer, musician, tv watcher, and human."/>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="unsemantic-grid-responsive.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700italic,700,600italic,600,400italic,300,300italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+</head>
+
+<body>
+	<div class="grid-container about">
+		<div class="prefix-10 grid-50 suffix-10">
+			<div class="homePageContent">
+				<h1>About</h1>
+				<p>I'm a designer at <a href="https://www.nasa.gov/centers/ames/home/index.html">NASA Ames Research Center</a> designing software to support the International Space Station and upcoming space vehicles 
+					<span class="footnote"><span class="footnoteNumber">[1]</span><span class="footnoteText" style="display: none;">There's a <a href="https://www.nasa.gov/exploration/systems/orion/">new space car</a> and a really <a href="https://www.nasa.gov/exploration/systems/sls/index.html">big rocket</a> that might take people to Mars one day.</span></span>
+				.</p>
+				<p>I used to work at Underwriters Laboratories
+					<span class="footnote"><span class="footnoteNumber">[2]</span><span class="footnoteText" style="display: none;">They help make sure your laptop <a href="http://ul.com/">doesn't catch fire</a>.</span></span>
+				on safety certification software. Before that I was at Fino Consulting designing iPad apps that helped businesses save money on energy.</p>
+				<p>I studied sociology at the <a href="http://www.sociology.illinois.edu/">University of Illinois at Urbana-Champaign</a> where my focus was on accessibility, digital inequality, and the social impact of technology. There, I led a program that tutored older adults in basic computer skills. At <a href="https://www.hcii.cmu.edu/">Carnegie Mellon University</a>, I studied human-computer interaction and worked on a tablet app for the field engineers of Eaton Corporation
+					<span class="footnote"><span class="footnoteNumber">[3]</span><span class="footnoteText" style="display: none;">They make the giant <a href="http://www.eaton.com/Eaton/index.htm">circuit breakers</a> you didn't know were underneath big buildings like sports stadiums.</span></span>
+				.</p>
+				<p>I'm a long time musician and I currently play percussion with the <a href="http://www.sjmetroband.org/">San Jose Metropolitan Band</a>. I also enjoy hiking, <a href="https://500px.com/dluetger">photography</a>, cars, watching and critiquing great tv, trying new beers, and traveling the world.</p>
+			</div>
+		</div>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+      jQuery.noConflict();
+      jQuery(function() {
+        jQuery("span.footnoteText").hide();
+        jQuery("span.footnoteNumber").click(function(event) {
+          jQuery(this.nextSibling).toggle();
+          event.stopPropagation();
+        });
+        jQuery("body").click(function(event) {
+          jQuery("span.footNoteText").hide();
+        });
+      });
+    </script>
+</body>
