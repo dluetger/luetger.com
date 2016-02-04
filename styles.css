@@ -93,8 +93,34 @@ a.magenta:focus {
   color: #CC2F6E;
   border-bottom: 1px solid #CC2F6E; }
 
-.textSection {
+.homePageContent {
+  max-width: 640px;
+  margin: auto;
+  padding-bottom: 50px; }
+
+section {
+  max-width: 640px;
+  margin: auto; }
+
+.textSection, .imageSection {
   margin-bottom: 75px; }
+
+#littleGuy {
+  max-width: 120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.imageSection {
+  max-width: 1000px; }
+  .imageSection img {
+    width: 100%; }
+  .imageSection p {
+    font-size: .8em;
+    max-width: 640px;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center; }
 
 .notesSection {
   font-size: .8em; }

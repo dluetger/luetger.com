@@ -127,8 +127,43 @@ a.magenta:focus{
 	border-bottom: 1px solid #CC2F6E;
 }
 
+.homePageContent{
+	max-width:640px;
+	margin:auto;
+	padding-bottom: 50px;
+}
+
+section{
+	max-width: 640px;
+	margin: auto;
+}
+
 .textSection{
 	margin-bottom:75px;
+}
+
+#littleGuy{
+	max-width:120px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.imageSection{
+	@extend .textSection;
+	max-width:1000px;
+
+	img{
+		width:100%;
+	}
+
+	p{
+		font-size: .8em;
+		max-width: 640px;
+		margin:auto;
+		margin-top: 10px;
+		text-align: center;
+	}
 }
 
 .notesSection{
