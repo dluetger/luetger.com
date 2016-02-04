@@ -13,6 +13,12 @@ $link-color: #444444;
 $link-hover-color: #3F6DE3;
 $light-grey: #B8B8B8;
 
+/*New Colors*/
+$sticky-note-magenta: #CC2F6E;
+$sticky-note-green: #5BA22F;
+$sticky-note-blue: #07A4B0;
+$sticky-note-orange: #E89530;
+
 /*Styles*/
 $link-underline: 1px solid rgba(107,107,107,.4);
 $link-hover-underline: 1px solid rgba(79,132,233,.4);
@@ -72,13 +78,53 @@ a{
 }
 
 a:hover{
-	color: #3F6DE3;
-	border-bottom: $link-hover-underline;
+	color: $sticky-note-blue;
+	border-bottom: 1px solid $sticky-note-blue;
 }
 
 a:focus{
-	color: #3F6DE3;
-	border-bottom: $link-hover-underline;
+	color: $sticky-note-blue;
+	border-bottom: 1px solid $sticky-note-blue;
+}
+
+a.blue:hover{
+			color: #07A4B0;
+			border-bottom: 1px solid #07A4B0;
+		}
+
+a.green:hover{
+	color: #5BA22F;
+	border-bottom: 1px solid #5BA22F;
+}
+
+a.orange:hover{
+	color: #E89530;
+	border-bottom: 1px solid #E89530;
+}
+
+a.magenta:hover{
+	color: #CC2F6E;
+	border-bottom: 1px solid #CC2F6E;
+}
+
+a.blue:focus{
+	color: #07A4B0;
+	border-bottom: 1px solid #07A4B0;
+}
+
+a.green:focus{
+	color: #5BA22F;
+	border-bottom: 1px solid #5BA22F;
+}
+
+a.orange:focus{
+	color: #E89530;
+	border-bottom: 1px solid #E89530;
+}
+
+a.magenta:focus{
+	color: #CC2F6E;
+	border-bottom: 1px solid #CC2F6E;
 }
 
 .textSection{

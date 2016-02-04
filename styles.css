@@ -2,6 +2,7 @@
 /*-----Variables & Mixins-----*/
 /*Fonts*/
 /*Colors*/
+/*New Colors*/
 /*Styles*/
 /*Animations & Transitions*/
 /*-----Basics-----*/
@@ -53,12 +54,44 @@ a {
   border-bottom: 1px solid rgba(107, 107, 107, 0.4); }
 
 a:hover {
-  color: #3F6DE3;
-  border-bottom: 1px solid rgba(79, 132, 233, 0.4); }
+  color: #07A4B0;
+  border-bottom: 1px solid #07A4B0; }
 
 a:focus {
-  color: #3F6DE3;
-  border-bottom: 1px solid rgba(79, 132, 233, 0.4); }
+  color: #07A4B0;
+  border-bottom: 1px solid #07A4B0; }
+
+a.blue:hover {
+  color: #07A4B0;
+  border-bottom: 1px solid #07A4B0; }
+
+a.green:hover {
+  color: #5BA22F;
+  border-bottom: 1px solid #5BA22F; }
+
+a.orange:hover {
+  color: #E89530;
+  border-bottom: 1px solid #E89530; }
+
+a.magenta:hover {
+  color: #CC2F6E;
+  border-bottom: 1px solid #CC2F6E; }
+
+a.blue:focus {
+  color: #07A4B0;
+  border-bottom: 1px solid #07A4B0; }
+
+a.green:focus {
+  color: #5BA22F;
+  border-bottom: 1px solid #5BA22F; }
+
+a.orange:focus {
+  color: #E89530;
+  border-bottom: 1px solid #E89530; }
+
+a.magenta:focus {
+  color: #CC2F6E;
+  border-bottom: 1px solid #CC2F6E; }
 
 .textSection {
   margin-bottom: 75px; }
