@@ -6,18 +6,27 @@
 $body-font-stack: "Open Sans", Helvetica, Arial, sans-serif;
 $header-font-stack: "Lato", Helvetica, Arial, sans-serif;
 
-/*Colors*/
+/*Background & Container Colors*/
 $background-color: #FDFDFD;
-$primary-font-color: #585858;
-$link-color: #444444;
-$link-hover-color: #3F6DE3;
 $light-grey: #B8B8B8;
+$very-light-grey: #ECE8E8;
+
+/*Text Colors*/
+$primary-font-color: #585858;
+
+/*Link Colors*/
+$link-color: #111111;
+$link-hover-color: #3F6DE3;
+$sticky-note-magenta: #CC2F6E;
+$sticky-note-green: #79BA50;
+$sticky-note-blue: #07A4B0;
+$sticky-note-orange: #E89530;
 
 /*Styles*/
 $link-underline: 1px solid rgba(107,107,107,.4);
-$link-hover-underline: 1px solid rgba(79,132,233,.4);
 
 /*Animations & Transitions*/
+//Makes it so that the page fades in all smooth like.
 @mixin fadein($time){
 	-webkit-animation: fadein $time;
 	-o-animation: fadein $time;
@@ -26,6 +35,7 @@ $link-hover-underline: 1px solid rgba(79,132,233,.4);
 	animation: fadein $time;
 }
 
+//Makes it so that elements change all smooth like.
 @mixin ease-in-out($time){
 	-o-transition: $time ease-in-out;
   	-ms-transition: $time ease-in-out;
@@ -34,7 +44,7 @@ $link-hover-underline: 1px solid rgba(79,132,233,.4);
   	transition: $time ease-in-out;
 }
 
-/*-----Basics-----*/
+/*-----Normal, Boring Stuff-----*/
 
 body{
 	color: #585858;
@@ -63,6 +73,8 @@ p{
 	@include ease-in-out(.2s);
 }
 
+/*-----Links-----*/
+
 a{
 	color: $link-color;
 	text-decoration: none;
@@ -72,24 +84,112 @@ a{
 }
 
 a:hover{
-	color: #3F6DE3;
-	border-bottom: $link-hover-underline;
+	color: $sticky-note-blue;
+	border-bottom: 1px solid $sticky-note-blue;
 }
 
 a:focus{
-	color: #3F6DE3;
-	border-bottom: $link-hover-underline;
+	color: $sticky-note-blue;
+	border-bottom: 1px solid $sticky-note-blue;
+}
+
+a.blue:hover{
+			color: $sticky-note-blue;
+			border-bottom: 1px solid $sticky-note-blue;
+		}
+
+a.green:hover{
+	color: $sticky-note-green;
+	border-bottom: 1px solid $sticky-note-green;
+}
+
+a.orange:hover{
+	color: $sticky-note-orange;
+	border-bottom: 1px solid $sticky-note-orange;
+}
+
+a.magenta:hover{
+	color: $sticky-note-magenta;
+	border-bottom: 1px solid $sticky-note-magenta;
+}
+
+a.blue:focus{
+	color: $sticky-note-blue;
+	border-bottom: 1px solid $sticky-note-blue;
+}
+
+a.green:focus{
+	color: $sticky-note-green;
+	border-bottom: 1px solid $sticky-note-green;
+}
+
+a.orange:focus{
+	color: $sticky-note-orange;
+	border-bottom: 1px solid $sticky-note-orange;
+}
+
+a.magenta:focus{
+	color: $sticky-note-magenta;
+	border-bottom: 1px solid $sticky-note-magenta;
+}
+
+/*-----Header Things (One Day)-----*/
+/*-----Things for the Part Where I Introduce Myself (Also Does Not Exist Yet)-----*/
+
+/*-----Home Page Things-----*/
+
+.homePageContent{
+	max-width:640px;
+	margin:auto;
+	padding-bottom: 50px;
+}
+
+/*-----Things for the Big Picture That Starts Most Pages (Coming Soon)-----*/
+
+/*-----Write-y Things----*/
+
+section{
+	max-width: 640px;
+	margin: auto;
 }
 
 .textSection{
 	margin-bottom:75px;
 }
 
+#littleGuy{
+	max-width:120px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.imageSection{
+	@extend .textSection;
+	max-width:1000px;
+
+	img{
+		width:100%;
+	}
+
+	p{
+		font-size: .8em;
+		max-width: 640px;
+		margin:auto;
+		margin-top: 10px;
+		text-align: center;
+	}
+}
+
 .notesSection{
+	//Appropriated a little bit for the cover page.
+
 	font-size:.8em;
 	// border-top:1px solid $light-grey;
 	// padding-top:50px;
 }
+
+/*-----Footnotes-----*/
 
 .footnote{
 	position: relative;
@@ -121,16 +221,33 @@ a:focus{
     margin:0 0 0 0;
 }
 
+/*-----About Page Things-----*/
+
 .about{
-	padding: 100px 0 100px 0;
+	padding: 100px 0 0 0;
 
 	h1{
 		margin-top: 0px;
 	}
 }
 
-/*-----Animations-----*/
-/*-Page Fade In-*/
+/*-----Footer Things-----*/
+
+footer{
+	border-top: 1px solid $light-grey;
+	background-color: $very-light-grey;
+
+	p{
+		max-width: 640px;
+		margin:auto;
+		text-align: center;
+		line-height: 50px;
+		font-size: .8em;
+	}
+}
+
+/*-----Stuff That Makes The Animations Work-----*/
+/*-Stuff That Makes the Page Fade In-*/
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -153,7 +270,7 @@ a:focus{
 }
 
 
-/*-----Responsive Behaviors-----*/
+/*-----Stuff That Makes the Site Look Good on Very Big or Very Small Screens-----*/
 
 @media (max-width:768px){
 	h1{
@@ -164,7 +281,7 @@ a:focus{
 		font-size: .9em;
 	}
 	.about{
-		padding:0 0 0 0;
+		padding:50px 0 0 0;
 
 		h1{
 		margin-top: 50px;
