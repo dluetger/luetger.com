@@ -22,11 +22,22 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/general\/dave.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 244382,
+		"inputAbbreviatedPath": "\/img\/general\/dave.jpg",
+		"outputAbbreviatedPath": "\/img\/general\/dave.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/general\/littleGuy.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 19169,
+		"initialSize": 16065,
 		"inputAbbreviatedPath": "\/img\/general\/littleGuy.png",
 		"outputAbbreviatedPath": "\/img\/general\/littleGuy.png",
 		"outputPathIsOutsideProject": 0,

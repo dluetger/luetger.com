@@ -13,11 +13,11 @@ body {
   font-size: 100%;
   background: #FDFDFD;
   background-size: cover;
-  -webkit-animation: fadein 3s;
-  -o-animation: fadein 3s;
-  -moz-animation: fadein 3s;
-  -ms-animation: fadein 3s;
-  animation: fadein 3s; }
+  -webkit-animation: fadein 2s;
+  -o-animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -ms-animation: fadein 2s;
+  animation: fadein 2s; }
 
 h1 {
   font-weight: 800;
@@ -42,6 +42,9 @@ p {
   -moz-transition: 0.2s ease-in-out;
   -webkit-transition: 0.2s eas e-in-out;
   transition: 0.2s ease-in-out; }
+
+i {
+  font-style: italic; }
 
 /*-----Links-----*/
 a {
@@ -95,16 +98,38 @@ a.magenta:focus {
   color: #CC2F6E;
   border-bottom: 1px solid #CC2F6E; }
 
-/*-----Header Things (One Day)-----*/
-/*-----Things for the Part Where I Introduce Myself (Also Does Not Exist Yet)-----*/
-/*-----Home Page Things-----*/
-.homePageContent {
-  max-width: 640px;
-  margin: auto;
-  padding-bottom: 50px; }
+/*-----Things That I Only Use on the Home Page-----*/
+.home .imageSection {
+  margin-bottom: 0px; }
+
+.boxForFlex {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+/*-----Things for the Part Where I Introduce Myself-----*/
+.greeting {
+  text-align: center;
+  margin: 0 0 60px 0;
+  display: block; }
+  .greeting h1 {
+    margin: 50px 0 10px 0; }
+  .greeting p {
+    margin: 0 0 0 0; }
+  .greeting .footnoteText {
+    text-align: left; }
+
+/*-----Things for the Part With All the Links-----*/
+nav {
+  text-align: center; }
+  nav a {
+    font-weight: 700;
+    margin: 0 20px 0 20px;
+    color: #585858; }
 
 /*-----Things for the Big Picture That Starts Most Pages (Coming Soon)-----*/
-/*-----Write-y Things----*/
+/*-----Things for the Part Where I Write a Bunch----*/
 section {
   max-width: 640px;
   margin: auto; }
@@ -112,11 +137,14 @@ section {
 .textSection, .imageSection {
   margin-bottom: 75px; }
 
-#littleGuy {
+.tallImage, .smallImage {
   max-width: 120px;
   display: block;
   margin-left: auto;
   margin-right: auto; }
+
+.smallImage {
+  max-width: 200px; }
 
 .imageSection {
   max-width: 1000px; }
@@ -217,3 +245,7 @@ footer {
     padding: 50px 0 0 0; }
     .about h1 {
       margin-top: 50px; } }
+@media (max-width: 400px) {
+  nav a {
+    margin: 0 100px 0 100px;
+    line-height: 2em; } }

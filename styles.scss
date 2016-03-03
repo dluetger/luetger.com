@@ -52,7 +52,7 @@ body{
 	font-size:100%;
 	background: #FDFDFD;
 	background-size: cover;
-	@include fadein(3s);
+	@include fadein(2s);
 }
 
 h1{
@@ -71,6 +71,10 @@ p{
 	margin:0 0 30px 0;
 	line-height: 1.75em;
 	@include ease-in-out(.2s);
+}
+
+i{
+	font-style: italic;
 }
 
 /*-----Links-----*/
@@ -133,20 +137,55 @@ a.magenta:focus{
 	border-bottom: 1px solid $sticky-note-magenta;
 }
 
-/*-----Header Things (One Day)-----*/
-/*-----Things for the Part Where I Introduce Myself (Also Does Not Exist Yet)-----*/
+/*-----Things That I Only Use on the Home Page-----*/
 
-/*-----Home Page Things-----*/
+.home{
+	// padding:100px 0 100px 0;
 
-.homePageContent{
-	max-width:640px;
-	margin:auto;
-	padding-bottom: 50px;
+	.imageSection{
+		margin-bottom:0px;
+	}
+}
+
+.boxForFlex{
+	height:100vh;
+	display: flex;
+	flex-direction: column;
+  	justify-content: center;
+}
+
+/*-----Things for the Part Where I Introduce Myself-----*/
+.greeting{
+	text-align:center;
+	margin:0 0 60px 0;
+	display:block;
+
+	h1{
+		margin:50px 0 10px 0;
+	}
+
+	p{
+		margin:0 0 0 0;
+	}
+	.footnoteText{
+		text-align: left;
+	}
+}
+
+/*-----Things for the Part With All the Links-----*/
+nav{
+	text-align:center;
+
+	a{
+		font-weight:700;
+		margin:0 20px 0 20px;
+		color:$primary-font-color;
+	}	
 }
 
 /*-----Things for the Big Picture That Starts Most Pages (Coming Soon)-----*/
 
-/*-----Write-y Things----*/
+/*-----Things for the Part Where I Write a Bunch----*/
 
 section{
 	max-width: 640px;
@@ -157,11 +196,16 @@ section{
 	margin-bottom:75px;
 }
 
-#littleGuy{
+.tallImage{
 	max-width:120px;
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
+}
+
+.smallImage{
+	@extend .tallImage;
+	max-width:200px;
 }
 
 .imageSection{
@@ -285,6 +329,15 @@ footer{
 
 		h1{
 		margin-top: 50px;
+		}
+	}
+}
+
+@media (max-width:400px){
+	nav{
+		a{
+			margin:0 100px 0 100px;
+			line-height: 2em;
 		}
 	}
 }
