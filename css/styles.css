@@ -1,0 +1,220 @@
+/*styles.css*/
+/*-----Variables & Mixins-----*/
+/*Fonts*/
+/*Background & Container Colors*/
+/*Text Colors*/
+/*Link Colors*/
+/*Styles*/
+/*Animations & Transitions*/
+/*-----Normal, Boring Stuff-----*/
+body {
+  color: #585858;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  background: #FDFDFD;
+  background-size: cover;
+  -webkit-animation: fadein 3s;
+  -o-animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -ms-animation: fadein 3s;
+  animation: fadein 3s; }
+
+h1 {
+  font-weight: 800;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  line-height: 50px;
+  height: 50px;
+  font-size: 2.25em;
+  margin: 0 0 40px 0;
+  -o-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s eas e-in-out;
+  transition: 0.2s ease-in-out; }
+
+p {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+  line-height: 1.75em;
+  -o-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s eas e-in-out;
+  transition: 0.2s ease-in-out; }
+
+/*-----Links-----*/
+a {
+  color: #111111;
+  text-decoration: none;
+  font-weight: 400;
+  -o-transition: 0.1s ease-in-out;
+  -ms-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -webkit-transition: 0.1s eas e-in-out;
+  transition: 0.1s ease-in-out;
+  border-bottom: 1px solid rgba(107, 107, 107, 0.4); }
+
+a:hover {
+  color: #07A4B0;
+  border-bottom: 1px solid #07A4B0; }
+
+a:focus {
+  color: #07A4B0;
+  border-bottom: 1px solid #07A4B0; }
+
+a.blue:hover {
+  color: #07A4B0;
+  border-bottom: 1px solid #07A4B0; }
+
+a.green:hover {
+  color: #79BA50;
+  border-bottom: 1px solid #79BA50; }
+
+a.orange:hover {
+  color: #E89530;
+  border-bottom: 1px solid #E89530; }
+
+a.magenta:hover {
+  color: #CC2F6E;
+  border-bottom: 1px solid #CC2F6E; }
+
+a.blue:focus {
+  color: #07A4B0;
+  border-bottom: 1px solid #07A4B0; }
+
+a.green:focus {
+  color: #79BA50;
+  border-bottom: 1px solid #79BA50; }
+
+a.orange:focus {
+  color: #E89530;
+  border-bottom: 1px solid #E89530; }
+
+a.magenta:focus {
+  color: #CC2F6E;
+  border-bottom: 1px solid #CC2F6E; }
+
+/*-----Header Things (One Day)-----*/
+/*-----Things for the Part Where I Introduce Myself (Also Does Not Exist Yet)-----*/
+/*-----Home Page Things-----*/
+.homePageContent {
+  max-width: 640px;
+  margin: auto;
+  padding-bottom: 50px; }
+  .homePageContent h1 {
+    margin-top: 150px; }
+
+/*-----Things for the Big Picture That Starts Most Pages (Coming Soon)-----*/
+/*-----Write-y Things----*/
+section {
+  max-width: 640px;
+  margin: auto; }
+
+.textSection, .imageSection {
+  margin-bottom: 75px; }
+
+#littleGuy {
+  max-width: 120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px; }
+
+.imageSection {
+  max-width: 1000px; }
+  .imageSection img {
+    width: 100%; }
+  .imageSection p {
+    font-size: .8em;
+    max-width: 640px;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center; }
+
+.notesSection {
+  font-size: .8em; }
+
+/*-----Footnotes-----*/
+.footnote {
+  position: relative;
+  vertical-align: baseline; }
+
+.footnoteNumber {
+  vertical-align: super;
+  font-size: .7em;
+  color: #111111;
+  position: relative;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(107, 107, 107, 0.4); }
+
+.footnoteText {
+  font-size: .7em;
+  line-height: 1.75em;
+  display: block;
+  width: 200px;
+  position: absolute;
+  left: 25px;
+  bottom: 5px;
+  border: 1px solid #B8B8B8;
+  padding: 10px;
+  background-color: #fff;
+  z-index: 100;
+  overflow: auto;
+  margin: 0 0 0 0; }
+
+/*-----About Page Things-----*/
+.about h1 {
+  margin-top: 0px; }
+
+/*-----Footer Things-----*/
+footer {
+  border-top: 1px solid #B8B8B8;
+  background-color: #ECE8E8; }
+  footer p {
+    max-width: 640px;
+    margin: auto;
+    text-align: center;
+    line-height: 50px;
+    font-size: .8em; }
+
+/*-----Stuff That Makes The Animations Work-----*/
+/*-Stuff That Makes the Page Fade In-*/
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/*-----Stuff That Makes the Site Look Good on Very Big or Very Small Screens-----*/
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+    margin-top: 50px; }
+
+  p {
+    font-size: .9em; }
+
+  .about {
+    padding: 50px 0 0 0; }
+    .about h1 {
+      margin-top: 50px; } }
