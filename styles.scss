@@ -61,7 +61,7 @@ h1{
 	line-height: 50px;
 	height:50px;
 	font-size: 2.25em;
-	margin:150px 0 40px 0;
+	margin:150px 0 50px 0;
 	@include ease-in-out(.2s);
 }
 
@@ -166,6 +166,7 @@ a.magenta:focus{
 
 	p{
 		margin:0 0 0 0;
+		line-height: 1.2em;
 	}
 	.footnoteText{
 		text-align: left;
