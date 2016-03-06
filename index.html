@@ -37,16 +37,40 @@
 </head>
 
 <body>
-	<div class="grid-container">
+	<div class="grid-container home">
 		<div class="prefix-10 grid-80 suffix-10">
-			<div class="homePageContent">
-				<h1>Yes, this is Dave.</h1>
-				<p>I'm a designer, musician, tv watcher, dog lover, beer drinker, and human. I'm in the HCI Group at <a href="http://hci.arc.nasa.gov/">NASA Ames</a> in Mountain View, California and I'm a graduate of <a href="https://www.hcii.cmu.edu/">Carnegie Mellon University</a>.</p>
-			<p>I have no idea what I'm doing.</p>
-				<div class="notesSection">
-					<p>Read more <a href="about.html">about me</a>, download my <a href="resume.pdf">resume (PDF)</a>, or say hello through <a href="mailto: dave@luetger.com">email</a>, <a href="https://twitter.com/dluetger">Twitter</a>, or <a href="https://www.linkedin.com/in/davidluetger">LinkedIn</a>.</p>
-				</div>	
+			<div class="boxForFlex">
+				<div class="greeting">
+					<figure class="imageSection">
+						<img class="tallImage" src="img/general/littleGuy.png" title="Author shown actual size." alt="A goofy little cartoon dude.">
+					</figure>
+					<h1>Yes, this is Dave.</h1>
+					<p>Designer, musician, tv watcher, and human.</p>
+					<p>I have no idea what I'm doing <span class="footnote"><span class="footnoteNumber">[1]</span><span class="footnoteText" style="display: none;">Okay, fine. I have <i>some</i> idea.</span></span>.</p>
+				</div>
+				<nav>
+						<a href="about.html">About</a>
+						<a href="resume.pdf">Resume (PDF)</a>
+						<a href="mailto: dave@luetger.com">Email</a>
+						<a href="https://twitter.com/dluetger">Twitter</a>
+				</nav>
 			</div>
 		</div>
 	</div>
+	<!--Version of jQuery that makes the footnotes work-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<!--Script that does the little footnotes. Lovingly borrowed from Randall Munroe at xkcd.com-->
+    <script>
+      jQuery.noConflict();
+      jQuery(function() {
+        jQuery("span.footnoteText").hide();
+        jQuery("span.footnoteNumber").click(function(event) {
+          jQuery(this.nextSibling).toggle();
+          event.stopPropagation();
+        });
+        jQuery("body").click(function(event) {
+          jQuery("span.footNoteText").hide();
+        });
+      });
+    </script>
 </body>
