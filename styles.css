@@ -19,7 +19,7 @@ body {
   -ms-animation: fadein 2s;
   animation: fadein 2s; }
 
-h1 {
+h1, h2 {
   font-weight: 800;
   font-family: "Lato", Helvetica, Arial, sans-serif;
   line-height: 50px;
@@ -31,6 +31,11 @@ h1 {
   -moz-transition: 0.2s ease-in-out;
   -webkit-transition: 0.2s eas e-in-out;
   transition: 0.2s ease-in-out; }
+
+h2 {
+  font-size: 2em;
+  line-height: 1.2em;
+  margin: 0 0 50px 0; }
 
 p {
   font-size: 1em;
@@ -113,7 +118,7 @@ a.magenta:focus {
   text-align: center;
   margin: 0 0 60px 0;
   display: block; }
-  .greeting h1 {
+  .greeting h1, .greeting h2 {
     margin: 50px 0 10px 0; }
   .greeting p {
     margin: 0 0 0 0;
@@ -134,7 +139,13 @@ section {
   max-width: 640px;
   margin: auto; }
 
-.textSection, .imageSection {
+.titleSection {
+  margin-bottom: 100px; }
+  .titleSection h1, .titleSection h2 {
+    margin: 0 0 0 10px;
+    text-align: center; }
+
+.textSection, .imageSection, .quoteSection, .notesSection {
   margin-bottom: 75px; }
 
 .tallImage, .smallImage {
@@ -157,8 +168,29 @@ section {
     margin-top: 10px;
     text-align: center; }
 
+.quoteSection {
+  border-left: 2px solid #B8B8B8;
+  padding: 0; }
+  .quoteSection p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-left: 20px;
+    font-weight: 400;
+    color: #55699D; }
+  .quoteSection .quoteSource {
+    font-size: 1em;
+    font-weight: 400;
+    color: #585858; }
+
+.subtitle {
+  font-size: 1.25em;
+  text-align: center;
+  font-weight: 300; }
+
 .notesSection {
-  font-size: .8em; }
+  font-size: .8em;
+  border-top: 1px solid #B8B8B8;
+  padding-top: 50px; }
 
 /*-----Footnotes-----*/
 .footnote {
@@ -191,7 +223,7 @@ section {
 /*-----About Page Things-----*/
 .about {
   padding: 100px 0 0 0; }
-  .about h1 {
+  .about h1, .about h2 {
     margin-top: 0px; }
 
 /*-----Footer Things-----*/
@@ -234,16 +266,19 @@ footer {
     opacity: 1; } }
 /*-----Stuff That Makes the Site Look Good on Very Big or Very Small Screens-----*/
 @media (max-width: 768px) {
-  h1 {
+  h1, h2 {
     font-size: 2em;
     margin-top: 50px; }
+
+  h2 {
+    font-size: 1.25em; }
 
   p {
     font-size: .9em; }
 
   .about {
     padding: 50px 0 0 0; }
-    .about h1 {
+    .about h1, .about h2 {
       margin-top: 50px; } }
 @media (max-width: 400px) {
   nav a {

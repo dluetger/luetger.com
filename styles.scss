@@ -65,6 +65,13 @@ h1{
 	@include ease-in-out(.2s);
 }
 
+h2{
+	@extend h1;
+	font-size: 2em;
+	line-height: 1.2em;
+	margin:0 0 50px 0;
+}
+
 p{
 	font-size: 1em;
 	font-weight: 400;
@@ -191,6 +198,15 @@ section{
 	margin: auto;
 }
 
+.titleSection{
+	margin-bottom: 100px;
+	
+	h1{
+		margin:0 0 0 10px;
+		text-align: center;
+	}
+}
+
 .textSection{
 	margin-bottom:75px;
 }
@@ -224,12 +240,37 @@ section{
 	}
 }
 
-.notesSection{
-	//Appropriated a little bit for the cover page.
+.quoteSection{
+	@extend .textSection;
+	border-left: 2px solid $light-grey;
+	padding:0;
 
+	p{
+		font-size: 1.5em;
+		line-height: 1.5em;
+		margin-left:20px;
+		font-weight: 400;
+		color:#55699D;
+	}
+
+	.quoteSource{
+		font-size: 1em;
+		font-weight: 400;
+		color:$primary-font-color;
+	}
+}
+
+.subtitle{
+	font-size:1.25em;
+	text-align:center;
+	font-weight: 300;
+}
+
+.notesSection{
+	@extend .textSection;
 	font-size:.8em;
-	// border-top:1px solid $light-grey;
-	// padding-top:50px;
+	border-top:1px solid $light-grey;
+	padding-top:50px;
 }
 
 /*-----Footnotes-----*/
@@ -319,6 +360,9 @@ footer{
 	h1{
 		font-size: 2em;
 		margin-top:50px;
+	}
+	h2{
+		font-size: 1.25em;
 	}
 	p{
 		font-size: .9em;
