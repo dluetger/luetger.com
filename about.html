@@ -18,24 +18,24 @@
 	<!--Version of jQuery that makes random link colors work-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<!--Script that does the random link colors-->
-	<script type="text/javascript">
-      	$(document).ready(function() {
-    		$("a").hover(function(e) {
-        		var randomClass = getRandomClass();
-        		$(e.target).attr("class", randomClass);
-    		});
-		});
+	<!--<script type="text/javascript">
+ //      	$(document).ready(function() {
+ //    		$("a").hover(function(e) {
+ //        		var randomClass = getRandomClass();
+ //        		$(e.target).attr("class", randomClass);
+ //    		});
+	// 	});
 
-		function getRandomClass() {
-    		//Store available css classes
-    		var classes = new Array("green", "blue", "orange", "magenta");
+	// 	function getRandomClass() {
+ //    		//Store available css classes
+ //    		var classes = new Array("green", "blue", "orange", "magenta");
     
-    		//Give a random number from 0 to 3
-    		var randomNumber = Math.floor(Math.random()*4);
+ //    		//Give a random number from 0 to 3
+ //    		var randomNumber = Math.floor(Math.random()*4);
     
-    		return classes[randomNumber];
-		};
-    </script>
+ //    		return classes[randomNumber];
+	// 	};
+ //    </script>-->
 </head>
 
 <body>
@@ -53,10 +53,13 @@
 					<p>I used to work at Underwriters Laboratories
 						<span class="footnote"><span class="footnoteNumber">[2]</span><span class="footnoteText" style="display: none;">They make sure your laptop <a href="http://ul.com/">doesn't catch fire</a>.</span></span>
 					on safety certification software. Before that I was at Fino Consulting designing iPad apps that helped businesses save money on energy.</p>
-					<p>I grew up outside Chicago and studied sociology at the <a href="http://www.sociology.illinois.edu/">University of Illinois at Urbana-Champaign</a> where my focus was on accessibility, digital inequality, and the social impact of technology. I also led a program that tutored older adults in basic computer skills. At <a href="https://www.hcii.cmu.edu/">Carnegie Mellon University</a>, I studied human-computer interaction and worked on a tablet app for the field engineers of Eaton Corporation
+					<p>I grew up outside Chicago and studied sociology at the <a href="http://www.sociology.illinois.edu/">University of Illinois at Urbana-Champaign</a> where my focus was on accessibility, digital inequality, and the social impact of technology. I also led a program that tutored older adults in basic computer skills. At <a href="https://www.hcii.cmu.edu/">Carnegie Mellon University</a>, I studied human-computer interaction and worked on a tablet app for the engineers at Eaton Corporation
 						<span class="footnote"><span class="footnoteNumber">[3]</span><span class="footnoteText" style="display: none;">They make  giant <a href="http://www.eaton.com/Eaton/index.htm">circuit breakers</a> that live underneath big buildings like sports stadiums.</span></span>
 					.</p>
 					<p>I play percussion and I'm currently with the <a href="http://www.sjmetroband.org/">San Jose Metropolitan Band</a>. I also enjoy hiking, <a href="https://500px.com/dluetger">photography</a>, cars, watching and critiquing great tv, trying new beers, and traveling the world.</p>
+				</section>
+				<section class="textSection">
+					<a href="index.html">Back to Home Page</a>
 				</section>
 			</div>
 		</div>
