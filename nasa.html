@@ -18,24 +18,24 @@
 	<!--Version of jQuery that makes random link colors work-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<!--Script that does the random link colors-->
-	<script type="text/javascript">
-      	$(document).ready(function() {
-    		$("a").hover(function(e) {
-        		var randomClass = getRandomClass();
-        		$(e.target).attr("class", randomClass);
-    		});
-		});
+	<!-- <script type="text/javascript">
+ //      	$(document).ready(function() {
+ //    		$("a").hover(function(e) {
+ //        		var randomClass = getRandomClass();
+ //        		$(e.target).attr("class", randomClass);
+ //    		});
+	// 	});
 
-		function getRandomClass() {
-    		//Store available css classes
-    		var classes = new Array("green", "blue", "orange", "magenta");
+	// 	function getRandomClass() {
+ //    		//Store available css classes
+ //    		var classes = new Array("green", "blue", "orange", "magenta");
     
-    		//Give a random number from 0 to 3
-    		var randomNumber = Math.floor(Math.random()*4);
+ //    		//Give a random number from 0 to 3
+ //    		var randomNumber = Math.floor(Math.random()*4);
     
-    		return classes[randomNumber];
-		};
-    </script>
+ //    		return classes[randomNumber];
+	// 	};
+ //    </script>-->
 </head>
 
 <body>
@@ -50,32 +50,34 @@
 					<p class="subtitle">Supporting the ISS &amp; Human Spaceflight</p>
 				</section>
 				<section class="textSection">
-					<p><a href="https://www.nasa.gov/centers/ames/home/index.html">NASA Ames Research Center</a> in Mountain View, CA has the world’s largest wind tunnel, an enormous 1930s airship hangar, and a cannon that shoots fire hotter than the sun
+					<p><a href="https://www.nasa.gov/centers/ames/home/index.html">NASA Ames Research Center</a> in Mountain View, CA has the world's largest wind tunnel, an enormous 1930s airship hangar, and a cannon that shoots fire hotter than the sun
 						<span class="footnote"><span class="footnoteNumber">[1]</span><span class="footnoteText" style="display: none;">No, <a href="https://www.nasa.gov/centers/ames/research/technology-onepagers/arcjetcomplex.html">really</a>. They use it to test heat shields.</span></span>.
 					The scientists on base study aviation, spaceflight, and information technology. As part of the HCI Group, I help make missions safer by designing software for the International Space Station and human space flight programs 
 						<span class="footnote"><span class="footnoteNumber">[2]</span><span class="footnoteText" style="display: none;">Particularly the new <a href="https://www.nasa.gov/exploration/systems/orion/index.html">Orion capsule</a> and <a href="https://www.nasa.gov/exploration/systems/sls/index.html" >SLS rocket</a>.</span></span>.<p>
 				</section>
 				<figure class="imageSection">
 					<img src="img/nasa/nasaAmes.jpg" title="" alt="An aerial photo of NASA Ames.">
-					<p>Fire cannon not pictured.</p>
+					<p>Ames Research Center. Fire cannon not pictured.</p>
 				</figure>
 				<section class="textSection">
-					<h2>Assuring Mission Safety Through Human-Centered Design</h2>
+					<h2>Safer Missions Through Human-Centered Design</h2>
 					<p>Going to space is very complicated 
 						<span class="footnote"><span class="footnoteNumber">[3]</span><span class="footnoteText" style="display: none;">Citation needed.</span></span>.
-					 The smart people of NASA have to keep track of tons of information to make sure the pieces of our spacecraft fit together, we don't kill our astronauts, and that we have a plan for everything that might go wrong 
-					 	<span class="footnote"><span class="footnoteNumber">[4]</span><span class="footnoteText" style="display: none;">They also make sure the <a href="https://www.youtube.com/watch?v=vyX368l--BU">space espresso machine</a> keeps working.</span></span>.</p>
+					 The smart people of NASA have to juggle tons of information to make sure the pieces of our spacecraft fit together, we don't kill our astronauts, and that we have a plan for everything that might go wrong 
+					 	<span class="footnote"><span class="footnoteNumber">[4]</span><span class="footnoteText" style="display: none;">Gotta make sure that <a href="https://www.youtube.com/watch?v=vyX368l--BU">space espresso machine</a> keeps working.</span></span>.</p>
+					 <p>I primarily work on the Mission Assurance System, a platform NASA uses to track mission critical data. I help make our spacecraft safer as well as make life easier for the folks on the ground. I do user research, run usability tests, create prototypes and write design specifications.  We're a small shop in the HCI Group.  So I also manage projects, run QA tests, provide customer support, and administer systems.</p>
+					 <p>It's not exactly the CIA, but I'm still working to figure out what I can and can't show publicly. I'll update this piece once I have some answers.</p>
 				</section>
-				<figure class="imageSection">
-					<img src="img/nasa/spreadsheet.png" title="" alt="A very complex requirements spreadsheet.">
-					<p>One of twenty requirements spreadsheets for the upcoming Space Launch System. This is how we go to space, everyone.</p>
-				</figure>
+				<section class="textSection">
+					<a href="index.html">Back to Home Page</a>
+				</section>
 			</div>
 		</div>
 	</div>
 	<footer>
 		<div class="grid-container">
 			<div class="prefix-10 grid-80 suffix-10">
+				<!--Script that makes it look like I always keep my site up to date.-->
 				<p>Made by <a href="index.html">Dave</a> in 
 					<script language="javascript" type="text/javascript">
 					var today = new Date()
