@@ -8,20 +8,21 @@
 /*Animations & Transitions*/
 /*-----Normal, Boring Stuff-----*/
 body {
-  color: #585858;
+  color: #323a45;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 100%;
+  font-size: 16px;
   background: #FDFDFD;
   background-size: cover;
-  -webkit-animation: fadein 2s;
-  -o-animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  -ms-animation: fadein 2s;
-  animation: fadein 2s; }
+  -webkit-animation: fadein 1s;
+  -o-animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  -ms-animation: fadein 1s;
+  animation: fadein 1s; }
 
-h1 {
+h1, h2 {
   font-weight: 800;
   font-family: "Lato", Helvetica, Arial, sans-serif;
+  color: #205493;
   line-height: 50px;
   height: 50px;
   font-size: 2.25em;
@@ -32,8 +33,13 @@ h1 {
   -webkit-transition: 0.2s eas e-in-out;
   transition: 0.2s ease-in-out; }
 
+h2 {
+  font-size: 2em;
+  line-height: 1.2em;
+  margin: 0 0 50px 0; }
+
 p {
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 400;
   margin: 0 0 30px 0;
   line-height: 1.75em;
@@ -48,7 +54,7 @@ i {
 
 /*-----Links-----*/
 a {
-  color: #111111;
+  color: #323a45;
   text-decoration: none;
   font-weight: 400;
   -o-transition: 0.1s ease-in-out;
@@ -56,47 +62,15 @@ a {
   -moz-transition: 0.1s ease-in-out;
   -webkit-transition: 0.1s eas e-in-out;
   transition: 0.1s ease-in-out;
-  border-bottom: 1px solid rgba(107, 107, 107, 0.4); }
+  border-bottom: 1px solid #323a45; }
 
 a:hover {
-  color: #07A4B0;
-  border-bottom: 1px solid #07A4B0; }
+  color: #e31c3d;
+  border-bottom: 1px solid #e31c3d; }
 
 a:focus {
-  color: #07A4B0;
-  border-bottom: 1px solid #07A4B0; }
-
-a.blue:hover {
-  color: #07A4B0;
-  border-bottom: 1px solid #07A4B0; }
-
-a.green:hover {
-  color: #79BA50;
-  border-bottom: 1px solid #79BA50; }
-
-a.orange:hover {
-  color: #E89530;
-  border-bottom: 1px solid #E89530; }
-
-a.magenta:hover {
-  color: #CC2F6E;
-  border-bottom: 1px solid #CC2F6E; }
-
-a.blue:focus {
-  color: #07A4B0;
-  border-bottom: 1px solid #07A4B0; }
-
-a.green:focus {
-  color: #79BA50;
-  border-bottom: 1px solid #79BA50; }
-
-a.orange:focus {
-  color: #E89530;
-  border-bottom: 1px solid #E89530; }
-
-a.magenta:focus {
-  color: #CC2F6E;
-  border-bottom: 1px solid #CC2F6E; }
+  color: #e31c3d;
+  border-bottom: 1px solid #e31c3d; }
 
 /*-----Things That I Only Use on the Home Page-----*/
 .home .imageSection {
@@ -113,11 +87,12 @@ a.magenta:focus {
   text-align: center;
   margin: 0 0 60px 0;
   display: block; }
-  .greeting h1 {
-    margin: 50px 0 10px 0; }
+  .greeting h1, .greeting h2 {
+    margin: 50px 0 10px 0;
+    color: #323a45; }
   .greeting p {
     margin: 0 0 0 0;
-    line-height: 1.2em; }
+    line-height: 1.6em; }
   .greeting .footnoteText {
     text-align: left; }
 
@@ -127,15 +102,20 @@ nav {
   nav a {
     font-weight: 700;
     margin: 0 20px 0 20px;
-    color: #585858; }
+    color: #323a45; }
 
-/*-----Things for the Big Picture That Starts Most Pages (Coming Soon)-----*/
 /*-----Things for the Part Where I Write a Bunch----*/
 section {
   max-width: 640px;
   margin: auto; }
 
-.textSection, .imageSection {
+.titleSection {
+  margin-bottom: 100px; }
+  .titleSection h1, .titleSection h2 {
+    margin: 0 0 0 10px;
+    text-align: center; }
+
+.textSection, .imageSection, .quoteSection, .notesSection {
   margin-bottom: 75px; }
 
 .tallImage, .smallImage {
@@ -158,8 +138,29 @@ section {
     margin-top: 10px;
     text-align: center; }
 
+.quoteSection {
+  border-left: 2px solid #B8B8B8;
+  padding: 0; }
+  .quoteSection p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-left: 20px;
+    font-weight: 400;
+    color: #55699D; }
+  .quoteSection .quoteSource {
+    font-size: 1em;
+    font-weight: 400;
+    color: #323a45; }
+
+.subtitle {
+  font-size: 1.25em;
+  text-align: center;
+  font-weight: 300; }
+
 .notesSection {
-  font-size: .8em; }
+  font-size: .8em;
+  border-top: 1px solid #B8B8B8;
+  padding-top: 50px; }
 
 /*-----Footnotes-----*/
 .footnote {
@@ -169,10 +170,10 @@ section {
 .footnoteNumber {
   vertical-align: super;
   font-size: .7em;
-  color: #111111;
+  color: #323a45;
   position: relative;
   cursor: pointer;
-  border-bottom: 1px solid rgba(107, 107, 107, 0.4); }
+  border-bottom: 1px solid #323a45; }
 
 .footnoteText {
   font-size: .7em;
@@ -192,13 +193,14 @@ section {
 /*-----About Page Things-----*/
 .about {
   padding: 100px 0 0 0; }
-  .about h1 {
+  .about h1, .about h2 {
     margin-top: 0px; }
 
 /*-----Footer Things-----*/
 footer {
   border-top: 1px solid #B8B8B8;
-  background-color: #ECE8E8; }
+  background-color: #ECE8E8;
+  margin-top: 150px; }
   footer p {
     max-width: 640px;
     margin: auto;
@@ -235,16 +237,19 @@ footer {
     opacity: 1; } }
 /*-----Stuff That Makes the Site Look Good on Very Big or Very Small Screens-----*/
 @media (max-width: 768px) {
-  h1 {
+  h1, h2 {
     font-size: 2em;
     margin-top: 50px; }
 
+  h2 {
+    font-size: 1.25em; }
+
   p {
-    font-size: .9em; }
+    font-size: 1em; }
 
   .about {
     padding: 50px 0 0 0; }
-    .about h1 {
+    .about h1, .about h2 {
       margin-top: 50px; } }
 @media (max-width: 400px) {
   nav a {

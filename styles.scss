@@ -7,23 +7,21 @@ $body-font-stack: "Open Sans", Helvetica, Arial, sans-serif;
 $header-font-stack: "Lato", Helvetica, Arial, sans-serif;
 
 /*Background & Container Colors*/
-$background-color: #FDFDFD;
+$background-color: #F1F1F1;
 $light-grey: #B8B8B8;
 $very-light-grey: #ECE8E8;
 
 /*Text Colors*/
-$primary-font-color: #585858;
+$primary-font-color: #323a45;
+$usa-blue: #205493;
 
 /*Link Colors*/
-$link-color: #111111;
-$link-hover-color: #3F6DE3;
-$sticky-note-magenta: #CC2F6E;
-$sticky-note-green: #79BA50;
-$sticky-note-blue: #07A4B0;
-$sticky-note-orange: #E89530;
+$link-color: #323a45;
+$link-hover-color: #e31c3d;
 
 /*Styles*/
-$link-underline: 1px solid rgba(107,107,107,.4);
+// $link-underline: 1px solid rgba(107,107,107,.4);
+$link-underline: 1px solid #323a45;
 
 /*Animations & Transitions*/
 //Makes it so that the page fades in all smooth like.
@@ -47,17 +45,18 @@ $link-underline: 1px solid rgba(107,107,107,.4);
 /*-----Normal, Boring Stuff-----*/
 
 body{
-	color: #585858;
+	color: $primary-font-color;
 	font-family: $body-font-stack;
-	font-size:100%;
+	font-size:16px;
 	background: #FDFDFD;
 	background-size: cover;
-	@include fadein(2s);
+	@include fadein(1s);
 }
 
 h1{
 	font-weight: 800;
 	font-family: $header-font-stack;
+	color: $usa-blue;
 	line-height: 50px;
 	height:50px;
 	font-size: 2.25em;
@@ -65,8 +64,15 @@ h1{
 	@include ease-in-out(.2s);
 }
 
+h2{
+	@extend h1;
+	font-size: 2em;
+	line-height: 1.2em;
+	margin:0 0 50px 0;
+}
+
 p{
-	font-size: 1em;
+	font-size: 1.1em;
 	font-weight: 400;
 	margin:0 0 30px 0;
 	line-height: 1.75em;
@@ -88,54 +94,54 @@ a{
 }
 
 a:hover{
-	color: $sticky-note-blue;
-	border-bottom: 1px solid $sticky-note-blue;
+	color: $link-hover-color;
+	border-bottom: 1px solid $link-hover-color;
 }
 
 a:focus{
-	color: $sticky-note-blue;
-	border-bottom: 1px solid $sticky-note-blue;
+	color: $link-hover-color;
+	border-bottom: 1px solid $link-hover-color;
 }
 
-a.blue:hover{
-			color: $sticky-note-blue;
-			border-bottom: 1px solid $sticky-note-blue;
-		}
+// a.blue:hover{
+// 			color: $sticky-note-blue;
+// 			border-bottom: 1px solid $sticky-note-blue;
+// 		}
 
-a.green:hover{
-	color: $sticky-note-green;
-	border-bottom: 1px solid $sticky-note-green;
-}
+// a.green:hover{
+// 	color: $sticky-note-green;
+// 	border-bottom: 1px solid $sticky-note-green;
+// }
 
-a.orange:hover{
-	color: $sticky-note-orange;
-	border-bottom: 1px solid $sticky-note-orange;
-}
+// a.orange:hover{
+// 	color: $sticky-note-orange;
+// 	border-bottom: 1px solid $sticky-note-orange;
+// }
 
-a.magenta:hover{
-	color: $sticky-note-magenta;
-	border-bottom: 1px solid $sticky-note-magenta;
-}
+// a.magenta:hover{
+// 	color: $sticky-note-magenta;
+// 	border-bottom: 1px solid $sticky-note-magenta;
+// }
 
-a.blue:focus{
-	color: $sticky-note-blue;
-	border-bottom: 1px solid $sticky-note-blue;
-}
+// a.blue:focus{
+// 	color: $sticky-note-blue;
+// 	border-bottom: 1px solid $sticky-note-blue;
+// }
 
-a.green:focus{
-	color: $sticky-note-green;
-	border-bottom: 1px solid $sticky-note-green;
-}
+// a.green:focus{
+// 	color: $sticky-note-green;
+// 	border-bottom: 1px solid $sticky-note-green;
+// }
 
-a.orange:focus{
-	color: $sticky-note-orange;
-	border-bottom: 1px solid $sticky-note-orange;
-}
+// a.orange:focus{
+// 	color: $sticky-note-orange;
+// 	border-bottom: 1px solid $sticky-note-orange;
+// }
 
-a.magenta:focus{
-	color: $sticky-note-magenta;
-	border-bottom: 1px solid $sticky-note-magenta;
-}
+// a.magenta:focus{
+// 	color: $sticky-note-magenta;
+// 	border-bottom: 1px solid $sticky-note-magenta;
+// }
 
 /*-----Things That I Only Use on the Home Page-----*/
 
@@ -162,11 +168,12 @@ a.magenta:focus{
 
 	h1{
 		margin:50px 0 10px 0;
+		color: $primary-font-color;
 	}
 
 	p{
 		margin:0 0 0 0;
-		line-height: 1.2em;
+		line-height: 1.6em;
 	}
 	.footnoteText{
 		text-align: left;
@@ -184,13 +191,20 @@ nav{
 	}	
 }
 
-/*-----Things for the Big Picture That Starts Most Pages (Coming Soon)-----*/
-
 /*-----Things for the Part Where I Write a Bunch----*/
 
 section{
 	max-width: 640px;
 	margin: auto;
+}
+
+.titleSection{
+	margin-bottom: 100px;
+	
+	h1{
+		margin:0 0 0 10px;
+		text-align: center;
+	}
 }
 
 .textSection{
@@ -226,12 +240,37 @@ section{
 	}
 }
 
-.notesSection{
-	//Appropriated a little bit for the cover page.
+.quoteSection{
+	@extend .textSection;
+	border-left: 2px solid $light-grey;
+	padding:0;
 
+	p{
+		font-size: 1.5em;
+		line-height: 1.5em;
+		margin-left:20px;
+		font-weight: 400;
+		color:#55699D;
+	}
+
+	.quoteSource{
+		font-size: 1em;
+		font-weight: 400;
+		color:$primary-font-color;
+	}
+}
+
+.subtitle{
+	font-size:1.25em;
+	text-align:center;
+	font-weight: 300;
+}
+
+.notesSection{
+	@extend .textSection;
 	font-size:.8em;
-	// border-top:1px solid $light-grey;
-	// padding-top:50px;
+	border-top:1px solid $light-grey;
+	padding-top:50px;
 }
 
 /*-----Footnotes-----*/
@@ -281,6 +320,7 @@ section{
 footer{
 	border-top: 1px solid $light-grey;
 	background-color: $very-light-grey;
+	margin-top:150px;
 
 	p{
 		max-width: 640px;
@@ -322,8 +362,11 @@ footer{
 		font-size: 2em;
 		margin-top:50px;
 	}
+	h2{
+		font-size: 1.25em;
+	}
 	p{
-		font-size: .9em;
+		font-size: 1em;
 	}
 	.about{
 		padding:50px 0 0 0;
