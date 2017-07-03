@@ -10,9 +10,9 @@
 /*Animations & Transitions*/
 /*-----Normal, Boring Stuff-----*/
 body {
-  color: #333333;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 18px;
+  color: #333333;
   background: #fdfdfd;
   -webkit-animation: fadein 1s;
   -o-animation: fadein 1s;
@@ -36,13 +36,14 @@ h2 {
   margin: 0 0 32px 0; }
 
 h3 {
-  font-size: 1.999em;
-  margin: 0 0 32px 0; }
+  font-size: 1.4143em;
+  margin: 0 0 16px 0; }
 
 p, a {
   font-weight: 400;
   line-height: 1.4143em;
   margin: 0 0 8px 0;
+  max-width: 640px;
   -o-transition: 0.2s ease-in-out;
   -ms-transition: 0.2s ease-in-out;
   -moz-transition: 0.2s ease-in-out;
@@ -53,8 +54,8 @@ p, a {
   font-size: 1.4143em;
   margin: 0 0 128px 0; }
 
-i {
-  font-style: italic; }
+img {
+  width: 640px; }
 
 /*-----Links-----*/
 a {
@@ -68,23 +69,23 @@ a {
   transition: 0.1s ease-in-out; }
 
 a:hover {
-  color: #0071BC;
+  color: #005289;
   border-bottom: 1px solid #0071BC; }
 
 a:focus {
-  color: #0071BC;
+  color: #005289;
   border-bottom: 1px solid #0071BC; }
 
 /*-----Things for the Part With All the Links-----*/
-header {
-  margin: 0 0 128px 0; }
-  header a {
-    line-height: 64px; }
-
 nav a {
   margin: 0 16px 0 0;
   color: #333333;
   border-bottom: none; }
+
+header {
+  margin: 0 0 128px 0; }
+  header a {
+    line-height: 64px; }
 
 .logo {
   font-size: 1.4143em;

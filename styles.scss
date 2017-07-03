@@ -65,9 +65,9 @@ $grid-tablet-large: 768px;
 /*-----Normal, Boring Stuff-----*/
 
 body{
-	color: $mine-shaft;
 	font-family: $open-sans;
 	font-size: 18px;
+	color: $mine-shaft;
 	background: $white;
 	@include fadein(1s);
 }
@@ -88,14 +88,15 @@ h2{
 
 h3{
 	@extend h1;
-	font-size: $font-size-x-large;
-	margin:0 0 $spacing-large 0;
+	font-size: $font-size-large;
+	margin:0 0 $spacing-medium 0;
 }
 
 p{
 	font-weight: $font-weight-regular;
 	line-height: $font-size-large;
 	margin:0 0 $spacing-small 0;
+	max-width: 640px;
 	@include ease-in-out(.2s);
 }
 
@@ -104,8 +105,8 @@ p{
 	margin: 0 0 $spacing-xx-large 0;
 }
 
-i{
-	font-style: italic;
+img{
+	width:640px;
 }
 
 /*-----Links-----*/
@@ -119,31 +120,30 @@ a{
 }
 
 a:hover{
-	color: $lochmara;
+	color: darken($lochmara, 10%);
 	border-bottom: 1px solid $lochmara;
 }
 
 a:focus{
-	color: $lochmara;
+	color: darken($lochmara, 10%);
 	border-bottom: 1px solid $lochmara;
 }
 
 /*-----Things for the Part With All the Links-----*/
-header{
-	margin: 0 0 $spacing-xx-large 0;
-
-	a{
-		line-height: $spacing-x-large;
-	}
-
-}
-
 nav{
 	a{
 		margin:0 $spacing-medium 0 0;
 		color:$mine-shaft;
 		border-bottom: none;
 	}	
+}
+
+header{
+	margin: 0 0 $spacing-xx-large 0;
+
+	a{
+		line-height: $spacing-x-large;
+	}
 }
 
 .logo{
