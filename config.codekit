@@ -11,6 +11,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/cpid.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/cpid.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/css\/normalize.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -49,6 +58,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/fieldsight.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fieldsight.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/img\/general\/about.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -60,13 +78,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/nasa\/nasaAmes.jpg": {
+	"\/img\/nasa\/ames.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 3.28496e+06,
-		"inputAbbreviatedPath": "\/img\/nasa\/nasaAmes.jpg",
-		"outputAbbreviatedPath": "\/img\/nasa\/nasaAmes.jpg",
+		"inputAbbreviatedPath": "\/img\/nasa\/ames.jpg",
+		"outputAbbreviatedPath": "\/img\/nasa\/ames.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -100,6 +118,17 @@
 		"initialSize": 9.1575e+06,
 		"inputAbbreviatedPath": "\/img\/nasa\/usabilityTesting.png",
 		"outputAbbreviatedPath": "\/img\/nasa\/usabilityTesting.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/report-bot\/report-bot.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 216277,
+		"inputAbbreviatedPath": "\/img\/report-bot\/report-bot.png",
+		"outputAbbreviatedPath": "\/img\/report-bot\/report-bot.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -142,6 +171,15 @@
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
+		},
+	"\/resume.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/resume.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/styles.scss": {
 		"createSourceMap": 0,

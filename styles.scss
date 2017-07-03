@@ -80,6 +80,10 @@ h1{
 	@include ease-in-out(.2s);
 }
 
+#about-header{
+	margin: 0 0 $spacing-x-large;
+}
+
 h2{
 	@extend h1;
 	font-size: $font-size-x-large;
@@ -89,24 +93,34 @@ h2{
 h3{
 	@extend h1;
 	font-size: $font-size-large;
-	margin:0 0 $spacing-medium 0;
+	margin: $spacing-large 0 $spacing-medium 0;
 }
 
 p{
 	font-weight: $font-weight-regular;
-	line-height: $font-size-large;
-	margin:0 0 $spacing-small 0;
+	line-height: 1.5em;
+	margin:0 0 $spacing-medium 0;
 	max-width: 640px;
 	@include ease-in-out(.2s);
 }
 
 .subtitle{
 	font-size: $font-size-large;
+	max-width: none;
 	margin: 0 0 $spacing-xx-large 0;
 }
 
+figure{
+	margin: 0 0 $spacing-x-large 0;
+}
+
 img{
-	width:640px;
+	width: 100%;
+	margin: 0 0 $spacing-medium 0;
+}
+
+.caption{
+	font-size: $font-size-small;
 }
 
 /*-----Links-----*/
@@ -142,7 +156,7 @@ header{
 	margin: 0 0 $spacing-xx-large 0;
 
 	a{
-		line-height: $spacing-x-large;
+		line-height: $spacing-xx-large;
 	}
 }
 
@@ -153,10 +167,13 @@ header{
 
 /*-----Things for the Part Where I Write a Bunch----*/
 
-// section{
-// 	max-width: 640px;
-// 	margin: auto;
-// }
+section{
+	margin: 0 0 $spacing-xx-large 0;
+
+	h2{
+		max-width: 640px;
+	}
+}
 
 // .titleSection{
 // 	margin-bottom: 100px;
@@ -311,4 +328,26 @@ footer{
 }
 
 @media (max-width: $grid-tablet-small){
+	body{
+		font-size: 16px;
+	}
+
+	h1{
+		font-size: $font-size-xx-large;
+		font-weight: $font-weight-x-bold;
+	}
+
+	#about-header{
+		margin: 0 0 $spacing-large;
+	}
+
+	h2{
+		font-size: $font-size-large;
+		margin:0 0 $spacing-large 0;
+	}
+
+	.subtitle{
+		font-size: $font-size-regular;
+		margin: 0 0 $spacing-x-large 0;
+	}
 }
