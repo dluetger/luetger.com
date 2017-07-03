@@ -103,6 +103,11 @@ header {
   font-weight: 800; }
 
 /*-----Things for the Part Where I Write a Bunch----*/
+.work-list {
+  list-style-type: none; }
+  .work-list a {
+    font-weight: 800; }
+
 section {
   margin: 0 0 128px 0; }
   section h2 {

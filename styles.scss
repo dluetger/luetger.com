@@ -167,6 +167,14 @@ header{
 
 /*-----Things for the Part Where I Write a Bunch----*/
 
+.work-list{
+	list-style-type: none;
+
+	a{
+		font-weight: $font-weight-x-bold;
+	}
+}
+
 section{
 	margin: 0 0 $spacing-xx-large 0;
 
