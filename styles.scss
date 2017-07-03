@@ -380,9 +380,6 @@ footer{
 
 /*-----Stuff That Makes the Site Look Good on Very Big or Very Small Screens-----*/
 
-@media (max-width: $grid-tablet-large){
-}
-
 @media (max-width: $grid-tablet-small){
 	body{
 		font-size: 16px;
@@ -405,5 +402,9 @@ footer{
 	.subtitle{
 		font-size: $font-size-regular;
 		margin: 0 0 $spacing-x-large 0;
+	}
+
+	h3{
+		font-size: $font-size-regular;
 	}
 }
