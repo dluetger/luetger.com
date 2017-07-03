@@ -36,12 +36,23 @@ $spacing-xx-small: 2px;
 
 /*Borders*/
 $border-link: 1px dotted $lochmara;
+$border-link-hover: 1px solid darken($lochmara, 10%);
+$border-link-large: 4px solid $lochmara;
+$border-link-large-hover: 4px solid darken($lochmara, 10%);
 
 /*Layout & Grid*/
 $grid-mobile-small: 240px;
 $grid-mobile-large: 320px;
 $grid-tablet-small: 480px;
 $grid-tablet-large: 768px;
+
+/*Border Radii*/
+@mixin border-radius($radius){
+ 	-webkit-border-radius: $radius;
+ 	-moz-border-radius: $radius;
+  	-ms-border-radius: $radius;
+  	border-radius: $radius;
+}
 
 /*Animations & Transitions*/
 //Makes it so that the page fades in all smooth like.
@@ -135,35 +146,60 @@ a{
 
 a:hover{
 	color: darken($lochmara, 10%);
-	border-bottom: 1px solid $lochmara;
+	border-bottom: $border-link-hover;
 }
 
 a:focus{
 	color: darken($lochmara, 10%);
-	border-bottom: 1px solid $lochmara;
+	border-bottom: $border-link-hover;
 }
 
 /*-----Things for the Part With All the Links-----*/
 nav{
 	a{
+		display: inline-block;
 		margin:0 $spacing-medium 0 0;
 		color:$mine-shaft;
 		border-bottom: none;
 	}	
-}
 
-header{
-	margin: 0 0 $spacing-xx-large 0;
+	a:hover{
+		border-bottom: $border-link-large-hover;
+	}
 
-	a{
-		line-height: $spacing-xx-large;
+	a:focus{
+		border-bottom: $border-link-large-hover;
 	}
 }
 
-.logo{
+.active-page{
+	border-bottom: $border-link-large;
+	border: inside;
+}
+
+header{
+	padding: $spacing-large 0 0 0;
+	margin: 0 0 $spacing-xx-large 0;
+
+	a{
+		line-height: $spacing-large;
+	}
+}
+
+a.logo{
 	font-size: $font-size-large;
 	font-weight: $font-weight-x-bold;
 }
+
+a.logo:hover{
+		color: lighten($mine-shaft, 20%);
+		border-bottom: none;
+	}
+
+a.logo:focus{
+		color: lighten($mine-shaft, 20%);
+		border-bottom: none;
+	}
 
 /*-----Things for the Part Where I Write a Bunch----*/
 
@@ -181,6 +217,18 @@ section{
 	h2{
 		max-width: 640px;
 	}
+}
+
+.disclaimer{
+	font-size: $font-size-small;
+	padding: $spacing-medium;
+	border: 2px solid $lochmara;
+	margin: 0 0 $spacing-x-large 0;
+	@include border-radius(2px);
+}
+
+b{
+	font-weight: $font-weight-x-bold;
 }
 
 // .titleSection{
@@ -292,7 +340,7 @@ footer{
 	a{
 		font-weight: $font-weight-x-bold;
 		color: $mine-shaft;
-		border: none;
+		border-bottom: 4px solid $white;
 	}
 }
 
