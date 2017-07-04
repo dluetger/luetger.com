@@ -1,15 +1,15 @@
 /*styles.css*/
-/*-----Variables & Mixins-----*/
+/*-----Variables and mixins-----*/
 /*Fonts*/
 /*Colors*/
-/*Font Sizes*/
-/*Font Weights*/
+/*Font sizes*/
+/*Font weights*/
 /*Spacing*/
-/*Borders*/
-/*Layout & Grid*/
-/*Border Radii*/
-/*Animations & Transitions*/
-/*-----Normal, Boring Stuff-----*/
+/*Border styles*/
+/*Border radii*/
+/*Layout and grid*/
+/*Animations and transitions*/
+/*-----Normal, boring stuff-----*/
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -32,9 +32,6 @@ h1, h2, h3 {
   -webkit-transition: 0.2s eas e-in-out;
   transition: 0.2s ease-in-out; }
 
-#about-header {
-  margin: 0 0 64px; }
-
 h2 {
   font-size: 1.999em;
   margin: 0 0 32px 0; }
@@ -54,11 +51,10 @@ p, a {
   -webkit-transition: 0.2s eas e-in-out;
   transition: 0.2s ease-in-out; }
 
-.subtitle {
-  font-size: 1.4143em;
-  max-width: none;
-  margin: 0 0 128px 0; }
+strong {
+  font-weight: 800; }
 
+/*-----Picture stuff-----*/
 figure {
   margin: 0 0 64px 0; }
 
@@ -66,10 +62,7 @@ img {
   width: 100%;
   margin: 0 0 16px 0; }
 
-.caption {
-  font-size: 0.707em; }
-
-/*-----Links-----*/
+/*-----Link stuff-----*/
 a {
   color: #0071BC;
   text-decoration: none;
@@ -88,7 +81,22 @@ a:focus {
   color: #005289;
   border-bottom: 1px solid #005289; }
 
-/*-----Things for the Part With All the Links-----*/
+/*-----Stuff that slightly modifies the boring stuff-----*/
+#about-header {
+  margin: 0 0 64px; }
+
+.caption {
+  font-size: 0.707em; }
+
+.subtitle {
+  font-size: 1.4143em;
+  max-width: none;
+  margin: 0 0 128px 0; }
+
+.subtitle-h3 {
+  margin: -16px 0 16px 0; }
+
+/*-----Things for the part with all the links-----*/
 nav a {
   display: inline-block;
   margin: 0 16px 0 0;
@@ -99,16 +107,17 @@ nav a:hover {
 nav a:focus {
   border-bottom: 4px solid #005289; }
 
-.active-page {
-  border-bottom: 4px solid #0071BC;
-  border: inside; }
-
 header {
   padding: 32px 0 0 0;
   margin: 0 0 128px 0; }
   header a {
     line-height: 32px; }
 
+.active-page {
+  border-bottom: 4px solid #0071BC;
+  border: inside; }
+
+/*The logo part*/
 a.logo {
   font-size: 1.4143em;
   font-weight: 800; }
@@ -121,16 +130,16 @@ a.logo:focus {
   color: #666666;
   border-bottom: none; }
 
-/*-----Things for the Part Where I Write a Bunch----*/
-.work-list {
-  list-style-type: none; }
-  .work-list a {
-    font-weight: 800; }
-
+/*-----Things for the part where most of the writing is----*/
 section {
   margin: 0 0 128px 0; }
   section h2 {
     max-width: 640px; }
+
+.work-list {
+  list-style-type: none; }
+  .work-list a {
+    font-weight: 800; }
 
 .disclaimer {
   font-size: 0.707em;
@@ -141,9 +150,6 @@ section {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   border-radius: 2px; }
-
-b {
-  font-weight: 800; }
 
 /*-----Footnotes-----*/
 .footnote {
@@ -173,9 +179,9 @@ b {
   overflow: auto;
   margin: 0 0 0 0; }
 
-/*-----Footer Things-----*/
+/*-----Footer stuff-----*/
 footer {
-  margin: 64px 0 64px 0; }
+  margin: 16px 0 64px 0; }
   footer a {
     font-weight: 800;
     color: #333333;
@@ -188,8 +194,8 @@ footer {
     font-weight: 400;
     border-bottom: 1px dotted #0071BC; }
 
-/*-----Stuff That Makes The Animations Work-----*/
-/*-Stuff That Makes the Page Fade In-*/
+/*-----Stuff that hopefully makes the animations work-----*/
+/*-Stuff that makes the page fade in-*/
 @keyframes fadein {
   from {
     opacity: 0; }
@@ -215,7 +221,7 @@ footer {
     opacity: 0; }
   to {
     opacity: 1; } }
-/*-----Stuff That Makes the Site Look Good on Very Big or Very Small Screens-----*/
+/*-----Stuff that makes the site not too ugly on very big or very small screens-----*/
 @media (max-width: 480px) {
   body {
     font-size: 16px; }

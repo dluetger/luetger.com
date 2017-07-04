@@ -1,6 +1,6 @@
 /*styles.css*/
 
-/*-----Variables & Mixins-----*/
+/*-----Variables and mixins-----*/
 
 /*Fonts*/
 $open-sans: "Open Sans", Helvetica, Arial, sans-serif;
@@ -11,7 +11,7 @@ $white: #fdfdfd;
 $mine-shaft: #333333;
 $lochmara: #0071BC;
 
-/*Font Sizes*/
+/*Font sizes*/
 $font-size-xxx-large: 3.998em;
 $font-size-xx-large: 2.827em;
 $font-size-x-large: 1.999em;
@@ -19,7 +19,7 @@ $font-size-large: 1.4143em;
 $font-size-regular: 1em;
 $font-size-small: 0.707em;
 
-/*Font Weights*/
+/*Font weights*/
 $font-weight-x-bold: 800;
 $font-weight-bold: 600;
 $font-weight-regular: 400;
@@ -34,19 +34,13 @@ $spacing-small: 8px;
 $spacing-x-small: 4px;
 $spacing-xx-small: 2px;
 
-/*Borders*/
+/*Border styles*/
 $border-link: 1px dotted $lochmara;
 $border-link-hover: 1px solid darken($lochmara, 10%);
 $border-link-large: 4px solid $lochmara;
 $border-link-large-hover: 4px solid darken($lochmara, 10%);
 
-/*Layout & Grid*/
-$grid-mobile-small: 240px;
-$grid-mobile-large: 320px;
-$grid-tablet-small: 480px;
-$grid-tablet-large: 768px;
-
-/*Border Radii*/
+/*Border radii*/
 @mixin border-radius($radius){
  	-webkit-border-radius: $radius;
  	-moz-border-radius: $radius;
@@ -54,7 +48,13 @@ $grid-tablet-large: 768px;
   	border-radius: $radius;
 }
 
-/*Animations & Transitions*/
+/*Layout and grid*/
+$grid-mobile-small: 240px;
+$grid-mobile-large: 320px;
+$grid-tablet-small: 480px;
+$grid-tablet-large: 768px;
+
+/*Animations and transitions*/
 //Makes it so that the page fades in all smooth like.
 @mixin fadein($time){
 	-webkit-animation: fadein $time;
@@ -73,7 +73,7 @@ $grid-tablet-large: 768px;
   	transition: $time ease-in-out;
 }
 
-/*-----Normal, Boring Stuff-----*/
+/*-----Normal, boring stuff-----*/
 
 body{
 	font-family: $open-sans;
@@ -89,10 +89,6 @@ h1{
 	font-weight: $font-weight-x-bold;
 	margin: 0 0 $spacing-small 0;
 	@include ease-in-out(.2s);
-}
-
-#about-header{
-	margin: 0 0 $spacing-x-large;
 }
 
 h2{
@@ -115,11 +111,11 @@ p{
 	@include ease-in-out(.2s);
 }
 
-.subtitle{
-	font-size: $font-size-large;
-	max-width: none;
-	margin: 0 0 $spacing-xx-large 0;
+strong{
+	font-weight: $font-weight-x-bold;
 }
+
+/*-----Picture stuff-----*/
 
 figure{
 	margin: 0 0 $spacing-x-large 0;
@@ -130,11 +126,7 @@ img{
 	margin: 0 0 $spacing-medium 0;
 }
 
-.caption{
-	font-size: $font-size-small;
-}
-
-/*-----Links-----*/
+/*-----Link stuff-----*/
 
 a{
 	@extend p;
@@ -154,7 +146,28 @@ a:focus{
 	border-bottom: $border-link-hover;
 }
 
-/*-----Things for the Part With All the Links-----*/
+
+/*-----Stuff that slightly modifies the boring stuff-----*/
+
+#about-header{
+	margin: 0 0 $spacing-x-large;
+}
+
+.caption{
+	font-size: $font-size-small;
+}
+
+.subtitle{
+	font-size: $font-size-large;
+	max-width: none;
+	margin: 0 0 $spacing-xx-large 0;
+}
+
+.subtitle-h3{
+	margin: -$spacing-medium 0 $spacing-medium 0;
+}
+
+/*-----Things for the part with all the links-----*/
 nav{
 	a{
 		display: inline-block;
@@ -172,11 +185,6 @@ nav{
 	}
 }
 
-.active-page{
-	border-bottom: $border-link-large;
-	border: inside;
-}
-
 header{
 	padding: $spacing-large 0 0 0;
 	margin: 0 0 $spacing-xx-large 0;
@@ -185,6 +193,13 @@ header{
 		line-height: $spacing-large;
 	}
 }
+
+.active-page{
+	border-bottom: $border-link-large;
+	border: inside;
+}
+
+/*The logo part*/
 
 a.logo{
 	font-size: $font-size-large;
@@ -201,21 +216,21 @@ a.logo:focus{
 		border-bottom: none;
 	}
 
-/*-----Things for the Part Where I Write a Bunch----*/
-
-.work-list{
-	list-style-type: none;
-
-	a{
-		font-weight: $font-weight-x-bold;
-	}
-}
+/*-----Things for the part where most of the writing is----*/
 
 section{
 	margin: 0 0 $spacing-xx-large 0;
 
 	h2{
 		max-width: 640px;
+	}
+}
+
+.work-list{
+	list-style-type: none;
+
+	a{
+		font-weight: $font-weight-x-bold;
 	}
 }
 
@@ -226,79 +241,6 @@ section{
 	margin: 0 0 $spacing-x-large 0;
 	@include border-radius(2px);
 }
-
-b{
-	font-weight: $font-weight-x-bold;
-}
-
-// .titleSection{
-// 	margin-bottom: 100px;
-	
-// 	h1{
-// 		margin:0 0 0 10px;
-// 		text-align: center;
-// 	}
-// }
-
-// .textSection{
-// 	margin-bottom:75px;
-// }
-
-// .tallImage{
-// 	max-width:120px;
-// 	display:block;
-// 	margin-left:auto;
-// 	margin-right:auto;
-// }
-
-// .smallImage{
-// 	@extend .tallImage;
-// 	max-width:200px;
-// }
-
-// .imageSection{
-// 	@extend .textSection;
-// 	max-width:1000px;
-
-// 	img{
-// 		width:100%;
-// 	}
-
-// 	p{
-// 		font-size: .8em;
-// 		max-width: 640px;
-// 		margin:auto;
-// 		margin-top: 10px;
-// 		text-align: center;
-// 	}
-// }
-
-// .quoteSection{
-// 	@extend .textSection;
-// 	border-left: 2px solid $mine-shaft;
-// 	padding:0;
-
-// 	p{
-// 		font-size: 1.5em;
-// 		line-height: 1.5em;
-// 		margin-left:20px;
-// 		font-weight: 400;
-// 		color:#55699D;
-// 	}
-
-// 	.quoteSource{
-// 		font-size: 1em;
-// 		font-weight: 400;
-// 		color:$mine-shaft;
-// 	}
-// }
-
-// .notesSection{
-// 	@extend .textSection;
-// 	font-size:.8em;
-// 	border-top:1px solid $mine-shaft;
-// 	padding-top:50px;
-// }
 
 /*-----Footnotes-----*/
 
@@ -332,10 +274,10 @@ b{
     margin:0 0 0 0;
 }
 
-/*-----Footer Things-----*/
+/*-----Footer stuff-----*/
 
 footer{
-	margin: $spacing-x-large 0 $spacing-x-large 0;
+	margin: $spacing-medium 0 $spacing-x-large 0;
 
 	a{
 		font-weight: $font-weight-x-bold;
@@ -354,8 +296,10 @@ footer{
 	}
 }
 
-/*-----Stuff That Makes The Animations Work-----*/
-/*-Stuff That Makes the Page Fade In-*/
+/*-----Stuff that hopefully makes the animations work-----*/
+
+/*-Stuff that makes the page fade in-*/
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -378,7 +322,7 @@ footer{
 }
 
 
-/*-----Stuff That Makes the Site Look Good on Very Big or Very Small Screens-----*/
+/*-----Stuff that makes the site not too ugly on very big or very small screens-----*/
 
 @media (max-width: $grid-tablet-small){
 	body{
