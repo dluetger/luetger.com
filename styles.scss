@@ -79,6 +79,7 @@ body{
 	font-family: $open-sans;
 	font-size: 18px;
 	color: $mine-shaft;
+	padding: 0 $spacing-large 0 $spacing-large;
 	background: $white;
 	@include fadein(1s);
 }
@@ -326,6 +327,12 @@ footer{
 
 
 /*-----Stuff that makes the site not too ugly on very big or very small screens-----*/
+
+@media (max-width: $grid-tablet-large){
+	body{
+		padding: 0 $spacing-small 0 $spacing-small;
+	}
+}
 
 @media (max-width: $grid-tablet-small){
 	body{
