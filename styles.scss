@@ -247,6 +247,10 @@ section{
 	@include border-radius(2px);
 }
 
+.weak{
+	color: lighten($mine-shaft, 40%);
+}
+
 /*-----Footnotes-----*/
 
 .footnote{
