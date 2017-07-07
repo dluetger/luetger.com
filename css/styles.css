@@ -121,7 +121,8 @@ header {
 /*The logo part*/
 a.logo {
   font-size: 1.4143em;
-  font-weight: 800; }
+  font-weight: 800;
+  margin: 0 32px 0 0; }
 
 a.logo:hover {
   color: #666666;
