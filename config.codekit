@@ -67,6 +67,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/img\/about\/about.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.13996e+06,
+		"inputAbbreviatedPath": "\/img\/about\/about.png",
+		"outputAbbreviatedPath": "\/img\/about\/about.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/cpid\/sls.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -74,17 +85,6 @@
 		"initialSize": 2.59213e+06,
 		"inputAbbreviatedPath": "\/img\/cpid\/sls.jpg",
 		"outputAbbreviatedPath": "\/img\/cpid\/sls.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/general\/about.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1.13996e+06,
-		"inputAbbreviatedPath": "\/img\/general\/about.png",
-		"outputAbbreviatedPath": "\/img\/general\/about.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

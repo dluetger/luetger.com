@@ -125,6 +125,7 @@ figure{
 img{
 	width: 100%;
 	margin: 0 0 $spacing-medium 0;
+	@include border-radius(2px);
 }
 
 /*-----Link stuff-----*/

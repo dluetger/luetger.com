@@ -61,7 +61,11 @@ figure {
 
 img {
   width: 100%;
-  margin: 0 0 16px 0; }
+  margin: 0 0 16px 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px; }
 
 /*-----Link stuff-----*/
 a {
