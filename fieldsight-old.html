@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Eaton Fieldsight / Dave Luetger</title>
+	<meta name="description" content="Designer, musician, tv watcher, and human"/>
+<!--CSS that makes the browser not do stupid default stuff to the styling.-->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!--CSS that makes it easy to layout stuff on the page-->
+	<link rel="stylesheet" type="text/css" href="css/unsemantic-grid-responsive.css">
+	<!--All the other CSS-->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="favicon.png">
+	<!--Fonts-->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700italic,700,600italic,600,400italic,300,300italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+</head>
+
+<body>
+	<header>
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10">
+				<nav>
+					<a class="logo" href="index.html">DL</a>
+					<a href="index.html" class="active-page">Work</a>
+					<!--<a href="#">Speaking</a>-->
+					<a href="resume.html">Resume</a>
+					<a href="about.html">About</a>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="grid-container">
+		<div class="prefix-10 grid-80 suffix-10">
+			<section>
+				<h1>Eaton Fieldsight</h1>
+				<p class="subtitle">Supporting electrical field service engineers</p>
+				<figure>
+					<img src="img/nasa/ames.jpg" title="NASA Ames Research Center" alt="An aerial photo of NASA Ames Research Center. Buildings of note include the main administrative building, the main wind tunnel facility, and the runways at Moffet Airfield. The San Francisco Bay is visible in the distance.">
+					<p class="caption">Aerial photo of NASA Ames</p>
+				</figure>
+				<p>It turns out keeping the lights on at commercial and industrial sites across the country is pretty hard and requires hundreds of personnel. My team at Carnegie Mellon worked with Eaton Electrical Services and Systems (EESS) to create FieldSight, a tablet application and software platform that allows field service engineers and Eaton staff to provide faster, easier, and simpler engineering services to their clients. We made it easier for engineers to capture test data and cutting down on manually entering repetitive information. The data captured by engineers on the job is sent back to operations centers via the web where it is easily monitored.</p>
+			</section>
+			<!--<section>
+				<h2>Streamline Eaton's electrical service division</h2>
+				<p>Eaton came to us with a broad challenge: streamline processes for the entire electrical services division. It turns out keeping the lights on at commercial and industrial sites across the country is pretty hard and requires hundreds of personnel. It was our job to figure out a better way to coordinate all the moving parts behind field service including documents, data, and people. </p>
+			</section>
+			<section>
+				<h2>On the road with interviews, focus groups, and more</h2>
+				<p>We flew across the country to seven key sites and spoke to 21 participants from service, coordination, and management roles. We toured each site, conducted focus groups, and performed contextual interviews in order to get a grasp on what Eaton did as a company as well as uncovering things we could help make better. We identified four primary opportunities: make all the paperwork associated with the job just a little easier, put information in one place, ensure data is accurate, and transmit information more quickly.</p>
+				<p>After brainstorming about 100 ideas and narrowing them with our clients based on their goals, we moved forward with an idea for a platform that can be catered to the individual needs of every role at Eaton, the focal point of which was a tablet application for field engineers. We took off across the country again, this time to four sites, and tested prototypes with a total of 16 field engineers. Our design went through five main phases: two paper prototypes, an interactive prototype made with Axure, and interactive prototype made with Briefs, and finally an HTML/CSS prototype.</p>
+			</section>
+			<section>
+				<h2>A platform with tools for everyone</h2>
+				<p>The idea behind FieldSight is that data can be quickly shared by everyone at Eaton. Managers, coordinators, sales people, engineers, and even customers can have the information they need when they need it, including financial data on jobs, scheduling information and job progress. A real-time system keeps everyone on the same page and reduces the need for lengthy, formal reports.</p>
+				<p>The tablet application for field engineers captures every aspect of their job from general information and safety procedures to on-site reporting and customer interaction. In particular, we made it easier for engineers to capture test data on electrical equipment by automating part of the process and cutting down on manually entering repetitive information. The data captured by engineers on the job is sent back to operations centers via the web where it is easily monitored.</p>
+			</section>-->
+		</div>
+	</div>
+	<footer>
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10">
+				<nav>
+					<a href="mailto: dave@luetger.com">dave@luetger.com</a>
+					<a href="https://twitter.com/dluetger">@dluetger</a>
+				</nav>
+				<p class="copyright">Made by <a href="index.html">Dave</a> in 
+							<script language="javascript" type="text/javascript">
+							var today = new Date()
+							var year = today.getFullYear()
+							document.write(year)
+							</script>.
+				</p>
+			</div>
+		</div>	
+	<!--Version of jQuery that makes the footnotes work-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<!--Script that does the little footnotes. Lovingly borrowed from Randall Munroe at xkcd.com-->
+    <script>
+      jQuery.noConflict();
+      jQuery(function() {
+        jQuery("span.footnoteText").hide();
+        jQuery("span.footnoteNumber").click(function(event) {
+          jQuery(this.nextSibling).toggle();
+          event.stopPropagation();
+        });
+        jQuery("body").click(function(event) {
+          jQuery("span.footNoteText").hide();
+        });
+      });
+    </script>
+</body>
+</html>

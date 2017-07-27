@@ -58,6 +58,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/fieldsight-old.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fieldsight-old.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/fieldsight.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -85,6 +94,17 @@
 		"initialSize": 2.59213e+06,
 		"inputAbbreviatedPath": "\/img\/cpid\/sls.jpg",
 		"outputAbbreviatedPath": "\/img\/cpid\/sls.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/fieldsight\/fieldsight-hero.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.57971e+06,
+		"inputAbbreviatedPath": "\/img\/fieldsight\/fieldsight-hero.png",
+		"outputAbbreviatedPath": "\/img\/fieldsight\/fieldsight-hero.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -155,6 +175,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/whirlpool\/whirlpool-hero.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 726071,
+		"inputAbbreviatedPath": "\/img\/whirlpool\/whirlpool-hero.png",
+		"outputAbbreviatedPath": "\/img\/whirlpool\/whirlpool-hero.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -218,6 +249,15 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
+		},
+	"\/whirlpool.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/whirlpool.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		}
 	},
 "hooks": [
