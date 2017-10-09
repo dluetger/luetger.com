@@ -4,12 +4,13 @@
 
 /*Fonts*/
 $open-sans: "Open Sans", Helvetica, Arial, sans-serif;
-$lato: "Lato", Helvetica, Arial, sans-serif;
 
 /*Colors*/
+$pure-white: #ffffff;
 $white: #fdfdfd;
-$mine-shaft: #333333;
-$lochmara: #0071BC;
+$mine-shaft: #222222;
+$tundora: #444444;
+$amaranth: #E52B50;
 
 /*Font sizes*/
 $font-size-xxx-large: 3.998em;
@@ -35,10 +36,10 @@ $spacing-x-small: 4px;
 $spacing-xx-small: 2px;
 
 /*Border styles*/
-$border-link: 1px dotted $lochmara;
-$border-link-hover: 1px solid darken($lochmara, 10%);
-$border-link-large: 4px solid $lochmara;
-$border-link-large-hover: 4px solid darken($lochmara, 10%);
+$border-link: 1px solid $amaranth;
+$border-link-hover: 1px solid darken($amaranth, 10%);
+$border-link-large: 4px solid $amaranth;
+$border-link-large-hover: 4px solid darken($amaranth, 10%);
 
 /*Border radii*/
 @mixin border-radius($radius){
@@ -78,22 +79,24 @@ $grid-tablet-large: 768px;
 body{
 	font-family: $open-sans;
 	font-size: 18px;
-	color: $mine-shaft;
+	color: $tundora;
 	padding: 0 $spacing-large 0 $spacing-large;
 	background: $white;
 	@include fadein(1s);
 }
 
 h1{
-	font-family: $lato;
 	font-size: $font-size-xxx-large;
 	font-weight: $font-weight-x-bold;
-	margin: 0 0 $spacing-small 0;
+	color: $mine-shaft;
+	letter-spacing: -0.02em;
+	margin: 0 0 $spacing-small -4px;
 	@include ease-in-out(.2s);
 }
 
 h2{
 	@extend h1;
+	// letter-spacing: inherit;
 	font-size: $font-size-x-large;
 	margin:0 0 $spacing-large 0;
 }
@@ -132,20 +135,20 @@ img{
 
 a{
 	@extend p;
-	color: $lochmara;
+	color: $tundora;
 	text-decoration: none;
   	border-bottom: $border-link;
 	@include ease-in-out(.1s);
+	@include border-radius(1px);
 }
 
 a:hover{
-	color: darken($lochmara, 10%);
-	border-bottom: $border-link-hover;
+	color: $pure-white;
+	background-color: darken($amaranth, 10%);
 }
 
 a:focus{
-	color: darken($lochmara, 10%);
-	border-bottom: $border-link-hover;
+	@extend a:hover;
 }
 
 
@@ -212,11 +215,11 @@ a.logo{
 a.logo:hover{
 		color: lighten($mine-shaft, 20%);
 		border-bottom: none;
+		background-color: $white;
 	}
 
 a.logo:focus{
-		color: lighten($mine-shaft, 20%);
-		border-bottom: none;
+		@extend a.logo:hover;
 	}
 
 /*-----Things for the part where most of the writing is----*/
@@ -236,14 +239,23 @@ section{
 	list-style-type: none;
 
 	a{
-		font-weight: $font-weight-x-bold;
+		font-weight: $font-weight-bold;
+		color: $mine-shaft;
+	}
+
+	a:hover{
+		color: $pure-white;
+	}
+
+	a:focus{
+		@extend a:hover;
 	}
 }
 
 .disclaimer{
 	font-size: $font-size-small;
 	padding: $spacing-medium;
-	border: 2px solid $lochmara;
+	border: 2px solid $amaranth;
 	margin: 0 0 $spacing-x-large 0;
 	@include border-radius(2px);
 }
@@ -262,7 +274,7 @@ section{
 .footnoteNumber{
 	vertical-align: super;
 	font-size:.7em;
-	color: $lochmara;
+	color: $amaranth;
 	position: relative;
     cursor: pointer;
     border-bottom: $border-link

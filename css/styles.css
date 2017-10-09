@@ -13,7 +13,7 @@
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  color: #333333;
+  color: #444444;
   padding: 0 32px 0 32px;
   background: #fdfdfd;
   -webkit-animation: fadein 1s;
@@ -23,10 +23,11 @@ body {
   animation: fadein 1s; }
 
 h1, h2, h3 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 3.998em;
   font-weight: 800;
-  margin: 0 0 8px 0;
+  color: #222222;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px -4px;
   -o-transition: 0.2s ease-in-out;
   -ms-transition: 0.2s ease-in-out;
   -moz-transition: 0.2s ease-in-out;
@@ -69,22 +70,22 @@ img {
 
 /*-----Link stuff-----*/
 a {
-  color: #0071BC;
+  color: #444444;
   text-decoration: none;
-  border-bottom: 1px dotted #0071BC;
+  border-bottom: 1px solid #E52B50;
   -o-transition: 0.1s ease-in-out;
   -ms-transition: 0.1s ease-in-out;
   -moz-transition: 0.1s ease-in-out;
   -webkit-transition: 0.1s eas e-in-out;
-  transition: 0.1s ease-in-out; }
+  transition: 0.1s ease-in-out;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  border-radius: 1px; }
 
-a:hover {
-  color: #005289;
-  border-bottom: 1px solid #005289; }
-
-a:focus {
-  color: #005289;
-  border-bottom: 1px solid #005289; }
+a:hover, a:focus, .work-list a:focus {
+  color: #ffffff;
+  background-color: #c5183b; }
 
 /*-----Stuff that slightly modifies the boring stuff-----*/
 #about-header {
@@ -105,12 +106,12 @@ a:focus {
 nav a {
   display: inline-block;
   margin: 0 16px 0 0;
-  color: #333333;
+  color: #222222;
   border-bottom: none; }
-nav a:hover {
-  border-bottom: 4px solid #005289; }
+nav a:hover, nav a:focus, nav .work-list a:focus, .work-list nav a:focus {
+  border-bottom: 4px solid #c5183b; }
 nav a:focus {
-  border-bottom: 4px solid #005289; }
+  border-bottom: 4px solid #c5183b; }
 
 header {
   padding: 32px 0 0 0;
@@ -119,7 +120,7 @@ header {
     line-height: 32px; }
 
 .active-page {
-  border-bottom: 4px solid #0071BC;
+  border-bottom: 4px solid #E52B50;
   border: inside; }
 
 /*The logo part*/
@@ -128,31 +129,31 @@ a.logo {
   font-weight: 800;
   margin: 0 32px 0 0; }
 
-a.logo:hover {
-  color: #666666;
-  border-bottom: none; }
-
-a.logo:focus {
-  color: #666666;
-  border-bottom: none; }
+a.logo:hover, a.logo:focus {
+  color: #555555;
+  border-bottom: none;
+  background-color: #fdfdfd; }
 
 /*-----Things for the part where most of the writing is----*/
 section {
   padding: 0 0 64px 0;
   margin: 0 0 64px 0;
-  border-bottom: 1px solid #cccccc; }
+  border-bottom: 1px solid #bbbbbb; }
   section h2 {
     max-width: 640px; }
 
 .work-list {
   list-style-type: none; }
   .work-list a {
-    font-weight: 800; }
+    font-weight: 600;
+    color: #222222; }
+  .work-list a:hover, .work-list a:focus {
+    color: #ffffff; }
 
 .disclaimer {
   font-size: 0.707em;
   padding: 16px;
-  border: 2px solid #0071BC;
+  border: 2px solid #E52B50;
   margin: 0 0 64px 0;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -160,7 +161,7 @@ section {
   border-radius: 2px; }
 
 .weak {
-  color: #666666; }
+  color: #555555; }
 
 /*-----Footnotes-----*/
 .footnote {
@@ -170,10 +171,10 @@ section {
 .footnoteNumber {
   vertical-align: super;
   font-size: .7em;
-  color: #0071BC;
+  color: #E52B50;
   position: relative;
   cursor: pointer;
-  border-bottom: 1px dotted #0071BC; }
+  border-bottom: 1px solid #E52B50; }
 
 .footnoteText {
   font-size: .7em;
@@ -183,7 +184,7 @@ section {
   position: absolute;
   left: 25px;
   bottom: 5px;
-  border: 1px solid #333333;
+  border: 1px solid #222222;
   padding: 10px;
   background-color: #fff;
   z-index: 100;
@@ -195,7 +196,7 @@ footer {
   margin: 16px 0 64px 0; }
   footer a {
     font-weight: 800;
-    color: #333333;
+    color: #222222;
     border-bottom: 4px solid #fdfdfd; }
 
 .copyright {
@@ -203,7 +204,7 @@ footer {
   margin: 8px 0 0 0; }
   .copyright a {
     font-weight: 400;
-    border-bottom: 1px dotted #0071BC; }
+    border-bottom: 1px solid #E52B50; }
 
 /*-----Stuff that hopefully makes the animations work-----*/
 /*-Stuff that makes the page fade in-*/
