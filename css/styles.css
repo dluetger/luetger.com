@@ -75,9 +75,9 @@ img {
 
 /*-----Link stuff-----*/
 a {
-  color: #0074D9;
+  color: #00549d;
   text-decoration: none;
-  border-bottom: 1px dotted #0074D9;
+  border-bottom: 1px dotted #00549d;
   -o-transition: 0.1s ease-in-out;
   -ms-transition: 0.1s ease-in-out;
   -moz-transition: 0.1s ease-in-out;
@@ -89,8 +89,8 @@ a {
   border-radius: 1px; }
 
 a:hover, a:focus {
-  color: #003d73;
-  border-bottom: 1px solid #003d73; }
+  color: #001d37;
+  border-bottom: 1px solid #001d37; }
 
 /*-----Stuff that slightly modifies the boring stuff-----*/
 #about-header {
@@ -115,9 +115,9 @@ nav a {
   color: #373A46;
   border-bottom: none; }
 nav a:hover, nav a:focus {
-  border-bottom: 4px solid #0059a6; }
+  border-bottom: 4px solid #00396a; }
 nav a:focus {
-  border-bottom: 4px solid #0059a6; }
+  border-bottom: 4px solid #00396a; }
 
 header {
   padding: 128px 0 0 0;
@@ -126,7 +126,7 @@ header {
     line-height: 32px; }
 
 .active-page {
-  border-bottom: 4px solid #0074D9;
+  border-bottom: 4px solid #00549d;
   border: inside; }
 
 /*The logo part*/
@@ -154,7 +154,7 @@ section {
 .disclaimer {
   font-size: 0.707em;
   padding: 16px;
-  border: 2px solid #0074D9;
+  border: 2px solid #00549d;
   margin: 0 0 64px 0;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -173,10 +173,10 @@ section {
   vertical-align: super;
   font-size: .7em;
   line-height: 0;
-  color: #0074D9;
+  color: #00549d;
   position: relative;
   cursor: pointer;
-  border-bottom: 1px dotted #0074D9; }
+  border-bottom: 1px dotted #00549d; }
 
 .footnoteText {
   font-size: .7em;
@@ -206,7 +206,7 @@ footer {
   margin: 8px 0 0 0; }
   .copyright a {
     font-weight: 400;
-    border-bottom: 1px dotted #0074D9; }
+    border-bottom: 1px dotted #00549d; }
 
 /*-----Stuff that hopefully makes the animations work-----*/
 /*-Stuff that makes the page fade in-*/

@@ -10,7 +10,7 @@ $pure-white: #ffffff;
 $white: #f7f7f7;
 $mine-shaft: #373A46;
 $tundora: #555555;
-$science-blue: #0074D9;
+$endeavour: #00549d;
 
 /*Font sizes*/
 $font-size-xxx-large: 3.998em;
@@ -36,10 +36,10 @@ $spacing-x-small: 4px;
 $spacing-xx-small: 2px;
 
 /*Border styles*/
-$border-link: 1px dotted $science-blue;
-$border-link-hover: 1px solid darken($science-blue, 20%);
-$border-link-large: 4px solid $science-blue;
-$border-link-large-hover: 4px solid darken($science-blue, 10%);
+$border-link: 1px dotted $endeavour;
+$border-link-hover: 1px solid darken($endeavour, 20%);
+$border-link-large: 4px solid $endeavour;
+$border-link-large-hover: 4px solid darken($endeavour, 10%);
 
 /*Border radii*/
 @mixin border-radius($radius){
@@ -141,7 +141,7 @@ img{
 
 a{
 	@extend p;
-	color: $science-blue;
+	color: $endeavour;
 	text-decoration: none;
   	border-bottom: $border-link;
 	@include ease-in-out(.1s);
@@ -149,7 +149,7 @@ a{
 }
 
 a:hover{
-	color: darken($science-blue, 20%);
+	color: darken($endeavour, 20%);
 	border-bottom: $border-link-hover;
 }
 
@@ -249,7 +249,7 @@ section{
 .disclaimer{
 	font-size: $font-size-small;
 	padding: $spacing-medium;
-	border: 2px solid $science-blue;
+	border: 2px solid $endeavour;
 	margin: 0 0 $spacing-x-large 0;
 	@include border-radius(2px);
 }
@@ -269,7 +269,7 @@ section{
 	vertical-align: super;
 	font-size:.7em;
 	line-height: 0;
-	color: $science-blue;
+	color: $endeavour;
 	position: relative;
     cursor: pointer;
     border-bottom: $border-link
