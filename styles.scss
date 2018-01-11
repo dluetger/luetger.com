@@ -83,7 +83,7 @@ body{
 	padding: 0 $spacing-large 0 $spacing-large;
 	background: $white;
 	@include fadein(1s);
-	border-top: 1px solid lighten($tundora, 50%);
+	border-top: 2px solid lighten($tundora, 50%);
 }
 
 header{
