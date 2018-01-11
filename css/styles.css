@@ -11,21 +11,25 @@
 /*Animations and transitions*/
 /*-----Normal, boring stuff-----*/
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  color: #444444;
+  color: #555555;
   padding: 0 32px 0 32px;
-  background: #fdfdfd;
+  background: #f7f7f7;
   -webkit-animation: fadein 1s;
   -o-animation: fadein 1s;
   -moz-animation: fadein 1s;
   -ms-animation: fadein 1s;
-  animation: fadein 1s; }
+  animation: fadein 1s;
+  border-top: 1px solid #d5d5d5; }
+
+header {
+  margin-top: 1000px; }
 
 h1, h2, h3 {
   font-size: 3.998em;
   font-weight: 800;
-  color: #222222;
+  color: #373A46;
   letter-spacing: -0.02em;
   margin: 0 0 8px -4px;
   -o-transition: 0.2s ease-in-out;
@@ -43,8 +47,9 @@ h3 {
   margin: 32px 0 16px 0; }
 
 p, a {
+  color: #555555;
   font-weight: 400;
-  line-height: 1.5em;
+  line-height: 1.6em;
   margin: 0 0 16px 0;
   max-width: 640px;
   -o-transition: 0.2s ease-in-out;
@@ -70,9 +75,9 @@ img {
 
 /*-----Link stuff-----*/
 a {
-  color: #444444;
+  color: #0074D9;
   text-decoration: none;
-  border-bottom: 1px solid #E52B50;
+  border-bottom: 1px dotted #0074D9;
   -o-transition: 0.1s ease-in-out;
   -ms-transition: 0.1s ease-in-out;
   -moz-transition: 0.1s ease-in-out;
@@ -83,9 +88,9 @@ a {
   -ms-border-radius: 1px;
   border-radius: 1px; }
 
-a:hover, a:focus, .work-list a:focus {
-  color: #ffffff;
-  background-color: #c5183b; }
+a:hover, a:focus {
+  color: #003d73;
+  border-bottom: 1px solid #003d73; }
 
 /*-----Stuff that slightly modifies the boring stuff-----*/
 #about-header {
@@ -96,6 +101,7 @@ a:hover, a:focus, .work-list a:focus {
 
 .subtitle {
   font-size: 1.4143em;
+  font-weight: 300;
   max-width: none;
   margin: 0 0 128px 0; }
 
@@ -106,21 +112,21 @@ a:hover, a:focus, .work-list a:focus {
 nav a {
   display: inline-block;
   margin: 0 16px 0 0;
-  color: #222222;
+  color: #373A46;
   border-bottom: none; }
-nav a:hover, nav a:focus, nav .work-list a:focus, .work-list nav a:focus {
-  border-bottom: 4px solid #c5183b; }
+nav a:hover, nav a:focus {
+  border-bottom: 4px solid #0059a6; }
 nav a:focus {
-  border-bottom: 4px solid #c5183b; }
+  border-bottom: 4px solid #0059a6; }
 
 header {
-  padding: 32px 0 0 0;
-  margin: 0 0 128px 0; }
+  padding: 128px 0 0 0;
+  margin: 0 0 64px 0; }
   header a {
     line-height: 32px; }
 
 .active-page {
-  border-bottom: 4px solid #E52B50;
+  border-bottom: 4px solid #0074D9;
   border: inside; }
 
 /*The logo part*/
@@ -130,30 +136,25 @@ a.logo {
   margin: 0 32px 0 0; }
 
 a.logo:hover, a.logo:focus {
-  color: #555555;
+  color: #64697f;
   border-bottom: none;
-  background-color: #fdfdfd; }
+  background-color: #f7f7f7; }
 
 /*-----Things for the part where most of the writing is----*/
 section {
   padding: 0 0 64px 0;
   margin: 0 0 64px 0;
-  border-bottom: 1px solid #bbbbbb; }
+  border-bottom: 1px solid #d3d5dc; }
   section h2 {
     max-width: 640px; }
 
 .work-list {
   list-style-type: none; }
-  .work-list a {
-    font-weight: 600;
-    color: #222222; }
-  .work-list a:hover, .work-list a:focus {
-    color: #ffffff; }
 
 .disclaimer {
   font-size: 0.707em;
   padding: 16px;
-  border: 2px solid #E52B50;
+  border: 2px solid #0074D9;
   margin: 0 0 64px 0;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -161,7 +162,7 @@ section {
   border-radius: 2px; }
 
 .weak {
-  color: #555555; }
+  color: #64697f; }
 
 /*-----Footnotes-----*/
 .footnote {
@@ -171,10 +172,11 @@ section {
 .footnoteNumber {
   vertical-align: super;
   font-size: .7em;
-  color: #E52B50;
+  line-height: 0;
+  color: #0074D9;
   position: relative;
   cursor: pointer;
-  border-bottom: 1px solid #E52B50; }
+  border-bottom: 1px dotted #0074D9; }
 
 .footnoteText {
   font-size: .7em;
@@ -184,7 +186,7 @@ section {
   position: absolute;
   left: 25px;
   bottom: 5px;
-  border: 1px solid #222222;
+  border: 1px solid #373A46;
   padding: 10px;
   background-color: #fff;
   z-index: 100;
@@ -196,15 +198,15 @@ footer {
   margin: 16px 0 64px 0; }
   footer a {
     font-weight: 800;
-    color: #222222;
-    border-bottom: 4px solid #fdfdfd; }
+    color: #373A46;
+    border-bottom: 4px solid #f7f7f7; }
 
 .copyright {
   font-size: 0.707em;
   margin: 8px 0 0 0; }
   .copyright a {
     font-weight: 400;
-    border-bottom: 1px solid #E52B50; }
+    border-bottom: 1px dotted #0074D9; }
 
 /*-----Stuff that hopefully makes the animations work-----*/
 /*-Stuff that makes the page fade in-*/

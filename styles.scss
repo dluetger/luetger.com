@@ -3,14 +3,14 @@
 /*-----Variables and mixins-----*/
 
 /*Fonts*/
-$open-sans: "Open Sans", Helvetica, Arial, sans-serif;
+$open-sans: "Libre Franklin", Helvetica, Arial, sans-serif;
 
 /*Colors*/
 $pure-white: #ffffff;
-$white: #fdfdfd;
-$mine-shaft: #222222;
-$tundora: #444444;
-$amaranth: #E52B50;
+$white: #f7f7f7;
+$mine-shaft: #373A46;
+$tundora: #555555;
+$science-blue: #0074D9;
 
 /*Font sizes*/
 $font-size-xxx-large: 3.998em;
@@ -22,7 +22,7 @@ $font-size-small: 0.707em;
 
 /*Font weights*/
 $font-weight-x-bold: 800;
-$font-weight-bold: 600;
+$font-weight-bold: 700;
 $font-weight-regular: 400;
 $font-weight-light: 300;
 
@@ -36,10 +36,10 @@ $spacing-x-small: 4px;
 $spacing-xx-small: 2px;
 
 /*Border styles*/
-$border-link: 1px solid $amaranth;
-$border-link-hover: 1px solid darken($amaranth, 10%);
-$border-link-large: 4px solid $amaranth;
-$border-link-large-hover: 4px solid darken($amaranth, 10%);
+$border-link: 1px dotted $science-blue;
+$border-link-hover: 1px solid darken($science-blue, 20%);
+$border-link-large: 4px solid $science-blue;
+$border-link-large-hover: 4px solid darken($science-blue, 10%);
 
 /*Border radii*/
 @mixin border-radius($radius){
@@ -83,6 +83,11 @@ body{
 	padding: 0 $spacing-large 0 $spacing-large;
 	background: $white;
 	@include fadein(1s);
+	border-top: 1px solid lighten($tundora, 50%);
+}
+
+header{
+	margin-top: 1000px;
 }
 
 h1{
@@ -108,8 +113,9 @@ h3{
 }
 
 p{
+	color: $tundora;
 	font-weight: $font-weight-regular;
-	line-height: 1.5em;
+	line-height: 1.6em;
 	margin:0 0 $spacing-medium 0;
 	max-width: 640px;
 	@include ease-in-out(.2s);
@@ -135,7 +141,7 @@ img{
 
 a{
 	@extend p;
-	color: $tundora;
+	color: $science-blue;
 	text-decoration: none;
   	border-bottom: $border-link;
 	@include ease-in-out(.1s);
@@ -143,8 +149,8 @@ a{
 }
 
 a:hover{
-	color: $pure-white;
-	background-color: darken($amaranth, 10%);
+	color: darken($science-blue, 20%);
+	border-bottom: $border-link-hover;
 }
 
 a:focus{
@@ -164,6 +170,7 @@ a:focus{
 
 .subtitle{
 	font-size: $font-size-large;
+	font-weight: $font-weight-light;
 	max-width: none;
 	margin: 0 0 $spacing-xx-large 0;
 }
@@ -191,8 +198,8 @@ nav{
 }
 
 header{
-	padding: $spacing-large 0 0 0;
-	margin: 0 0 $spacing-xx-large 0;
+	padding: $spacing-xx-large 0 0 0;
+	margin: 0 0 $spacing-x-large 0;
 
 	a{
 		line-height: $spacing-large;
@@ -237,25 +244,12 @@ section{
 
 .work-list{
 	list-style-type: none;
-
-	a{
-		font-weight: $font-weight-bold;
-		color: $mine-shaft;
-	}
-
-	a:hover{
-		color: $pure-white;
-	}
-
-	a:focus{
-		@extend a:hover;
-	}
 }
 
 .disclaimer{
 	font-size: $font-size-small;
 	padding: $spacing-medium;
-	border: 2px solid $amaranth;
+	border: 2px solid $science-blue;
 	margin: 0 0 $spacing-x-large 0;
 	@include border-radius(2px);
 }
@@ -274,7 +268,8 @@ section{
 .footnoteNumber{
 	vertical-align: super;
 	font-size:.7em;
-	color: $amaranth;
+	line-height: 0;
+	color: $science-blue;
 	position: relative;
     cursor: pointer;
     border-bottom: $border-link
