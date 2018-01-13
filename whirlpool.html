@@ -14,9 +14,14 @@
 	<!--Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,700" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+	</script>
 </head>
 
 <body>
+	<div class="progress-container">
+    	<div class="progress-bar" id="progress"></div>
+  	</div> 
 	<header>
 		<div class="grid-container">
 			<div class="prefix-10 grid-80 suffix-10">
@@ -40,6 +45,7 @@
 					<!--<p class="caption">Engineers can use the search suggestions to quickly find what they are looking for instead of meticulously typing lengthy identifying codes. The system returns relevant schematics and additional metadata so engineers no longer have to search through thick binders.</p>-->
 				</figure>
 				<p>Underwriters Laboratories (UL) is a safety testing and certification company. You've probably seen their mark on the back of your TV or on your laptop charger.  They test and certify products from hundreds of manufacturers to make sure they are safe to sell in markets around the world. As part of a partnership between UL and Whirlpool, I worked on a web app to help safety engineers compare appliance requirements across countries. Every country has a different set of standards to meet, and appliance manufacturers want to make products that can be sold in the greatest number of markets possible. The people who needed this info had been compiling things manually from an assortment of websites, databases, and spreadsheets. Putting the information in one place and offering side-by-side comparisons saves time and effort and ensures safety engineers always have the most accurate information.</p>
+				<a href="schematics.html">Next project: NASA Schematics Catalog</a>
 			</section>
 		</div>
 	</div>
@@ -60,7 +66,7 @@
 			</div>
 		</div>	
 	<!--Version of jQuery that makes the footnotes work-->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<!--Script that does the little footnotes. Lovingly borrowed from Randall Munroe at xkcd.com-->
     <script>
       jQuery.noConflict();
@@ -75,5 +81,16 @@
         });
       });
     </script>
+    <!--Script that does the progress bar-->
+	<script>
+		window.onscroll = function() {barScroll()};
+
+		function barScroll() {
+		  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		  var scrolled = (winScroll / height) * 100;
+		  document.getElementById("progress").style.width = scrolled + "%";
+		}
+	</script>
 </body>
 </html>

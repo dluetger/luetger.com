@@ -17,6 +17,9 @@
 </head>
 
 <body>
+	<div class="progress-container">
+    	<div class="progress-bar" id="progress"></div>
+  	</div> 
 	<header>
 		<div class="grid-container">
 			<div class="prefix-10 grid-80 suffix-10">
@@ -40,6 +43,9 @@
 					<!--<p class="caption">Engineers can use the search suggestions to quickly find what they are looking for instead of meticulously typing lengthy identifying codes. The system returns relevant schematics and additional metadata so engineers no longer have to search through thick binders.</p>-->
 				</figure>
 				<p>On launch day, there might be problems with the spacecraft that engineers must resolve quickly. If they can't resolve the issues in time, the launch might get delayed or scrubbed entirely. It's important that engineers have everything they need at their fingertips. They'll refer to rocket schematics to diagnose issues, but those schematics are currently stored in thick binders. Rather than hunt and pick through several enormous binders, we're working on a search interface so engineers can quickly find exactly what they need. By spending less time searching and more time problem solving, we can ensure a timely and safe launch.</p>
+				<a href="whirlpool.html">Previous project: Whirlpool Global Market Access</a>
+				<br/>
+				<a href="fieldsight.html">Next project: Eaton Fieldsight</a>
 			</section>
 		</div>
 	</div>
@@ -75,5 +81,16 @@
         });
       });
     </script>
+    <!--Script that does the progress bar-->
+	<script>
+		window.onscroll = function() {barScroll()};
+
+		function barScroll() {
+		  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		  var scrolled = (winScroll / height) * 100;
+		  document.getElementById("progress").style.width = scrolled + "%";
+		}
+	</script>
 </body>
 </html>
