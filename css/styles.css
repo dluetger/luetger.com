@@ -43,7 +43,6 @@ h1, h2, h3 {
   font-size: 3.998em;
   font-weight: 800;
   color: #373A46;
-  letter-spacing: -0.02em;
   margin: 0 0 8px -4px;
   -o-transition: 0.2s ease-in-out;
   -ms-transition: 0.2s ease-in-out;
@@ -72,7 +71,7 @@ h3 {
 p, a {
   color: #555555;
   font-weight: 400;
-  line-height: 1.6em;
+  line-height: 1.7em;
   margin: 0 0 16px 0;
   max-width: 640px;
   -o-transition: 0.2s ease-in-out;
@@ -167,21 +166,28 @@ a.logo:hover, a.logo:focus {
 section {
   padding: 0 0 64px 0;
   margin: 0 0 64px 0; }
-  section h2 {
-    max-width: 640px; }
 
 .work-list {
   list-style-type: none; }
 
 .disclaimer {
-  font-size: 0.707em;
-  padding: 16px;
-  border: 2px solid #00549d;
-  margin: 0 0 64px 0;
+  padding: 32px;
+  background-color: #d0e9ff;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
-  border-radius: 2px; }
+  border-radius: 2px;
+  max-width: 640px; }
+  .disclaimer h2 {
+    font-size: 1em;
+    margin: 0 0 0 0;
+    color: #00396a; }
+  .disclaimer h2::after {
+    height: 0;
+    margin-bottom: 8px; }
+  .disclaimer p, .disclaimer a {
+    margin: 0 0 0 0;
+    color: #00396a; }
 
 .weak {
   color: #64697f; }

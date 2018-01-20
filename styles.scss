@@ -110,7 +110,6 @@ h1{
 	font-size: $font-size-xxx-large;
 	font-weight: $font-weight-x-bold;
 	color: $mine-shaft;
-	letter-spacing: -0.02em;
 	margin: 0 0 $spacing-small -4px;
 	@include ease-in-out(.2s);
 }
@@ -131,7 +130,6 @@ h2:after {
      height: $spacing-x-small;
      position: relative;
      width: $spacing-x-large;
-     //margin-bottom: $spacing-large;
 }
 
 h3{
@@ -143,7 +141,7 @@ h3{
 p{
 	color: $tundora;
 	font-weight: $font-weight-regular;
-	line-height: 1.6em;
+	line-height: 1.7em;
 	margin:0 0 $spacing-medium 0;
 	max-width: 640px;
 	@include ease-in-out(.2s);
@@ -239,17 +237,6 @@ header{
 	border: inside;
 }
 
-// .top-stripe{
-// 	height: $spacing-small;
-// 	background: repeating-linear-gradient(
-//   		-45deg,
-//   		darken($white, 5%),
-//   		darken($white, 5%) 2px,
-//   		darken($white, 10%) 2px,
-//   		darken($white, 10%) 4px
-//   	);
-// }
-
 /*The logo part*/
 
 a.logo{
@@ -273,10 +260,6 @@ a.logo:focus{
 section{
 	padding: 0 0 $spacing-x-large 0;
 	margin: 0 0 $spacing-x-large 0;
-	//border-bottom: 1px solid lighten($tundora, 40%);
-	h2{
-		max-width: 640px;
-	}
 }
 
 .work-list{
@@ -284,22 +267,32 @@ section{
 }
 
 .disclaimer{
-	font-size: $font-size-small;
-	padding: $spacing-medium;
-	border: 2px solid $endeavour;
-	margin: 0 0 $spacing-x-large 0;
+	padding: $spacing-large;
+	background-color: lighten($endeavour, 60%);
 	@include border-radius(2px);
+	max-width: 640px;
+
+	h2{
+		font-size: $font-size-regular;
+		margin: 0 0 0 0;
+		color: darken($endeavour, 10%);
+
+	}
+
+	h2::after{
+		height: 0;
+		margin-bottom: $spacing-small;
+	}
+
+	p{
+		margin: 0 0 0 0;
+		color: darken($endeavour, 10%);
+	}
 }
 
 .weak{
 	color: lighten($mine-shaft, 20%);
 }
-
-// .rule{
-// 	height: $spacing-small;
-// 	width: $spacing-large;
-// 	background-color: $endeavour;
-// }
 
 /*-----Footnotes-----*/
 
