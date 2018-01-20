@@ -11,11 +11,38 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/css\/styles.css": {
+	"\/cpid.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/cpid.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/normalize.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/normalize.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/styles.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/styles.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/unsemantic-grid-responsive.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/unsemantic-grid-responsive.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -31,35 +58,64 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/general\/dave.png": {
+	"\/fieldsight-old.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fieldsight-old.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fieldsight.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fieldsight.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/img\/about\/about.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 64227,
-		"inputAbbreviatedPath": "\/img\/general\/dave.png",
-		"outputAbbreviatedPath": "\/img\/general\/dave.png",
+		"initialSize": 1.13996e+06,
+		"inputAbbreviatedPath": "\/img\/about\/about.png",
+		"outputAbbreviatedPath": "\/img\/about\/about.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/general\/littleGuy.png": {
-		"fileType": 32768,
+	"\/img\/cpid\/sls.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 16065,
-		"inputAbbreviatedPath": "\/img\/general\/littleGuy.png",
-		"outputAbbreviatedPath": "\/img\/general\/littleGuy.png",
+		"initialSize": 2.59213e+06,
+		"inputAbbreviatedPath": "\/img\/cpid\/sls.jpg",
+		"outputAbbreviatedPath": "\/img\/cpid\/sls.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/nasa\/nasaAmes.jpg": {
+	"\/img\/fieldsight\/fieldsight-hero.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.57971e+06,
+		"inputAbbreviatedPath": "\/img\/fieldsight\/fieldsight-hero.png",
+		"outputAbbreviatedPath": "\/img\/fieldsight\/fieldsight-hero.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/nasa\/ames.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 3.28496e+06,
-		"inputAbbreviatedPath": "\/img\/nasa\/nasaAmes.jpg",
-		"outputAbbreviatedPath": "\/img\/nasa\/nasaAmes.jpg",
+		"inputAbbreviatedPath": "\/img\/nasa\/ames.jpg",
+		"outputAbbreviatedPath": "\/img\/nasa\/ames.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -97,29 +153,44 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/report-bot\/report-bot.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 216277,
+		"inputAbbreviatedPath": "\/img\/report-bot\/report-bot.png",
+		"outputAbbreviatedPath": "\/img\/report-bot\/report-bot.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/schematics\/schematics.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 273882,
+		"inputAbbreviatedPath": "\/img\/schematics\/schematics.png",
+		"outputAbbreviatedPath": "\/img\/schematics\/schematics.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/whirlpool\/whirlpool-hero.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 726071,
+		"inputAbbreviatedPath": "\/img\/whirlpool\/whirlpool-hero.png",
+		"outputAbbreviatedPath": "\/img\/whirlpool\/whirlpool-hero.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/nasa.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/nasa.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/normalize.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/normalize.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -145,11 +216,20 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
-	"\/styles.css": {
-		"fileType": 16,
-		"ignore": 1,
+	"\/resume.html": {
+		"fileType": 8192,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/styles.css",
+		"inputAbbreviatedPath": "\/resume.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/schematics.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/schematics.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -162,7 +242,7 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/styles.scss",
-		"outputAbbreviatedPath": "\/styles.css",
+		"outputAbbreviatedPath": "\/css\/styles.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 0,
@@ -170,11 +250,11 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/unsemantic-grid-responsive.css": {
-		"fileType": 16,
+	"\/whirlpool.html": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/unsemantic-grid-responsive.css",
+		"inputAbbreviatedPath": "\/whirlpool.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -775,7 +855,7 @@
 	"markdownProcessHTML": 0,
 	"markdownRandomFootnoteNumbers": 0,
 	"markdownUseCompatibilityMode": 0,
-	"reloadFileURLs": 0,
+	"reloadFileURLs": 1,
 	"sassAutoOutputPathEnabled": 1,
 	"sassAutoOutputPathFilenamePattern": "*.css",
 	"sassAutoOutputPathRelativePath": "..\/css",

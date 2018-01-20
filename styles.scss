@@ -1,29 +1,61 @@
 /*styles.css*/
 
-/*-----Variables & Mixins-----*/
+/*-----Variables and mixins-----*/
 
 /*Fonts*/
-$body-font-stack: "Open Sans", Helvetica, Arial, sans-serif;
-$header-font-stack: "Lato", Helvetica, Arial, sans-serif;
+$open-sans: "Libre Franklin", Helvetica, Arial, sans-serif;
 
-/*Background & Container Colors*/
-$background-color: #F1F1F1;
-$light-grey: #B8B8B8;
-$very-light-grey: #ECE8E8;
+/*Colors*/
+$pure-white: #ffffff;
+$white: #f7f7f7;
+$mine-shaft: #373A46;
+$tundora: #555555;
+$endeavour: #00549d;
 
-/*Text Colors*/
-$primary-font-color: #323a45;
-$usa-blue: #205493;
+/*Font sizes*/
+$font-size-xxx-large: 3.998em;
+$font-size-xx-large: 2.827em;
+$font-size-x-large: 1.999em;
+$font-size-large: 1.4143em;
+$font-size-regular: 1em;
+$font-size-small: 0.707em;
 
-/*Link Colors*/
-$link-color: #323a45;
-$link-hover-color: #e31c3d;
+/*Font weights*/
+$font-weight-x-bold: 800;
+$font-weight-bold: 700;
+$font-weight-regular: 400;
+$font-weight-light: 300;
 
-/*Styles*/
-// $link-underline: 1px solid rgba(107,107,107,.4);
-$link-underline: 1px solid #323a45;
+/*Spacing*/
+$spacing-xx-large: 128px;
+$spacing-x-large: 64px;
+$spacing-large: 32px;
+$spacing-medium: 16px;
+$spacing-small: 8px;
+$spacing-x-small: 4px;
+$spacing-xx-small: 2px;
 
-/*Animations & Transitions*/
+/*Border styles*/
+$border-link: 1px dotted $endeavour;
+$border-link-hover: 1px solid darken($endeavour, 20%);
+$border-link-large: 4px solid $endeavour;
+$border-link-large-hover: 4px solid darken($endeavour, 10%);
+
+/*Border radii*/
+@mixin border-radius($radius){
+ 	-webkit-border-radius: $radius;
+ 	-moz-border-radius: $radius;
+  	-ms-border-radius: $radius;
+  	border-radius: $radius;
+}
+
+/*Layout and grid*/
+$grid-mobile-small: 240px;
+$grid-mobile-large: 320px;
+$grid-tablet-small: 480px;
+$grid-tablet-large: 768px;
+
+/*Animations and transitions*/
 //Makes it so that the page fades in all smooth like.
 @mixin fadein($time){
 	-webkit-animation: fadein $time;
@@ -42,235 +74,224 @@ $link-underline: 1px solid #323a45;
   	transition: $time ease-in-out;
 }
 
-/*-----Normal, Boring Stuff-----*/
+/*-----Normal, boring stuff-----*/
 
 body{
-	color: $primary-font-color;
-	font-family: $body-font-stack;
-	font-size:16px;
-	background: #FDFDFD;
-	background-size: cover;
+	font-family: $open-sans;
+	font-size: 18px;
+	color: $tundora;
+	padding: 0 $spacing-large 0 $spacing-large;
+	background: $white;
 	@include fadein(1s);
+	//border-top: 2px solid $endeavour;
+}
+
+.progress-container {
+  width: 100%;
+  height: 4px;
+  background: darken($white, 20%);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 4px;
+  background: $endeavour;
+  width: 0%;
+}
+
+header{
+	margin-top: 1000px;
 }
 
 h1{
-	font-weight: 800;
-	font-family: $header-font-stack;
-	color: $usa-blue;
-	line-height: 50px;
-	height:50px;
-	font-size: 2.25em;
-	margin:150px 0 50px 0;
+	font-size: $font-size-xxx-large;
+	font-weight: $font-weight-x-bold;
+	color: $mine-shaft;
+	margin: 0 0 $spacing-small -4px;
 	@include ease-in-out(.2s);
 }
 
 h2{
 	@extend h1;
-	font-size: 2em;
-	line-height: 1.2em;
-	margin:0 0 50px 0;
+	// letter-spacing: inherit;
+	font-size: $font-size-x-large;
+	margin:0 0 $spacing-large 0;
+	padding-bottom: $spacing-small;
+}
+
+h2:after {
+     background-color: $endeavour;
+     bottom: -$spacing-small;
+     content: "";
+     display: block;
+     height: $spacing-x-small;
+     position: relative;
+     width: $spacing-x-large;
+}
+
+h3{
+	@extend h1;
+	font-size: $font-size-large;
+	margin: $spacing-large 0 $spacing-medium 0;
 }
 
 p{
-	font-size: 1.1em;
-	font-weight: 400;
-	margin:0 0 30px 0;
-	line-height: 1.75em;
+	color: $tundora;
+	font-weight: $font-weight-regular;
+	line-height: 1.7em;
+	margin:0 0 $spacing-medium 0;
+	max-width: 640px;
 	@include ease-in-out(.2s);
 }
 
-i{
-	font-style: italic;
+strong{
+	font-weight: $font-weight-x-bold;
 }
 
-/*-----Links-----*/
+/*-----Picture stuff-----*/
+
+figure{
+	margin: 0 0 $spacing-x-large 0;
+}
+
+img{
+	width: 100%;
+	margin: 0 0 $spacing-medium 0;
+	@include border-radius(2px);
+}
+
+/*-----Link stuff-----*/
 
 a{
-	color: $link-color;
+	@extend p;
+	color: $endeavour;
 	text-decoration: none;
-	font-weight:400;
+  	border-bottom: $border-link;
 	@include ease-in-out(.1s);
-  	border-bottom: $link-underline;
+	@include border-radius(1px);
 }
 
 a:hover{
-	color: $link-hover-color;
-	border-bottom: 1px solid $link-hover-color;
+	color: darken($endeavour, 20%);
+	border-bottom: $border-link-hover;
 }
 
 a:focus{
-	color: $link-hover-color;
-	border-bottom: 1px solid $link-hover-color;
+	@extend a:hover;
 }
 
-// a.blue:hover{
-// 			color: $sticky-note-blue;
-// 			border-bottom: 1px solid $sticky-note-blue;
-// 		}
 
-// a.green:hover{
-// 	color: $sticky-note-green;
-// 	border-bottom: 1px solid $sticky-note-green;
-// }
+/*-----Stuff that slightly modifies the boring stuff-----*/
 
-// a.orange:hover{
-// 	color: $sticky-note-orange;
-// 	border-bottom: 1px solid $sticky-note-orange;
-// }
-
-// a.magenta:hover{
-// 	color: $sticky-note-magenta;
-// 	border-bottom: 1px solid $sticky-note-magenta;
-// }
-
-// a.blue:focus{
-// 	color: $sticky-note-blue;
-// 	border-bottom: 1px solid $sticky-note-blue;
-// }
-
-// a.green:focus{
-// 	color: $sticky-note-green;
-// 	border-bottom: 1px solid $sticky-note-green;
-// }
-
-// a.orange:focus{
-// 	color: $sticky-note-orange;
-// 	border-bottom: 1px solid $sticky-note-orange;
-// }
-
-// a.magenta:focus{
-// 	color: $sticky-note-magenta;
-// 	border-bottom: 1px solid $sticky-note-magenta;
-// }
-
-/*-----Things That I Only Use on the Home Page-----*/
-
-.home{
-	// padding:100px 0 100px 0;
-
-	.imageSection{
-		margin-bottom:0px;
-	}
+#about-header{
+	margin: 0 0 $spacing-x-large;
 }
 
-.boxForFlex{
-	height:100vh;
-	display: flex;
-	flex-direction: column;
-  	justify-content: center;
-}
-
-/*-----Things for the Part Where I Introduce Myself-----*/
-.greeting{
-	text-align:center;
-	margin:0 0 60px 0;
-	display:block;
-
-	h1{
-		margin:50px 0 10px 0;
-		color: $primary-font-color;
-	}
-
-	p{
-		margin:0 0 0 0;
-		line-height: 1.6em;
-	}
-	.footnoteText{
-		text-align: left;
-	}
-}
-
-/*-----Things for the Part With All the Links-----*/
-nav{
-	text-align:center;
-
-	a{
-		font-weight:700;
-		margin:0 20px 0 20px;
-		color:$primary-font-color;
-	}	
-}
-
-/*-----Things for the Part Where I Write a Bunch----*/
-
-section{
-	max-width: 640px;
-	margin: auto;
-}
-
-.titleSection{
-	margin-bottom: 100px;
-	
-	h1{
-		margin:0 0 0 10px;
-		text-align: center;
-	}
-}
-
-.textSection{
-	margin-bottom:75px;
-}
-
-.tallImage{
-	max-width:120px;
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-.smallImage{
-	@extend .tallImage;
-	max-width:200px;
-}
-
-.imageSection{
-	@extend .textSection;
-	max-width:1000px;
-
-	img{
-		width:100%;
-	}
-
-	p{
-		font-size: .8em;
-		max-width: 640px;
-		margin:auto;
-		margin-top: 10px;
-		text-align: center;
-	}
-}
-
-.quoteSection{
-	@extend .textSection;
-	border-left: 2px solid $light-grey;
-	padding:0;
-
-	p{
-		font-size: 1.5em;
-		line-height: 1.5em;
-		margin-left:20px;
-		font-weight: 400;
-		color:#55699D;
-	}
-
-	.quoteSource{
-		font-size: 1em;
-		font-weight: 400;
-		color:$primary-font-color;
-	}
+.caption{
+	font-size: $font-size-small;
 }
 
 .subtitle{
-	font-size:1.25em;
-	text-align:center;
-	font-weight: 300;
+	font-size: $font-size-large;
+	font-weight: $font-weight-light;
+	max-width: none;
+	margin: 0 0 $spacing-xx-large 0;
 }
 
-.notesSection{
-	@extend .textSection;
-	font-size:.8em;
-	border-top:1px solid $light-grey;
-	padding-top:50px;
+.subtitle-h3{
+	margin: -$spacing-medium 0 $spacing-medium 0;
+}
+
+/*-----Things for the part with all the links-----*/
+nav{
+	a{
+		display: inline-block;
+		margin:0 $spacing-medium 0 0;
+		color:$mine-shaft;
+		border-bottom: none;
+	}	
+
+	a:hover{
+		border-bottom: $border-link-large-hover;
+	}
+
+	a:focus{
+		border-bottom: $border-link-large-hover;
+	}
+}
+
+header{
+	padding: $spacing-xx-large 0 0 0;
+	margin: 0 0 $spacing-x-large 0;
+
+	a{
+		line-height: $spacing-large;
+	}
+}
+
+.active-page{
+	border-bottom: $border-link-large;
+	border: inside;
+}
+
+/*The logo part*/
+
+a.logo{
+	font-size: $font-size-large;
+	font-weight: $font-weight-x-bold;
+	margin: 0 $spacing-large 0 0;
+}
+
+a.logo:hover{
+		color: lighten($mine-shaft, 20%);
+		border-bottom: none;
+		background-color: $white;
+	}
+
+a.logo:focus{
+		@extend a.logo:hover;
+	}
+
+/*-----Things for the part where most of the writing is----*/
+
+section{
+	padding: 0 0 $spacing-x-large 0;
+	margin: 0 0 $spacing-x-large 0;
+}
+
+.work-list{
+	list-style-type: none;
+}
+
+.disclaimer{
+	padding: $spacing-large;
+	background-color: lighten($endeavour, 60%);
+	@include border-radius(2px);
+	max-width: 640px;
+
+	h2{
+		font-size: $font-size-regular;
+		margin: 0 0 0 0;
+		color: darken($endeavour, 10%);
+
+	}
+
+	h2::after{
+		height: 0;
+		margin-bottom: $spacing-small;
+	}
+
+	p{
+		margin: 0 0 0 0;
+		color: darken($endeavour, 10%);
+	}
+}
+
+.weak{
+	color: lighten($mine-shaft, 20%);
 }
 
 /*-----Footnotes-----*/
@@ -283,10 +304,11 @@ section{
 .footnoteNumber{
 	vertical-align: super;
 	font-size:.7em;
-	color: $link-color;
+	line-height: 0;
+	color: $endeavour;
 	position: relative;
     cursor: pointer;
-    border-bottom: $link-underline
+    border-bottom: $border-link
 }
 
 .footnoteText{
@@ -297,7 +319,7 @@ section{
     position: absolute;
     left: 25px;
     bottom: 5px;
-    border: 1px solid $light-grey;
+    border: 1px solid $mine-shaft;
     padding: 10px;
     background-color: #fff;
     z-index: 100;
@@ -305,34 +327,32 @@ section{
     margin:0 0 0 0;
 }
 
-/*-----About Page Things-----*/
-
-.about{
-	padding: 100px 0 0 0;
-
-	h1{
-		margin-top: 0px;
-	}
-}
-
-/*-----Footer Things-----*/
+/*-----Footer stuff-----*/
 
 footer{
-	border-top: 1px solid $light-grey;
-	background-color: $very-light-grey;
-	margin-top:150px;
+	margin: $spacing-medium 0 $spacing-x-large 0;
 
-	p{
-		max-width: 640px;
-		margin:auto;
-		text-align: center;
-		line-height: 50px;
-		font-size: .8em;
+	a{
+		font-weight: $font-weight-x-bold;
+		color: $mine-shaft;
+		border-bottom: 4px solid $white;
 	}
 }
 
-/*-----Stuff That Makes The Animations Work-----*/
-/*-Stuff That Makes the Page Fade In-*/
+.copyright{
+	font-size: $font-size-small;
+	margin: $spacing-small 0 0 0;
+
+	a{
+		font-weight: $font-weight-regular;
+		border-bottom: $border-link;
+	}
+}
+
+/*-----Stuff that hopefully makes the animations work-----*/
+
+/*-Stuff that makes the page fade in-*/
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -355,33 +375,39 @@ footer{
 }
 
 
-/*-----Stuff That Makes the Site Look Good on Very Big or Very Small Screens-----*/
+/*-----Stuff that makes the site not too ugly on very big or very small screens-----*/
 
-@media (max-width:768px){
-	h1{
-		font-size: 2em;
-		margin-top:50px;
-	}
-	h2{
-		font-size: 1.25em;
-	}
-	p{
-		font-size: 1em;
-	}
-	.about{
-		padding:50px 0 0 0;
-
-		h1{
-		margin-top: 50px;
-		}
+@media (max-width: $grid-tablet-large){
+	body{
+		padding: 0 $spacing-small 0 $spacing-small;
 	}
 }
 
-@media (max-width:400px){
-	nav{
-		a{
-			margin:0 100px 0 100px;
-			line-height: 2em;
-		}
+@media (max-width: $grid-tablet-small){
+	body{
+		font-size: 16px;
+	}
+
+	h1{
+		font-size: $font-size-xx-large;
+		font-weight: $font-weight-x-bold;
+	}
+
+	#about-header{
+		margin: 0 0 $spacing-large;
+	}
+
+	h2{
+		font-size: $font-size-large;
+		margin:0 0 $spacing-large 0;
+	}
+
+	.subtitle{
+		font-size: $font-size-regular;
+		margin: 0 0 $spacing-x-large 0;
+	}
+
+	h3{
+		font-size: $font-size-regular;
 	}
 }

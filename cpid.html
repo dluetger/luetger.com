@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Dave Luetger</title>
+	<title>Spaceflight asset tracking / Dave Luetger</title>
 	<meta name="description" content="Designer, musician, tv watcher, and human"/>
-	<!--CSS that makes the browser not do stupid default stuff to the styling.-->
+<!--CSS that makes the browser not do stupid default stuff to the styling.-->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<!--CSS that makes it easy to layout stuff on the page-->
 	<link rel="stylesheet" type="text/css" href="css/unsemantic-grid-responsive.css">
@@ -12,15 +12,15 @@
 	<!--Favicon-->
 	<link rel="icon" type="image/png" href="favicon.png">
 	<!--Fonts-->
-	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,700" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700italic,700,600italic,600,400italic,300,300italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 </head>
 
 <body>
-	<div class="progress-container"></div>
 	<header>
 		<div class="grid-container">
-			<div class="prefix-10 grid-80 suffix-10">
+			<div class="">
 				<nav>
 					<a class="logo" href="index.html">DL</a>
 					<a href="index.html" class="active-page">Work</a>
@@ -32,40 +32,22 @@
 		</div>
 	</header>
 	<div class="grid-container">
-		<div class="prefix-10 grid-80 suffix-10">
-			<h1>Dave Luetger</h1>
-			<p class="subtitle">UX Designer in Mountain View, California</p>
+		<div class="">
 			<section>
-				<h2>Featured work</h2>
-				<div class="rule"></div>
-				<ul class="work-list">
-					<li>
-						<a href="whirlpool.html">Whirlpool Global Market Access</a>
-						<p>Understanding product safety requirements across markets</p>
-					</li>
-					<!--<li>
-						<a href="cpid.html">Spaceflight asset tracking</a>
-						<p>Helping manage the exchange of spacecraft documentation and hardware</p>
-					</li>-->
-					<li>
-						<a href="schematics.html">NASA Schematics Catalog</a>
-						<p>Finding critical spacecraft information on launch day</p>
-					</li>
-					<!-- <li>
-						<a href="#">Automated reporting</a>
-						<p>Making it easier to retrieve critical planning data</p>
-					</li> -->
-					<li>
-						<a href="fieldsight.html">Eaton FieldSight</a>
-						<p>Supporting electrical field service engineers</p>
-					</li>
-				</ul>
+				<h1>Spaceflight asset tracking</h1>
+				<p class="subtitle">Helping manage the exchange of spacecraft documentation and hardware</p>
+				<figure>
+					<img src="img/cpid/sls.jpg" title="NASA SLS" alt="A render of NASA's Space Launch System (SLS) on the launcpad. The photos is taken from the base of the launchpad looking up at the rocket. Spotlights illuminate the spacecraft against a dark, blue night sky.">
+					<p class="caption">NASA's new spacecraft. The capsule (people go here), the rocket (goes up), and the launchpad (keeps it all from falling over) are all managed by separate groups. Our system helps them coordinate and put them all together.</p>
+				</figure>
+				<p class="disclaimer"><strong>Note:</strong> The nature of my work means there are some things I can't show. I'll continue to update this project with more details once I figure out what I can share publicly.</p>
+				<p>NASA divides the work of building its new spacecraft among dozens of teams. They're constantly exchanging documentation and hardware as they design and build. If information and parts don't arrive on time, the entire launch could get delayed. A small team is in charge of tracking these exchanges. We designed and built a system for them to track deadlines, points of contact, and the status of each asset. We saved them several hours per week by automating their weekly reports. We also gave them a single, authoritative place to keep their critical mission data. This is crucial for maintaining accuracy. By introducing efficiency wherever we can, we help push our mission forward.</p>
 			</section>
-		</div>		
+		</div>
 	</div>
 	<footer>
 		<div class="grid-container">
-			<div class="prefix-10 grid-80 suffix-10">
+			<div class="">
 				<nav>
 					<a href="mailto: dave@luetger.com">dave@luetger.com</a>
 					<a href="https://twitter.com/dluetger">@dluetger</a>
@@ -79,7 +61,6 @@
 				</p>
 			</div>
 		</div>	
-	</footer>
 	<!--Version of jQuery that makes the footnotes work-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<!--Script that does the little footnotes. Lovingly borrowed from Randall Munroe at xkcd.com-->

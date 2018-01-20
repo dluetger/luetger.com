@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Resume / Dave Luetger</title>
+	<meta name="description" content="Designer, musician, tv watcher, and human"/>
+<!--CSS that makes the browser not do stupid default stuff to the styling.-->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!--CSS that makes it easy to layout stuff on the page-->
+	<link rel="stylesheet" type="text/css" href="css/unsemantic-grid-responsive.css">
+	<!--All the other CSS-->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="favicon.png">
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+</head>
+
+<body>
+	<div class="progress-container"></div>
+	<header>
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10">
+				<nav>
+					<a class="logo" href="index.html">DL</a>
+					<a href="index.html">Work</a>
+					<!--<a href="#">Speaking</a>-->
+					<a href="resume.html" class="active-page">Resume</a>
+					<a href="about.html">About</a>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="grid-container">
+		<div class="prefix-10 grid-80 suffix-10">
+			<h1>Resume</h1>
+			<p class="subtitle"><a href="resume.pdf">PDF version</a></p>
+			<section>				
+				<h2>Work</h2>
+				<h3>NASA Ames Research Center</h3>
+				<p class="subtitle-h3">User Experience Designer <span class="weak">/ 2015 - Present</span></p>
+				<p>At NASA I primarily work on mission safety software that supports the ISS and human space flight. I do user research, facilitate usability testing, create wireframes, mockups, prototypes and write design specifications. I also manage projects, set design and development milestones, and administer systems.</p>
+				<h3>Underwriters Laboratories</h3>
+				<p class="subtitle-h3">User Experience Designer <span class="weak">/ 2014 - 2015</span></p>
+				<p>At UL I worked on internal and client facing safety certification software. I did user research and usability testing, reported recommendations, and created wireframes and prototypes. I helped grow a new user experience and design practice by leading workshops and introducing new research methods.</p>
+				<h3>Fino Consulting</h3>
+				<p class="subtitle-h3">User Experience Designer <span class="weak">/ 2013 - 2014</span></p>
+				<p>At Fino my primary project was an energy pricing tablet application. I introduced user research and regular client feedback sessions, made usability recommendations, and created wireframes and mockups. I also championed user-centered design methods at the small, developer driven consultancy.</p>
+			</section>
+			<section>
+				<h2>Education</h2>
+				<h3>Carnegie Mellon University</h3>
+				<p class="subtitle-h3">Master of Human-Computer Interaction <span class="weak">/ 2013</span></p>
+				<h3>University of Illinois at Urbana-Champaign</h3>
+				<p class="subtitle-h3">Bachelor of Arts in Sociology <span class="weak">/ 2012</span></p>
+				<p>Minors in Informatics and Business
+				</br>
+				Graduated with Highest Distinction</p>
+			</section>
+			<section>
+				<h2>Skills</h2>
+				<h3>Methods</h3>
+				<p>Accessibility evaluation, card sorting, competitive analysis, contextual inquiry, heuristic evaluation, persona creation, sketching, storyboarding, task analysis, usability testing, wireframing</p>
+				<h3>Software</h3>
+				<p>Adobe Suite, Balsamiq, HTML/CSS, InVision, Marvel, OmniGraffle, Sketch</p>
+			</section>
+		</div>
+	</div>
+	<footer>
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10">
+				<nav>
+					<a href="mailto: dave@luetger.com">dave@luetger.com</a>
+					<a href="https://twitter.com/dluetger">@dluetger</a>
+				</nav>
+				<p class="copyright">Made by <a href="index.html">Dave</a> in 
+							<script language="javascript" type="text/javascript">
+							var today = new Date()
+							var year = today.getFullYear()
+							document.write(year)
+							</script>.
+				</p>
+			</div>
+		</div>	
+	<!--Version of jQuery that makes the footnotes work-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<!--Script that does the little footnotes. Lovingly borrowed from Randall Munroe at xkcd.com-->
+    <script>
+      jQuery.noConflict();
+      jQuery(function() {
+        jQuery("span.footnoteText").hide();
+        jQuery("span.footnoteNumber").click(function(event) {
+          jQuery(this.nextSibling).toggle();
+          event.stopPropagation();
+        });
+        jQuery("body").click(function(event) {
+          jQuery("span.footNoteText").hide();
+        });
+      });
+    </script>
+</body>
+</html>

@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Dave Luetger</title>
+	<title>Eaton FieldSight / Dave Luetger</title>
 	<meta name="description" content="Designer, musician, tv watcher, and human"/>
-	<!--CSS that makes the browser not do stupid default stuff to the styling.-->
+<!--CSS that makes the browser not do stupid default stuff to the styling.-->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<!--CSS that makes it easy to layout stuff on the page-->
 	<link rel="stylesheet" type="text/css" href="css/unsemantic-grid-responsive.css">
@@ -17,7 +17,9 @@
 </head>
 
 <body>
-	<div class="progress-container"></div>
+	<div class="progress-container">
+    	<div class="progress-bar" id="progress"></div>
+  	</div> 
 	<header>
 		<div class="grid-container">
 			<div class="prefix-10 grid-80 suffix-10">
@@ -33,35 +35,17 @@
 	</header>
 	<div class="grid-container">
 		<div class="prefix-10 grid-80 suffix-10">
-			<h1>Dave Luetger</h1>
-			<p class="subtitle">UX Designer in Mountain View, California</p>
 			<section>
-				<h2>Featured work</h2>
-				<div class="rule"></div>
-				<ul class="work-list">
-					<li>
-						<a href="whirlpool.html">Whirlpool Global Market Access</a>
-						<p>Understanding product safety requirements across markets</p>
-					</li>
-					<!--<li>
-						<a href="cpid.html">Spaceflight asset tracking</a>
-						<p>Helping manage the exchange of spacecraft documentation and hardware</p>
-					</li>-->
-					<li>
-						<a href="schematics.html">NASA Schematics Catalog</a>
-						<p>Finding critical spacecraft information on launch day</p>
-					</li>
-					<!-- <li>
-						<a href="#">Automated reporting</a>
-						<p>Making it easier to retrieve critical planning data</p>
-					</li> -->
-					<li>
-						<a href="fieldsight.html">Eaton FieldSight</a>
-						<p>Supporting electrical field service engineers</p>
-					</li>
-				</ul>
+				<h1>Eaton FieldSight</h1>
+				<p class="subtitle">Supporting electrical field service engineers</p>
+				<figure>
+					<img src="img/fieldsight/fieldsight-hero.png" title="FieldSight" alt="Three screens from the Eaton FieldSight displayed on iPad.">
+					<!--<p class="caption">Aerial photo of NASA Ames</p>-->
+				</figure>
+				<p>Keeping the lights on at commercial and industrial sites across the country is pretty hard and requires hundreds of personnel. My team at Carnegie Mellon worked with Eaton Electrical Services and Systems (EESS) to create FieldSight, a tablet application and software platform that allows field service engineers and Eaton staff to provide faster, easier, and simpler engineering services to their clients. We made it easier for engineers to capture test data and reduced the need to manually enter repetitive information. The data captured on the job is sent back to operations centers via the web where it is easily monitored.</p>
+				<a href="schematics.html">Previous project: NASA Schematics Catalog</a>
 			</section>
-		</div>		
+		</div>
 	</div>
 	<footer>
 		<div class="grid-container">
@@ -79,7 +63,6 @@
 				</p>
 			</div>
 		</div>	
-	</footer>
 	<!--Version of jQuery that makes the footnotes work-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<!--Script that does the little footnotes. Lovingly borrowed from Randall Munroe at xkcd.com-->
@@ -96,5 +79,16 @@
         });
       });
     </script>
+    <!--Script that does the progress bar-->
+	<script>
+		window.onscroll = function() {barScroll()};
+
+		function barScroll() {
+		  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		  var scrolled = (winScroll / height) * 100;
+		  document.getElementById("progress").style.width = scrolled + "%";
+		}
+	</script>
 </body>
 </html>

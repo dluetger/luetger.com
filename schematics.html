@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Dave Luetger</title>
+	<title>NASA Schematics Catalog / Dave Luetger</title>
 	<meta name="description" content="Designer, musician, tv watcher, and human"/>
-	<!--CSS that makes the browser not do stupid default stuff to the styling.-->
+<!--CSS that makes the browser not do stupid default stuff to the styling.-->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<!--CSS that makes it easy to layout stuff on the page-->
 	<link rel="stylesheet" type="text/css" href="css/unsemantic-grid-responsive.css">
@@ -17,7 +17,9 @@
 </head>
 
 <body>
-	<div class="progress-container"></div>
+	<div class="progress-container">
+    	<div class="progress-bar" id="progress"></div>
+  	</div> 
 	<header>
 		<div class="grid-container">
 			<div class="prefix-10 grid-80 suffix-10">
@@ -33,35 +35,23 @@
 	</header>
 	<div class="grid-container">
 		<div class="prefix-10 grid-80 suffix-10">
-			<h1>Dave Luetger</h1>
-			<p class="subtitle">UX Designer in Mountain View, California</p>
 			<section>
-				<h2>Featured work</h2>
-				<div class="rule"></div>
-				<ul class="work-list">
-					<li>
-						<a href="whirlpool.html">Whirlpool Global Market Access</a>
-						<p>Understanding product safety requirements across markets</p>
-					</li>
-					<!--<li>
-						<a href="cpid.html">Spaceflight asset tracking</a>
-						<p>Helping manage the exchange of spacecraft documentation and hardware</p>
-					</li>-->
-					<li>
-						<a href="schematics.html">NASA Schematics Catalog</a>
-						<p>Finding critical spacecraft information on launch day</p>
-					</li>
-					<!-- <li>
-						<a href="#">Automated reporting</a>
-						<p>Making it easier to retrieve critical planning data</p>
-					</li> -->
-					<li>
-						<a href="fieldsight.html">Eaton FieldSight</a>
-						<p>Supporting electrical field service engineers</p>
-					</li>
-				</ul>
+				<h1>NASA Schematics Catalog</h1>
+				<p class="subtitle">Finding critical spacecraft information on launch day</p>
+				<figure>
+					<img src="img/schematics/schematics.png" title="Schematics catalog" alt="Two screenshots from schematics catalog.">
+					<!--<p class="caption">Engineers can use the search suggestions to quickly find what they are looking for instead of meticulously typing lengthy identifying codes. The system returns relevant schematics and additional metadata so engineers no longer have to search through thick binders.</p>-->
+				</figure>
+				<!-- <section class="disclaimer">
+					<h2>Note</h2>
+					<p>Due to the nature of this work, I'm still figuring out what I can and can't publish.</p>
+				</section> -->
+				<p>On launch day, there might be problems with the spacecraft that engineers must resolve quickly. If they can't resolve the issues in time, the launch might get delayed or scrubbed entirely. It's important that engineers have everything they need at their fingertips. They'll refer to rocket schematics to diagnose issues, but those schematics are currently stored in thick binders. Rather than hunt and pick through several enormous binders, we're working on a search interface so engineers can quickly find exactly what they need. By spending less time searching and more time problem solving, we can ensure a timely and safe launch.</p>
+				<a href="whirlpool.html">Previous project: Whirlpool Global Market Access</a>
+				<br/>
+				<a href="fieldsight.html">Next project: Eaton Fieldsight</a>
 			</section>
-		</div>		
+		</div>
 	</div>
 	<footer>
 		<div class="grid-container">
@@ -79,7 +69,6 @@
 				</p>
 			</div>
 		</div>	
-	</footer>
 	<!--Version of jQuery that makes the footnotes work-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<!--Script that does the little footnotes. Lovingly borrowed from Randall Munroe at xkcd.com-->
@@ -96,5 +85,16 @@
         });
       });
     </script>
+    <!--Script that does the progress bar-->
+	<script>
+		window.onscroll = function() {barScroll()};
+
+		function barScroll() {
+		  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		  var scrolled = (winScroll / height) * 100;
+		  document.getElementById("progress").style.width = scrolled + "%";
+		}
+	</script>
 </body>
 </html>
