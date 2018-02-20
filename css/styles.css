@@ -68,7 +68,7 @@ h3 {
   font-size: 1.4143em;
   margin: 32px 0 16px 0; }
 
-p, a {
+p, a, ul {
   color: #555555;
   font-weight: 400;
   line-height: 1.7em;
@@ -113,6 +113,15 @@ a {
 a:hover, a:focus {
   color: #001d37;
   border-bottom: 1px solid #001d37; }
+
+/*-----List stuff-----*/
+ul {
+  list-style-type: disc;
+  list-style-position: oustide;
+  margin-left: 32px; }
+
+li {
+  margin-bottom: 8px; }
 
 /*-----Stuff that slightly modifies the boring stuff-----*/
 #about-header {
@@ -169,6 +178,8 @@ section {
 
 .work-list {
   list-style-type: none; }
+  .work-list li {
+    margin-left: -32px; }
 
 .disclaimer {
   padding: 32px;
@@ -185,7 +196,7 @@ section {
   .disclaimer h2::after {
     height: 0;
     margin-bottom: 8px; }
-  .disclaimer p, .disclaimer a {
+  .disclaimer p, .disclaimer a, .disclaimer ul {
     margin: 0 0 0 0;
     color: #00396a; }
 

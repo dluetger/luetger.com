@@ -183,6 +183,19 @@ a:focus{
 	@extend a:hover;
 }
 
+/*-----List stuff-----*/
+
+ul{
+	@extend p;
+	list-style-type: disc;
+	list-style-position: oustide;
+	margin-left: $spacing-large;
+}
+
+li{
+	margin-bottom: $spacing-small;
+}
+
 
 /*-----Stuff that slightly modifies the boring stuff-----*/
 
@@ -264,6 +277,10 @@ section{
 
 .work-list{
 	list-style-type: none;
+
+	li{
+		margin-left: -$spacing-large;
+	}
 }
 
 .disclaimer{
