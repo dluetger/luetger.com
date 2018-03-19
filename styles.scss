@@ -36,8 +36,8 @@ $spacing-x-small: 4px;
 $spacing-xx-small: 2px;
 
 /*Border styles*/
-$border-link: 1px dotted $endeavour;
-$border-link-hover: 1px solid darken($endeavour, 20%);
+$border-link: 1px solid $endeavour;
+$border-link-hover: 2px solid $endeavour;
 $border-link-large: 4px solid $endeavour;
 $border-link-large-hover: 4px solid darken($endeavour, 10%);
 
@@ -122,27 +122,27 @@ h2{
 	padding-bottom: $spacing-small;
 }
 
-h2:after {
-     background-color: $endeavour;
-     bottom: -$spacing-small;
+h2:before {
+     background-color: lighten($mine-shaft, 50%);
+     bottom: $spacing-medium;
      content: "";
      display: block;
-     height: $spacing-x-small;
+     height: 1px;
      position: relative;
-     width: $spacing-x-large;
+     width: 640px;
 }
 
 h3{
 	@extend h1;
-	font-size: $font-size-large;
+	font-size: 1.1em;
 	margin: $spacing-large 0 $spacing-medium 0;
 }
 
 p{
 	color: $tundora;
-	font-weight: $font-weight-regular;
+	font-weight: $font-weight-light;
 	line-height: 1.7em;
-	margin:0 0 $spacing-medium 0;
+	margin:0 0 $spacing-large 0;
 	max-width: 640px;
 	@include ease-in-out(.2s);
 }
@@ -161,13 +161,14 @@ img{
 	width: 100%;
 	margin: 0 0 $spacing-medium 0;
 	@include border-radius(2px);
+	background-color: darken($white, 5%);
+	border: none;
 }
 
 /*-----Link stuff-----*/
 
 a{
 	@extend p;
-	color: $endeavour;
 	text-decoration: none;
   	border-bottom: $border-link;
 	@include ease-in-out(.1s);
@@ -175,12 +176,16 @@ a{
 }
 
 a:hover{
-	color: darken($endeavour, 20%);
-	border-bottom: $border-link-hover;
+	background-color: lighten($endeavour, 55%);
+	border: 1px lighten($endeavour, 55%);
+	color: darken($mine-shaft, 10%);
+// 	border-bottom: $border-link-hover;
 }
 
 a:focus{
 	@extend a:hover;
+	outline: 2px solid $endeavour;
+	outline-offset: 4px;
 }
 
 /*-----List stuff-----*/
@@ -193,7 +198,7 @@ ul{
 }
 
 li{
-	margin-bottom: $spacing-small;
+	margin-bottom: $spacing-medium;
 }
 
 
@@ -226,14 +231,6 @@ nav{
 		color:$mine-shaft;
 		border-bottom: none;
 	}	
-
-	a:hover{
-		border-bottom: $border-link-large-hover;
-	}
-
-	a:focus{
-		border-bottom: $border-link-large-hover;
-	}
 }
 
 header{
@@ -246,8 +243,8 @@ header{
 }
 
 .active-page{
-	border-bottom: $border-link-large;
-	border: inside;
+	font-weight: $font-weight-bold;
+	color: $endeavour;
 }
 
 /*The logo part*/
@@ -280,6 +277,7 @@ section{
 
 	li{
 		margin-left: -$spacing-large;
+		margin-bottom: -$spacing-small;
 	}
 }
 
@@ -352,7 +350,6 @@ footer{
 	a{
 		font-weight: $font-weight-x-bold;
 		color: $mine-shaft;
-		border-bottom: 4px solid $white;
 	}
 }
 

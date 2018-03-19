@@ -55,24 +55,24 @@ h2 {
   margin: 0 0 32px 0;
   padding-bottom: 8px; }
 
-h2:after {
-  background-color: #00549d;
-  bottom: -8px;
+h2:before {
+  background-color: #b6b9c6;
+  bottom: 16px;
   content: "";
   display: block;
-  height: 4px;
+  height: 1px;
   position: relative;
-  width: 64px; }
+  width: 640px; }
 
 h3 {
-  font-size: 1.4143em;
+  font-size: 1.1em;
   margin: 32px 0 16px 0; }
 
 p, a, ul {
   color: #555555;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.7em;
-  margin: 0 0 16px 0;
+  margin: 0 0 32px 0;
   max-width: 640px;
   -o-transition: 0.2s ease-in-out;
   -ms-transition: 0.2s ease-in-out;
@@ -93,13 +93,14 @@ img {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
-  border-radius: 2px; }
+  border-radius: 2px;
+  background-color: #eaeaea;
+  border: none; }
 
 /*-----Link stuff-----*/
 a {
-  color: #00549d;
   text-decoration: none;
-  border-bottom: 1px dotted #00549d;
+  border-bottom: 1px solid #00549d;
   -o-transition: 0.1s ease-in-out;
   -ms-transition: 0.1s ease-in-out;
   -moz-transition: 0.1s ease-in-out;
@@ -111,8 +112,13 @@ a {
   border-radius: 1px; }
 
 a:hover, a:focus {
-  color: #001d37;
-  border-bottom: 1px solid #001d37; }
+  background-color: #b7ddff;
+  border: 1px #b7ddff;
+  color: #212229; }
+
+a:focus {
+  outline: 2px solid #00549d;
+  outline-offset: 4px; }
 
 /*-----List stuff-----*/
 ul {
@@ -121,7 +127,7 @@ ul {
   margin-left: 32px; }
 
 li {
-  margin-bottom: 8px; }
+  margin-bottom: 16px; }
 
 /*-----Stuff that slightly modifies the boring stuff-----*/
 #about-header {
@@ -145,10 +151,6 @@ nav a {
   margin: 0 16px 0 0;
   color: #373A46;
   border-bottom: none; }
-nav a:hover, nav a:focus {
-  border-bottom: 4px solid #00396a; }
-nav a:focus {
-  border-bottom: 4px solid #00396a; }
 
 header {
   padding: 128px 0 0 0;
@@ -157,8 +159,8 @@ header {
     line-height: 32px; }
 
 .active-page {
-  border-bottom: 4px solid #00549d;
-  border: inside; }
+  font-weight: 700;
+  color: #00549d; }
 
 /*The logo part*/
 a.logo {
@@ -179,7 +181,8 @@ section {
 .work-list {
   list-style-type: none; }
   .work-list li {
-    margin-left: -32px; }
+    margin-left: -32px;
+    margin-bottom: -8px; }
 
 .disclaimer {
   padding: 32px;
@@ -215,7 +218,7 @@ section {
   color: #00549d;
   position: relative;
   cursor: pointer;
-  border-bottom: 1px dotted #00549d; }
+  border-bottom: 1px solid #00549d; }
 
 .footnoteText {
   font-size: .7em;
@@ -237,15 +240,14 @@ footer {
   margin: 16px 0 64px 0; }
   footer a {
     font-weight: 800;
-    color: #373A46;
-    border-bottom: 4px solid #f7f7f7; }
+    color: #373A46; }
 
 .copyright {
   font-size: 0.707em;
   margin: 8px 0 0 0; }
   .copyright a {
     font-weight: 400;
-    border-bottom: 1px dotted #00549d; }
+    border-bottom: 1px solid #00549d; }
 
 /*-----Stuff that hopefully makes the animations work-----*/
 /*-Stuff that makes the page fade in-*/
