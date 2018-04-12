@@ -1,7 +1,9 @@
 /*styles.css*/
 /*-----Variables and mixins-----*/
 /*Fonts*/
-/*Colors*/
+/*Grays*/
+/*Primary Colors*/
+/*Accent Colors*/
 /*Font sizes*/
 /*Font weights*/
 /*Spacing*/
@@ -14,8 +16,7 @@ body {
   font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
   font-size: 18px;
   color: #555555;
-  padding: 0 32px 0 32px;
-  background: #f7f7f7;
+  background: #f5f7fa;
   -webkit-animation: fadein 1s;
   -o-animation: fadein 1s;
   -moz-animation: fadein 1s;
@@ -25,7 +26,7 @@ body {
 .progress-container {
   width: 100%;
   height: 4px;
-  background: #c4c4c4;
+  background: #c8d1e0;
   position: fixed;
   top: 0;
   left: 0; }
@@ -33,11 +34,8 @@ body {
 /* The progress bar (scroll indicator) */
 .progress-bar {
   height: 4px;
-  background: #00549d;
+  background: #1f5dc2;
   width: 0%; }
-
-header {
-  margin-top: 1000px; }
 
 h1, h2, h3 {
   font-size: 3.998em;
@@ -54,15 +52,6 @@ h2 {
   font-size: 1.999em;
   margin: 0 0 32px 0;
   padding-bottom: 8px; }
-
-h2:before {
-  background-color: #b6b9c6;
-  bottom: 16px;
-  content: "";
-  display: block;
-  height: 1px;
-  position: relative;
-  width: 640px; }
 
 h3 {
   font-size: 1.1em;
@@ -94,13 +83,12 @@ img {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   border-radius: 2px;
-  background-color: #eaeaea;
   border: none; }
 
 /*-----Link stuff-----*/
 a {
   text-decoration: none;
-  border-bottom: 1px solid #00549d;
+  border-bottom: 1px solid #1f5dc2;
   -o-transition: 0.1s ease-in-out;
   -ms-transition: 0.1s ease-in-out;
   -moz-transition: 0.1s ease-in-out;
@@ -112,12 +100,12 @@ a {
   border-radius: 1px; }
 
 a:hover, a:focus {
-  background-color: #b7ddff;
-  border: 1px #b7ddff;
-  color: #212229; }
+  background-color: #9dc2fa;
+  color: black; }
 
 a:focus {
-  outline: 2px solid #00549d;
+  outline: 2px dashed #434a54;
+  outline-radius: 1px;
   outline-offset: 4px; }
 
 /*-----List stuff-----*/
@@ -136,11 +124,23 @@ li {
 .caption {
   font-size: 0.707em; }
 
+.masthead {
+  background-color: #ebeff5;
+  padding-bottom: 64px;
+  margin-bottom: 128px;
+  border-bottom: 1px solid #c8d1e0; }
+
+.hero-text {
+  font-size: 1.999em;
+  font-weight: 700;
+  color: #373A46;
+  line-height: 1.5em;
+  max-width: 100%; }
+
 .subtitle {
   font-size: 1.4143em;
   font-weight: 300;
-  max-width: none;
-  margin: 0 0 128px 0; }
+  max-width: none; }
 
 .subtitle-h3 {
   margin: -16px 0 16px 0; }
@@ -160,7 +160,8 @@ header {
 
 .active-page {
   font-weight: 700;
-  color: #00549d; }
+  color: #1f5dc2;
+  border-bottom: 4px solid #1f5dc2; }
 
 /*The logo part*/
 a.logo {
@@ -171,7 +172,21 @@ a.logo {
 a.logo:hover, a.logo:focus {
   color: #64697f;
   border-bottom: none;
-  background-color: #f7f7f7; }
+  background-color: #f5f7fa; }
+
+.index-header {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+
+.logo img {
+  background-color: transparent;
+  padding: 0 0 0 0;
+  margin: 0 0 -4px 0;
+  border-radius: 0; }
 
 /*-----Things for the part where most of the writing is----*/
 section {
@@ -182,11 +197,12 @@ section {
   list-style-type: none; }
   .work-list li {
     margin-left: -32px;
-    margin-bottom: -8px; }
+    margin-bottom: -8px;
+    font-weight: 700; }
 
 .disclaimer {
   padding: 32px;
-  background-color: #d0e9ff;
+  background-color: white;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -195,13 +211,13 @@ section {
   .disclaimer h2 {
     font-size: 1em;
     margin: 0 0 0 0;
-    color: #00396a; }
+    color: #184896; }
   .disclaimer h2::after {
     height: 0;
     margin-bottom: 8px; }
   .disclaimer p, .disclaimer a, .disclaimer ul {
     margin: 0 0 0 0;
-    color: #00396a; }
+    color: #184896; }
 
 .weak {
   color: #64697f; }
@@ -215,10 +231,10 @@ section {
   vertical-align: super;
   font-size: .7em;
   line-height: 0;
-  color: #00549d;
+  color: #1f5dc2;
   position: relative;
   cursor: pointer;
-  border-bottom: 1px solid #00549d; }
+  border-bottom: 1px solid #1f5dc2; }
 
 .footnoteText {
   font-size: .7em;
@@ -237,7 +253,10 @@ section {
 
 /*-----Footer stuff-----*/
 footer {
-  margin: 16px 0 64px 0; }
+  margin: 16px 0 0 0;
+  border-top: 1px solid #c8d1e0;
+  padding: 64px 0 64px 0;
+  background-color: #ebeff5; }
   footer a {
     font-weight: 800;
     color: #373A46; }
@@ -247,7 +266,14 @@ footer {
   margin: 8px 0 0 0; }
   .copyright a {
     font-weight: 400;
-    border-bottom: 1px solid #00549d; }
+    border-bottom: 1px solid #1f5dc2; }
+
+/*------Stuff for the part where I talk about myself-----*/
+#about-image {
+  max-width: 256px;
+  border: 8px solid white;
+  border-radius: 256px;
+  margin-top: -256px; }
 
 /*-----Stuff that hopefully makes the animations work-----*/
 /*-Stuff that makes the page fade in-*/
@@ -279,14 +305,25 @@ footer {
 /*-----Stuff that makes the site not too ugly on very big or very small screens-----*/
 @media (max-width: 768px) {
   body {
-    padding: 0 8px 0 8px; } }
+    padding: 0 8px 0 8px; }
+
+  #about-image {
+    border: 8px solid white;
+    border-radius: 256px;
+    display: block;
+    margin: 64px auto 0 auto; } }
 @media (max-width: 480px) {
   body {
     font-size: 16px; }
 
+  .hero-text {
+    font-size: 1.4143em;
+    line-height: 1.5em; }
+
   h1, h2, h3 {
     font-size: 2.827em;
-    font-weight: 800; }
+    font-weight: 800;
+    line-height: 1.1em; }
 
   #about-header {
     margin: 0 0 32px; }
@@ -297,7 +334,18 @@ footer {
 
   .subtitle {
     font-size: 1em;
-    margin: 0 0 64px 0; }
+    margin: 0 0 32px 0;
+    line-height: 1.5em; }
 
   h3 {
-    font-size: 1em; } }
+    font-size: 1em; }
+
+  .masthead {
+    margin-bottom: 64px;
+    padding-bottom: 32px; }
+
+  p, a, ul {
+    margin-bottom: 16px; }
+
+  section {
+    margin-bottom: 8px; } }

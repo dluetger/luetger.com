@@ -3,14 +3,25 @@
 /*-----Variables and mixins-----*/
 
 /*Fonts*/
-$open-sans: "Libre Franklin", Helvetica, Arial, sans-serif;
+$font-stack: "Libre Franklin", Helvetica, Arial, sans-serif;
 
-/*Colors*/
-$pure-white: #ffffff;
-$white: #f7f7f7;
+/*Grays*/
+$gray-10: rgb(245, 247, 250);
+$gray-20: rgb(235, 239, 245);
+$gray-40: rgb(200, 209, 224);
+$gray-80: rgb(67, 74, 84);
+$gray-100: rgb(51, 56, 64);
 $mine-shaft: #373A46;
 $tundora: #555555;
-$endeavour: #00549d;
+
+/*Primary Colors*/
+$primary-30: rgb(157, 194, 250);
+$primary-50: rgb(74, 137, 232);
+$primary-70: rgb(31, 93, 194);
+$primary-90: rgb(17, 64, 145);
+
+/*Accent Colors*/
+$accent-70: rgb(207, 70, 21);
 
 /*Font sizes*/
 $font-size-xxx-large: 3.998em;
@@ -36,10 +47,10 @@ $spacing-x-small: 4px;
 $spacing-xx-small: 2px;
 
 /*Border styles*/
-$border-link: 1px solid $endeavour;
-$border-link-hover: 2px solid $endeavour;
-$border-link-large: 4px solid $endeavour;
-$border-link-large-hover: 4px solid darken($endeavour, 10%);
+$border-link: 1px solid $primary-70;
+$border-link-hover: 2px solid $primary-70;
+$border-link-large: 4px solid $primary-70;
+$border-link-large-hover: 4px solid darken($primary-70, 10%);
 
 /*Border radii*/
 @mixin border-radius($radius){
@@ -77,19 +88,19 @@ $grid-tablet-large: 768px;
 /*-----Normal, boring stuff-----*/
 
 body{
-	font-family: $open-sans;
+	font-family: $font-stack;
 	font-size: 18px;
 	color: $tundora;
-	padding: 0 $spacing-large 0 $spacing-large;
-	background: $white;
+	//padding: 0 $spacing-large 0 $spacing-large;
+	background: $gray-10;
 	@include fadein(1s);
-	//border-top: 2px solid $endeavour;
+	//border-top: 2px solid $primary-70;
 }
 
 .progress-container {
   width: 100%;
   height: 4px;
-  background: darken($white, 20%);
+  background: $gray-40;
   position: fixed;
   top: 0;
   left: 0;
@@ -98,13 +109,13 @@ body{
 /* The progress bar (scroll indicator) */
 .progress-bar {
   height: 4px;
-  background: $endeavour;
+  background: $primary-70;
   width: 0%;
 }
 
-header{
-	margin-top: 1000px;
-}
+// header{
+// 	margin-top: 1000px;
+// }
 
 h1{
 	font-size: $font-size-xxx-large;
@@ -122,15 +133,15 @@ h2{
 	padding-bottom: $spacing-small;
 }
 
-h2:before {
-     background-color: lighten($mine-shaft, 50%);
-     bottom: $spacing-medium;
-     content: "";
-     display: block;
-     height: 1px;
-     position: relative;
-     width: 640px;
-}
+// h2:before {
+//      background-color: lighten($mine-shaft, 50%);
+//      bottom: $spacing-medium;
+//      content: "";
+//      display: block;
+//      height: 1px;
+//      position: relative;
+//      width: 640px;
+// }
 
 h3{
 	@extend h1;
@@ -161,30 +172,38 @@ img{
 	width: 100%;
 	margin: 0 0 $spacing-medium 0;
 	@include border-radius(2px);
-	background-color: darken($white, 5%);
+	//background-color: darken($gray-10, 5%);
 	border: none;
 }
 
 /*-----Link stuff-----*/
+	
+// a{
+// 	@extend p;
+// 	text-decoration: none;
+//   	border-bottom: $border-link;
+// 	@include ease-in-out(.1s);
+// 	@include border-radius(1px);
+// }
 
 a{
 	@extend p;
 	text-decoration: none;
-  	border-bottom: $border-link;
+  	border-bottom: 1px solid $primary-70;
+  	// padding-bottom: -8px;
 	@include ease-in-out(.1s);
 	@include border-radius(1px);
 }
 
 a:hover{
-	background-color: lighten($endeavour, 55%);
-	border: 1px lighten($endeavour, 55%);
-	color: darken($mine-shaft, 10%);
-// 	border-bottom: $border-link-hover;
+	background-color: $primary-30;
+	color: black;
 }
 
 a:focus{
 	@extend a:hover;
-	outline: 2px solid $endeavour;
+	outline: 2px dashed $gray-80;
+	outline-radius: 1px;
 	outline-offset: 4px;
 }
 
@@ -212,11 +231,26 @@ li{
 	font-size: $font-size-small;
 }
 
+.masthead{
+	background-color: $gray-20;
+	padding-bottom: $spacing-x-large;
+	margin-bottom: $spacing-xx-large;
+	border-bottom: 1px solid rgb(200, 209, 224);
+}
+
+.hero-text{
+	font-size: $font-size-x-large;
+	font-weight: $font-weight-bold;
+	color: $mine-shaft;
+	line-height: 1.5em;
+	max-width: 100%;
+}
+
 .subtitle{
 	font-size: $font-size-large;
 	font-weight: $font-weight-light;
 	max-width: none;
-	margin: 0 0 $spacing-xx-large 0;
+	//margin: 0 0 $spacing-xx-large 0;
 }
 
 .subtitle-h3{
@@ -244,7 +278,8 @@ header{
 
 .active-page{
 	font-weight: $font-weight-bold;
-	color: $endeavour;
+	color: $primary-70;
+	border-bottom: $spacing-x-small solid $primary-70;
 }
 
 /*The logo part*/
@@ -258,12 +293,28 @@ a.logo{
 a.logo:hover{
 		color: lighten($mine-shaft, 20%);
 		border-bottom: none;
-		background-color: $white;
+		background-color: $gray-10;
 	}
 
 a.logo:focus{
 		@extend a.logo:hover;
 	}
+
+.index-header{
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+.logo img{
+	background-color: transparent;
+	padding: 0 0 0 0;
+	margin: 0 0 -4px 0;
+	border-radius: 0;
+}
 
 /*-----Things for the part where most of the writing is----*/
 
@@ -278,19 +329,20 @@ section{
 	li{
 		margin-left: -$spacing-large;
 		margin-bottom: -$spacing-small;
+		font-weight: $font-weight-bold;
 	}
 }
 
 .disclaimer{
 	padding: $spacing-large;
-	background-color: lighten($endeavour, 60%);
+	background-color: lighten($primary-70, 60%);
 	@include border-radius(2px);
 	max-width: 640px;
 
 	h2{
 		font-size: $font-size-regular;
 		margin: 0 0 0 0;
-		color: darken($endeavour, 10%);
+		color: darken($primary-70, 10%);
 
 	}
 
@@ -301,7 +353,7 @@ section{
 
 	p{
 		margin: 0 0 0 0;
-		color: darken($endeavour, 10%);
+		color: darken($primary-70, 10%);
 	}
 }
 
@@ -320,7 +372,7 @@ section{
 	vertical-align: super;
 	font-size:.7em;
 	line-height: 0;
-	color: $endeavour;
+	color: $primary-70;
 	position: relative;
     cursor: pointer;
     border-bottom: $border-link
@@ -345,7 +397,10 @@ section{
 /*-----Footer stuff-----*/
 
 footer{
-	margin: $spacing-medium 0 $spacing-x-large 0;
+	margin: $spacing-medium 0 0 0;
+	border-top: 1px solid rgb(200, 209, 224);
+	padding: $spacing-x-large 0 $spacing-x-large 0;
+	background-color: $gray-20;
 
 	a{
 		font-weight: $font-weight-x-bold;
@@ -361,6 +416,14 @@ footer{
 		font-weight: $font-weight-regular;
 		border-bottom: $border-link;
 	}
+}
+
+/*------Stuff for the part where I talk about myself-----*/
+#about-image{
+	max-width: 256px;
+	border: 8px solid white;
+	border-radius: 256px;
+	margin-top: -(2*$spacing-xx-large);
 }
 
 /*-----Stuff that hopefully makes the animations work-----*/
@@ -395,6 +458,13 @@ footer{
 	body{
 		padding: 0 $spacing-small 0 $spacing-small;
 	}
+
+	#about-image{
+		border: 8px solid white;
+		border-radius: 256px;
+		display: block;
+		margin: $spacing-x-large auto 0 auto;
+	}
 }
 
 @media (max-width: $grid-tablet-small){
@@ -402,9 +472,15 @@ footer{
 		font-size: 16px;
 	}
 
+	.hero-text{
+		font-size: $font-size-large;
+		line-height: 1.5em;
+	}
+
 	h1{
 		font-size: $font-size-xx-large;
 		font-weight: $font-weight-x-bold;
+		line-height: 1.1em;
 	}
 
 	#about-header{
@@ -418,10 +494,24 @@ footer{
 
 	.subtitle{
 		font-size: $font-size-regular;
-		margin: 0 0 $spacing-x-large 0;
+		margin: 0 0 $spacing-large 0;
+		line-height: 1.5em;
 	}
 
 	h3{
 		font-size: $font-size-regular;
+	}
+
+	.masthead{
+		margin-bottom: $spacing-x-large;
+		padding-bottom: $spacing-large;
+	}
+
+	p{
+		margin-bottom: $spacing-medium;
+	}
+
+	section{
+		margin-bottom: $spacing-small;
 	}
 }
