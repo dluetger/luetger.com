@@ -273,7 +273,9 @@ footer {
   max-width: 256px;
   border: 8px solid white;
   border-radius: 256px;
-  margin-top: -256px; }
+  margin-top: -256px;
+  background-color: #c8d1e0;
+  height: 256px; }
 
 /*-----Stuff that hopefully makes the animations work-----*/
 /*-Stuff that makes the page fade in-*/
