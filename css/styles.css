@@ -72,6 +72,15 @@ p, a, ul {
 strong {
   font-weight: 800; }
 
+blockquote p, blockquote a, blockquote ul {
+  border-left: 4px solid #114091;
+  font-size: 1.4143em;
+  padding-left: 32px;
+  min-width: 100%; }
+blockquote footer {
+  margin-top: -64px;
+  padding-left: 32px; }
+
 /*-----Picture stuff-----*/
 figure {
   margin: 0 0 64px 0; }
@@ -83,7 +92,11 @@ img {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   border-radius: 2px;
+  background-color: #e4e9f2;
   border: none; }
+
+figcaption {
+  font-size: 0.707em; }
 
 /*-----Link stuff-----*/
 a {
@@ -120,9 +133,6 @@ li {
 /*-----Stuff that slightly modifies the boring stuff-----*/
 #about-header {
   margin: 0 0 64px; }
-
-.caption {
-  font-size: 0.707em; }
 
 .masthead {
   background-color: #ebeff5;
@@ -251,6 +261,20 @@ section {
   overflow: auto;
   margin: 0 0 0 0; }
 
+/*-----Project nav stuff-----*/
+.project-nav {
+  border-top: 1px solid #c8d1e0; }
+  .project-nav a {
+    padding: 32px 0 32px 0;
+    font-weight: 700;
+    margin-bottom: -16px; }
+
+.proj-prev {
+  border-right: 1px solid #c8d1e0; }
+
+.proj-next {
+  text-align: right; }
+
 /*-----Footer stuff-----*/
 footer {
   margin: 16px 0 0 0;
@@ -267,6 +291,12 @@ footer {
   .copyright a {
     font-weight: 400;
     border-bottom: 1px solid #1f5dc2; }
+
+blockquote footer {
+  background-color: transparent;
+  margin: none;
+  border: none;
+  padding: none; }
 
 /*------Stuff for the part where I talk about myself-----*/
 #about-image {

@@ -162,6 +162,21 @@ strong{
 	font-weight: $font-weight-x-bold;
 }
 
+blockquote{
+
+	p{
+		border-left: $spacing-x-small solid $primary-90;
+		font-size: $font-size-large;
+		padding-left: $spacing-large;
+		min-width: 100%;
+	}
+
+	footer{
+		margin-top: -$spacing-x-large;
+		padding-left: $spacing-large;
+	}
+}
+
 /*-----Picture stuff-----*/
 
 figure{
@@ -172,8 +187,12 @@ img{
 	width: 100%;
 	margin: 0 0 $spacing-medium 0;
 	@include border-radius(2px);
-	//background-color: darken($gray-10, 5%);
+	background-color: darken($gray-10, 5%);
 	border: none;
+}
+
+figcaption{
+	font-size: $font-size-small;
 }
 
 /*-----Link stuff-----*/
@@ -197,6 +216,7 @@ a{
 
 a:hover{
 	background-color: $primary-30;
+	//border-bottom: 1px solid $primary-30;
 	color: black;
 }
 
@@ -227,10 +247,6 @@ li{
 	margin: 0 0 $spacing-x-large;
 }
 
-.caption{
-	font-size: $font-size-small;
-}
-
 .masthead{
 	background-color: $gray-20;
 	padding-bottom: $spacing-x-large;
@@ -256,6 +272,8 @@ li{
 .subtitle-h3{
 	margin: -$spacing-medium 0 $spacing-medium 0;
 }
+
+
 
 /*-----Things for the part with all the links-----*/
 nav{
@@ -394,6 +412,29 @@ section{
     margin:0 0 0 0;
 }
 
+
+/*-----Project nav stuff-----*/
+.project-nav {
+	border-top: 1px solid rgb(200, 209, 224);
+
+	nav{
+	}
+
+	a{
+		padding: $spacing-large 0 $spacing-large 0;
+		font-weight: $font-weight-bold;
+		margin-bottom: -$spacing-medium;
+	}
+}
+
+.proj-prev{
+	border-right: 1px solid rgb(200, 209, 224);
+}
+
+.proj-next{
+	text-align: right;
+}
+
 /*-----Footer stuff-----*/
 
 footer{
@@ -416,6 +457,13 @@ footer{
 		font-weight: $font-weight-regular;
 		border-bottom: $border-link;
 	}
+}
+
+blockquote footer{
+	background-color: transparent;
+	margin: none;
+	border: none;
+	padding: none;
 }
 
 /*------Stuff for the part where I talk about myself-----*/
