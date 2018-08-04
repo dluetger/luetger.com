@@ -217,6 +217,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/whirlpool\/ul-go-compare.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 227865,
+		"inputAbbreviatedPath": "\/img\/whirlpool\/ul-go-compare.png",
+		"outputAbbreviatedPath": "\/img\/whirlpool\/ul-go-compare.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/whirlpool\/ul-go-data.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 234662,
+		"inputAbbreviatedPath": "\/img\/whirlpool\/ul-go-data.png",
+		"outputAbbreviatedPath": "\/img\/whirlpool\/ul-go-data.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/whirlpool\/ul-go-home.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 697381,
+		"inputAbbreviatedPath": "\/img\/whirlpool\/ul-go-home.png",
+		"outputAbbreviatedPath": "\/img\/whirlpool\/ul-go-home.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/whirlpool\/whirlpool-hero.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -224,6 +257,28 @@
 		"initialSize": 167455,
 		"inputAbbreviatedPath": "\/img\/whirlpool\/whirlpool-hero.png",
 		"outputAbbreviatedPath": "\/img\/whirlpool\/whirlpool-hero.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/whirlpool\/whirlpool-usability-test-2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.39765e+06,
+		"inputAbbreviatedPath": "\/img\/whirlpool\/whirlpool-usability-test-2.png",
+		"outputAbbreviatedPath": "\/img\/whirlpool\/whirlpool-usability-test-2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/whirlpool\/whirlpool-usability-test.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.46791e+06,
+		"inputAbbreviatedPath": "\/img\/whirlpool\/whirlpool-usability-test.jpg",
+		"outputAbbreviatedPath": "\/img\/whirlpool\/whirlpool-usability-test.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

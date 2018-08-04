@@ -19,9 +19,12 @@
 </head>
 
 <body>
+	<!--The part at the very top that shows how far you've gone-->
 	<div class="progress-container">
     	<div class="progress-bar" id="progress"></div>
   	</div> 
+
+  	<!--The big part at the top that shows the title and stuff-->
   	<div class="masthead">
 		<header>
 			<div class="grid-container">
@@ -43,67 +46,109 @@
 			</div>
 		</div>
 	</div>
-	<div class="grid-container">
-		<div class="prefix-10 grid-80 suffix-10">
-			<section>
-				<figure>
-					<!-- <img style="min-height: 500px;"> -->
-					<img src="img/whirlpool/whirlpool-hero.png" title="Whirlpool Global Requirements" alt="Three screenshots from the Whirlpool market requirements interface."> 
-					<!--<p class="caption">Engineers can use the search suggestions to quickly find what they are looking for instead of meticulously typing lengthy identifying codes. The system returns relevant schematics and additional metadata so engineers no longer have to search through thick binders.</p>-->
-				</figure>
-				<h2>Summary</h2>
-				<p>Safety compliance teams at Whirlpool make sure products meet the requirements of every country in a particular market (for instance, selling washing machines across South America). It was difficult for them to find, compare, and meet the all the different sets of requirements out there. I led the user research and usability testing and contributed to the interface design on a concept to help them solve some of these issues.</p>
-			</section>
-			<section>
-				<h2>Challenge</h2>
-				<p>To sell products in different markets, Whirlpool's appliances need to meet the local requirements of several different countries. These include UL safety standards, electrical guidelines, water pressure ranges, and more. But this information is decentralized, so it's hard to compile it all and make the right decisions.</p>
-				<p>We sought to make it easier for Whirlpool employees to compare requirements and help them make better design decisions.</p>
-			</section>
-			<section>
-				<h2>Approach</h2>
-				<h3>Research</h3>
-				<p>I planned and facilitated several interviews with engineers, managers, and compliance professionals from UL and Whirlpool to get a sense of the space. Our research helped reveal several areas we wanted to focus on:</p>
-				<ul>
-					<li>As expected, the process of comparing piecemeal requirements was very manual. It was usually done by calling different departments or looking up individual standards across many sources</li>
-					<li>It was even difficult to compare two different Whirlpool products. The data sheets for different appliance types are scattered across several places.</li>
-					<li>Requirements are a moving target and change year to year. Compliance teams struggle to know what the new requirements will be by the time they put their new designs into production.</li>
-					<li>The data, in addition to being scattered, are often incomplete, which causes confusion. For instance, was there actually no requirement for something or is the information missing?</li>
-				</ul>
-				<h3>Design and testing</h3>
-				<p>After defining flows and narrowing requirements, we matured our designs from sketches to high fidelity mockups over the course of several weeks. We regularly invited in Whirlpool and UL compliance teams to provide feedback. </p>
-				<p>I planned and facilitated usability tests onsite with ten Whirlpool employees. We ended up with several high-level findings we wanted to address before our final iteration: </p>
-				<ul>
-					<li>While it was great to compare requirements side-by-side, it was difficult to tell exactly where the differences were. We could do better by calling some of these differences out more with more salience.</li>
-					<li>While we designed an interface for editing the data, no one we tested with felt enough ownership over it to be able to make those changes. We'd need to learn more about how the data is sourced and changed.</li>
-					<li>Our participants only found the news concept moderately helpful. We thought about adding a date component to the search criteria so users could search across time as well as across markets.</li>
-				</ul>
-			</section>
-			<section>
-				<h2>Solution</h2>
-				<p>Our final concept was a web-based requirements portal. Our goal was to get people in front of the data as fast as possible so they were able to start making decisions.</p>
-				<h3>Search</h3>
-				<p>Users can get to the data quickly by selecting a category and market from finite dropdown menus. They can search for one requirements sheet or choose from the start to compare across markets.</p>
-				<h3>Web-based requirements</h3>
-				<p>All the product requirements from multiple sources are on one page. Points of contact help users easily reach out for more information if necessary.</p>
-				<h3>Side-by-side comparisons</h3>
-				<p>The differences between the requirements in different countries are highlighted so they are easy to find. This helps safety folks more easily design appliances that meet the requirements of multiple markets.</p>
-				<h3>Conveying upcoming changes</h3>
-				<p>The news section makes it easy to read about upcoming changes to requirements that may not yet be documented. This helps Whirlpool plan ahead.</p>
-			</section>
-			<section>
-				<h2>Outcome</h2>
-				<p>We ran our participants through three real-life scenarios that could be improved with the web portal. The final concept received the following feedback:</p>
-				<ul>
-					<li>Users appreciated having all the information in a single place</li>
-					<li>Highlighting the differences in requirements made it much easier to compare them</li>
-					<li>People reacted generally well to the news feature, but we felt in future we could do more to help them more easily identify upcoming changes</li>
-					<li>Moving forward, data ownership was going to be a primary challenge. Most users still did not feel comfortable authoring data and expected it to come from somewhere else</li>
-				</ul>
-				<p>Whirlpool approved of our concept, and UL created a whole new team to bring this product to even more clients. It now lives on as <a href="https://go.ul.com/">UL Go</a>, a compliance portal for all UL partners.</p>
-				<a href="schematics.html">Next project: NASA Schematics Catalog</a>
-			</section>
+
+	<!--The big main part that has the story-->
+	<div class="grid-container content">
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure>
+				<img src="img/whirlpool/whirlpool-hero.png" title="Whirlpool Global Requirements" alt="Three screenshots from the Whirlpool market requirements interface."> 
+			</figure>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Summary</h2>
+			<p>Safety compliance teams at Whirlpool make sure products meet the requirements of every country in a particular market (for instance, selling washing machines across South America). It was difficult for them to find, compare, and meet the all the different sets of requirements out there. I led the user research and usability testing and contributed to the interface design on a concept to help them solve some of these issues.</p>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Challenge</h2>
+			<p>To sell products in different markets, Whirlpool's appliances need to meet the local requirements of several different countries. These include UL safety standards, electrical guidelines, water pressure ranges, and more. But this information is decentralized, so it's hard to compile it all and make the right decisions.</p>
+			<p>We sought to make it easier for Whirlpool employees to compare requirements and help them make better design decisions.</p>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Approach</h2>
+			<h3>Research</h3>
+			<p>I planned and facilitated several interviews with engineers, managers, and compliance professionals from UL and Whirlpool to get a sense of the space. Our research helped reveal several areas we wanted to focus on:</p>
+			<ul>
+				<li>As expected, the process of comparing piecemeal requirements was very manual. It was usually done by calling different departments or looking up individual standards across many sources</li>
+				<li>It was even difficult to compare two different Whirlpool products. The data sheets for different appliance types are scattered across several places.</li>
+				<li>Requirements are a moving target and change year to year. Compliance teams struggle to know what the new requirements will be by the time they put their new designs into production.</li>
+				<li>The data, in addition to being scattered, are often incomplete, which causes confusion. For instance, was there actually no requirement for something or is the information missing?</li>
+			</ul>
+			<h3>Design and testing</h3>
+			<p>After defining flows and narrowing requirements, we matured our designs from sketches to high fidelity mockups over the course of several weeks. We regularly invited in Whirlpool and UL compliance teams to provide feedback. </p>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5 grid-parent">
+			<figure>
+				<div class="grid-50">
+					<img src="img/whirlpool/whirlpool-usability-test.jpg" title="Usability Test" alt="Conducting a usability test at Whirlpool">
+					<figcaption>One of ten usability tests at Whirlpool HQ. I'm not as bored as I look!</figcaption>
+				</div>
+				<div class="grid-50">
+					<img src="img/whirlpool/whirlpool-usability-test-2.png" title="Usability Test Setup" alt="Part of the setup for our usability tests">
+					<figcaption>Part of our setup including a testing laptop and one for giving participants their scenarios.</figcaption>
+				</div>
+			</figure>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<p>I planned and facilitated usability tests onsite with ten Whirlpool employees. We ended up with several high-level findings we wanted to address before our final iteration: </p>
+			<h4>What are the differences?</h4>
+			<p>While it was great to compare requirements side-by-side, it was difficult to tell exactly where the differences were. We could do better by calling some of these differences out more with more salience.</p>
+			<h4>Data ownership</h4>
+			<p>While we designed an interface for editing the data, no one we tested with felt enough ownership over it to be able to make those changes. We'd need to learn more about how the data is sourced and changed.</p>
+			<h4>"News" was just okay</h4>
+			<p>Our participants only found the news concept moderately helpful. We thought about adding a date component to the search criteria so users could search across time as well as across markets.</p>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Solution</h2>
+			<p>Our final concept was a web-based requirements portal. Our goal was to get people in front of the data as fast as possible so they were able to start making decisions.</p>
+			<h3>Search</h3>
+			<p>Users can get to the data quickly by selecting a category and market from finite dropdown menus. They can search for one requirements sheet or choose from the start to compare across markets.</p>
+			<h3>Web-based requirements</h3>
+			<p>All the product requirements from multiple sources are on one page. Points of contact help users easily reach out for more information if necessary.</p>
+			<h3>Side-by-side comparisons</h3>
+			<p>The differences between the requirements in different countries are highlighted so they are easy to find. This helps safety folks more easily design appliances that meet the requirements of multiple markets.</p>
+			<h3>Conveying upcoming changes</h3>
+			<p>The news section makes it easy to read about upcoming changes to requirements that may not yet be documented. This helps Whirlpool plan ahead.</p>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Outcome</h2>
+			<p>We ran our participants through three real-life scenarios that could be improved with the web portal. The final concept received the following feedback:</p>
+			<ul>
+				<li>Users appreciated having all the information in a single place</li>
+				<li>Highlighting the differences in requirements made it much easier to compare them</li>
+				<li>People reacted generally well to the news feature, but we felt in future we could do more to help them more easily identify upcoming changes</li>
+				<li>Moving forward, data ownership was going to be a primary challenge. Most users still did not feel comfortable authoring data and expected it to come from somewhere else</li>
+			</ul>
+			<p>Whirlpool approved of our concept, and UL created a whole new team to bring this product to even more clients. It now lives on as <a href="https://go.ul.com/">UL Go</a>, a compliance portal for all UL partners.</p>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5 grid-parent">
+			<figure>
+				<div class="grid-33">
+					<img src="img/whirlpool/ul-go-data.png" title="UL Go Data View" alt="Screenshot showing the data view screen from UL Go">
+				</div>
+				<div class="grid-33">
+					<img src="img/whirlpool/ul-go-home.png" title="UL Go Home Page" alt="Screenshot showing the home page from UL Go">
+				</div>
+				<div class="grid-33">
+					<img src="img/whirlpool/ul-go-compare.png" title="UL Go Comparison View" alt="Screenshot showing the compairson screen from UL Go">
+				</div>
+				<figcaption class="grid-100">Some screenshots from the current iteration of this project, UL Go.</figcaption>
+			</figure>
+		</section>
 		</div>
 	</div>
+
+		<!--The part where you can quickly get to another project-->
+	<div class="project-nav">
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10 grid-parent">	
+				<nav>		
+					<a class="grid-50 mobile-grid-100 proj-prev" href="fieldsight.html">Previous project: <br/>  Eaton Fieldsight</a>
+					<a class="grid-45 mobile-grid-100 proj-next" href="schematics.html">Next project: <br/>NASA Schematics Catalog</a>
+				</nav>
+			</div>
+		</div>
+	</div>
+
 	<footer>
 		<div class="grid-container">
 			<div class="prefix-10 grid-80 suffix-10">

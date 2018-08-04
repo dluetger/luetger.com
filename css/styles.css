@@ -37,7 +37,7 @@ body {
   background: #1f5dc2;
   width: 0%; }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-size: 3.998em;
   font-weight: 800;
   color: #373A46;
@@ -56,6 +56,10 @@ h2 {
 h3 {
   font-size: 1.1em;
   margin: 32px 0 16px 0; }
+
+h4 {
+  font-size: 0.9em;
+  margin: 16px 0 8px 0; }
 
 p, a, ul {
   color: #555555;
@@ -97,6 +101,9 @@ img {
 
 figcaption {
   font-size: 0.707em; }
+
+.figure-image-container {
+  display: block; }
 
 /*-----Link stuff-----*/
 a {
@@ -350,7 +357,7 @@ blockquote footer {
     font-size: 1.4143em;
     line-height: 1.5em; }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     font-size: 2.827em;
     font-weight: 800;
     line-height: 1.1em; }

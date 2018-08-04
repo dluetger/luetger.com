@@ -149,6 +149,12 @@ h3{
 	margin: $spacing-large 0 $spacing-medium 0;
 }
 
+h4{
+	@extend h1;
+	font-size: 0.9em;
+	margin: $spacing-medium 0 $spacing-small 0;
+}
+
 p{
 	color: $tundora;
 	font-weight: $font-weight-light;
@@ -193,6 +199,10 @@ img{
 
 figcaption{
 	font-size: $font-size-small;
+}
+
+.figure-image-container{
+	display: block;
 }
 
 /*-----Link stuff-----*/
