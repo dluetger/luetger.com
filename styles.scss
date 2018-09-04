@@ -207,6 +207,10 @@ blockquote{
 	}
 }
 
+.blockquote-small p{
+	font-size: $font-size-regular;
+}
+
 /*-----Picture stuff-----*/
 
 figure{
@@ -277,12 +281,8 @@ li{
 }
 
 .list-short li{
-	line-height: 1em;
 	margin-left: -$spacing-medium;
-
-	a{
-		line-height: 1em;
-	}
+	margin-bottom: $spacing-x-small;
 }
 
 
@@ -639,5 +639,13 @@ blockquote footer{
 
 	section{
 		margin-bottom: $spacing-small;
+	}
+
+	blockquote{
+
+		p{
+			padding-left: $spacing-medium;
+			font-size: $font-size-regular;
+		}
 	}
 }

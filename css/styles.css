@@ -100,6 +100,9 @@ blockquote footer {
   margin-top: -64px;
   padding-left: 32px; }
 
+.blockquote-small p, .blockquote-small a, .blockquote-small ul {
+  font-size: 1em; }
+
 /*-----Picture stuff-----*/
 figure {
   margin: 0 0 64px 0; }
@@ -154,10 +157,8 @@ li {
   margin-bottom: 16px; }
 
 .list-short li {
-  line-height: 1em;
-  margin-left: -16px; }
-  .list-short li a {
-    line-height: 1em; }
+  margin-left: -16px;
+  margin-bottom: 4px; }
 
 /*-----Stuff that slightly modifies the boring stuff-----*/
 #about-header {
@@ -432,4 +433,8 @@ blockquote footer {
     margin-bottom: 16px; }
 
   section {
-    margin-bottom: 8px; } }
+    margin-bottom: 8px; }
+
+  blockquote p, blockquote a, blockquote ul {
+    padding-left: 16px;
+    font-size: 1em; } }

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>NASA Schematics Catalog / Dave Luetger</title>
+	<title>NASA HCI Design System / Dave Luetger</title>
 	<meta name="description" content="Designer, musician, tv watcher, and human"/>
 <!--CSS that makes the browser not do stupid default stuff to the styling.-->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -13,13 +13,17 @@
 	<link rel="icon" type="image/png" href="favicon.png">
 	<!--Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 </head>
 
 <body>
+	<!--The part at the very top that shows how far you've gone-->
 	<div class="progress-container">
     	<div class="progress-bar" id="progress"></div>
   	</div> 
+
+  	<!--The big part at the top that shows the title and stuff-->
   	<div class="masthead">
 		<header>
 			<div class="grid-container">
@@ -36,33 +40,39 @@
 		</header>
 		<div class="grid-container">
 			<div class="prefix-10 grid-80 suffix-10">
-				<h1>NASA Schematics Catalog</h1>
-				<p class="subtitle">Finding critical spacecraft information on launch day</p>
+				<h1>NASA HCI Design System</h1>
+				<p class="subtitle">Making it easier to create quality digital products for the agency</p>
 			</div>
 		</div>
 	</div>
-	<div class="grid-container">
-		<div class="prefix-5 grid-90 suffix-5">
-			<section>
-				<figure>
-					<img src="img/schematics/schematics-hero.png" title="Schematics catalog" alt="Two screenshots from schematics catalog.">
-					<!--<p class="caption">Engineers can use the search suggestions to quickly find what they are looking for instead of meticulously typing lengthy identifying codes. The system returns relevant schematics and additional metadata so engineers no longer have to search through thick binders.</p>-->
-				</figure>
-			</section>
-		</div>
-		<div class="prefix-10 grid-80 suffix-10">
-				<!-- <section class="disclaimer">
-					<h2>Note</h2>
-					<p>Due to the nature of this work, I'm still figuring out what I can and can't publish.</p>
-				</section> -->
-				<p>On launch day, there might be problems with the spacecraft that engineers must resolve quickly. If they can't resolve the issues in time, the launch might get delayed or scrubbed entirely. It's important that engineers have everything they need at their fingertips. They'll refer to rocket schematics to diagnose issues, but those schematics are currently stored in thick binders. Rather than hunt and pick through several enormous binders, we're working on a search interface so engineers can quickly find exactly what they need. By spending less time searching and more time problem solving, we can ensure a timely and safe launch.</p>
-<!-- 				<a href="whirlpool.html">Previous project: Whirlpool Global Market Access</a>
-				<br/>
-				<a href="fieldsight.html">Next project: Eaton Fieldsight</a> -->
-			</section>
-		</div>
+
+	<!--The big main part that has the story-->
+	<div class="grid-container content">
+		<!--An image summarizing the project-->
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure>
+				<img src="img/design-system/design-system-hero.png" title="NASA HCI Design System" alt="A collage of sample components from the design system.">
+			</figure>
+		</section>
+		<!--A summary of the project-->
+		<section class="prefix-10 grid-80 suffix-10">
+			<p>As my team grew and the number of projects we were supporting increased to an unmanageable degree, we were accruing lots of technical and design debt, and it was harder to do our work. I led the creation of our first design system to help overcome some of our most pressing team challenges. Since the project began we’ve designed and implemented over half of our components, and we’ve been able to spend more time on things like accessibility and performance.</p>
+		</section>
+	</div>
+
+	<!--The part where you can quickly get to another project-->
+	<div class="project-nav">
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10 grid-parent">	
+				<nav>		
+					<a class="grid-50 mobile-grid-100 proj-prev" href="schematics.html">Previous project: <br/>  NASA Schematics Catalog</a>
+					<a class="grid-45 mobile-grid-100 proj-next" href="schematics.html">Next project: <br/>NASA SLS Data Exchange</a>
+				</nav>
+			</div>
 		</div>
 	</div>
+
+	<!--The big bottom part-->
 	<footer>
 		<div class="grid-container">
 			<div class="prefix-10 grid-80 suffix-10">
@@ -78,7 +88,8 @@
 							</script>.
 				</p>
 			</div>
-		</div>	
+		</div>
+
 	<!--Version of jQuery that makes the footnotes work-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<!--Script that does the little footnotes. Lovingly borrowed from Randall Munroe at xkcd.com-->

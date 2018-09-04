@@ -56,11 +56,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/design-system-long.html": {
+	"\/design-system-short.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/design-system-long.html",
+		"inputAbbreviatedPath": "\/design-system-short.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -378,6 +378,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/sls\/collaborative-document.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 19408,
+		"inputAbbreviatedPath": "\/img\/sls\/collaborative-document.png",
+		"outputAbbreviatedPath": "\/img\/sls\/collaborative-document.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/sls\/comments.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13072,
+		"inputAbbreviatedPath": "\/img\/sls\/comments.png",
+		"outputAbbreviatedPath": "\/img\/sls\/comments.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/sls\/dem.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -385,6 +407,28 @@
 		"initialSize": 598268,
 		"inputAbbreviatedPath": "\/img\/sls\/dem.png",
 		"outputAbbreviatedPath": "\/img\/sls\/dem.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/sls\/information-architecture.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 44909,
+		"inputAbbreviatedPath": "\/img\/sls\/information-architecture.png",
+		"outputAbbreviatedPath": "\/img\/sls\/information-architecture.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/sls\/linking.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16360,
+		"inputAbbreviatedPath": "\/img\/sls\/linking.png",
+		"outputAbbreviatedPath": "\/img\/sls\/linking.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -418,6 +462,17 @@
 		"initialSize": 175534,
 		"inputAbbreviatedPath": "\/img\/sls\/process-model.png",
 		"outputAbbreviatedPath": "\/img\/sls\/process-model.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/sls\/signatures.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25407,
+		"inputAbbreviatedPath": "\/img\/sls\/signatures.png",
+		"outputAbbreviatedPath": "\/img\/sls\/signatures.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
