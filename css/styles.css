@@ -1,7 +1,6 @@
 /*styles.css*/
 /*-----Variables and mixins-----*/
 /*Fonts*/
-/*Grays*/
 /*Primary Colors*/
 /*Accent Colors*/
 /*Font sizes*/
@@ -12,10 +11,14 @@
 /*Layout and grid*/
 /*Animations and transitions*/
 /*-----Normal, boring stuff-----*/
+html {
+  background-color: #343941; }
+
 body {
   font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  color: #555555;
+  color: #343941;
+  margin: 8px;
   background: #f5f7fa;
   -webkit-animation: fadein 1s;
   -o-animation: fadein 1s;
@@ -25,59 +28,71 @@ body {
 
 .progress-container {
   width: 100%;
-  height: 4px;
-  background: #c8d1e0;
+  height: 8px;
+  background: #343941;
   position: fixed;
   top: 0;
   left: 0; }
 
 /* The progress bar (scroll indicator) */
 .progress-bar {
-  height: 4px;
-  background: #1f5dc2;
+  height: 8px;
+  background: #d07a11;
   width: 0%; }
+
+/*Selection*/
+::selection {
+  background: #f5bb75;
+  color: #343941; }
+
+::-moz-selection {
+  background: #f5bb75;
+  color: #343941; }
+
+::-webkit-selection {
+  background: #f5bb75;
+  color: #343941; }
 
 h1, h2, h3, h4 {
   font-size: 3.998em;
   font-weight: 800;
-  color: #373A46;
   margin: 0 0 8px -4px;
   -o-transition: 0.2s ease-in-out;
   -ms-transition: 0.2s ease-in-out;
   -moz-transition: 0.2s ease-in-out;
-  -webkit-transition: 0.2s eas e-in-out;
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out; }
 
 h2 {
-  font-size: 1.999em;
+  font-size: 2.827em;
   margin: 0 0 32px 0;
   padding-bottom: 8px; }
 
 h3 {
-  font-size: 1.1em;
-  margin: 32px 0 16px 0; }
+  font-size: 1.999em;
+  margin: 32px 0 24px 0; }
 
 h4 {
-  font-size: 0.9em;
-  margin: 16px 0 8px 0; }
+  font-size: 1.4143em;
+  margin: 32px 0 16px 0; }
 
 p, a, ul {
-  color: #555555;
+  color: #59616e;
   font-weight: 300;
   line-height: 1.7em;
-  margin: 0 0 32px 0;
+  margin: 0 0 16px 0;
   max-width: 640px;
   -o-transition: 0.2s ease-in-out;
   -ms-transition: 0.2s ease-in-out;
   -moz-transition: 0.2s ease-in-out;
-  -webkit-transition: 0.2s eas e-in-out;
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out; }
 
-strong {
+strong, b {
   font-weight: 800; }
 
 blockquote p, blockquote a, blockquote ul {
-  border-left: 4px solid #114091;
+  border-left: 4px solid #ad5f00;
   font-size: 1.4143em;
   padding-left: 32px;
   min-width: 100%; }
@@ -96,11 +111,11 @@ img {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   border-radius: 2px;
-  background-color: #e4e9f2;
   border: none; }
 
 figcaption {
-  font-size: 0.707em; }
+  font-size: 0.707em;
+  line-height: 1.5em; }
 
 .figure-image-container {
   display: block; }
@@ -108,11 +123,11 @@ figcaption {
 /*-----Link stuff-----*/
 a {
   text-decoration: none;
-  border-bottom: 1px solid #1f5dc2;
+  border-bottom: 1px solid #ad5f00;
   -o-transition: 0.1s ease-in-out;
   -ms-transition: 0.1s ease-in-out;
   -moz-transition: 0.1s ease-in-out;
-  -webkit-transition: 0.1s eas e-in-out;
+  -webkit-transition: 0.1s ease-in-out;
   transition: 0.1s ease-in-out;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -120,11 +135,12 @@ a {
   border-radius: 1px; }
 
 a:hover, a:focus {
-  background-color: #9dc2fa;
+  background-color: #f5bb75;
+  border-bottom: 1px solid #f5bb75;
   color: black; }
 
 a:focus {
-  outline: 2px dashed #434a54;
+  outline: 2px dashed #59616e;
   outline-radius: 1px;
   outline-offset: 4px; }
 
@@ -137,6 +153,12 @@ ul {
 li {
   margin-bottom: 16px; }
 
+.list-short li {
+  line-height: 1em;
+  margin-left: -16px; }
+  .list-short li a {
+    line-height: 1em; }
+
 /*-----Stuff that slightly modifies the boring stuff-----*/
 #about-header {
   margin: 0 0 64px; }
@@ -147,12 +169,22 @@ li {
   margin-bottom: 128px;
   border-bottom: 1px solid #c8d1e0; }
 
+.hero-text-h {
+  font-size: 3.998em;
+  margin-bottom: 16px; }
+
 .hero-text {
-  font-size: 1.999em;
-  font-weight: 700;
-  color: #373A46;
+  font-size: 1.4143em;
+  font-weight: 300;
   line-height: 1.5em;
-  max-width: 100%; }
+  max-width: 100%;
+  color: #343941; }
+
+.hero-text-h:hover span {
+  display: none; }
+
+.hero-text-h:hover:after {
+  content: '(loot-grr).'; }
 
 .subtitle {
   font-size: 1.4143em;
@@ -166,7 +198,9 @@ li {
 nav a {
   display: inline-block;
   margin: 0 16px 0 0;
-  color: #373A46;
+  color: #343941;
+  border-bottom: none; }
+nav a:hover, nav a:focus {
   border-bottom: none; }
 
 header {
@@ -177,8 +211,14 @@ header {
 
 .active-page {
   font-weight: 700;
-  color: #1f5dc2;
-  border-bottom: 4px solid #1f5dc2; }
+  color: #ad5f00;
+  border-bottom: 4px solid #ad5f00; }
+
+.active-page:hover {
+  border-bottom: 4px solid #f5bb75; }
+
+.active-page:focus {
+  border-bottom: 4px solid #f5bb75; }
 
 /*The logo part*/
 a.logo {
@@ -187,7 +227,7 @@ a.logo {
   margin: 0 32px 0 0; }
 
 a.logo:hover, a.logo:focus {
-  color: #64697f;
+  color: #626b7a;
   border-bottom: none;
   background-color: #f5f7fa; }
 
@@ -210,34 +250,38 @@ section {
   padding: 0 0 0 0;
   margin: 0 0 64px 0; }
 
+.section-1 {
+  padding: 0 0 64px 0;
+  border-bottom: 1px solid #c8d0e0;
+  margin: 0 0 64px 0; }
+
+.section-medium {
+  margin: 0 0 32px 0; }
+
+.section-small {
+  margin: 0 0 16px 0; }
+
 .work-list {
   list-style-type: none; }
   .work-list li {
     margin-left: -32px;
     margin-bottom: -8px;
     font-weight: 700; }
+  .work-list a {
+    font-weight: 700;
+    color: #343941; }
 
 .disclaimer {
   padding: 32px;
-  background-color: white;
+  background-color: #f8d3a5;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   border-radius: 2px;
-  max-width: 640px; }
-  .disclaimer h2 {
-    font-size: 1em;
-    margin: 0 0 0 0;
-    color: #184896; }
-  .disclaimer h2::after {
-    height: 0;
-    margin-bottom: 8px; }
-  .disclaimer p, .disclaimer a, .disclaimer ul {
-    margin: 0 0 0 0;
-    color: #184896; }
+  color: #8c4e03; }
 
 .weak {
-  color: #64697f; }
+  color: #626b7a; }
 
 /*-----Footnotes-----*/
 .footnote {
@@ -248,10 +292,10 @@ section {
   vertical-align: super;
   font-size: .7em;
   line-height: 0;
-  color: #1f5dc2;
+  color: #ad5f00;
   position: relative;
   cursor: pointer;
-  border-bottom: 1px solid #1f5dc2; }
+  border-bottom: 1px solid #8c4e03; }
 
 .footnoteText {
   font-size: .7em;
@@ -261,7 +305,7 @@ section {
   position: absolute;
   left: 25px;
   bottom: 5px;
-  border: 1px solid #373A46;
+  border: 1px solid #59616e;
   padding: 10px;
   background-color: #fff;
   z-index: 100;
@@ -290,14 +334,14 @@ footer {
   background-color: #ebeff5; }
   footer a {
     font-weight: 800;
-    color: #373A46; }
+    color: #343941; }
 
 .copyright {
   font-size: 0.707em;
   margin: 8px 0 0 0; }
   .copyright a {
     font-weight: 400;
-    border-bottom: 1px solid #1f5dc2; }
+    border-bottom: 1px solid #8c4e03; }
 
 blockquote footer {
   background-color: transparent;
@@ -376,6 +420,9 @@ blockquote footer {
 
   h3 {
     font-size: 1em; }
+
+  h4 {
+    font-size: 0.8em; }
 
   .masthead {
     margin-bottom: 64px;
