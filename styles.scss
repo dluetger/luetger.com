@@ -116,6 +116,12 @@ body{
 	//border-top: 2px solid $primary-70;
 }
 
+.skip-main{
+	left: -999px;
+	position: absolute;
+	z-index: -999;
+}
+
 .progress-container {
   width: 100%;
   height: $spacing-small;
@@ -266,6 +272,16 @@ a:focus{
 	outline: 2px dashed $gray-80;
 	outline-radius: 1px;
 	outline-offset: 4px;
+}
+
+.skip-main:focus, .skip-main:active{
+	left: auto;
+	top: $spacing-small;
+	overflow: auto;
+	z-index: 999;
+	background-color: $primary-50;
+	color: white;
+	padding: $spacing-medium;	
 }
 
 /*-----List stuff-----*/
