@@ -20,17 +20,18 @@ $gray-80: hsl(218, 11%, 39%);
 $gray-100: hsl(217, 11%, 23%);
 
 // /*Primary Colors*/
-// $primary-30: rgb(157, 194, 250);
-// $primary-50: rgb(74, 137, 232);
-// $primary-70: rgb(31, 93, 194);
-// $primary-90: rgb(17, 64, 145);
+$primary-30: hsl(217, 93%, 83%);
+$primary-50: hsl(217, 84%, 64%);
+$primary-60: hsl(217, 69%, 52%);
+$primary-70: hsl(217, 74%, 43%);
+$primary-90: hsl(217, 75%, 25%);
 
 /*Primary Colors*/
-$primary-30: hsl(33, 86%, 71%);
-$primary-50: hsl(33, 85%, 44%);
-$primary-60: hsl(33, 100%, 34%);
-$primary-70: hsl(33, 96%, 28%);
-$primary-90: hsl(33, 75%, 17%);
+// $primary-30: hsl(33, 86%, 71%);
+// $primary-50: hsl(33, 85%, 44%);
+// $primary-60: hsl(33, 100%, 34%);
+// $primary-70: hsl(33, 96%, 28%);
+// $primary-90: hsl(33, 75%, 17%);
 
 /*Accent Colors*/
 $accent-70: rgb(207, 70, 21);
@@ -107,7 +108,7 @@ body{
 	font-family: $font-stack;
 	font-size: 18px;
 	color: $gray-100;
-	margin: $spacing-small;
+	// margin: $spacing-small;
 	//padding: 0 $spacing-large 0 $spacing-large;
 	//border: $spacing-small solid $gray-100;
 	background: $gray-10;
