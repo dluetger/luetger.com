@@ -15,9 +15,13 @@ $font-stack: "Libre Franklin", Helvetica, Arial, sans-serif;
 
 $gray-10: hsl(216, 33%, 97%);
 $gray-20: hsl(216, 33%, 94%);
+$gray-30: hsl(218, 31%, 90%);
 $gray-40: hsl(218, 28%, 83%);
 $gray-80: hsl(218, 11%, 39%);
 $gray-100: hsl(217, 11%, 23%);
+
+$slate-10: hsl(198, 38%, 95%);
+$slate-30: hsl(206, 63%, 79%);
 
 // /*Primary Colors*/
 $primary-30: hsl(217, 93%, 83%);
@@ -183,7 +187,7 @@ h4{
 }
 
 p{
-	color: $gray-80;
+	//color: $gray-80;
 	font-weight: $font-weight-light;
 	line-height: 1.7em;
 	margin:0 0 $spacing-medium 0;
@@ -274,6 +278,10 @@ a:focus{
 	outline-offset: 4px;
 }
 
+a:active{
+	@extend a;
+}
+
 .skip-main:focus, .skip-main:active{
 	left: auto;
 	top: $spacing-small;
@@ -310,10 +318,13 @@ li{
 }
 
 .masthead{
-	background-color: $gray-20;
-	padding-bottom: $spacing-x-large;
-	margin-bottom: $spacing-xx-large;
-	border-bottom: 1px solid rgb(200, 209, 224);
+	background-color: $gray-30;
+	padding-bottom: 1.5*$spacing-xx-large;
+	//border-bottom: 1px solid rgb(200, 209, 224);
+}
+
+.masthead-image{
+	margin-top: -($spacing-xx-large);
 }
 
 .hero-text-h{
@@ -530,9 +541,9 @@ section{
 
 footer{
 	margin: $spacing-medium 0 0 0;
-	border-top: 1px solid rgb(200, 209, 224);
+	//border-top: 1px solid rgb(200, 209, 224);
 	padding: $spacing-x-large 0 $spacing-x-large 0;
-	background-color: $gray-20;
+	background-color: $gray-30;
 
 	a{
 		font-weight: $font-weight-x-bold;

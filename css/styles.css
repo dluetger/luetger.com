@@ -80,8 +80,7 @@ h4 {
   font-size: 1.4143em;
   margin: 32px 0 16px 0; }
 
-p, a, ul {
-  color: #59616e;
+p, a, a:active, ul {
   font-weight: 300;
   line-height: 1.7em;
   margin: 0 0 16px 0;
@@ -95,7 +94,7 @@ p, a, ul {
 strong, b {
   font-weight: 800; }
 
-blockquote p, blockquote a, blockquote ul {
+blockquote p, blockquote a, blockquote a:active, blockquote ul {
   border-left: 4px solid #3071d9;
   font-size: 1.4143em;
   padding-left: 32px;
@@ -128,7 +127,7 @@ figcaption {
   display: block; }
 
 /*-----Link stuff-----*/
-a {
+a, a:active {
   text-decoration: none;
   border-bottom: 1px solid #3071d9;
   -o-transition: 0.1s ease-in-out;
@@ -178,10 +177,11 @@ li {
   margin: 0 0 64px; }
 
 .masthead {
-  background-color: #ebeff5;
-  padding-bottom: 64px;
-  margin-bottom: 128px;
-  border-bottom: 1px solid #c8d1e0; }
+  background-color: #dee3ed;
+  padding-bottom: 192px; }
+
+.masthead-image {
+  margin-top: -128px; }
 
 .hero-text-h {
   font-size: 3.998em;
@@ -209,7 +209,7 @@ li {
   margin: -16px 0 16px 0; }
 
 /*-----Things for the part with all the links-----*/
-nav a {
+nav a, nav a:active {
   display: inline-block;
   margin: 0 16px 0 0;
   color: #343941;
@@ -220,7 +220,7 @@ nav a:hover, nav a:focus {
 header {
   padding: 128px 0 0 0;
   margin: 0 0 64px 0; }
-  header a {
+  header a, header a:active {
     line-height: 32px; }
 
 .active-page {
@@ -343,10 +343,9 @@ section {
 /*-----Footer stuff-----*/
 footer {
   margin: 16px 0 0 0;
-  border-top: 1px solid #c8d1e0;
   padding: 64px 0 64px 0;
-  background-color: #ebeff5; }
-  footer a {
+  background-color: #dee3ed; }
+  footer a, footer a:active {
     font-weight: 800;
     color: #343941; }
 
@@ -442,12 +441,12 @@ blockquote footer {
     margin-bottom: 64px;
     padding-bottom: 32px; }
 
-  p, a, ul {
+  p, a, a:active, ul {
     margin-bottom: 16px; }
 
   section {
     margin-bottom: 8px; }
 
-  blockquote p, blockquote a, blockquote ul {
+  blockquote p, blockquote a, blockquote a:active, blockquote ul {
     padding-left: 16px;
     font-size: 1em; } }
