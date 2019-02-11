@@ -464,10 +464,35 @@ section{
 	background-color: lighten($primary-30, 10%);
 	@include border-radius(2px);
 	color: $primary-70;
+
+	h2 {
+		font-size: $font-size-regular;
+		margin-bottom: 0;
+	}
+
+	p{
+		margin: 0;
+	}
+}
+
+.claim {
+	color: $primary-60;
 }
 
 .weak{
 	color: lighten($gray-100, 20%);
+}
+
+.impact-number{
+	font-size: $font-size-xxx-large;
+	font-weight: $font-weight-bold;
+	color: $primary-60;
+	margin-bottom: 0;
+	line-height: 1em;
+}
+
+.impact-description{
+	font-weight: $font-weight-bold;
 }
 
 /*-----Footnotes-----*/

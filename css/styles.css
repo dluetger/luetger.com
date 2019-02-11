@@ -293,9 +293,27 @@ section {
   -ms-border-radius: 2px;
   border-radius: 2px;
   color: #1d5bbf; }
+  .disclaimer h2 {
+    font-size: 1em;
+    margin-bottom: 0; }
+  .disclaimer p, .disclaimer a, .disclaimer ul {
+    margin: 0; }
+
+.claim {
+  color: #3071d9; }
 
 .weak {
   color: #626b7a; }
+
+.impact-number {
+  font-size: 3.998em;
+  font-weight: 700;
+  color: #3071d9;
+  margin-bottom: 0;
+  line-height: 1em; }
+
+.impact-description {
+  font-weight: 700; }
 
 /*-----Footnotes-----*/
 .footnote {
