@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>NASA HCI Design System / Dave Luetger</title>
+	<meta name="description" content="Designer, musician, tv watcher, and human"/>
+<!--CSS that makes the browser not do stupid default stuff to the styling.-->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!--CSS that makes it easy to layout stuff on the page-->
+	<link rel="stylesheet" type="text/css" href="css/unsemantic-grid-responsive.css">
+	<!--All the other CSS-->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="favicon.png">
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+</head>
+
+<body>
+	<!--The part at the very top that shows how far you've gone-->
+	<div class="progress-container">
+    	<div class="progress-bar" id="progress"></div>
+  	</div> 
+
+  	<!--The big part at the top that shows the title and stuff-->
+  	<div class="masthead">
+  		<a class="skip-main" href="#main">Skip to main content</a>
+		<header>
+			<div class="grid-container">
+				<div class="prefix-10 grid-80 suffix-10">
+					<nav>
+						<a class="logo" href="index.html"><img src="img/general/d.svg" alt="Dave Luetger"></a>
+						<a href="index.html" class="active-page">Work</a>
+						<!--<a href="#">Speaking</a>-->
+						<a href="resume.html">Resume</a>
+						<a href="about.html">About</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div id="main" class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10">
+				<h1>NASA HCI Design System</h1>
+				<p class="subtitle">Making it easier to create quality digital products for the agency</p>
+			</div>
+		</div>
+	</div>
+
+	<!--The big main part that has the story-->
+	<div class="grid-container content">
+
+		<!--Summary and product-->
+		<!--An image summarizing the project-->
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure>
+				<img src="img/design-system/design-system-hero.png" title="NASA HCI Design System" alt="A collage of sample components from the design system.">
+			</figure>
+		</section>
+		<!--A summary of the project-->
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Summary</h2>
+			<p>As my team grew and the number of projects we were supporting increased over time, we were accruing lots of technical and design debt, and it was harder to do our work. I led the creation of our first design system to help overcome some of our most pressing challenges. Since the project began we've designed and implemented over half of our components, and we've been able to spend more time on things like accessibility and performance.</p>
+			<p><strong class="claim">Since the project began, we've agreed on designs for almost all of our components and increased the number of issues the team has resolved per sprint by 10%.</strong></p>
+		</section>
+		<!--The part that describes my role, my team, and my client-->
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Project details</h2>
+			<div class="grid-50">			
+				<h3>My contribution</h3>
+				<ul class="list-short">
+					<li>Product management</li>
+					<li>Facilitation and workshops</li>
+					<li>Interaction design</li>
+					<li>Visual design</li>			
+					<li>HTML/CSS</li>
+					<li>Sprint planning</li>		
+				</ul>
+			</div>
+			<div class="grid-50">
+				<h3>Collaborators</h3>
+				<ul class="list-short">
+					<li><a href="https://twitter.com/ronaldhkim?lang=en">Ron Kim</a></li>
+					<li><a href="http://iammueller.com/">Chris Mueller</a></li>
+					<li><a href="https://hci.arc.nasa.gov/">The NASA Ames HCI Group</a></li>
+				</ul>
+			</div>
+		</section>
+		<!--The part that describes the background and the problem-->
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Background</h2>
+			<p>My team, the NASA HCI Group, designs and builds internal software for human spaceflight groups at the agency as they track data and make decisions. In the past two years, we've doubled in size, and the number of products and user communities we are supporting has increased exponentially. It was getting harder to design and build quality products. We were spending too much time working on small things like what a button should look like and not enough time on more important things like accessibility or performance. Our user interfaces were increasingly inconsistent, even within the same product. At the same time, our engineering team was undertaking an effort to rebuild key pages of our flagship product in React.  While great for performance, we risked introducing even more competing standards. We knew the time was right to start thinking about our design practice in a new way.</p>
+			<p>A few colleagues and I began an effort to solve some of our biggest challenges with our first design system.</p>
+			<p><strong class="claim">Our goal was to create a set of standardized components that would decrease the work required to maintain quality digital products for the&nbsp;agency.</strong></p>
+		</section>
+		<!--The part that explains how we fixed it maybe-->
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>The Design System</h2>
+			<p>I'm responsible for four main parts of our design system: the documentation, Sketch library, icon pack, and content guide.</p>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<div class="grid-50">
+				<h3>Documentation</h3>	
+				<p>The most important part of our design system is the documentation. It's the nexus between design and engineering, and solves the core issues we identified of communication and sharing our common understanding.</p>
+				<p>We drew heavy inspiration from how other teams from <a href="https://material.io/design/">Google</a> to <a href="https://polaris.shopify.com/">Shopify</a> to the <a href="https://designsystem.digital.gov/">federal government</a> did this. Each component page contains a summary, a live example, code snippets (React, Stylus, HTML, and CSS), visual design details, guidance for use, and accessibility guidance. It also contains links to sources. These might be other design systems, usability research, or our own, primary research. We document our sources because we want every decision we make in the system to be justified.</p>
+				<p>While other organizations have beautiful, public documentation sites, we wanted to be able to write and publish quickly. We already used Confluence for our other team documentation, so we created a new space there for the design system. This allowed us to publish changes quickly and often in a place that our team was already familiar with.</p>
+			</div>
+			<figure class="grid-50">
+				<img src="img/design-system/documentation.png" title="Design System Documentation" alt="Three screenshots from our design system documentation.">
+<!-- 				<figcaption class="caption">A caption explaining the image</figcaption> -->
+			</figure>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure class="grid-50">
+				<img src="img/design-system/sketch-library.png" title="Sketch Library" alt="Our Sketch library.">
+<!-- 				<figcaption class="caption">A caption explaining the image</figcaption> -->
+			</figure>
+			<div class="grid-50">	
+				<h3>Sketch library</h3>
+				<p>Our design team is primarily using Sketch these days, so we created a UI kit to make implementing the design system standards easier. This helps us solve a core issue of consistency within our design specs. By creating a Sketch Library file, designers are able to call up our components from any blank document, and they are automatically updated when we push changes to the system.</p>
+			</div>				
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<div class="grid-50">
+				<h3>Icon pack</h3>
+				<p>While our icon set is included in our Sketch Library, we also created a standard icon pack of ready-to-use PNGs and clean SVGs. This acts as a resource for designers who don't need to import the entire design system and for engineers to quickly grab new assets when they implement new components.</p>
+			</div>
+			<figure class="grid-50">
+				<img src="img/design-system/icon-pack.png" title="Icon Pack" alt="A few select icons from our pack.">
+<!-- 				<figcaption class="caption">A caption explaining the image</figcaption> -->
+			</figure>			
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">		
+			<figure class="grid-50">
+				<img src="img/design-system/content-guide.png" title="Content Guide" alt="The 'Abbreviations and acronyms' page from our content guide.">
+<!-- 				<figcaption class="caption">A caption explaining the image</figcaption> -->
+			</figure>
+			<div class="grid-50">
+				<h3>Content guide</h3>
+				<p>We write a lot for our products. From inscriptions to labels and error messages to help guides, we didn't really have a standard on voice, tone, or how we approached mechanics like abbreviations (and there are a lot at NASA!) or technical words. We created a content guide to ensure a consistent style and keep our UI copy easy to understand.</p>
+			</div>				
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Approach</h2>
+			<p>While my colleague Chris and I had created limited UI kits in the past to help with our work, we knew we needed to do more to fundamentally transform the way the team worked and create lasting change.</p>
+			<h3>Interface inventory</h3>
+			<p>We began by taking a look at our current products and inventoried all the inconsistencies we could find, in both appearance and behavior. We uncovered more than 100 issues and added them to a running list.</p>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5 grid-parent">
+			<figure>
+				<div class="grid-50">
+					<img src="img/design-system/issues-list.png" title="List of UI Issues" alt="A screenshot of a Google Sheet listing our more than 100 UI inconsistencies.">
+					<figcaption>Our running list of interface inconsistencies. We used this as a starting point to guide our work and as one way to illustrate the problem to our team.</figcaption>
+				</div>
+				<div class="grid-50">
+					<img src="img/design-system/alerts.png" title="Inconsistent Alerts" alt="Five samples of different styles of alerts from our pre-existing designs.">
+					<figcaption>We uncovered inconsistencies in how our elements looked even within the same product. For example, here are all the different ways we rendered alerts in our flagship product, Mission Assurance System.</figcaption>
+				</div>
+			</figure>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h3>Building foundations</h3>
+				<p>We found some of the most fundamental inconsistencies in the very basics of our interface: typography, color, margins and padding. These things added up, and we knew in order to build a strong design system, we'd have to agree on some foundations.</p>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<div class="grid-50">
+				<h4>Type</h4>
+				<p>At NASA, over 95% of our users are using Internet Explorer on Windows machines in a very tightly controlled IT environment. We wanted our text to be readable, simple, and something everyone already had on their machines. We were pretty much already using Arial everywhere in our products, so we decided on that. However, we had very inconsistent heading and paragraph styles, so we documented that based loosely on a standard <a href="https://type-scale.com/">type scale</a>. </p>
+			</div>
+			<figure class="grid-50">
+				<img src="img/design-system/type.png" title="Type" alt="A snippet from our design system showing a few type styles.">
+<!-- 				<figcaption class="caption">A caption explaining the image</figcaption> -->
+			</figure>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure class="grid-50">
+				<img src="img/design-system/spacing.png" title="Spacing" alt="A snippet from our design system showing how we do margins and padding.">
+<!-- 				<figcaption class="caption">A caption explaining the image</figcaption> -->
+			</figure>
+			<div class="grid-50">	
+				<h4>Spacing</h4>
+				<p>Our margins and padding were all over the place. Not only did this mean page layouts looked… janky, but also that the information hierarchy on many pages was unclear. Taking some inspiration from <a href="https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62">Nathan Curtis</a>, we outlined a base 16 spacing system that scaled non-linearly, making it easy to tell the difference between grouped parts of the page.</p>
+			</div>				
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">		
+			<div class="grid-50">
+				<h4>Color</h4>
+				<p>The colors in our products were varied and highly inconsistent. For instance, we were using over ten different hues of blue for basically reason. We also used and inconsistent set of colors for semantic meanings like errors or warnings. In addition, many of our color combinations didn't meet the minimum contrast recommendations required for accessibility. I was primarily responsible for creating our new palette.</p>
+				<p>I took inspiration from systems like <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors">Google Material</a>, <a href="https://mineral-ui.com/color">Mineral UI</a>, <a href="https://design.trello.com/style/color">Trello</a>, and the colors we were already using to standardize our system. We defined a basic set of grays to use for most things like text, and a set of four semantic colors for errors, warnings, success messages, and information.</p>
+				<p>For our extended palette, containing many more colors from the rainbow, I outlined twelve hues, each with four steps. I limited the number of steps so it was easier for our team to make choices, but left room in case we wanted to add more later. In order to make the whole set cohesive, I introduced just a hint of "NASA blue" into each hue.</p>
+				<p>The most important part of creating our color palette, however, was providing guidance on accessible color combinations. For each swatch, I included it's WCAG contrast rating against white and our darkest and lightest grays.</p>
+			</div>
+			<figure class="grid-50">
+				<img src="img/design-system/color.png" title="Color" alt="A few swatches from our color palette.">
+<!-- 				<figcaption class="caption">A caption explaining the image</figcaption> -->
+			</figure>				
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h3>Making (and measuring) progress</h3>
+			<p>It was one thing do create the system, but another entirely to make it easy to use for our team and ensure adoption. As product manager, it was my responsibility to create a process for implementing and contributing to the design system. I did lots of research on existing design systems and leaders (including <a href="https://github.com/primer/primer">GitHub</a> and our federal friends at <a href="https://designsystem.digital.gov/">18F</a>), and tried to create a process that worked for our team's unique needs.</p>
+			<h4>Component framework</h4>
+			<p>We adapted <a href="http://bradfrost.com/blog/post/atomic-web-design/">Brad Frost's Atomic Design</a> to suit our needs. We divide the "things" inside our design system into five main groups.</p>
+			<ul><li>	<b>Principles:</b> These are core, single-sentence ideas that we base the rest of our designs on. If you have nothing else to go from, make sure your design meets these principles.
+			</li><li>	<b>Foundations:</b> The core pieces that make up everything else in the system. Type, colors, spacing, iconography, shadows, and our grid.
+			</li><li>	<b>Components:</b> Fundamental components that make up larger ones. Things like buttons, links, form controls, and more.
+			</li><li>	<b>Complex components:</b> Larger components made up of several smaller ones, like dialogs, popovers, and alerts.
+			</li><li>	<b>Product-specific components:</b> Our flagship product, Mission Assurance System, has it's own very special use cases and is very complex. There are components it uses thant don't really come in handy for our other work. While we do use them over and over again, we separate these out so the team is encouraged to start with more fundamental patterns for new work.
+			</li></ul>
+			<h4>Component statuses</h4>
+			<p>When did we know we were "done" with a component? And how could the team know whether they could use something in their designs or code? I defined a few statuses that worked for our process.</p>
+			<ul><li>	<b>Proposal:</b> Things we're playing around with but might not end up standardizing.
+			</li><li>	<b>Identified:</b> We've decided as a team that we want to standardize this component, but haven't done much work beyond that.
+			</li><li>	<b>Design review:</b> We've begun doing some design work on this component, but things will change rapidly.
+			</li><li>	<b>Design complete:</b> We've agreed on the design for a component but it hasn't been implemented into code yet.
+			</li><li>	<b>Partially implemented:</b> Some code has been written and published for this component. It can be used in live products with the expectation it may change.
+			</li><li>	<b>Code complete:</b> The core code for this component has been written and it's ready to use in production.
+			</li><li>	<b>Under review:</b> We're considering making destabilizing design or code changes to this component, so proceed with caution.
+			</li><li>	<b>Deprecated:</b> This component might be live right now, but we've decided not use it anymore, at least in it's current iteration, moving forward.
+			</li></ul>
+		</section>
+<!-- 		<section class="prefix-5 grid-90 suffix-5 grid-parent">
+			<figure>
+				<div class="grid-50">
+					<img src="img/design-system/code-complete.png" title="List of UI Issues" alt="A screenshot of a Google Sheet listing our more than 100 UI inconsistencies.">
+					<figcaption>Our running list of interface inconsistencies. We used this as a starting point to guide our work and as one way to illustrate the problem to our team.</figcaption>
+				</div>
+				<div class="grid-50">
+					<img src="img/design-system/design-review.png" title="Inconsistent Alerts" alt="Five samples of different styles of alerts from our pre-existing designs.">
+					<figcaption>We uncovered inconsistencies in how our elements looked even within the same product. For example, here are all the different ways we rendered alerts in our flagship product, Mission Assurance System.</figcaption>
+				</div>
+			</figure>
+		</section> -->
+		<section class="prefix-10 grid-80 suffix-10">
+			<h4>A cadence for designing, building, and releasing the system</h4>
+			<p>Drawing yet again on some fine reading from <a href="https://medium.com/eightshapes-llc/releasing-design-systems-57fca91a23f6">Nathan Curtis</a>, I created a work and release cadence that fit into our existing process.</p>
+			<p>We were already doing engineering sprints on our other projects, so I introduced design sprints in order to structure the design work as well as provide an output that could be picked up by our developers as each new sprint began. The designers' work would be primarily focused on making updates to the design resources like our Sketch Library and the documentation, with code changes being made by engineers on their own schedule. While we proposed some code in our documentation to help our engineers get started (and giving me an opportunity to flex some of my HTML/CSS skills), we left most of the implementation up to them. This let us make progress without significantly uprooting our existing release cadence.</p>
+		</section>
+		<!--The part where I talk about unique challenges-->
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Challenges</h2>
+			<h3>Making the system that was right for us</h3>
+			<p>Lots of companies have well polished, gorgeous design systems that they can publish and maintain for public use. We don't have the same resources as most of those teams, so for us, we focused heavily on what would have the most immediate impact to our process and, as a result, our customers.</p>
+			<p>This meant moving rapidly, documenting as we went, and iterating over time. It meant not being afraid of having messy documentation. It meant using the vocabulary of the team, even if it didn't always match up with what we saw in the rest of the industry. And it meant designing patterns that were right for our users rather than doing things just because they are trendy.</p>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h3>Getting buy-in and keeping people included</h3>
+			<p>The design system represented a huge change in thinking and process for our team. While no one was necessarily hostile to the idea, it was difficult to convince some folks that the system would be valuable and not distract from the "real" work.</p>
+			<p>My colleagues and I working on the system kept fighting, presenting often to our team leadership and keeping the rest of the team apprised of changes with a weekly (most of the time) newsletter. We made sure at every turn to continue illustrating the value of the design system, the main idea being that creating a better process for us meant better product outcomes for our users. Through a grassroots, bottom-up effort, and an emerging top-down buy in, we've managed to make progress.</p>
+		</section>
+		<!--The part that explains how it all ended up-->
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Outcomes</h2>
+			<h3>Project progress</h3>
+			<p class="impact-number">90%</p>
+			<p class="impact-description">Of components design complete</p>
+			<p class="impact-number">40%</p>
+			<p class="impact-description">Components code complete</p>
+			<p>To date, we've compeleted design work on almost half our components, and development work on almost half. There's a ways to go before everything is fully implemented, but we're seeing both designers and engineers start to adopt the system and think in a new way.</p>
+			<h3>Improved workflow</h3>
+			<p class="impact-number">10%</p>
+			<p class="impact-description">More front-end tickets completed per sprint</p>
+			<p>It used to be that every front-end update needed a designer's full attention and a lot of back and forth between design and development. "Smaller" issues were ignored because of cost. With even a partial design system in place, we've seen a noticeable increase on what the front-end dev team has been able to accomplish in each sprint.</p>
+		</section>
+		<!--The part where I talk about if there's things that went well or could have gone better-->
+<!-- 		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Reflection</h2>
+			<p>Escape is not his plan. I must face him, alone. What?! But with the blast shield down, I can't even see! How am I supposed to fight? Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</p>
+		</section> -->
+	</div>
+
+	<!--The part where you can quickly get to another project-->
+<!-- 	<div class="project-nav">
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10 grid-parent">	
+				<nav>		
+					<a class="grid-50 mobile-grid-100 proj-prev" href="schematics.html">Previous project: <br/>  NASA Schematics Catalog</a>
+					<a class="grid-45 mobile-grid-100 proj-next" href="sls.html">Next project: <br/>SLS Data Exchange (DEx)</a>
+				</nav>
+			</div>
+		</div>
+	</div> -->
+
+	<!--The big bottom part-->
+	<footer>
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10">
+				<nav>
+					<a href="mailto: dave@luetger.com">dave@luetger.com</a>
+					<a href="https://twitter.com/dluetger">@dluetger</a>
+				</nav>
+				<p class="copyright">Made by <a href="index.html">Dave</a> in 
+							<script language="javascript" type="text/javascript">
+							var today = new Date()
+							var year = today.getFullYear()
+							document.write(year)
+							</script>.
+				</p>
+			</div>
+		</div>
+
+	<!--Version of jQuery that makes the footnotes work-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<!--Script that does the little footnotes. Lovingly borrowed from Randall Munroe at xkcd.com-->
+    <script>
+      jQuery.noConflict();
+      jQuery(function() {
+        jQuery("span.footnoteText").hide();
+        jQuery("span.footnoteNumber").click(function(event) {
+          jQuery(this.nextSibling).toggle();
+          event.stopPropagation();
+        });
+        jQuery("body").click(function(event) {
+          jQuery("span.footNoteText").hide();
+        });
+      });
+    </script>
+    <!--Script that does the progress bar-->
+	<script>
+		window.onscroll = function() {barScroll()};
+
+		function barScroll() {
+		  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		  var scrolled = (winScroll / height) * 100;
+		  document.getElementById("progress").style.width = scrolled + "%";
+		}
+	</script>
+</body>
+</html>

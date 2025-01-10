@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>SLS Data Exchange / Dave Luetger</title>
+	<meta name="description" content="Designer, musician, tv watcher, and human"/>
+<!--CSS that makes the browser not do stupid default stuff to the styling.-->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!--CSS that makes it easy to layout stuff on the page-->
+	<link rel="stylesheet" type="text/css" href="css/unsemantic-grid-responsive.css">
+	<!--All the other CSS-->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="favicon.png">
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+</head>
+
+<body>
+	<!--The part at the very top that shows how far you've gone-->
+	<div class="progress-container">
+    	<div class="progress-bar" id="progress"></div>
+  	</div> 
+
+  	<!--The big part at the top that shows the title and stuff-->
+  	<div class="masthead">
+  		<a class="skip-main" href="#main">Skip to main content</a>
+		<header>
+			<div class="grid-container">
+				<div class="prefix-10 grid-80 suffix-10">
+					<nav>
+						<a class="logo" href="index.html"><img src="img/general/d.svg" alt="Dave Luetger"></a>
+						<a href="index.html" class="active-page">Work</a>
+						<!--<a href="#">Speaking</a>-->
+						<a href="resume.html">Resume</a>
+						<a href="about.html">About</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div id="main" class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10">
+				<h1>SLS Data Exchange&nbsp;(DEx)</h1>
+				<p class="subtitle">Supporting the delivery of crucial data between NASA engineers</p>
+			</div>
+		</div>
+	</div>
+
+	<!--The big main part that has the story-->
+	<div class="grid-container content">
+		<!--An image summarizing the project-->
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure>
+				<img src="img/sls/sls-hero.png" title="SLS DEx" alt="A few screenshots from SLS DEx.">
+			</figure>
+		</section>
+		<!--Special notes if there are secrets shhhhhhh-->
+		<section class="prefix-10 grid-80 suffix-10">
+			<div class="disclaimer">
+				<h2>Note</h2>
+				<p>This work contains a few space secrets (shh!), so I've redacted and abstracted a few things to tell the story.</p>
+			</div>
+		</section>
+		<!--A summary of the project-->
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Summary</h2>
+			<p>Designing NASA's new Space Launch System (SLS) is no small task, and engineers and contractors from across the agency have to exchange and review all manner of models, drawings, and more with one another. Their process wasn't going as expected. Things weren't being delivered on time and it was difficult to get everyone to sign off, causing tension within the organization. I led the research, information architecture, and design to create DEx, a web application to address some of SLS' biggest challenges. 
+			<p><strong class="claim">Since launch, we've halved the time it takes to complete the data exchange&nbsp;process.</strong></p>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Project details</h2>
+			<div class="grid-50">			
+				<h3>My contribution</h3>
+				<ul class="list-short">
+					<li>Product management</li>
+					<li>Information architecture</li>
+					<li>Interaction design</li>
+					<li>User research</li>
+					<li>Usability testing</li>
+					<li>Client relations</li>
+					<li>Facilitation and workshops</li>	
+				</ul>
+			</div>
+			<div class="grid-50">
+				<h3>Collaborators</h3>
+				<ul class="list-short">
+					<li><a href="http://stephentrahan.com/">Stephen Trahan</a></li>
+					<li><a href="https://hci.arc.nasa.gov/">The NASA Ames HCI Group</a></li>
+				</ul>
+				<h3>Client</h3>
+				<ul class="list-short">
+					<li><a href="https://www.nasa.gov/exploration/systems/sls/index.html">NASA Space Launch System Program</a></li>
+				</ul>
+			</div>
+		</section>
+		<!--The part that describes the background and the problem-->
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Background</h2>
+			<p>Since retiring the Space Shuttle, NASA has been hard at work on a new human spaceflight vehicle, the Space Launch System (SLS). To design and build the rocket, all manner of specialized engineers and contractors have to collaborate on, exchange, and review data artifacts with one another. These are things like environment models, trajectories, drawings, schematics, tables, and more. Each of these deliverables are dependent on one or more others, so it's important that data is completed and delivered on time. In addition, every deliverable needs to be signed off on by multiple different parties.</p>
+			<p>To keep track of everything, the folks at SLS had come up with a process for requests, signatures, and deliveries. However, it was run by a single person inside an Excel spreadsheet of ever-increasing size and complexity. Nothing was working as expected. There were many bureaucratic silos and unclear requests. Things weren't getting delivered on time (if at all), and it took way to long to get everyone to sign off on things. While there was a process in theory, it wasn't really being followed, sewing discord, stress, and unhappiness throughout the SLS organization.</p>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure>
+				<img src="img/sls/dem.png" title="Data Exchange Matrix" alt="A screenshot of the spreadsheet SLS had been using to track everything.">
+				<figcaption class="caption">SLS had been running everything from a single spreadsheet!</figcaption>
+			</figure>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<p>I led the user research, information architecture, and product design on SLS Data Exchange (DEx), a web application that addresses some of SLS' most critical issues.</p>
+			<p><strong class="claim">Our goal was to make the process more efficient by breaking down key barriers, reducing stress for the organization.</strong></p>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>The product: Mapping opportunities to features</h2>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<div class="grid-50">
+				<h3>Shared, web-based documents</h3>	
+				<p><b>Opportunity:</b> Make it easier to locate and access material.</p>
+<!-- 				<blockquote class="blockquote-small">
+					<p>Tremendous work! We might know how to do this by the time we fly.</p>
+					<footer>— SLS Chief Engineer</footer>
+				</blockquote> -->
+				<p><b>Solution:</b> By providing all the data on a single, web-based platform rather than individual engineers' hard drives or scattered throughout email, we made it easier for people to find what they were looking for.</p>
+			</div>
+			<figure class="grid-50">
+				<img src="img/sls/collaborative-document.png" title="Design System Documentation" alt="Three screenshots from our design system documentation.">
+<!-- 				<figcaption class="caption">A caption explaining the image</figcaption> -->
+			</figure>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure class="grid-50">
+				<img src="img/sls/signatures.png" title="Sketch Library" alt="Our Sketch library.">
+<!-- 				<figcaption class="caption">A caption explaining the image</figcaption> -->
+			</figure>
+			<div class="grid-50">	
+				<h3>Signatures</h3>
+				<p><b>Opportunity:</b> Reduce the time needed for sign off.</p>
+				<p><b>Solution:</b> Web-based signatures that can be completed with the click of a button rather than running around searching for people to physically sign off on paper.</p>
+			</div>				
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<div class="grid-50">
+				<h3>Linked information</h3>	
+				<p><b>Opportunity:</b> Better communicate status and impacts.</p>
+				<p><b>Solution:</b> By linking records together, users can easily see how each is related and know which items have an impact on others.</p>
+			</div>
+			<figure class="grid-50">
+				<img src="img/sls/linking.png" title="Design System Documentation" alt="Three screenshots from our design system documentation.">
+<!-- 				<figcaption class="caption">A caption explaining the image</figcaption> -->
+			</figure>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure class="grid-50">
+				<img src="img/sls/comments.png" title="Sketch Library" alt="Our Sketch library.">
+<!-- 				<figcaption class="caption">A caption explaining the image</figcaption> -->
+			</figure>
+			<div class="grid-50">	
+				<h3>Comments</h3>
+				<p><b>Opportunity:</b> Encourage collaboration.</p>
+				<p><b>Solution:</b> Using comments, users can discuss an exchange in a single, public place so everyone involved in the process can see. This keeps people in the loop and reduces the load on people's mailboxes.</p>
+			</div>				
+		</section>
+		<!--The part that explains how we fixed it maybe-->
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Approach</h2>
+			<h3>User interviews</h3>
+			<p>After a kickoff with our main clients, we traveled to Marshall Spaceflight Center (MSFC) in Huntsville, AL to do some interviews. I facilitated thirteen interviews with folks from different disciplines, elements, and roles in the process. Our research questions sought to answer who was involved in the process, what it looked like from each participants' perspective, frustrations and pain points, and any things that might be working well, if any.</p>
+			<h3>Analyzing our notes</h3>
+			<p>Rather than doing an affinity diagram, we tried out using Airtable to document and classify our notes. We thought it would save us some time and allow us to quickly add data and make associations. My colleague Stephen and I combed through our raw notes and pulled out "nuggets" that could stand on their own. We tagged each note as we went in order to pull out common trends. We went through rapidly and at the end a pretty good set of themes had emerged.</p>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure>
+				<img src="img/sls/nuggets.png" title="Research Notes" alt="A screenshot of our Airtable instance, which we used to organize all our research notes.">
+				<figcaption class="caption">We used Airtable to organize all our notes, and later to link all our data user stories.</figcaption>
+			</figure>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h3>Determining the most critical opportunities</h3>
+			<p>We quantified our data in two ways to filter out the most important opportunities. The first was a simple bar chart showing how many times a theme was mentioned. Nothing was too surprising, but we now had evidence to back up some of the frustrations we heard about when the project began.</p>
+			<p>The second model we created was a "prevalence-severity matrix". I had used <a href="https://www.nngroup.com/articles/prioritization-matrices/">impact-effort matrices</a> in past projects to help prioritize work, and wondered if we could use something similar to further narrow our opportunities. On this chart, we plotted how often a theme came up against how severe it was. The severity, was, admittedly, a subjective measure based on the language our participants used and our previous domain knowledge. However, it offered a useful tool to get a sense of our top opportunities. </p>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5 grid-parent">
+			<figure>
+				<div class="grid-50">
+					<img src="img/sls/bar-chart.png" title="Bar Chart" alt="A bar chart showing how often each theme came up.">
+				</div>
+				<div class="grid-50">
+					<img src="img/sls/matrix.png" title="Prevalance-Severity Matrix" alt="A matrix showing how often an issue came up versus how severe it was.">
+				</div>
+				<figcaption class="grid-100">Two of the models we used to quantify our data.</figcaption>
+			</figure>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h3>Modeling the process</h3>
+			<p>We wanted a clearer picture of the overall process, and wanted to be able to show our stakeholders where the biggest issues were happening. We pieced together everything we heard into a unified model and highlighted the breakdowns.</p>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure>
+				<img src="img/sls/process-model.png" title="Process Model" alt="Our model of the original process, marking breakdowns.">
+				<figcaption class="caption">Just one part of our model highlighting some of the breakdowns in the old process.</figcaption>
+			</figure>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h3>Workshopping project goals and design ideas</h3>
+			<p>We travelled back out to Marshall, and I facilitated two workshops with our clients and a few other leaders from SLS. The first was to generate project goals, and the second was to explore design ideas.</p>
+			<p>For the goals workshop, we did a simple brainstorm on sticky notes. In the second exercise, we got them drawing! I wanted to make sure our findings and the goals of our stakeholders were aligned. If there were goals or design ideas that didn't map clearly to our findings, we could analyze them further. We also wanted to make the process participatory and make folks feel included in the process. Making changes is a scary thing, so we worked hard to make sure everyone felt welcome in shaping the project.</p>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure>
+				<img src="img/sls/workshop.jpg" title="Workshop Affinity Diagram" alt="Our affinity diagram of project goals created with our clients.">
+				<figcaption class="caption">We brainstormed and grouped dozens of goals generated by our clients.</figcaption>
+			</figure>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h3>Roles and user stories</h3>
+			<p>We divided our user community into a few main roles: </p>
+			<ul><li>	<b>Data creators:</b> These folks were the primary creators, requestors, and users of data artifacts.
+			</li><li>	<b>Schedulers:</b> These folks are primarily responsible for tracking status and monitoring dates. Often overlaps with the "router" role.
+			</li><li>	<b>Routers:</b> Primarily responsible for making sure data gets where it needs to go and coordinating the people involved in an exchange. Often overlaps with the "scheduler" role.
+			</li><li>	<b>Approvers:</b> Responsible for signing off on deliveries. May overlap with the "data creator" role.
+			</li></ul>
+			<p>For each role, we wrote several user stories that combined everything we learned from our research and workshops. We used these user stories to scope the work for the first release.</p>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure>
+				<img src="img/sls/user-story.png" title="User Story Example" alt="An example user story.">
+				<figcaption class="caption">Just one example user story we presented to our clients.</figcaption>
+			</figure>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h3>Information architecture</h3>
+			<p>My team's flagship product, Mission Assurance System, is a customizable platform that fits into a lot of NASA use cases. For many projects, it's a way to rapidly the meet our users' needs without spending too much time creating an entirely new piece of enterprise software. We decided that it would be a good fit for SLS as well.</p>
+			<p>Even though we were building using our platform, we still needed to define a logical information architecture. We drew content from all the artifacts we had collected  (memos, the original Excel spreadsheet, and more) and our primary research in order to create our IA.</p>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure>
+				<img src="img/sls/information-architecture.png" title="Information Architecture" alt="Our information architecture diagram.">
+				<figcaption class="caption">Our information architecture diagram illustrating how we would structure the records in the system.</figcaption>
+			</figure>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h3>Creating a new process</h3>
+			<p>In addition to creating an information architecture, we worked with our clients to draw out a new workflow. We defined what the responsibilities of each role would be in the new system.</p>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure>
+				<img src="img/sls/workflow.png" title="Workflow" alt="A workflow for the new system showing the responsibilities of each role.">
+				<figcaption class="caption">We created this workflow diagram to map out how each role would interact with the system.</figcaption>
+			</figure>
+		</section>
+		<section class="prefix-10 grid-80 suffix-10">
+			<h3>Usability testing and validation</h3>
+			<p>With our information architecture and new process workflow in hand, I created a prototype environment of our product to put in front of users. We took our third trip to Alabama to test and validate the interface. I facilitated seven sessions where we sought to validate some of our concepts and get some light usability feedback. We provided our participants a different set of scenarios depending on what role they played in the process.</p>
+			<h4>What needed work</h4>
+			<ul><li>Most of our participants had process questions. We needed to change some vocabulary around in the system to make it more clear what every field was for.
+			</li><li>About half our participants struggled with commenting. The concept of threading was particularly unclear.
+			</li><li>We had provided a set of search results on the homepage for quick access, but they turned out not to be valuable. Most of our participants were looking for something more personalized.
+			</li></ul>
+			<h4>What went well</h4>
+			<ul><li>The general concept, a web-based collaborative environment, went over well with 100% of our participants.
+			</li><li>A majority of our participants commented on how easy it was to link records together, and we observed them completing the task in very little time.
+			</li><li>We found that folks found it easy to determine what the status of a record was, as well do a search for everything in a particular status.
+			</li></ul>
+		</section>
+		<!--The part that explains how it all ended up-->
+		<section class="prefix-10 grid-80 suffix-10">
+			<h2>Outcome</h2>
+			<h3>Reducing the number of days per cycle</h3>
+			<p class="impact-number">15</p>
+			<p class="impact-description">Days saved per review</p>
+		 	<p>Since launch we've cut the time the average data exchange takes in half, from 30 days to just 15.</p>
+		 	<p class="impact-number">5</p>
+			<p class="impact-description">Days saved for all signatures</p>
+			<p>Within each cycle, we've seen the time it takes engineers to gather all their signatures fall from 8 days on average to just three.</p>
+		</section>
+		<section class="prefix-5 grid-90 suffix-5">
+			<blockquote>
+				<p>Tremendous work! We might know how to do this by the time we fly.</p>
+				<footer>&ndash;SLS Chief Engineer</footer>
+			</blockquote>
+		</section>
+	</div>
+
+	<!--The part where you can quickly get to another project-->
+<!-- 	<div class="project-nav">
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10 grid-parent">	
+				<nav>		
+					<a class="grid-50 mobile-grid-100 proj-prev" href="schematics.html">Previous project: <br/>  NASA Schematics Catalog</a>
+					<a class="grid-45 mobile-grid-100 proj-next" href="schematics.html">Next project: <br/>NASA SLS Data Exchange</a>
+				</nav>
+			</div>
+		</div>
+	</div> -->
+
+	<!--The big bottom part-->
+	<footer>
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10">
+				<nav>
+					<a href="mailto: dave@luetger.com">dave@luetger.com</a>
+					<a href="https://twitter.com/dluetger">@dluetger</a>
+				</nav>
+				<p class="copyright">Made by <a href="index.html">Dave</a> in 
+							<script language="javascript" type="text/javascript">
+							var today = new Date()
+							var year = today.getFullYear()
+							document.write(year)
+							</script>.
+				</p>
+			</div>
+		</div>
+
+	<!--Version of jQuery that makes the footnotes work-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<!--Script that does the little footnotes. Lovingly borrowed from Randall Munroe at xkcd.com-->
+    <script>
+      jQuery.noConflict();
+      jQuery(function() {
+        jQuery("span.footnoteText").hide();
+        jQuery("span.footnoteNumber").click(function(event) {
+          jQuery(this.nextSibling).toggle();
+          event.stopPropagation();
+        });
+        jQuery("body").click(function(event) {
+          jQuery("span.footNoteText").hide();
+        });
+      });
+    </script>
+    <!--Script that does the progress bar-->
+	<script>
+		window.onscroll = function() {barScroll()};
+
+		function barScroll() {
+		  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		  var scrolled = (winScroll / height) * 100;
+		  document.getElementById("progress").style.width = scrolled + "%";
+		}
+	</script>
+</body>
+</html>

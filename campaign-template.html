@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Campaign Website Template / Dave Luetger</title>
+	<meta name="description" content="Designer, musician, tv watcher, and human"/>
+<!--CSS that makes the browser not do stupid default stuff to the styling.-->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!--CSS that makes it easy to layout stuff on the page-->
+	<link rel="stylesheet" type="text/css" href="css/unsemantic-grid-responsive.css">
+	<!--All the other CSS-->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="favicon.png">
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+</head>
+
+<body>
+	<div class="progress-container">
+    	<div class="progress-bar" id="progress"></div>
+  	</div> 
+  	<div class="masthead">
+  		<a class="skip-main" href="#main">Skip to main content</a>
+		<header>
+			<div class="grid-container">
+				<div class="prefix-10 grid-80 suffix-10">
+					<nav>
+						<a class="logo" href="index.html"><img src="img/general/d.svg" alt="Dave Luetger"></a>
+						<a href="index.html" class="active-page">Work</a>
+						<!--<a href="#">Speaking</a>-->
+						<a href="resume.html">Resume</a>
+						<a href="about.html">About</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div id="main" class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10">
+				<h1>Ragtag Campaign&nbsp;template</h1>
+				<p class="subtitle">Making it easy for new candidates to launch their websites</p>
+			</div>
+		</div>
+	</div>
+	<div class="grid-container">
+		<div class="prefix-5 grid-90 suffix-5">
+			<section>
+				<figure>
+					<img src="img/campaign-template/campaign-template-hero.png" title="Campaign Template" alt="Web and mobile layouts for the campaign template.">
+					<!--<p class="caption">Aerial photo of NASA Ames</p>-->
+				</figure>
+			</section>
+		</div>
+		<div class="prefix-10 grid-80 suffix-10">
+			<section>
+				<p><a href="https://ragtag.org/">Ragtag</a> is a volunteer organization of technologists and activists working to support progressive candidates for federal, state, and local offices in the United States. Political candidates, especially people running for the first time, don't always have the resources to make a quality website in a limited time. While volunteers like me are helping dozens of candidates with their sites, demand has started growing beyond what we can handle. Ragtag wanted to make a set of templates that could quickly and easily be deployed to candidates no matter what kind of content they had. I did competitive analysis on a wide range of existing campaign websites, and designed the first template. My goals were to create a template that is professional and patriotic while remaining accessible and, most importantly, adaptable to lots of different kinds of content.</p>
+<!-- 				<a href="schematics.html">Previous project: NASA Schematics Catalog</a> -->
+			</section>
+		</div>
+	</div>
+	<footer>
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10">
+				<nav>
+					<a href="mailto: dave@luetger.com">dave@luetger.com</a>
+					<a href="https://twitter.com/dluetger">@dluetger</a>
+				</nav>
+				<p class="copyright">Made by <a href="index.html">Dave</a> in 
+							<script language="javascript" type="text/javascript">
+							var today = new Date()
+							var year = today.getFullYear()
+							document.write(year)
+							</script>.
+				</p>
+			</div>
+		</div>	
+	<!--Version of jQuery that makes the footnotes work-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<!--Script that does the little footnotes. Lovingly borrowed from Randall Munroe at xkcd.com-->
+    <script>
+      jQuery.noConflict();
+      jQuery(function() {
+        jQuery("span.footnoteText").hide();
+        jQuery("span.footnoteNumber").click(function(event) {
+          jQuery(this.nextSibling).toggle();
+          event.stopPropagation();
+        });
+        jQuery("body").click(function(event) {
+          jQuery("span.footNoteText").hide();
+        });
+      });
+    </script>
+    <!--Script that does the progress bar-->
+	<script>
+		window.onscroll = function() {barScroll()};
+
+		function barScroll() {
+		  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		  var scrolled = (winScroll / height) * 100;
+		  document.getElementById("progress").style.width = scrolled + "%";
+		}
+	</script>
+</body>
+</html>

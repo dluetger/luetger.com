@@ -4,21 +4,34 @@
 
 /*Fonts*/
 $font-stack: "Libre Franklin", Helvetica, Arial, sans-serif;
+// $font-stack: "Roboto", Helvetica, Arial, sans-serif;
 
-/*Grays*/
-$gray-10: rgb(245, 247, 250);
-$gray-20: rgb(235, 239, 245);
-$gray-40: rgb(200, 209, 224);
-$gray-80: rgb(67, 74, 84);
-$gray-100: rgb(51, 56, 64);
-$mine-shaft: #373A46;
-$tundora: #555555;
+// /*Grays*/
+// $gray-10: rgb(245, 247, 250);
+// $gray-20: rgb(235, 239, 245);
+// $gray-40: rgb(200, 209, 224);
+// $gray-80: rgb(67, 74, 84);
+// $gray-100: rgb(51, 56, 64);
+
+$gray-10: hsl(216, 33%, 97%);
+$gray-20: hsl(216, 33%, 94%);
+$gray-40: hsl(218, 28%, 83%);
+$gray-80: hsl(218, 11%, 39%);
+$gray-100: hsl(217, 11%, 23%);
+
+// /*Primary Colors*/
+$primary-30: hsl(217, 93%, 83%);
+$primary-50: hsl(217, 84%, 64%);
+$primary-60: hsl(217, 69%, 52%);
+$primary-70: hsl(217, 74%, 43%);
+$primary-90: hsl(217, 75%, 25%);
 
 /*Primary Colors*/
-$primary-30: rgb(157, 194, 250);
-$primary-50: rgb(74, 137, 232);
-$primary-70: rgb(31, 93, 194);
-$primary-90: rgb(17, 64, 145);
+// $primary-30: hsl(33, 86%, 71%);
+// $primary-50: hsl(33, 85%, 44%);
+// $primary-60: hsl(33, 100%, 34%);
+// $primary-70: hsl(33, 96%, 28%);
+// $primary-90: hsl(33, 75%, 17%);
 
 /*Accent Colors*/
 $accent-70: rgb(207, 70, 21);
@@ -81,26 +94,38 @@ $grid-tablet-large: 768px;
 	-o-transition: $time ease-in-out;
   	-ms-transition: $time ease-in-out;
   	-moz-transition: $time ease-in-out;
-  	-webkit-transition: $time eas e-in-out;
+  	-webkit-transition: $time ease-in-out;
   	transition: $time ease-in-out;
 }
 
 /*-----Normal, boring stuff-----*/
 
+html{
+	background-color: $gray-100;
+}
+
 body{
 	font-family: $font-stack;
 	font-size: 18px;
-	color: $tundora;
+	color: $gray-100;
+	// margin: $spacing-small;
 	//padding: 0 $spacing-large 0 $spacing-large;
+	//border: $spacing-small solid $gray-100;
 	background: $gray-10;
 	@include fadein(1s);
 	//border-top: 2px solid $primary-70;
 }
 
+.skip-main{
+	left: -999px;
+	position: absolute;
+	z-index: -999;
+}
+
 .progress-container {
   width: 100%;
-  height: 4px;
-  background: $gray-40;
+  height: $spacing-small;
+  background: $gray-100;
   position: fixed;
   top: 0;
   left: 0;
@@ -108,19 +133,31 @@ body{
 
 /* The progress bar (scroll indicator) */
 .progress-bar {
-  height: 4px;
-  background: $primary-70;
+  height: $spacing-small;
+  background: $primary-50;
   width: 0%;
 }
 
-// header{
-// 	margin-top: 1000px;
-// }
+/*Selection*/
+
+::selection {
+background:$primary-30;
+color: $gray-100;
+}
+
+::-moz-selection {
+background:$primary-30;
+color: $gray-100;
+}
+
+::-webkit-selection {
+background:$primary-30;
+color: $gray-100;
+}
 
 h1{
 	font-size: $font-size-xxx-large;
 	font-weight: $font-weight-x-bold;
-	color: $mine-shaft;
 	margin: 0 0 $spacing-small -4px;
 	@include ease-in-out(.2s);
 }
@@ -128,38 +165,57 @@ h1{
 h2{
 	@extend h1;
 	// letter-spacing: inherit;
-	font-size: $font-size-x-large;
+	font-size: $font-size-xx-large;
 	margin:0 0 $spacing-large 0;
 	padding-bottom: $spacing-small;
 }
 
-// h2:before {
-//      background-color: lighten($mine-shaft, 50%);
-//      bottom: $spacing-medium;
-//      content: "";
-//      display: block;
-//      height: 1px;
-//      position: relative;
-//      width: 640px;
-// }
-
 h3{
 	@extend h1;
-	font-size: 1.1em;
+	font-size: $font-size-x-large;
+	margin: $spacing-large 0 $spacing-medium+$spacing-small 0;
+}
+
+h4{
+	@extend h1;
+	font-size: $font-size-large;
 	margin: $spacing-large 0 $spacing-medium 0;
 }
 
 p{
-	color: $tundora;
+	color: $gray-80;
 	font-weight: $font-weight-light;
 	line-height: 1.7em;
-	margin:0 0 $spacing-large 0;
+	margin:0 0 $spacing-medium 0;
 	max-width: 640px;
 	@include ease-in-out(.2s);
 }
 
 strong{
 	font-weight: $font-weight-x-bold;
+}
+
+b{
+	@extend strong;
+}
+
+blockquote{
+
+	p{
+		border-left: $spacing-x-small solid $primary-60;
+		font-size: $font-size-large;
+		padding-left: $spacing-large;
+		min-width: 100%;
+	}
+
+	footer{
+		margin-top: -$spacing-x-large;
+		padding-left: $spacing-large;
+	}
+}
+
+.blockquote-small p{
+	font-size: $font-size-regular;
 }
 
 /*-----Picture stuff-----*/
@@ -176,6 +232,15 @@ img{
 	border: none;
 }
 
+figcaption{
+	font-size: $font-size-small;
+	line-height: 1.5em;
+}
+
+.figure-image-container{
+	display: block;
+}
+
 /*-----Link stuff-----*/
 	
 // a{
@@ -189,7 +254,7 @@ img{
 a{
 	@extend p;
 	text-decoration: none;
-  	border-bottom: 1px solid $primary-70;
+  	border-bottom: 1px solid $primary-60;
   	// padding-bottom: -8px;
 	@include ease-in-out(.1s);
 	@include border-radius(1px);
@@ -197,6 +262,8 @@ a{
 
 a:hover{
 	background-color: $primary-30;
+	border-bottom: 1px solid $primary-30;
+	//border-bottom: 1px solid $primary-30;
 	color: black;
 }
 
@@ -205,6 +272,16 @@ a:focus{
 	outline: 2px dashed $gray-80;
 	outline-radius: 1px;
 	outline-offset: 4px;
+}
+
+.skip-main:focus, .skip-main:active{
+	left: auto;
+	top: $spacing-small;
+	overflow: auto;
+	z-index: 999;
+	background-color: $primary-50;
+	color: white;
+	padding: $spacing-medium;	
 }
 
 /*-----List stuff-----*/
@@ -220,15 +297,16 @@ li{
 	margin-bottom: $spacing-medium;
 }
 
+.list-short li{
+	margin-left: -$spacing-medium;
+	margin-bottom: $spacing-x-small;
+}
+
 
 /*-----Stuff that slightly modifies the boring stuff-----*/
 
 #about-header{
 	margin: 0 0 $spacing-x-large;
-}
-
-.caption{
-	font-size: $font-size-small;
 }
 
 .masthead{
@@ -238,12 +316,25 @@ li{
 	border-bottom: 1px solid rgb(200, 209, 224);
 }
 
+.hero-text-h{
+	font-size: $font-size-xxx-large;
+	margin-bottom: $spacing-medium;
+}
+
 .hero-text{
-	font-size: $font-size-x-large;
-	font-weight: $font-weight-bold;
-	color: $mine-shaft;
+	font-size: $font-size-large;
+	font-weight: $font-weight-light;
 	line-height: 1.5em;
 	max-width: 100%;
+	color: $gray-100;
+}
+
+.hero-text-h:hover span{
+  display: none;
+}
+
+.hero-text-h:hover:after{
+	content: '(loot-grr).';
 }
 
 .subtitle{
@@ -257,12 +348,18 @@ li{
 	margin: -$spacing-medium 0 $spacing-medium 0;
 }
 
+
+
 /*-----Things for the part with all the links-----*/
 nav{
 	a{
 		display: inline-block;
 		margin:0 $spacing-medium 0 0;
-		color:$mine-shaft;
+		color:$gray-100;
+		border-bottom: none;
+	}
+
+	a:hover{
 		border-bottom: none;
 	}	
 }
@@ -274,12 +371,22 @@ header{
 	a{
 		line-height: $spacing-large;
 	}
+
+
 }
 
 .active-page{
 	font-weight: $font-weight-bold;
-	color: $primary-70;
-	border-bottom: $spacing-x-small solid $primary-70;
+	color: $primary-60;
+	border-bottom: $spacing-x-small solid $primary-60;
+}
+
+.active-page:hover{
+	border-bottom: $spacing-x-small solid $primary-30;
+}
+
+.active-page:focus{
+	border-bottom: $spacing-x-small solid $primary-30;
 }
 
 /*The logo part*/
@@ -291,7 +398,7 @@ a.logo{
 }
 
 a.logo:hover{
-		color: lighten($mine-shaft, 20%);
+		color: lighten($gray-100, 20%);
 		border-bottom: none;
 		background-color: $gray-10;
 	}
@@ -319,8 +426,22 @@ a.logo:focus{
 /*-----Things for the part where most of the writing is----*/
 
 section{
-	padding: 0 0 $spacing-x-large 0;
+	padding: 0 0 0 0;
 	margin: 0 0 $spacing-x-large 0;
+}
+
+.section-1{
+	padding: 0 0 $spacing-x-large 0;
+	border-bottom: 1px solid $gray-40;
+	margin: 0 0 $spacing-x-large 0;
+}
+
+.section-medium{
+	margin: 0 0 $spacing-large 0;
+}
+
+.section-small{
+	margin: 0 0 $spacing-medium 0;	
 }
 
 .work-list{
@@ -331,34 +452,47 @@ section{
 		margin-bottom: -$spacing-small;
 		font-weight: $font-weight-bold;
 	}
+
+	a{
+		font-weight: $font-weight-bold;
+		color: $gray-100;
+	}
 }
 
 .disclaimer{
 	padding: $spacing-large;
-	background-color: lighten($primary-70, 60%);
+	background-color: lighten($primary-30, 10%);
 	@include border-radius(2px);
-	max-width: 640px;
+	color: $primary-70;
 
-	h2{
+	h2 {
 		font-size: $font-size-regular;
-		margin: 0 0 0 0;
-		color: darken($primary-70, 10%);
-
-	}
-
-	h2::after{
-		height: 0;
-		margin-bottom: $spacing-small;
+		margin-bottom: 0;
 	}
 
 	p{
-		margin: 0 0 0 0;
-		color: darken($primary-70, 10%);
+		margin: 0;
 	}
 }
 
+.claim {
+	color: $primary-60;
+}
+
 .weak{
-	color: lighten($mine-shaft, 20%);
+	color: lighten($gray-100, 20%);
+}
+
+.impact-number{
+	font-size: $font-size-xxx-large;
+	font-weight: $font-weight-bold;
+	color: $primary-60;
+	margin-bottom: 0;
+	line-height: 1em;
+}
+
+.impact-description{
+	font-weight: $font-weight-bold;
 }
 
 /*-----Footnotes-----*/
@@ -372,7 +506,7 @@ section{
 	vertical-align: super;
 	font-size:.7em;
 	line-height: 0;
-	color: $primary-70;
+	color: $primary-60;
 	position: relative;
     cursor: pointer;
     border-bottom: $border-link
@@ -386,12 +520,35 @@ section{
     position: absolute;
     left: 25px;
     bottom: 5px;
-    border: 1px solid $mine-shaft;
+    border: 1px solid $gray-80;
     padding: 10px;
     background-color: #fff;
     z-index: 100;
     overflow: auto;
     margin:0 0 0 0;
+}
+
+
+/*-----Project nav stuff-----*/
+.project-nav {
+	border-top: 1px solid rgb(200, 209, 224);
+
+	nav{
+	}
+
+	a{
+		padding: $spacing-large 0 $spacing-large 0;
+		font-weight: $font-weight-bold;
+		margin-bottom: -$spacing-medium;
+	}
+}
+
+.proj-prev{
+	border-right: 1px solid rgb(200, 209, 224);
+}
+
+.proj-next{
+	text-align: right;
 }
 
 /*-----Footer stuff-----*/
@@ -404,7 +561,7 @@ footer{
 
 	a{
 		font-weight: $font-weight-x-bold;
-		color: $mine-shaft;
+		color: $gray-100;
 	}
 }
 
@@ -416,6 +573,13 @@ footer{
 		font-weight: $font-weight-regular;
 		border-bottom: $border-link;
 	}
+}
+
+blockquote footer{
+	background-color: transparent;
+	margin: none;
+	border: none;
+	padding: none;
 }
 
 /*------Stuff for the part where I talk about myself-----*/
@@ -504,6 +668,10 @@ footer{
 		font-size: $font-size-regular;
 	}
 
+	h4{
+		font-size: 0.8em;
+	}
+
 	.masthead{
 		margin-bottom: $spacing-x-large;
 		padding-bottom: $spacing-large;
@@ -515,5 +683,13 @@ footer{
 
 	section{
 		margin-bottom: $spacing-small;
+	}
+
+	blockquote{
+
+		p{
+			padding-left: $spacing-medium;
+			font-size: $font-size-regular;
+		}
 	}
 }

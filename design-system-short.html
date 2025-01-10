@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>NASA HCI Design System / Dave Luetger</title>
+	<meta name="description" content="Designer, musician, tv watcher, and human"/>
+<!--CSS that makes the browser not do stupid default stuff to the styling.-->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!--CSS that makes it easy to layout stuff on the page-->
+	<link rel="stylesheet" type="text/css" href="css/unsemantic-grid-responsive.css">
+	<!--All the other CSS-->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="favicon.png">
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+</head>
+
+<body>
+	<!--The part at the very top that shows how far you've gone-->
+	<div class="progress-container">
+    	<div class="progress-bar" id="progress"></div>
+  	</div> 
+
+  	<!--The big part at the top that shows the title and stuff-->
+  	<div class="masthead">
+		<header>
+			<div class="grid-container">
+				<div class="prefix-10 grid-80 suffix-10">
+					<nav>
+						<a class="logo" href="index.html"><img src="img/general/d.svg" alt="Dave Luetger"></a>
+						<a href="index.html" class="active-page">Work</a>
+						<!--<a href="#">Speaking</a>-->
+						<a href="resume.html">Resume</a>
+						<a href="about.html">About</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10">
+				<h1>NASA HCI Design System</h1>
+				<p class="subtitle">Making it easier to create quality digital products for the agency</p>
+			</div>
+		</div>
+	</div>
+
+	<!--The big main part that has the story-->
+	<div class="grid-container content">
+		<!--An image summarizing the project-->
+		<section class="prefix-5 grid-90 suffix-5">
+			<figure>
+				<img src="img/design-system/design-system-hero.png" title="NASA HCI Design System" alt="A collage of sample components from the design system.">
+			</figure>
+		</section>
+		<!--A summary of the project-->
+		<section class="prefix-10 grid-80 suffix-10">
+			<p>As my team grew and the number of projects we were supporting increased to an unmanageable degree, we were accruing lots of technical and design debt, and it was harder to do our work. I led the creation of our first design system to help overcome some of our most pressing team challenges. Since the project began we’ve designed and implemented over half of our components, and we’ve been able to spend more time on things like accessibility and performance.</p>
+		</section>
+	</div>
+
+	<!--The part where you can quickly get to another project-->
+	<div class="project-nav">
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10 grid-parent">	
+				<nav>		
+					<a class="grid-50 mobile-grid-100 proj-prev" href="schematics.html">Previous project: <br/>  NASA Schematics Catalog</a>
+					<a class="grid-45 mobile-grid-100 proj-next" href="schematics.html">Next project: <br/>NASA SLS Data Exchange</a>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<!--The big bottom part-->
+	<footer>
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10">
+				<nav>
+					<a href="mailto: dave@luetger.com">dave@luetger.com</a>
+					<a href="https://twitter.com/dluetger">@dluetger</a>
+				</nav>
+				<p class="copyright">Made by <a href="index.html">Dave</a> in 
+							<script language="javascript" type="text/javascript">
+							var today = new Date()
+							var year = today.getFullYear()
+							document.write(year)
+							</script>.
+				</p>
+			</div>
+		</div>
+
+	<!--Version of jQuery that makes the footnotes work-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<!--Script that does the little footnotes. Lovingly borrowed from Randall Munroe at xkcd.com-->
+    <script>
+      jQuery.noConflict();
+      jQuery(function() {
+        jQuery("span.footnoteText").hide();
+        jQuery("span.footnoteNumber").click(function(event) {
+          jQuery(this.nextSibling).toggle();
+          event.stopPropagation();
+        });
+        jQuery("body").click(function(event) {
+          jQuery("span.footNoteText").hide();
+        });
+      });
+    </script>
+    <!--Script that does the progress bar-->
+	<script>
+		window.onscroll = function() {barScroll()};
+
+		function barScroll() {
+		  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		  var scrolled = (winScroll / height) * 100;
+		  document.getElementById("progress").style.width = scrolled + "%";
+		}
+	</script>
+</body>
+</html>

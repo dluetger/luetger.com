@@ -17,8 +17,12 @@
 </head>
 
 <body>
-	<div class="progress-container"></div>
+	<!--The part at the very top that shows how far you've gone-->
+	<div class="progress-container">
+    	<div class="progress-bar" id="progress"></div>
+  	</div> 
 	<div class="masthead">
+		<a class="skip-main" href="#main">Skip to main content</a>
 		<header>
 			<div class="grid-container">
 				<div class="prefix-10 grid-80 suffix-10">
@@ -32,7 +36,7 @@
 				</div>
 			</div>
 		</header>
-		<div class="grid-container">
+		<div id="main" class="grid-container">
 			<div class="prefix-10 grid-80 suffix-10">
 				<h1>Resume</h1>
 			<p class="subtitle"><a href="resume.pdf">PDF version</a></p>
@@ -54,21 +58,35 @@
 				<p>At Fino my primary project was an energy pricing tablet application. I introduced user research and regular client feedback sessions, made usability recommendations, and created wireframes and mockups. I also championed user-centered design methods at the small, developer driven consultancy.</p>
 			</section>
 			<section>
+				<h2>Speaking</h2>
+				<h3>BayCHI</h3>
+				<p><a href="http://www.baychi.org/calendar/20181113/">How Data Drives Design at NASA</a><span class="weak"> / November 2018</span></p>
+				<p>There's a lot of paperwork to go to space! Building tools to help the folks "behind the scenes" at NASA takes a deep understanding of their complex worlds. I joined two of my colleagues, <a href="https://www.linkedin.com/in/kristle-mccracken-29397122/">Kristle McCracken</a> and <a href="https://www.linkedin.com/in/liz-wagstaff-6ab290a3/">Liz Wagstaff</a>, to discuss how we used qualitative data to support NASA's Space Launch System program and how we introduced a new set of stakeholders to user-centered design.</p>
+			</section>
+			<section>
+				<h2>Special projects</h2>
+				<h3>Ragtag</h3>
+				<p class="subtitle-h3">Designer <span class="weak">/ May 2017 - Present</span></p>
+				<p>Ragtag is a volunteer organization of technologists and activists working to support progressive candidates for federal, state, and local offices in the United States. I've primarily worked on two projects. A web tool to help folks arrange carpools for canvassing, and a design template that can be quickly applied to first-time candidates' websites.</p>
+				<h3>University of California Irvine MHCID</h3>
+				<p class="subtitle-h3">Design Mentor <span class="weak">/ January 2017 - August 2017</span></p>
+				<p>I provided one-on-one mentorship and feedback for students of UCI's new master's Program in HCI.</p>
+			</section>
+			<section>
 				<h2>Education</h2>
 				<h3>Carnegie Mellon University</h3>
 				<p class="subtitle-h3">Master of Human-Computer Interaction <span class="weak">/ 2013</span></p>
 				<h3>University of Illinois at Urbana-Champaign</h3>
 				<p class="subtitle-h3">Bachelor of Arts in Sociology <span class="weak">/ 2012</span></p>
-				<p>Minors in Informatics and Business
-				</br>
-				Graduated with Highest Distinction</p>
 			</section>
 			<section>
 				<h2>Skills</h2>
+				<h3>Disciplines</h3>
+				<p>Accessibility. client relations, design systems, information architecture, facilitation and workshops, project management, usability testing, user&nbsp;research</p>
 				<h3>Methods</h3>
-				<p>Accessibility evaluation, card sorting, competitive analysis, contextual inquiry, heuristic evaluation, persona creation, sketching, storyboarding, task analysis, usability testing, wireframing</p>
+				<p>Card sorting, click-through prototyping, competitive analysis, contextual interviews, heuristic evaluation, storyboards, think-aloud testing, wireframes</p>
 				<h3>Software</h3>
-				<p>Adobe Suite, Balsamiq, HTML/CSS, InVision, Marvel, OmniGraffle, Sketch</p>
+				<p>Sketch, HTML/CSS/Sass, Photoshop, Illustrator, InDesign, InVision/Marvel Balsamiq, Omnigraffle</p>
 			</section>
 		</div>
 	</div>
@@ -104,5 +122,16 @@
         });
       });
     </script>
+    <!--Script that does the progress bar-->
+	<script>
+		window.onscroll = function() {barScroll()};
+
+		function barScroll() {
+		  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		  var scrolled = (winScroll / height) * 100;
+		  document.getElementById("progress").style.width = scrolled + "%";
+		}
+	</script>
 </body>
 </html>
