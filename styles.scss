@@ -111,7 +111,7 @@ body{
 	// margin: $spacing-small;
 	//padding: 0 $spacing-large 0 $spacing-large;
 	//border: $spacing-small solid $gray-100;
-	background: $gray-10;
+	background: $gray-20;
 	@include fadein(1s);
 	//border-top: 2px solid $primary-70;
 }
@@ -268,7 +268,7 @@ a:hover{
 }
 
 a:focus{
-	@extend a:hover;
+	@extend a, :hover;
 	outline: 2px dashed $gray-80;
 	outline-radius: 1px;
 	outline-offset: 4px;
@@ -312,8 +312,8 @@ li{
 .masthead{
 	background-color: $gray-20;
 	padding-bottom: $spacing-x-large;
-	margin-bottom: $spacing-xx-large;
-	border-bottom: 1px solid rgb(200, 209, 224);
+	margin-bottom: $spacing-x-large;
+	// border-bottom: 1px solid rgb(200, 209, 224);
 }
 
 .hero-text-h{
@@ -346,6 +346,14 @@ li{
 
 .subtitle-h3{
 	margin: -$spacing-medium 0 $spacing-medium 0;
+}
+
+.social-links{
+	margin-top: $spacing-x-large;
+}
+
+.social-links a{
+	font-weight: bold;
 }
 
 
@@ -404,7 +412,7 @@ a.logo:hover{
 	}
 
 a.logo:focus{
-		@extend a.logo:hover;
+		@extend a, .logo, :hover;
 	}
 
 .index-header{
@@ -555,7 +563,7 @@ section{
 
 footer{
 	margin: $spacing-medium 0 0 0;
-	border-top: 1px solid rgb(200, 209, 224);
+	// border-top: 1px solid rgb(200, 209, 224);
 	padding: $spacing-x-large 0 $spacing-x-large 0;
 	background-color: $gray-20;
 
