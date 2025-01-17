@@ -1,10 +1,12 @@
 /*styles.css*/
 /*-----Variables and mixins-----*/
-/*Fonts*/
+/*Grays*/
 /*Primary Colors*/
 /*Accent Colors*/
+/*Fonts*/
 /*Font sizes*/
 /*Font weights*/
+/*Line heights*/
 /*Spacing*/
 /*Border styles*/
 /*Border radii*/
@@ -12,11 +14,11 @@
 /*Animations and transitions*/
 /*-----Normal, boring stuff-----*/
 html {
-  background-color: #343941;
+  background-color: #ebeff5;
 }
 
 body {
-  font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
+  font-family: "Public Sans", Helvetica, Arial, sans-serif;
   font-size: 18px;
   color: #343941;
   background: #ebeff5;
@@ -207,7 +209,6 @@ li {
 }
 
 .masthead {
-  background-color: #ebeff5;
   padding-bottom: 64px;
   margin-bottom: 64px;
 }
@@ -218,19 +219,11 @@ li {
 }
 
 .hero-text {
-  font-size: 1.4143em;
-  font-weight: 300;
-  line-height: 1.5em;
+  font-size: 1.999em;
+  font-weight: 700;
+  line-height: 1.2em;
   max-width: 100%;
   color: #343941;
-}
-
-.hero-text-h:hover span, a.hero-text-h:focus span {
-  display: none;
-}
-
-.hero-text-h:hover:after, a.hero-text-h:focus:after {
-  content: "(loot-grr).";
 }
 
 .subtitle {
@@ -437,7 +430,6 @@ section {
 footer {
   margin: 16px 0 0 0;
   padding: 64px 0 64px 0;
-  background-color: #ebeff5;
 }
 footer a, footer a:focus, footer a.logo:focus {
   font-weight: 800;
@@ -532,7 +524,7 @@ blockquote footer {
 
   .hero-text {
     font-size: 1.4143em;
-    line-height: 1.5em;
+    line-height: 1.2em;
   }
 
   h1, h2, h3, h4 {
@@ -582,3 +574,4 @@ blockquote footer {
     font-size: 1em;
   }
 }
+/*Dark mode*/

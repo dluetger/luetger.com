@@ -2,39 +2,32 @@
 
 /*-----Variables and mixins-----*/
 
-/*Fonts*/
-$font-stack: "Libre Franklin", Helvetica, Arial, sans-serif;
-// $font-stack: "Roboto", Helvetica, Arial, sans-serif;
+/////*Colors*//////
 
-// /*Grays*/
-// $gray-10: rgb(245, 247, 250);
-// $gray-20: rgb(235, 239, 245);
-// $gray-40: rgb(200, 209, 224);
-// $gray-80: rgb(67, 74, 84);
-// $gray-100: rgb(51, 56, 64);
-
+/*Grays*/
 $gray-10: hsl(216, 33%, 97%);
 $gray-20: hsl(216, 33%, 94%);
 $gray-40: hsl(218, 28%, 83%);
 $gray-80: hsl(218, 11%, 39%);
 $gray-100: hsl(217, 11%, 23%);
 
-// /*Primary Colors*/
+/*Primary Colors*/
 $primary-30: hsl(217, 93%, 83%);
 $primary-50: hsl(217, 84%, 64%);
 $primary-60: hsl(217, 69%, 52%);
 $primary-70: hsl(217, 74%, 43%);
 $primary-90: hsl(217, 75%, 25%);
 
-/*Primary Colors*/
-// $primary-30: hsl(33, 86%, 71%);
-// $primary-50: hsl(33, 85%, 44%);
-// $primary-60: hsl(33, 100%, 34%);
-// $primary-70: hsl(33, 96%, 28%);
-// $primary-90: hsl(33, 75%, 17%);
-
 /*Accent Colors*/
 $accent-70: rgb(207, 70, 21);
+
+$accent-orange: #CC4E00;
+$accent-orange-dm: #FFA057;
+
+/////*Typography*/////
+
+/*Fonts*/
+$font-stack: "Public Sans", Helvetica, Arial, sans-serif;
 
 /*Font sizes*/
 $font-size-xxx-large: 3.998em;
@@ -49,6 +42,14 @@ $font-weight-x-bold: 800;
 $font-weight-bold: 700;
 $font-weight-regular: 400;
 $font-weight-light: 300;
+
+/*Line heights*/
+$line-height-x-small: 1em;
+$line-height-small: 1.2em;
+$line-height-medium: 1.5em;
+$line-height-large: 2em;
+
+/////*Layout*/////
 
 /*Spacing*/
 $spacing-xx-large: 128px;
@@ -101,17 +102,18 @@ $grid-tablet-large: 768px;
 /*-----Normal, boring stuff-----*/
 
 html{
-	background-color: $gray-100;
+	background-color: $gray-20;
 }
 
 body{
 	font-family: $font-stack;
 	font-size: 18px;
 	color: $gray-100;
-	// margin: $spacing-small;
+	//margin: $spacing-small;
 	//padding: 0 $spacing-large 0 $spacing-large;
 	//border: $spacing-small solid $gray-100;
 	background: $gray-20;
+	// background-image: url('../img/general/background-noise.png');
 	@include fadein(1s);
 	//border-top: 2px solid $primary-70;
 }
@@ -310,7 +312,7 @@ li{
 }
 
 .masthead{
-	background-color: $gray-20;
+	// background-color: $gray-20;
 	padding-bottom: $spacing-x-large;
 	margin-bottom: $spacing-x-large;
 	// border-bottom: 1px solid rgb(200, 209, 224);
@@ -322,20 +324,20 @@ li{
 }
 
 .hero-text{
-	font-size: $font-size-large;
-	font-weight: $font-weight-light;
-	line-height: 1.5em;
+	font-size: $font-size-x-large;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-small;
 	max-width: 100%;
 	color: $gray-100;
 }
 
-.hero-text-h:hover span{
-  display: none;
-}
+// .hero-text-h:hover span{
+//   display: none;
+// }
 
-.hero-text-h:hover:after{
-	content: '(loot-grr).';
-}
+// .hero-text-h:hover:after{
+// 	content: '(loot-grr).';
+// }
 
 .subtitle{
 	font-size: $font-size-large;
@@ -354,6 +356,7 @@ li{
 
 .social-links a{
 	font-weight: bold;
+	// color: $accent-orange;
 }
 
 
@@ -565,7 +568,7 @@ footer{
 	margin: $spacing-medium 0 0 0;
 	// border-top: 1px solid rgb(200, 209, 224);
 	padding: $spacing-x-large 0 $spacing-x-large 0;
-	background-color: $gray-20;
+	// background-color: $gray-20;
 
 	a{
 		font-weight: $font-weight-x-bold;
@@ -648,7 +651,7 @@ blockquote footer{
 
 	.hero-text{
 		font-size: $font-size-large;
-		line-height: 1.5em;
+		line-height: $line-height-small;
 	}
 
 	h1{
@@ -701,3 +704,37 @@ blockquote footer{
 		}
 	}
 }
+
+/*Dark mode*/
+// html{
+// 	background-color: $gray-100;
+// }
+
+// body{
+// 	color: white;
+// 	background-image: url('../img/general/background-noise-dark.png');
+// 	background-color: $gray-100;
+// }
+
+// .hero-text{
+// 	color: white;
+// }
+
+// .social-links a{
+// 	color: $accent-orange-dm;
+// }
+
+// footer{
+// 	a{
+// 		color: white;
+// 	}
+// }
+
+// .copyright{
+// 	color: white;
+// }
+
+// .logo{
+//   	-webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+//     filter: invert(100%);
+// }
