@@ -40,7 +40,7 @@ $spacing-x-small: 4px;
 $spacing-xx-small: 2px;
 
 /*Border styles*/
-$border-link: 1px solid colors.$gray-2;
+$border-link: 1px solid colors.$primary-70;
 $border-link-hover: 2px solid colors.$primary-70;
 $border-link-large: 4px solid colors.$primary-70;
 $border-link-large-hover: 4px solid darken(colors.$primary-70, 10%);
@@ -81,22 +81,42 @@ $grid-tablet-large: 768px;
 /*-----Normal, boring stuff-----*/
 
 html{
-	background-color: colors.$gray-6;
+	background-color: colors.$gray-20;
 }
 
 body{
 	font-family: $font-stack;
 	font-size: 18px;
-	color: colors.$gray-2;
+	color: colors.$gray-100;
+	//margin: $spacing-small;
+	//padding: 0 $spacing-large 0 $spacing-large;
+	//border: $spacing-small solid colors.$gray-100;
+	background: colors.$gray-20;
 	// background-image: url('../img/general/background-noise.png');
 	@include fadein(1s);
-	// border-top: 2px solid colors.$primary-70;
+	//border-top: 2px solid colors.$primary-70;
 }
 
 .skip-main{
 	left: -999px;
 	position: absolute;
 	z-index: -999;
+}
+
+.progress-container {
+  width: 100%;
+  height: $spacing-small;
+  background: colors.$gray-100;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: $spacing-small;
+  background: colors.$primary-50;
+  width: 0%;
 }
 
 /*Selection*/
@@ -144,6 +164,7 @@ h4{
 }
 
 p{
+	color: colors.$gray-80;
 	font-weight: $font-weight-light;
 	line-height: 1.7em;
 	margin:0 0 $spacing-medium 0;
@@ -159,27 +180,77 @@ b{
 	@extend strong;
 }
 
+blockquote{
+
+	p{
+		border-left: $spacing-x-small solid colors.$primary-60;
+		font-size: $font-size-large;
+		padding-left: $spacing-large;
+		min-width: 100%;
+	}
+
+	footer{
+		margin-top: -$spacing-x-large;
+		padding-left: $spacing-large;
+	}
+}
+
+.blockquote-small p{
+	font-size: $font-size-regular;
+}
+
+/*-----Picture stuff-----*/
+
+figure{
+	margin: 0 0 $spacing-x-large 0;
+}
+
+img{
+	width: 100%;
+	margin: 0 0 $spacing-medium 0;
+	@include border-radius(2px);
+	//background-color: darken(colors.$gray-10, 5%);
+	border: none;
+}
+
+figcaption{
+	font-size: $font-size-small;
+	line-height: 1.5em;
+}
+
+.figure-image-container{
+	display: block;
+}
+
 /*-----Link stuff-----*/
+	
+// a{
+// 	@extend p;
+// 	text-decoration: none;
+//   	border-bottom: $border-link;
+// 	@include ease-in-out(.1s);
+// 	@include border-radius(1px);
+// }
 
 a{
 	@extend p;
 	text-decoration: none;
-  	border-bottom: 1px solid colors.$gray-2;
+  	border-bottom: 1px solid colors.$primary-60;
   	// padding-bottom: -8px;
 	@include ease-in-out(.1s);
 	@include border-radius(1px);
 }
 
 a:hover{
-	background-color: colors.$gray-2;
-	border-bottom: 1px solid colors.$gray-2;
+	background-color: colors.$primary-30;
+	border-bottom: 1px solid colors.$primary-30;
 	//border-bottom: 1px solid colors.$primary-30;
-	color: colors.$gray-6;
+	color: black;
 }
 
 a:focus{
 	@extend a, :hover;
-	outline: 2px dashed colors.$gray-2;
+	outline: 2px dashed colors.$gray-80;
 	outline-radius: 1px;
 	outline-offset: 4px;
 }
@@ -189,9 +260,34 @@ a:focus{
 	top: $spacing-small;
 	overflow: auto;
 	z-index: 999;
-	background-color: colors.$gray-2;
-	color: colors.$gray-6;
+	background-color: colors.$primary-50;
+	color: white;
 	padding: $spacing-medium;	
+}
+
+/*-----List stuff-----*/
+
+ul{
+	@extend p;
+	list-style-type: disc;
+	list-style-position: oustide;
+	margin-left: $spacing-large;
+}
+
+li{
+	margin-bottom: $spacing-medium;
+}
+
+.list-short li{
+	margin-left: -$spacing-medium;
+	margin-bottom: $spacing-x-small;
+}
+
+
+/*-----Stuff that slightly modifies the boring stuff-----*/
+
+#about-header{
+	margin: 0 0 $spacing-x-large;
 }
 
 .masthead{
@@ -211,9 +307,8 @@ a:focus{
 	font-weight: $font-weight-bold;
 	line-height: $line-height-small;
 	max-width: 100%;
+	color: colors.$gray-100;
 }
-
-/* The part that shows how to pronounce my name */
 
 // .hero-text-h:hover span{
 //   display: none;
@@ -223,12 +318,24 @@ a:focus{
 // 	content: '(loot-grr).';
 // }
 
+.subtitle{
+	font-size: $font-size-large;
+	font-weight: $font-weight-light;
+	max-width: none;
+	//margin: 0 0 $spacing-xx-large 0;
+}
+
+.subtitle-h3{
+	margin: -$spacing-medium 0 $spacing-medium 0;
+}
+
 .social-links{
 	margin-top: $spacing-x-large;
 }
 
 .social-links a{
 	font-weight: bold;
+	// color: $accent-orange;
 }
 
 
@@ -238,21 +345,13 @@ nav{
 	a{
 		display: inline-block;
 		margin:0 $spacing-medium 0 0;
-		color:colors.$gray-2;
+		color:colors.$gray-100;
 		border-bottom: none;
 	}
 
 	a:hover{
 		border-bottom: none;
 	}	
-
-	a:focus{
-		border-bottom: none;
-		outline: 2px dashed colors.$gray-2;
-		outline-radius: 1px;
-		outline-offset: 4px;
-		color: colors.$gray-6;
-	}
 }
 
 header{
@@ -266,13 +365,21 @@ header{
 
 }
 
-/*The logo part*/
-
-/*Temorarily adjusting the color this way until I get around to properly changing the svg*/
-.logo{
-  	-webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
-    filter: invert(100%);
+.active-page{
+	font-weight: $font-weight-bold;
+	color: colors.$primary-60;
+	border-bottom: $spacing-x-small solid colors.$primary-60;
 }
+
+.active-page:hover{
+	border-bottom: $spacing-x-small solid colors.$primary-30;
+}
+
+.active-page:focus{
+	border-bottom: $spacing-x-small solid colors.$primary-30;
+}
+
+/*The logo part*/
 
 a.logo{
 	font-size: $font-size-large;
@@ -283,7 +390,7 @@ a.logo{
 a.logo:hover{
 		color: lighten(colors.$gray-100, 20%);
 		border-bottom: none;
-		background-color: colors.$gray-6;
+		background-color: colors.$gray-10;
 	}
 
 a.logo:focus{
@@ -306,6 +413,134 @@ a.logo:focus{
 	border-radius: 0;
 }
 
+/*-----Things for the part where most of the writing is----*/
+
+section{
+	padding: 0 0 0 0;
+	margin: 0 0 $spacing-x-large 0;
+}
+
+.section-1{
+	padding: 0 0 $spacing-x-large 0;
+	border-bottom: 1px solid colors.$gray-40;
+	margin: 0 0 $spacing-x-large 0;
+}
+
+.section-medium{
+	margin: 0 0 $spacing-large 0;
+}
+
+.section-small{
+	margin: 0 0 $spacing-medium 0;	
+}
+
+.work-list{
+	list-style-type: none;
+
+	li{
+		margin-left: -$spacing-large;
+		margin-bottom: -$spacing-small;
+		font-weight: $font-weight-bold;
+	}
+
+	a{
+		font-weight: $font-weight-bold;
+		color: colors.$gray-100;
+	}
+}
+
+.disclaimer{
+	padding: $spacing-large;
+	background-color: lighten(colors.$primary-30, 10%);
+	@include border-radius(2px);
+	color: colors.$primary-70;
+
+	h2 {
+		font-size: $font-size-regular;
+		margin-bottom: 0;
+	}
+
+	p{
+		margin: 0;
+	}
+}
+
+.claim {
+	color: colors.$primary-60;
+}
+
+.weak{
+	color: lighten(colors.$gray-100, 20%);
+}
+
+.impact-number{
+	font-size: $font-size-xxx-large;
+	font-weight: $font-weight-bold;
+	color: colors.$primary-60;
+	margin-bottom: 0;
+	line-height: 1em;
+}
+
+.impact-description{
+	font-weight: $font-weight-bold;
+}
+
+/*-----Footnotes-----*/
+
+.footnote{
+	position: relative;
+	vertical-align: baseline;
+}
+
+.footnoteNumber{
+	vertical-align: super;
+	font-size:.7em;
+	line-height: 0;
+	color: colors.$primary-60;
+	position: relative;
+    cursor: pointer;
+    border-bottom: $border-link
+}
+
+.footnoteText{
+    font-size: .7em;
+    line-height: 1.75em;
+    display: block;
+    width: 200px;
+    position: absolute;
+    left: 25px;
+    bottom: 5px;
+    border: 1px solid colors.$gray-80;
+    padding: 10px;
+    background-color: #fff;
+    z-index: 100;
+    overflow: auto;
+    margin:0 0 0 0;
+}
+
+
+/*-----Project nav stuff-----*/
+.project-nav {
+	border-top: 1px solid rgb(200, 209, 224);
+
+	nav{
+	}
+
+	a{
+		padding: $spacing-large 0 $spacing-large 0;
+		font-weight: $font-weight-bold;
+		margin-bottom: -$spacing-medium;
+	}
+}
+
+.proj-prev{
+	border-right: 1px solid rgb(200, 209, 224);
+}
+
+.proj-next{
+	text-align: right;
+}
+
 /*-----Footer stuff-----*/
 
 footer{
@@ -316,7 +551,7 @@ footer{
 
 	a{
 		font-weight: $font-weight-x-bold;
-		color: colors.$gray-2;
+		color: colors.$gray-100;
 	}
 }
 
@@ -328,6 +563,23 @@ footer{
 		font-weight: $font-weight-regular;
 		border-bottom: $border-link;
 	}
+}
+
+blockquote footer{
+	background-color: transparent;
+	margin: none;
+	border: none;
+	padding: none;
+}
+
+/*------Stuff for the part where I talk about myself-----*/
+#about-image{
+	max-width: 256px;
+	border: 8px solid white;
+	border-radius: 256px;
+	margin-top: -(2*$spacing-xx-large);
+	background-color: colors.$gray-40;
+	height: 256px;
 }
 
 /*-----Stuff that hopefully makes the animations work-----*/
@@ -431,3 +683,37 @@ footer{
 		}
 	}
 }
+
+/*Dark mode*/
+// html{
+// 	background-color: colors.$gray-100;
+// }
+
+// body{
+// 	color: white;
+// 	background-image: url('../img/general/background-noise-dark.png');
+// 	background-color: colors.$gray-100;
+// }
+
+// .hero-text{
+// 	color: white;
+// }
+
+// .social-links a{
+// 	color: $accent-orange-dm;
+// }
+
+// footer{
+// 	a{
+// 		color: white;
+// 	}
+// }
+
+// .copyright{
+// 	color: white;
+// }
+
+// .logo{
+//   	-webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+//     filter: invert(100%);
+// }

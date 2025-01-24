@@ -15,13 +15,14 @@
 /*Animations and transitions*/
 /*-----Normal, boring stuff-----*/
 html {
-  background-color: #222222;
+  background-color: #ebeff5;
 }
 
 body {
   font-family: "Public Sans", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  color: #e2e2e2;
+  color: #343941;
+  background: #ebeff5;
   -webkit-animation: fadein 1s;
   -o-animation: fadein 1s;
   -moz-animation: fadein 1s;
@@ -33,6 +34,22 @@ body {
   left: -999px;
   position: absolute;
   z-index: -999;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #343941;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #5691f0;
+  width: 0%;
 }
 
 /*Selection*/
@@ -78,7 +95,8 @@ h4 {
   margin: 32px 0 16px 0;
 }
 
-p, a, a.logo:focus, a:focus {
+p, ul, a, a.logo:focus, a:focus {
+  color: #59616e;
   font-weight: 300;
   line-height: 1.7em;
   margin: 0 0 16px 0;
@@ -94,10 +112,49 @@ strong, b {
   font-weight: 800;
 }
 
+blockquote p, blockquote ul, blockquote a, blockquote a.logo:focus, blockquote a:focus {
+  border-left: 4px solid #3071d9;
+  font-size: 1.4143em;
+  padding-left: 32px;
+  min-width: 100%;
+}
+blockquote footer {
+  margin-top: -64px;
+  padding-left: 32px;
+}
+
+.blockquote-small p, .blockquote-small ul, .blockquote-small a, .blockquote-small a.logo:focus {
+  font-size: 1em;
+}
+
+/*-----Picture stuff-----*/
+figure {
+  margin: 0 0 64px 0;
+}
+
+img {
+  width: 100%;
+  margin: 0 0 16px 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  border: none;
+}
+
+figcaption {
+  font-size: 0.707em;
+  line-height: 1.5em;
+}
+
+.figure-image-container {
+  display: block;
+}
+
 /*-----Link stuff-----*/
 a, a.logo:focus, a:focus {
   text-decoration: none;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid #3071d9;
   -o-transition: 0.1s ease-in-out;
   -ms-transition: 0.1s ease-in-out;
   -moz-transition: 0.1s ease-in-out;
@@ -110,13 +167,13 @@ a, a.logo:focus, a:focus {
 }
 
 a:hover, a:focus, a.logo:focus {
-  background-color: #e2e2e2;
-  border-bottom: 1px solid #e2e2e2;
-  color: #222222;
+  background-color: #abcafc;
+  border-bottom: 1px solid #abcafc;
+  color: black;
 }
 
 a:focus, a.logo:focus {
-  outline: 2px dashed #e2e2e2;
+  outline: 2px dashed #59616e;
   outline-radius: 1px;
   outline-offset: 4px;
 }
@@ -126,9 +183,30 @@ a:focus, a.logo:focus {
   top: 8px;
   overflow: auto;
   z-index: 999;
-  background-color: #e2e2e2;
-  color: #222222;
+  background-color: #5691f0;
+  color: white;
   padding: 16px;
+}
+
+/*-----List stuff-----*/
+ul {
+  list-style-type: disc;
+  list-style-position: oustide;
+  margin-left: 32px;
+}
+
+li {
+  margin-bottom: 16px;
+}
+
+.list-short li {
+  margin-left: -16px;
+  margin-bottom: 4px;
+}
+
+/*-----Stuff that slightly modifies the boring stuff-----*/
+#about-header {
+  margin: 0 0 64px;
 }
 
 .masthead {
@@ -146,9 +224,19 @@ a:focus, a.logo:focus {
   font-weight: 700;
   line-height: 1.2em;
   max-width: 100%;
+  color: #343941;
 }
 
-/* The part that shows how to pronounce my name */
+.subtitle {
+  font-size: 1.4143em;
+  font-weight: 300;
+  max-width: none;
+}
+
+.subtitle-h3 {
+  margin: -16px 0 16px 0;
+}
+
 .social-links {
   margin-top: 64px;
 }
@@ -161,18 +249,11 @@ a:focus, a.logo:focus {
 nav a, nav a.logo:focus, nav a:focus {
   display: inline-block;
   margin: 0 16px 0 0;
-  color: #e2e2e2;
+  color: #343941;
   border-bottom: none;
 }
 nav a:hover, nav a:focus, nav a.logo:focus {
   border-bottom: none;
-}
-nav a:focus, nav a.logo:focus {
-  border-bottom: none;
-  outline: 2px dashed #e2e2e2;
-  outline-radius: 1px;
-  outline-offset: 4px;
-  color: #222222;
 }
 
 header {
@@ -183,14 +264,21 @@ header a, header a.logo:focus, header a:focus {
   line-height: 32px;
 }
 
-/*The logo part*/
-/*Temorarily adjusting the color this way until I get around to properly changing the svg*/
-.logo, a.logo:focus {
-  -webkit-filter: invert(100%);
-  /* safari 6.0 - 9.0 */
-  filter: invert(100%);
+.active-page {
+  font-weight: 700;
+  color: #3071d9;
+  border-bottom: 4px solid #3071d9;
 }
 
+.active-page:hover, a.active-page:focus {
+  border-bottom: 4px solid #abcafc;
+}
+
+.active-page:focus {
+  border-bottom: 4px solid #abcafc;
+}
+
+/*The logo part*/
 a.logo, a.logo:focus {
   font-size: 1.4143em;
   font-weight: 800;
@@ -200,7 +288,7 @@ a.logo, a.logo:focus {
 a.logo:hover, a.logo:focus {
   color: #626b7a;
   border-bottom: none;
-  background-color: #222222;
+  background-color: #f5f7fa;
 }
 
 .index-header {
@@ -219,6 +307,126 @@ a.logo:hover, a.logo:focus {
   border-radius: 0;
 }
 
+/*-----Things for the part where most of the writing is----*/
+section {
+  padding: 0 0 0 0;
+  margin: 0 0 64px 0;
+}
+
+.section-1 {
+  padding: 0 0 64px 0;
+  border-bottom: 1px solid #c8d0e0;
+  margin: 0 0 64px 0;
+}
+
+.section-medium {
+  margin: 0 0 32px 0;
+}
+
+.section-small {
+  margin: 0 0 16px 0;
+}
+
+.work-list {
+  list-style-type: none;
+}
+.work-list li {
+  margin-left: -32px;
+  margin-bottom: -8px;
+  font-weight: 700;
+}
+.work-list a {
+  font-weight: 700;
+  color: #343941;
+}
+
+.disclaimer {
+  padding: 32px;
+  background-color: #dde9fe;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  color: #1d5bbf;
+}
+.disclaimer h2 {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+.disclaimer p, .disclaimer a, .disclaimer ul {
+  margin: 0;
+}
+
+.claim {
+  color: #3071d9;
+}
+
+.weak {
+  color: #626b7a;
+}
+
+.impact-number {
+  font-size: 3.998em;
+  font-weight: 700;
+  color: #3071d9;
+  margin-bottom: 0;
+  line-height: 1em;
+}
+
+.impact-description {
+  font-weight: 700;
+}
+
+/*-----Footnotes-----*/
+.footnote {
+  position: relative;
+  vertical-align: baseline;
+}
+
+.footnoteNumber {
+  vertical-align: super;
+  font-size: 0.7em;
+  line-height: 0;
+  color: #3071d9;
+  position: relative;
+  cursor: pointer;
+  border-bottom: 1px solid #1d5bbf;
+}
+
+.footnoteText {
+  font-size: 0.7em;
+  line-height: 1.75em;
+  display: block;
+  width: 200px;
+  position: absolute;
+  left: 25px;
+  bottom: 5px;
+  border: 1px solid #59616e;
+  padding: 10px;
+  background-color: #fff;
+  z-index: 100;
+  overflow: auto;
+  margin: 0 0 0 0;
+}
+
+/*-----Project nav stuff-----*/
+.project-nav {
+  border-top: 1px solid #c8d1e0;
+}
+.project-nav a {
+  padding: 32px 0 32px 0;
+  font-weight: 700;
+  margin-bottom: -16px;
+}
+
+.proj-prev {
+  border-right: 1px solid #c8d1e0;
+}
+
+.proj-next {
+  text-align: right;
+}
+
 /*-----Footer stuff-----*/
 footer {
   margin: 16px 0 0 0;
@@ -226,7 +434,7 @@ footer {
 }
 footer a, footer a:focus, footer a.logo:focus {
   font-weight: 800;
-  color: #e2e2e2;
+  color: #343941;
 }
 
 .copyright {
@@ -235,7 +443,24 @@ footer a, footer a:focus, footer a.logo:focus {
 }
 .copyright a {
   font-weight: 400;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid #1d5bbf;
+}
+
+blockquote footer {
+  background-color: transparent;
+  margin: none;
+  border: none;
+  padding: none;
+}
+
+/*------Stuff for the part where I talk about myself-----*/
+#about-image {
+  max-width: 256px;
+  border: 8px solid white;
+  border-radius: 256px;
+  margin-top: -256px;
+  background-color: #c8d0e0;
+  height: 256px;
 }
 
 /*-----Stuff that hopefully makes the animations work-----*/
@@ -337,7 +562,7 @@ footer a, footer a:focus, footer a.logo:focus {
     padding-bottom: 32px;
   }
 
-  p, a, a:focus, a.logo:focus {
+  p, a, a:focus, ul, a.logo:focus {
     margin-bottom: 16px;
   }
 
@@ -345,8 +570,9 @@ footer a, footer a:focus, footer a.logo:focus {
     margin-bottom: 8px;
   }
 
-  blockquote p, blockquote a, blockquote a:focus, blockquote a.logo:focus {
+  blockquote p, blockquote a, blockquote a:focus, blockquote ul, blockquote a.logo:focus {
     padding-left: 16px;
     font-size: 1em;
   }
 }
+/*Dark mode*/
