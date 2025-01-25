@@ -116,9 +116,8 @@ a:hover, a:focus, a.logo:focus {
 }
 
 a:focus, a.logo:focus {
-  outline: 2px dashed #e2e2e2;
-  outline-radius: 1px;
-  outline-offset: 4px;
+  outline: 0;
+  color: #222222;
 }
 
 .skip-main:focus, .skip-main:active {
@@ -167,12 +166,11 @@ nav a, nav a.logo:focus, nav a:focus {
 }
 nav a:hover, nav a:focus, nav a.logo:focus {
   border-bottom: none;
+  color: #222222;
 }
 nav a:focus, nav a.logo:focus {
   border-bottom: none;
-  outline: 2px dashed #e2e2e2;
-  outline-radius: 1px;
-  outline-offset: 4px;
+  outline: 0;
   color: #222222;
 }
 

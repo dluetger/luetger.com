@@ -179,9 +179,11 @@ a:hover{
 
 a:focus{
 	@extend a, :hover;
-	outline: 2px dashed colors.$gray-2;
-	outline-radius: 1px;
-	outline-offset: 4px;
+	outline: 0;
+	// outline-radius: 1px;
+	// outline-offset: 6px;
+	color: colors.$gray-6;
+
 }
 
 .skip-main:focus, .skip-main:active{
@@ -245,13 +247,13 @@ nav{
 
 	a:hover{
 		border-bottom: none;
+		color: colors.$gray-6;
 	}	
 
 	a:focus{
 		border-bottom: none;
-		outline: 2px dashed colors.$gray-2;
-		outline-radius: 1px;
-		outline-offset: 4px;
+		outline: 0;
+		// outline-offset: 2px;
 		color: colors.$gray-6;
 	}
 }
