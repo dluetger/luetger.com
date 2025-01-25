@@ -37,18 +37,18 @@ body {
 
 /*Selection*/
 ::selection {
-  background: #abcafc;
-  color: #343941;
+  background: #f6f6f6;
+  color: #222222;
 }
 
 ::-moz-selection {
-  background: #abcafc;
-  color: #343941;
+  background: #f6f6f6;
+  color: #222222;
 }
 
 ::-webkit-selection {
-  background: #abcafc;
-  color: #343941;
+  background: #f6f6f6;
+  color: #222222;
 }
 
 h1, h4, h3, h2 {
@@ -148,6 +148,23 @@ a:focus, a.logo:focus {
 }
 
 /* The part that shows how to pronounce my name */
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .social-links {
   margin: 64px -8px 0;
 }

@@ -102,18 +102,18 @@ body{
 /*Selection*/
 
 ::selection {
-background:colors.$primary-30;
-color: colors.$gray-100;
+background:colors.$gray-1;
+color: colors.$gray-6;
 }
 
 ::-moz-selection {
-background:colors.$primary-30;
-color: colors.$gray-100;
+background:colors.$gray-1;
+color: colors.$gray-6;
 }
 
 ::-webkit-selection {
-background:colors.$primary-30;
-color: colors.$gray-100;
+background:colors.$gray-1;
+color: colors.$gray-6;
 }
 
 h1{
@@ -216,6 +216,19 @@ a:focus{
 }
 
 /* The part that shows how to pronounce my name */
+
+// span.last-name{
+// 	animation: shake 10s infinite;
+// 	background-color: white;
+// }
+
+@keyframes shake {
+  0% { transform: translateY(0) }
+  25% { transform: translateY(5px) }
+  50% { transform: translateY(-5px) }
+  75% { transform: translateY(5px) }
+  100% { transform: translateY(0) }
+}
 
 // .hero-text-h:hover span{
 //   display: none;
@@ -357,7 +370,6 @@ footer{
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
 
 /*-----Stuff that makes the site not too ugly on very big or very small screens-----*/
 
