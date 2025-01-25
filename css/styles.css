@@ -150,11 +150,12 @@ a:focus, a.logo:focus {
 
 /* The part that shows how to pronounce my name */
 .social-links {
-  margin-top: 64px;
+  margin: 64px -8px 0;
 }
 
 .social-links a, .social-links a.logo:focus {
   font-weight: bold;
+  padding: 0 8px 0 8px;
 }
 
 /*-----Things for the part with all the links-----*/

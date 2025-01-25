@@ -224,11 +224,12 @@ a:focus{
 // }
 
 .social-links{
-	margin-top: $spacing-x-large;
+	margin: $spacing-x-large 0 -$spacing-small 0;
 }
 
 .social-links a{
 	font-weight: bold;
+	padding: 0 $spacing-small 0 $spacing-small;
 }
 
 
