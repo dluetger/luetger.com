@@ -1,10 +1,13 @@
+/*styles.css*/
 /*Grays - [DEPRECATED]*/
 /* gray */
 /*Primary Colors*/
 /*Accent Colors*/
-/*styles.css*/
+/*Font*/
+/*Font sizes*/
+/*Font weights*/
+/*Line heights*/
 /*-----Variables and mixins-----*/
-/*Fonts*/
 /*Font sizes*/
 /*Font weights*/
 /*Line heights*/
@@ -15,13 +18,13 @@
 /*Animations and transitions*/
 /*-----Normal, boring stuff-----*/
 html {
-  background-color: #222222;
+  background-color: hsl(194.33, 0%, 13.15%);
 }
 
 body {
   font-family: "Public Sans", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  color: #e2e2e2;
+  color: hsl(194.33, 0%, 88.76%);
   -webkit-animation: fadein 1s;
   -o-animation: fadein 1s;
   -moz-animation: fadein 1s;
@@ -37,18 +40,18 @@ body {
 
 /*Selection*/
 ::selection {
-  background: #abcafc;
-  color: #343941;
+  background: hsl(194.33, 0%, 96.6%);
+  color: hsl(194.33, 0%, 13.15%);
 }
 
 ::-moz-selection {
-  background: #abcafc;
-  color: #343941;
+  background: hsl(194.33, 0%, 96.6%);
+  color: hsl(194.33, 0%, 13.15%);
 }
 
 ::-webkit-selection {
-  background: #abcafc;
-  color: #343941;
+  background: hsl(194.33, 0%, 96.6%);
+  color: hsl(194.33, 0%, 13.15%);
 }
 
 h1, h4, h3, h2 {
@@ -97,7 +100,7 @@ strong, b {
 /*-----Link stuff-----*/
 a, a.logo:focus, a:focus {
   text-decoration: none;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid hsl(194.33, 0%, 88.76%);
   -o-transition: 0.1s ease-in-out;
   -ms-transition: 0.1s ease-in-out;
   -moz-transition: 0.1s ease-in-out;
@@ -110,15 +113,14 @@ a, a.logo:focus, a:focus {
 }
 
 a:hover, a:focus, a.logo:focus {
-  background-color: #e2e2e2;
-  border-bottom: 1px solid #e2e2e2;
-  color: #222222;
+  background-color: hsl(194.33, 0%, 88.76%);
+  border-bottom: 1px solid hsl(194.33, 0%, 88.76%);
+  color: hsl(194.33, 0%, 13.15%);
 }
 
 a:focus, a.logo:focus {
-  outline: 2px dashed #e2e2e2;
-  outline-radius: 1px;
-  outline-offset: 4px;
+  outline: 0;
+  color: hsl(194.33, 0%, 13.15%);
 }
 
 .skip-main:focus, .skip-main:active {
@@ -126,8 +128,8 @@ a:focus, a.logo:focus {
   top: 8px;
   overflow: auto;
   z-index: 999;
-  background-color: #e2e2e2;
-  color: #222222;
+  background-color: hsl(194.33, 0%, 88.76%);
+  color: hsl(194.33, 0%, 13.15%);
   padding: 16px;
 }
 
@@ -149,30 +151,47 @@ a:focus, a.logo:focus {
 }
 
 /* The part that shows how to pronounce my name */
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .social-links {
-  margin-top: 64px;
+  margin: 64px 0 -8px 0;
 }
 
 .social-links a, .social-links a.logo:focus {
   font-weight: bold;
+  padding: 0 8px 0 8px;
 }
 
 /*-----Things for the part with all the links-----*/
 nav a, nav a.logo:focus, nav a:focus {
   display: inline-block;
   margin: 0 16px 0 0;
-  color: #e2e2e2;
+  color: hsl(194.33, 0%, 88.76%);
   border-bottom: none;
 }
 nav a:hover, nav a:focus, nav a.logo:focus {
   border-bottom: none;
+  color: hsl(194.33, 0%, 13.15%);
 }
 nav a:focus, nav a.logo:focus {
   border-bottom: none;
-  outline: 2px dashed #e2e2e2;
-  outline-radius: 1px;
-  outline-offset: 4px;
-  color: #222222;
+  outline: 0;
+  color: hsl(194.33, 0%, 13.15%);
 }
 
 header {
@@ -186,8 +205,7 @@ header a, header a.logo:focus, header a:focus {
 /*The logo part*/
 /*Temorarily adjusting the color this way until I get around to properly changing the svg*/
 .logo, a.logo:focus {
-  -webkit-filter: invert(100%);
-  /* safari 6.0 - 9.0 */
+  -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
   filter: invert(100%);
 }
 
@@ -198,9 +216,8 @@ a.logo, a.logo:focus {
 }
 
 a.logo:hover, a.logo:focus {
-  color: #626b7a;
   border-bottom: none;
-  background-color: #222222;
+  background-color: hsl(194.33, 0%, 13.15%);
 }
 
 .index-header {
@@ -226,7 +243,7 @@ footer {
 }
 footer a, footer a:focus, footer a.logo:focus {
   font-weight: 800;
-  color: #e2e2e2;
+  color: hsl(194.33, 0%, 88.76%);
 }
 
 .copyright {
@@ -235,7 +252,7 @@ footer a, footer a:focus, footer a.logo:focus {
 }
 .copyright a {
   font-weight: 400;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid hsl(194.33, 0%, 88.76%);
 }
 
 /*-----Stuff that hopefully makes the animations work-----*/
@@ -285,7 +302,6 @@ footer a, footer a:focus, footer a.logo:focus {
   body {
     padding: 0 8px 0 8px;
   }
-
   #about-image {
     border: 8px solid white;
     border-radius: 256px;
@@ -297,54 +313,43 @@ footer a, footer a:focus, footer a.logo:focus {
   body {
     font-size: 16px;
   }
-
   .hero-text {
     font-size: 1.4143em;
     line-height: 1.2em;
   }
-
   h1, h2, h3, h4 {
     font-size: 2.827em;
     font-weight: 800;
     line-height: 1.1em;
   }
-
   #about-header {
     margin: 0 0 32px;
   }
-
   h2 {
     font-size: 1.4143em;
     margin: 0 0 32px 0;
   }
-
   .subtitle {
     font-size: 1em;
     margin: 0 0 32px 0;
     line-height: 1.5em;
   }
-
   h3 {
     font-size: 1em;
   }
-
   h4 {
     font-size: 0.8em;
   }
-
   .masthead {
     margin-bottom: 64px;
     padding-bottom: 32px;
   }
-
   p, a, a:focus, a.logo:focus {
     margin-bottom: 16px;
   }
-
   section {
     margin-bottom: 8px;
   }
-
   blockquote p, blockquote a, blockquote a:focus, blockquote a.logo:focus {
     padding-left: 16px;
     font-size: 1em;
