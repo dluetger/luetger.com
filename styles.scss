@@ -1,32 +1,28 @@
 /*styles.css*/
 @use 'colors';
+@use 'type';
 
 /*-----Variables and mixins-----*/
 
-/////*Typography*/////
-
-/*Fonts*/
-$font-stack: "Public Sans", Helvetica, Arial, sans-serif;
-
 /*Font sizes*/
-$font-size-xxx-large: 3.998em;
-$font-size-xx-large: 2.827em;
-$font-size-x-large: 1.999em;
-$font-size-large: 1.4143em;
-$font-size-regular: 1em;
-$font-size-small: 0.707em;
+// type.$font-size-xxx-large: 3.998em;
+// type.$font-size-xx-large: 2.827em;
+// type.$font-size-x-large: 1.999em;
+// type.$font-size-large: 1.4143em;
+// type.$font-size-regular: 1em;
+// type.$font-size-small: 0.707em;
 
 /*Font weights*/
-$font-weight-x-bold: 800;
-$font-weight-bold: 700;
-$font-weight-regular: 400;
-$font-weight-light: 300;
+// type.$font-weight-x-bold: 800;
+// type.$font-weight-bold: 700;
+// type.$font-weight-regular: 400;
+// type.$font-weight-light: 300;
 
 /*Line heights*/
-$line-height-x-small: 1em;
-$line-height-small: 1.2em;
-$line-height-medium: 1.5em;
-$line-height-large: 2em;
+// type.$line-height-x-small: 1em;
+// type.$line-height-small: 1.2em;
+// type.$line-height-medium: 1.5em;
+// type.$line-height-large: 2em;
 
 /////*Layout*/////
 
@@ -43,7 +39,6 @@ $spacing-xx-small: 2px;
 $border-link: 1px solid colors.$gray-2;
 $border-link-hover: 2px solid colors.$primary-70;
 $border-link-large: 4px solid colors.$primary-70;
-$border-link-large-hover: 4px solid darken(colors.$primary-70, 10%);
 
 /*Border radii*/
 @mixin border-radius($radius){
@@ -85,7 +80,7 @@ html{
 }
 
 body{
-	font-family: $font-stack;
+	font-family: type.$primary;
 	font-size: 18px;
 	color: colors.$gray-2;
 	// background-image: url('../img/general/background-noise.png');
@@ -117,8 +112,8 @@ color: colors.$gray-6;
 }
 
 h1{
-	font-size: $font-size-xxx-large;
-	font-weight: $font-weight-x-bold;
+	font-size: type.$font-size-xxx-large;
+	font-weight: type.$font-weight-x-bold;
 	margin: 0 0 $spacing-small -4px;
 	@include ease-in-out(.2s);
 }
@@ -126,25 +121,25 @@ h1{
 h2{
 	@extend h1;
 	// letter-spacing: inherit;
-	font-size: $font-size-xx-large;
+	font-size: type.$font-size-xx-large;
 	margin:0 0 $spacing-large 0;
 	padding-bottom: $spacing-small;
 }
 
 h3{
 	@extend h1;
-	font-size: $font-size-x-large;
+	font-size: type.$font-size-x-large;
 	margin: $spacing-large 0 $spacing-medium+$spacing-small 0;
 }
 
 h4{
 	@extend h1;
-	font-size: $font-size-large;
+	font-size: type.$font-size-large;
 	margin: $spacing-large 0 $spacing-medium 0;
 }
 
 p{
-	font-weight: $font-weight-light;
+	font-weight: type.$font-weight-light;
 	line-height: 1.7em;
 	margin:0 0 $spacing-medium 0;
 	max-width: 640px;
@@ -152,7 +147,7 @@ p{
 }
 
 strong{
-	font-weight: $font-weight-x-bold;
+	font-weight: type.$font-weight-x-bold;
 }
 
 b{
@@ -204,14 +199,14 @@ a:focus{
 }
 
 .hero-text-h{
-	font-size: $font-size-xxx-large;
+	font-size: type.$font-size-xxx-large;
 	margin-bottom: $spacing-medium;
 }
 
 .hero-text{
-	font-size: $font-size-x-large;
-	font-weight: $font-weight-bold;
-	line-height: $line-height-small;
+	font-size: type.$font-size-x-large;
+	font-weight: type.$font-weight-bold;
+	line-height: type.$line-height-small;
 	max-width: 100%;
 }
 
@@ -239,7 +234,7 @@ a:focus{
 // }
 
 .social-links{
-	margin: $spacing-x-large 0 -$spacing-small 0;
+	margin: $spacing-x-large 0 (-$spacing-small) 0;
 }
 
 .social-links a{
@@ -291,13 +286,12 @@ header{
 }
 
 a.logo{
-	font-size: $font-size-large;
-	font-weight: $font-weight-x-bold;
+	font-size: type.$font-size-large;
+	font-weight: type.$font-weight-x-bold;
 	margin: 0 $spacing-large 0 0;
 }
 
 a.logo:hover{
-		color: lighten(colors.$gray-100, 20%);
 		border-bottom: none;
 		background-color: colors.$gray-6;
 	}
@@ -331,17 +325,17 @@ footer{
 	// background-color: colors.$gray-20;
 
 	a{
-		font-weight: $font-weight-x-bold;
+		font-weight: type.$font-weight-x-bold;
 		color: colors.$gray-2;
 	}
 }
 
 .copyright{
-	font-size: $font-size-small;
+	font-size: type.$font-size-small;
 	margin: $spacing-small 0 0 0;
 
 	a{
-		font-weight: $font-weight-regular;
+		font-weight: type.$font-weight-regular;
 		border-bottom: $border-link;
 	}
 }
@@ -392,13 +386,13 @@ footer{
 	}
 
 	.hero-text{
-		font-size: $font-size-large;
-		line-height: $line-height-small;
+		font-size: type.$font-size-large;
+		line-height: type.$line-height-small;
 	}
 
 	h1{
-		font-size: $font-size-xx-large;
-		font-weight: $font-weight-x-bold;
+		font-size: type.$font-size-xx-large;
+		font-weight: type.$font-weight-x-bold;
 		line-height: 1.1em;
 	}
 
@@ -407,18 +401,18 @@ footer{
 	}
 
 	h2{
-		font-size: $font-size-large;
+		font-size: type.$font-size-large;
 		margin:0 0 $spacing-large 0;
 	}
 
 	.subtitle{
-		font-size: $font-size-regular;
+		font-size: type.$font-size-regular;
 		margin: 0 0 $spacing-large 0;
 		line-height: 1.5em;
 	}
 
 	h3{
-		font-size: $font-size-regular;
+		font-size: type.$font-size-regular;
 	}
 
 	h4{
@@ -442,7 +436,7 @@ footer{
 
 		p{
 			padding-left: $spacing-medium;
-			font-size: $font-size-regular;
+			font-size: type.$font-size-regular;
 		}
 	}
 }
