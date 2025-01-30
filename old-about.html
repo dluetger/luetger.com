@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>About / Dave Luetger</title>
+	<meta name="description" content="Designer, musician, tv watcher, and human"/>
+<!--CSS that makes the browser not do stupid default stuff to the styling.-->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!--CSS that makes it easy to layout stuff on the page-->
+	<link rel="stylesheet" type="text/css" href="css/unsemantic-grid-responsive.css">
+	<!--All the other CSS-->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="favicon.png">
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+</head>
+
+<body>
+	<div class="progress-container"></div>
+	<div class="masthead">
+		<a class="skip-main" href="#main">Skip to main content</a>
+		<header>
+			<div class="grid-container">
+				<div class="prefix-10 grid-80 suffix-10">
+					<nav>
+						<a class="logo" href="index.html"><img src="img/general/d.svg" alt="Dave Luetger"></a>
+						<a href="index.html">Work</a>
+						<!--<a href="#">Speaking</a>-->
+						<a href="resume.html">Resume</a>
+						<a href="about.html" class="active-page">About</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div id="main" class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10">
+				<h1>About</h1>
+			</div>
+		</div>
+	</div>
+	<div class="grid-container">
+		<div class="prefix-10 grid-80 suffix-10">
+			<section>
+				<div class="grid-60">
+					<p>I'm a designer at <a href="https://www.nasa.gov/centers/ames/home/index.html">NASA Ames Research Center</a> working on software that supports the International Space Station and future human spaceflight missions
+						<span class="footnote"><span class="footnoteNumber">[1]</span><span class="footnoteText" style="display: none;">There's a <a href="https://www.nasa.gov/exploration/systems/orion/">new space car</a> and a really <a href="https://www.nasa.gov/exploration/systems/sls/index.html">big rocket</a> that might take people to Mars one day.</span></span>
+					.</p>
+					<p>I used to work at Underwriters Laboratories
+						<span class="footnote"><span class="footnoteNumber">[2]</span><span class="footnoteText" style="display: none;">They make sure your laptop <a href="http://ul.com/">doesn't catch fire</a>.</span></span>
+					on safety certification software. Before that I was at Fino Consulting designing iPad apps that helped businesses save money on energy.</p>
+					<p>I grew up outside Chicago and studied sociology at the <a href="http://www.sociology.illinois.edu/">University of Illinois at Urbana-Champaign</a> where my focus was on accessibility, digital inequality, and the social impact of technology. I also led a program that tutored older adults in basic computer skills. At <a href="https://www.hcii.cmu.edu/">Carnegie Mellon University</a>, I studied human-computer interaction and worked on a tablet app for the engineers at Eaton Corporation
+						<span class="footnote"><span class="footnoteNumber">[3]</span><span class="footnoteText" style="display: none;">They make  giant <a href="http://www.eaton.com/Eaton/index.htm">circuit breakers</a> that live underneath big buildings like sports stadiums.</span></span>
+					.</p>
+					<p>Civic engagement is important to me. I contribute my design skills to <a href="https://ragtag.org/">Ragtag</a>, an organization of technologists helping first-time candidates, and I regularly volunteer as a election officer in Santa Clara County.</p>
+					<p>I play percussion with the <a href="http://www.sjmetroband.org/">San Jose Metropolitan Band</a> and the <a href="https://www.novavista.org/">Nova Vista Symphony</a>. I also enjoy hiking, <a href="https://500px.com/dluetger">photography</a>, cars, watching great tv, trying new beers, and traveling the world.</p>
+				</div>
+				<div class="grid-40">
+					<img id="about-image" src="img/about/about.png" alt="A handsome likeness of the author">
+				</div>	
+			</section>
+		</div>
+	</div>
+	<footer>
+		<div class="grid-container">
+			<div class="prefix-10 grid-80 suffix-10">
+				<nav>
+					<a href="mailto: dave@luetger.com">dave@luetger.com</a>
+					<a href="https://twitter.com/dluetger">@dluetger</a>
+				</nav>
+				<p class="copyright">Designed and built by <a href="index.html">Dave</a> in 
+							<script language="javascript" type="text/javascript">
+							var today = new Date()
+							var year = today.getFullYear()
+							document.write(year)
+							</script>.
+				</p>
+			</div>
+		</div>	
+	<!--Version of jQuery that makes the footnotes work-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<!--Script that does the little footnotes. Lovingly borrowed from Randall Munroe at xkcd.com-->
+    <script>
+      jQuery.noConflict();
+      jQuery(function() {
+        jQuery("span.footnoteText").hide();
+        jQuery("span.footnoteNumber").click(function(event) {
+          jQuery(this.nextSibling).toggle();
+          event.stopPropagation();
+        });
+        jQuery("body").click(function(event) {
+          jQuery("span.footNoteText").hide();
+        });
+      });
+    </script>
+</body>
+</html>

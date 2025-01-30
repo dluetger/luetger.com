@@ -1,44 +1,16 @@
-/*styles.css*/
+// styles.css
+
 @use 'colors';
 @use 'type';
+@use 'layout';
+@use 'borders';
+// @use 'animation'; -> put animation stuff here
 
-/*-----Variables and mixins-----*/
+@use 'lists';
 
-/*Font sizes*/
-// type.$font-size-xxx-large: 3.998em;
-// type.$font-size-xx-large: 2.827em;
-// type.$font-size-x-large: 1.999em;
-// type.$font-size-large: 1.4143em;
-// type.$font-size-regular: 1em;
-// type.$font-size-small: 0.707em;
+@use 'projectDetails';
 
-/*Font weights*/
-// type.$font-weight-x-bold: 800;
-// type.$font-weight-bold: 700;
-// type.$font-weight-regular: 400;
-// type.$font-weight-light: 300;
-
-/*Line heights*/
-// type.$line-height-x-small: 1em;
-// type.$line-height-small: 1.2em;
-// type.$line-height-medium: 1.5em;
-// type.$line-height-large: 2em;
-
-/////*Layout*/////
-
-/*Spacing*/
-$spacing-xx-large: 128px;
-$spacing-x-large: 64px;
-$spacing-large: 32px;
-$spacing-medium: 16px;
-$spacing-small: 8px;
-$spacing-x-small: 4px;
-$spacing-xx-small: 2px;
-
-/*Border styles*/
-$border-link: 1px solid colors.$gray-2;
-$border-link-hover: 2px solid colors.$primary-70;
-$border-link-large: 4px solid colors.$primary-70;
+@use 'footer';
 
 /*Border radii*/
 @mixin border-radius($radius){
@@ -47,12 +19,6 @@ $border-link-large: 4px solid colors.$primary-70;
   	-ms-border-radius: $radius;
   	border-radius: $radius;
 }
-
-/*Layout and grid*/
-$grid-mobile-small: 240px;
-$grid-mobile-large: 320px;
-$grid-tablet-small: 480px;
-$grid-tablet-large: 768px;
 
 /*Animations and transitions*/
 //Makes it so that the page fades in all smooth like.
@@ -112,42 +78,46 @@ color: colors.$gray-6;
 }
 
 h1{
-	font-size: type.$font-size-xxx-large;
+	font-size: type.$font-size-xx-large;
 	font-weight: type.$font-weight-x-bold;
-	margin: 0 0 $spacing-small -4px;
+	line-height: type.$line-height-x-small;
+	margin: 0 0 layout.$spacing-medium 0;
 	@include ease-in-out(.2s);
 }
 
 h2{
 	@extend h1;
 	// letter-spacing: inherit;
-	font-size: type.$font-size-xx-large;
-	margin:0 0 $spacing-large 0;
-	padding-bottom: $spacing-small;
+	font-size: type.$font-size-x-large;
+	margin:0 0 layout.$spacing-small 0;
 }
 
 h3{
 	@extend h1;
 	font-size: type.$font-size-x-large;
-	margin: $spacing-large 0 $spacing-medium+$spacing-small 0;
+	margin: layout.$spacing-large 0 layout.$spacing-medium+layout.$spacing-small 0;
 }
 
 h4{
 	@extend h1;
 	font-size: type.$font-size-large;
-	margin: $spacing-large 0 $spacing-medium 0;
+	margin: layout.$spacing-large 0 layout.$spacing-medium 0;
 }
 
 p{
 	font-weight: type.$font-weight-light;
-	line-height: 1.7em;
-	margin:0 0 $spacing-medium 0;
+	line-height: type.$line-height-medium;
+	margin:0 0 layout.$spacing-medium 0;
 	max-width: 640px;
 	@include ease-in-out(.2s);
 }
 
 strong{
 	font-weight: type.$font-weight-x-bold;
+}
+
+em{
+	font-style: italic;
 }
 
 b{
@@ -160,6 +130,7 @@ a{
 	@extend p;
 	text-decoration: none;
   	border-bottom: 1px solid colors.$gray-2;
+  	color: colors.$gray-2;
   	// padding-bottom: -8px;
 	@include ease-in-out(.1s);
 	@include border-radius(1px);
@@ -181,26 +152,30 @@ a:focus{
 
 }
 
+li{
+	line-height: type.$line-height-medium;
+}
+
 .skip-main:focus, .skip-main:active{
 	left: auto;
-	top: $spacing-small;
+	top: layout.$spacing-small;
 	overflow: auto;
 	z-index: 999;
 	background-color: colors.$gray-2;
 	color: colors.$gray-6;
-	padding: $spacing-medium;	
+	padding: layout.$spacing-medium;	
 }
 
 .masthead{
 	// background-color: colors.$gray-20;
-	padding-bottom: $spacing-x-large;
-	margin-bottom: $spacing-x-large;
+	padding-bottom: layout.$spacing-x-large;
+	margin-bottom: layout.$spacing-x-large;
 	// border-bottom: 1px solid rgb(200, 209, 224);
 }
 
 .hero-text-h{
 	font-size: type.$font-size-xxx-large;
-	margin-bottom: $spacing-medium;
+	margin-bottom: layout.$spacing-medium;
 }
 
 .hero-text{
@@ -208,6 +183,14 @@ a:focus{
 	font-weight: type.$font-weight-bold;
 	line-height: type.$line-height-small;
 	max-width: 100%;
+}
+
+.subtitle{
+	font-size: type.$font-size-large;
+	font-weight: type.$font-weight-light;
+	line-height: type.$line-height-small;
+	max-width: none;
+	margin: 0 0 layout.$spacing-large 0;
 }
 
 /* The part that shows how to pronounce my name */
@@ -234,12 +217,12 @@ a:focus{
 // }
 
 .social-links{
-	margin: $spacing-x-large 0 (-$spacing-small) 0;
+	margin: layout.$spacing-x-large 0 0 (-(layout.$spacing-small));
 }
 
 .social-links a{
 	font-weight: bold;
-	padding: 0 $spacing-small 0 $spacing-small;
+	padding: 0 layout.$spacing-small 0 layout.$spacing-small;
 }
 
 
@@ -248,7 +231,7 @@ a:focus{
 nav{
 	a{
 		display: inline-block;
-		margin:0 $spacing-medium 0 0;
+		margin:0 layout.$spacing-medium 0 0;
 		color:colors.$gray-2;
 		border-bottom: none;
 	}
@@ -267,11 +250,11 @@ nav{
 }
 
 header{
-	padding: $spacing-xx-large 0 0 0;
-	margin: 0 0 $spacing-x-large 0;
+	padding: layout.$spacing-xx-large 0 0 0;
+	margin: 0 0 layout.$spacing-x-large 0;
 
 	a{
-		line-height: $spacing-large;
+		line-height: layout.$spacing-large;
 	}
 
 
@@ -288,7 +271,7 @@ header{
 a.logo{
 	font-size: type.$font-size-large;
 	font-weight: type.$font-weight-x-bold;
-	margin: 0 $spacing-large 0 0;
+	margin: 0 layout.$spacing-large 0 0;
 }
 
 a.logo:hover{
@@ -318,27 +301,27 @@ a.logo:focus{
 
 /*-----Footer stuff-----*/
 
-footer{
-	margin: $spacing-medium 0 0 0;
-	// border-top: 1px solid rgb(200, 209, 224);
-	padding: $spacing-x-large 0 $spacing-x-large 0;
-	// background-color: colors.$gray-20;
+// footer{
+// 	margin: layout.$spacing-medium 0 0 0;
+// 	// border-top: 1px solid rgb(200, 209, 224);
+// 	padding: layout.$spacing-x-large 0 layout.$spacing-x-large 0;
+// 	// background-color: colors.$gray-20;
 
-	a{
-		font-weight: type.$font-weight-x-bold;
-		color: colors.$gray-2;
-	}
-}
+// 	a{
+// 		font-weight: type.$font-weight-x-bold;
+// 		color: colors.$gray-2;
+// 	}
+// }
 
-.copyright{
-	font-size: type.$font-size-small;
-	margin: $spacing-small 0 0 0;
+// .copyright{
+// 	font-size: type.$font-size-small;
+// 	margin: layout.$spacing-small 0 0 0;
 
-	a{
-		font-weight: type.$font-weight-regular;
-		border-bottom: $border-link;
-	}
-}
+// 	a{
+// 		font-weight: type.$font-weight-regular;
+// 		border-bottom: $border-link;
+// 	}
+// }
 
 /*-----Stuff that hopefully makes the animations work-----*/
 
@@ -367,20 +350,20 @@ footer{
 
 /*-----Stuff that makes the site not too ugly on very big or very small screens-----*/
 
-@media (max-width: $grid-tablet-large){
+@media (max-width: layout.$grid-tablet-large){
 	body{
-		padding: 0 $spacing-small 0 $spacing-small;
+		padding: 0 layout.$spacing-small 0 layout.$spacing-small;
 	}
 
 	#about-image{
 		border: 8px solid white;
 		border-radius: 256px;
 		display: block;
-		margin: $spacing-x-large auto 0 auto;
+		margin: layout.$spacing-x-large auto 0 auto;
 	}
 }
 
-@media (max-width: $grid-tablet-small){
+@media (max-width: layout.$grid-tablet-small){
 	body{
 		font-size: 16px;
 	}
@@ -397,17 +380,17 @@ footer{
 	}
 
 	#about-header{
-		margin: 0 0 $spacing-large;
+		margin: 0 0 layout.$spacing-large;
 	}
 
 	h2{
 		font-size: type.$font-size-large;
-		margin:0 0 $spacing-large 0;
+		margin:0 0 layout.$spacing-large 0;
 	}
 
 	.subtitle{
 		font-size: type.$font-size-regular;
-		margin: 0 0 $spacing-large 0;
+		margin: 0 0 layout.$spacing-large 0;
 		line-height: 1.5em;
 	}
 
@@ -420,22 +403,22 @@ footer{
 	}
 
 	.masthead{
-		margin-bottom: $spacing-x-large;
-		padding-bottom: $spacing-large;
+		margin-bottom: layout.$spacing-x-large;
+		padding-bottom: layout.$spacing-large;
 	}
 
 	p{
-		margin-bottom: $spacing-medium;
+		margin-bottom: layout.$spacing-medium;
 	}
 
 	section{
-		margin-bottom: $spacing-small;
+		margin-bottom: layout.$spacing-small;
 	}
 
 	blockquote{
 
 		p{
-			padding-left: $spacing-medium;
+			padding-left: layout.$spacing-medium;
 			font-size: type.$font-size-regular;
 		}
 	}

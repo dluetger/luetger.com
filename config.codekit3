@@ -9,6 +9,19 @@
   ],
   "creatorBuild" : "34627",
   "files" : {
+    "\/_borders.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/css\/_borders.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
     "\/_colors.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -18,6 +31,58 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/css\/_colors.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
+    "\/_footer.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/css\/_footer.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
+    "\/_layout.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/css\/_layout.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
+    "\/_lists.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/css\/_lists.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
+    "\/_projectDetails.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/css\/_projectDetails.css",
       "oF" : 0,
       "oS" : 1,
       "pg" : 0
@@ -43,6 +108,14 @@
       "oAP" : "\/about.html",
       "oF" : 0
     },
+    "\/ao-courts.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/ao-courts.html",
+      "oF" : 0
+    },
     "\/campaign-template.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -58,6 +131,18 @@
       "oA" : 0,
       "oAP" : "\/cpid.html",
       "oF" : 0
+    },
+    "\/css\/ _project-details.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/css\/ _project-details-min.css",
+      "oF" : 0,
+      "pg" : 0
     },
     "\/css\/normalize.css" : {
       "aP" : 1,
@@ -150,6 +235,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/fieldsight.html",
+      "oF" : 0
+    },
+    "\/footer.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/footer.html",
       "oF" : 0
     },
     "\/img\/about\/about.jpg" : {
@@ -802,6 +895,14 @@
       "oAP" : "\/irs.html",
       "oF" : 0
     },
+    "\/old-about.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old-about.html",
+      "oF" : 0
+    },
     "\/old-styles.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -901,6 +1002,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/template.html",
+      "oF" : 0
+    },
+    "\/usfs.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/usfs.html",
       "oF" : 0
     },
     "\/whirlpool.html" : {

@@ -1,4 +1,3 @@
-/*styles.css*/
 /*Grays - [DEPRECATED]*/
 /* gray */
 /*Primary Colors*/
@@ -7,14 +6,60 @@
 /*Font sizes*/
 /*Font weights*/
 /*Line heights*/
-/*-----Variables and mixins-----*/
-/*Font sizes*/
-/*Font weights*/
-/*Line heights*/
 /*Spacing*/
+/*Breakpoints*/
 /*Border styles*/
+ul {
+  list-style-type: disc;
+  list-style-position: oustide;
+  line-height: 1.7em;
+  margin-left: 32px;
+}
+
+li {
+  margin-bottom: 16px;
+}
+
+.list-short li {
+  margin-left: -16px;
+  margin-bottom: 4px;
+}
+
+.project-details h2 {
+  font-size: 1.4143em;
+}
+.project-details h3 {
+  font-size: 1em;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.project-details p, .project-details a {
+  font-size: 0.707em;
+}
+.project-details li {
+  font-size: 0.707em;
+  line-height: 1.2em;
+}
+
+footer {
+  margin: 16px 0 0 0;
+  padding: 64px 0 64px 0;
+}
+footer .social-links {
+  margin: 0 0 8px -8px;
+}
+
+.copyright {
+  font-size: 0.707em;
+  margin: 8px 0 0 0;
+}
+.copyright a {
+  font-weight: 400;
+  border-bottom: 1px solid hsl(194.33, 0%, 88.76%);
+  color: hsl(194.33, 0%, 96.6%);
+}
+
 /*Border radii*/
-/*Layout and grid*/
 /*Animations and transitions*/
 /*-----Normal, boring stuff-----*/
 html {
@@ -55,9 +100,10 @@ body {
 }
 
 h1, h4, h3, h2 {
-  font-size: 3.998em;
+  font-size: 2.827em;
   font-weight: 800;
-  margin: 0 0 8px -4px;
+  line-height: 1.2em;
+  margin: 0 0 16px 0;
   -o-transition: 0.2s ease-in-out;
   -ms-transition: 0.2s ease-in-out;
   -moz-transition: 0.2s ease-in-out;
@@ -66,9 +112,8 @@ h1, h4, h3, h2 {
 }
 
 h2 {
-  font-size: 2.827em;
-  margin: 0 0 32px 0;
-  padding-bottom: 8px;
+  font-size: 1.999em;
+  margin: 0 0 8px 0;
 }
 
 h3 {
@@ -97,10 +142,15 @@ strong, b {
   font-weight: 800;
 }
 
+em {
+  font-style: italic;
+}
+
 /*-----Link stuff-----*/
 a, a.logo:focus, a:focus {
   text-decoration: none;
   border-bottom: 1px solid hsl(194.33, 0%, 88.76%);
+  color: hsl(194.33, 0%, 88.76%);
   -o-transition: 0.1s ease-in-out;
   -ms-transition: 0.1s ease-in-out;
   -moz-transition: 0.1s ease-in-out;
@@ -121,6 +171,10 @@ a:hover, a:focus, a.logo:focus {
 a:focus, a.logo:focus {
   outline: 0;
   color: hsl(194.33, 0%, 13.15%);
+}
+
+li {
+  line-height: 1.7em;
 }
 
 .skip-main:focus, .skip-main:active {
@@ -146,8 +200,16 @@ a:focus, a.logo:focus {
 .hero-text {
   font-size: 1.999em;
   font-weight: 700;
-  line-height: 1.2em;
+  line-height: 1.4em;
   max-width: 100%;
+}
+
+.subtitle {
+  font-size: 1.4143em;
+  font-weight: 300;
+  line-height: 1.4em;
+  max-width: none;
+  margin: 0 0 32px 0;
 }
 
 /* The part that shows how to pronounce my name */
@@ -169,7 +231,7 @@ a:focus, a.logo:focus {
   }
 }
 .social-links {
-  margin: 64px 0 -8px 0;
+  margin: 64px 0 0 -8px;
 }
 
 .social-links a, .social-links a.logo:focus {
@@ -237,24 +299,6 @@ a.logo:hover, a.logo:focus {
 }
 
 /*-----Footer stuff-----*/
-footer {
-  margin: 16px 0 0 0;
-  padding: 64px 0 64px 0;
-}
-footer a, footer a:focus, footer a.logo:focus {
-  font-weight: 800;
-  color: hsl(194.33, 0%, 88.76%);
-}
-
-.copyright {
-  font-size: 0.707em;
-  margin: 8px 0 0 0;
-}
-.copyright a {
-  font-weight: 400;
-  border-bottom: 1px solid hsl(194.33, 0%, 88.76%);
-}
-
 /*-----Stuff that hopefully makes the animations work-----*/
 /*-Stuff that makes the page fade in-*/
 @keyframes fadein {
@@ -315,7 +359,7 @@ footer a, footer a:focus, footer a.logo:focus {
   }
   .hero-text {
     font-size: 1.4143em;
-    line-height: 1.2em;
+    line-height: 1.4em;
   }
   h1, h2, h3, h4 {
     font-size: 2.827em;

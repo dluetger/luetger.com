@@ -1,0 +1,27 @@
+// _footer.scss
+
+@use 'colors';
+@use 'type';
+@use 'layout';
+@use 'borders';
+
+footer{
+	margin: layout.$spacing-medium 0 0 0;
+	padding: layout.$spacing-x-large 0 layout.$spacing-x-large 0;
+
+	.social-links{
+		margin: 0 0 layout.$spacing-small (-(layout.$spacing-small));
+	}
+
+}
+
+.copyright{
+	font-size: type.$font-size-small;
+	margin: layout.$spacing-small 0 0 0;
+
+	a{
+		font-weight: type.$font-weight-regular;
+		border-bottom: borders.$border-link;
+		color: colors.$gray-1;
+	}
+}
