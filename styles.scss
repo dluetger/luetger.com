@@ -161,6 +161,10 @@ li{
 	padding: layout.$spacing-medium;	
 }
 
+.site-nav{
+	font-family: type.$secondary;
+}
+
 .masthead{
 	// background-color: colors.$gray-20;
 	padding-bottom: layout.$spacing-x-large;
@@ -211,14 +215,14 @@ li{
 // 	content: '(loot-grr).';
 // }
 
-.social-links{
-	margin: layout.$spacing-x-large 0 0 (-(layout.$spacing-small));
-}
+// .social-links{
+// 	margin: layout.$spacing-x-large 0 0 (-(layout.$spacing-small));
+// }
 
-.social-links a{
-	font-weight: bold;
-	padding: 0 layout.$spacing-small 0 layout.$spacing-small;
-}
+// .social-links a{
+// 	font-weight: bold;
+// 	padding: 0 layout.$spacing-small 0 layout.$spacing-small;
+// }
 
 
 
@@ -229,6 +233,8 @@ nav{
 		margin:0 layout.$spacing-medium 0 0;
 		color:colors.$gray-2;
 		border-bottom: none;
+		padding: 0 layout.$spacing-small 0 layout.$spacing-small;
+
 	}
 
 	a:hover{

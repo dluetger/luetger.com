@@ -13,6 +13,11 @@ footer{
 		margin: 0 0 layout.$spacing-small (-(layout.$spacing-small));
 	}
 
+	.social-links a{
+		padding: 0 layout.$spacing-small 0 layout.$spacing-small;
+		font-family: type.$secondary;
+	}
+
 }
 
 .copyright{

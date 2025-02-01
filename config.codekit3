@@ -7,7 +7,7 @@
       "uuidString" : "B79AA4D1-5C0F-4118-9A41-7FA06611137A"
     }
   ],
-  "creatorBuild" : "34627",
+  "creatorBuild" : "34680",
   "files" : {
     "\/_borders.scss" : {
       "aP" : 0,
@@ -142,22 +142,6 @@
       "oAP" : "\/ao-courts.html",
       "oF" : 0
     },
-    "\/campaign-template.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/campaign-template.html",
-      "oF" : 0
-    },
-    "\/cpid.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/cpid.html",
-      "oF" : 0
-    },
     "\/css\/ _project-details.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -218,22 +202,6 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/design-system-short.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/design-system-short.html",
-      "oF" : 0
-    },
-    "\/design-system.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/design-system.html",
-      "oF" : 0
-    },
     "\/favicon.png" : {
       "ft" : 32768,
       "iS" : 304,
@@ -246,22 +214,6 @@
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
-    },
-    "\/fieldsight-old.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fieldsight-old.html",
-      "oF" : 0
-    },
-    "\/fieldsight.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fieldsight.html",
-      "oF" : 0
     },
     "\/footer.html" : {
       "cB" : 0,
@@ -514,6 +466,19 @@
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
+    },
+    "\/img\/irs\/irs-hero.png" : {
+      "ft" : 32768,
+      "iS" : 733528,
+      "oA" : 0,
+      "oAP" : "\/img\/irs\/irs-hero.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/img\/nasa\/ames.jpg" : {
       "ft" : 16384,
@@ -934,15 +899,63 @@
       "oAP" : "\/irs.html",
       "oF" : 0
     },
-    "\/old-about.html" : {
+    "\/old\/campaign-template.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/old-about.html",
+      "oAP" : "\/old\/campaign-template.html",
       "oF" : 0
     },
-    "\/old-styles.scss" : {
+    "\/old\/cpid.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/cpid.html",
+      "oF" : 0
+    },
+    "\/old\/design-system-short.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/design-system-short.html",
+      "oF" : 0
+    },
+    "\/old\/design-system.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/design-system.html",
+      "oF" : 0
+    },
+    "\/old\/fieldsight-old.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/fieldsight-old.html",
+      "oF" : 0
+    },
+    "\/old\/fieldsight.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/fieldsight.html",
+      "oF" : 0
+    },
+    "\/old\/old-about.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/old-about.html",
+      "oF" : 0
+    },
+    "\/old\/old-styles.scss" : {
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
@@ -954,6 +967,46 @@
       "oF" : 0,
       "oS" : 1,
       "pg" : 0
+    },
+    "\/old\/resume-2023.pdf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/resume-2023.pdf",
+      "oF" : 0
+    },
+    "\/old\/schematics-2.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/schematics-2.html",
+      "oF" : 0
+    },
+    "\/old\/schematics.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/schematics.html",
+      "oF" : 0
+    },
+    "\/old\/template.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/template.html",
+      "oF" : 0
+    },
+    "\/old\/whirlpool.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/whirlpool.html",
+      "oF" : 0
     },
     "\/README.md" : {
       "cB" : 0,
@@ -974,14 +1027,6 @@
       "rFN" : 0,
       "uCM" : 0
     },
-    "\/resume-2023.pdf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/resume-2023.pdf",
-      "oF" : 0
-    },
     "\/resume.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -996,22 +1041,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/resume.pdf",
-      "oF" : 0
-    },
-    "\/schematics-2.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/schematics-2.html",
-      "oF" : 0
-    },
-    "\/schematics.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/schematics.html",
       "oF" : 0
     },
     "\/sls.html" : {
@@ -1035,28 +1064,12 @@
       "oS" : 1,
       "pg" : 0
     },
-    "\/template.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/template.html",
-      "oF" : 0
-    },
     "\/usfs.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/usfs.html",
-      "oF" : 0
-    },
-    "\/whirlpool.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/whirlpool.html",
       "oF" : 0
     },
     "\/work.html" : {
@@ -1078,8 +1091,8 @@
     "creationDate" : 654663290.48423505,
     "displayValue" : "luetger.com",
     "displayValueWasSetByUser" : 0,
-    "iconImageName" : "brackets-peach",
-    "iconImageWasSetByUser" : 0
+    "iconImageName" : "brackets-tar",
+    "iconImageWasSetByUser" : 1
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
