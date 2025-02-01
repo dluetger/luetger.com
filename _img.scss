@@ -1,0 +1,33 @@
+// _img.scss
+
+@use 'layout';
+@use 'type';
+@use 'borders';
+
+figure{
+	margin: 0 0 layout.$spacing-x-large 0;
+}
+
+img{
+	width: 100%;
+	margin: 0 0 layout.$spacing-medium 0;
+	border: none;
+}
+
+.case-study-img{
+  clip-path: polygon(0 0,calc(100% - 40px) 0,100% 40px,100% 100%,40px 100%,0 calc(100% - 40px));
+  @include borders.border-radius(4px);
+}
+
+.case-study-hero{
+	margin-bottom: layout.$spacing-x-large;
+}
+
+figcaption{
+	font-size: type.$font-size-small;
+	line-height: 1.5em;
+}
+
+.figure-image-container{
+	display: block;
+}

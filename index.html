@@ -3,7 +3,7 @@
 <head>
 	<title>Dave Luetger</title>
 	<meta name="description" content="Designer, musician, tv watcher, and human"/>
-	<!--CSS that makes the browser not do stupid default stuff to the styling.-->
+	<!--CSS that makes the browser not do silly default stuff to the styling.-->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<!--CSS that makes it easy to layout stuff on the page-->
 	<link rel="stylesheet" type="text/css" href="css/unsemantic-grid-responsive.css">
@@ -14,7 +14,7 @@
 	<!--Fonts-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 </head>
 
@@ -27,12 +27,12 @@
 			<a class="skip-main" href="#main">Skip to main content</a>
 			<div class="grid-container">
 				<div class="prefix-10 grid-80 suffix-10">
-					<nav>
+					<nav class="site-nav">
 						<a class="logo" href="index.html"><img src="img/general/d.svg" alt="Dave Luetger"></a>
-						<!-- <a href="index.html" class="active-page">Work</a>
-						<a href="#">Speaking</a>
-						<a href="resume.html">Resume</a>
-						<a href="about.html">About</a> -->
+						<!-- <a href="index.html" class="active-page">Work</a> -->
+						<!-- <a href="#">Speaking</a> -->
+						<a href="resume.pdf">Resume</a>
+						<a href="about.html">About</a>
 					</nav>
 				</div>
 			</div>
@@ -42,12 +42,6 @@
 				<h1 class="index-header">Dave Luetger</h1>
 				<p class="hero-text"> 
 				I'm Dave <span class="last-name" id="text-replace">Luetger.</span> I'm a UX designer, researcher, and strategist. I believe government websites should (and can) be easy&nbsp;to&nbsp;use.</p>
-				<nav class="social-links">
-					<a href="mailto: dluetger@gmail.com">Email</a>
-					<a href="resume.pdf">Resume</a>
-					<a href="https://www.linkedin.com/in/davidluetger">LinkedIn</a>
-					<!--<a href="https://bsky.app/profile/dlootz.bsky.social">Bluesky</a>-->
-				</nav>
 			</div>
 			
 		</div>
@@ -57,6 +51,11 @@
 	<footer>
 		<div class="grid-container">
 			<div class="prefix-10 grid-80 suffix-10">
+				<nav class="social-links">
+					<a href="mailto: dluetger@gmail.com">Email</a>
+					<!-- <a href="resume.pdf">Resume</a> -->
+					<a href="https://www.linkedin.com/in/davidluetger">LinkedIn</a>
+				</nav>
 				<p class="copyright">Designed and built by <a href="index.html">Dave</a> in 
 							<script language="javascript" type="text/javascript">
 							var today = new Date()

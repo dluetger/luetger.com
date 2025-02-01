@@ -1,0 +1,30 @@
+// _work.scss
+
+@use 'layout';
+@use 'type';
+@use 'colors';
+
+.work-list{
+	list-style-type: none;
+
+	h3{
+		margin-bottom: layout.$spacing-x-small;
+	}
+
+	p{
+		margin-top: layout.$spacing-x-small;
+		line-height: type.$line-height-small;
+
+	}
+
+	li{
+		margin-left: (-(layout.$spacing-large));
+		font-weight: type.$font-weight-bold;
+	}
+
+	a{
+		font-weight: type.$font-weight-bold;
+		color: colors.$gray-2;
+		border: none;
+	}
+}

@@ -7,8 +7,21 @@
       "uuidString" : "B79AA4D1-5C0F-4118-9A41-7FA06611137A"
     }
   ],
-  "creatorBuild" : "34627",
+  "creatorBuild" : "34680",
   "files" : {
+    "\/_borders.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/css\/_borders.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
     "\/_colors.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -18,6 +31,71 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/css\/_colors.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
+    "\/_footer.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/css\/_footer.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
+    "\/_img.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/css\/_img.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
+    "\/_layout.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/css\/_layout.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
+    "\/_lists.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/css\/_lists.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
+    "\/_projectDetails.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/css\/_projectDetails.css",
       "oF" : 0,
       "oS" : 1,
       "pg" : 0
@@ -35,6 +113,19 @@
       "oS" : 1,
       "pg" : 0
     },
+    "\/_work.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/css\/_work.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
     "\/about.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -43,21 +134,25 @@
       "oAP" : "\/about.html",
       "oF" : 0
     },
-    "\/campaign-template.html" : {
+    "\/ao-courts.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/campaign-template.html",
+      "oAP" : "\/ao-courts.html",
       "oF" : 0
     },
-    "\/cpid.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
+    "\/css\/ _project-details.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/cpid.html",
-      "oF" : 0
+      "oAP" : "\/css\/ _project-details-min.css",
+      "oF" : 0,
+      "pg" : 0
     },
     "\/css\/normalize.css" : {
       "aP" : 1,
@@ -107,22 +202,6 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/design-system-short.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/design-system-short.html",
-      "oF" : 0
-    },
-    "\/design-system.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/design-system.html",
-      "oF" : 0
-    },
     "\/favicon.png" : {
       "ft" : 32768,
       "iS" : 304,
@@ -136,38 +215,17 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/fieldsight-old.html" : {
+    "\/footer.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/fieldsight-old.html",
+      "oAP" : "\/footer.html",
       "oF" : 0
-    },
-    "\/fieldsight.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fieldsight.html",
-      "oF" : 0
-    },
-    "\/img\/about\/about.jpg" : {
-      "ft" : 16384,
-      "iS" : 1343080,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/img\/about\/about.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
     },
     "\/img\/about\/about.png" : {
       "ft" : 32768,
-      "iS" : 2757930,
+      "iS" : 1178778,
       "oA" : 0,
       "oAP" : "\/img\/about\/about.png",
       "oF" : 0,
@@ -408,6 +466,19 @@
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
+    },
+    "\/img\/irs\/irs-hero.png" : {
+      "ft" : 32768,
+      "iS" : 733528,
+      "oA" : 0,
+      "oAP" : "\/img\/irs\/irs-hero.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/img\/nasa\/ames.jpg" : {
       "ft" : 16384,
@@ -682,6 +753,32 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/img\/usfs\/usfs-hero-dark.png" : {
+      "ft" : 32768,
+      "iS" : 1136983,
+      "oA" : 0,
+      "oAP" : "\/img\/usfs\/usfs-hero-dark.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/img\/usfs\/usfs-hero.png" : {
+      "ft" : 32768,
+      "iS" : 1149586,
+      "oA" : 0,
+      "oAP" : "\/img\/usfs\/usfs-hero.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/img\/whirlpool\/ul-go-compare.png" : {
       "ft" : 32768,
       "iS" : 227865,
@@ -802,7 +899,63 @@
       "oAP" : "\/irs.html",
       "oF" : 0
     },
-    "\/old-styles.scss" : {
+    "\/old\/campaign-template.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/campaign-template.html",
+      "oF" : 0
+    },
+    "\/old\/cpid.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/cpid.html",
+      "oF" : 0
+    },
+    "\/old\/design-system-short.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/design-system-short.html",
+      "oF" : 0
+    },
+    "\/old\/design-system.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/design-system.html",
+      "oF" : 0
+    },
+    "\/old\/fieldsight-old.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/fieldsight-old.html",
+      "oF" : 0
+    },
+    "\/old\/fieldsight.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/fieldsight.html",
+      "oF" : 0
+    },
+    "\/old\/old-about.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/old-about.html",
+      "oF" : 0
+    },
+    "\/old\/old-styles.scss" : {
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
@@ -814,6 +967,46 @@
       "oF" : 0,
       "oS" : 1,
       "pg" : 0
+    },
+    "\/old\/resume-2023.pdf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/resume-2023.pdf",
+      "oF" : 0
+    },
+    "\/old\/schematics-2.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/schematics-2.html",
+      "oF" : 0
+    },
+    "\/old\/schematics.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/schematics.html",
+      "oF" : 0
+    },
+    "\/old\/template.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/template.html",
+      "oF" : 0
+    },
+    "\/old\/whirlpool.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/old\/whirlpool.html",
+      "oF" : 0
     },
     "\/README.md" : {
       "cB" : 0,
@@ -834,14 +1027,6 @@
       "rFN" : 0,
       "uCM" : 0
     },
-    "\/resume-2023.pdf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/resume-2023.pdf",
-      "oF" : 0
-    },
     "\/resume.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -856,22 +1041,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/resume.pdf",
-      "oF" : 0
-    },
-    "\/schematics-2.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/schematics-2.html",
-      "oF" : 0
-    },
-    "\/schematics.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/schematics.html",
       "oF" : 0
     },
     "\/sls.html" : {
@@ -895,20 +1064,20 @@
       "oS" : 1,
       "pg" : 0
     },
-    "\/template.html" : {
+    "\/usfs.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template.html",
+      "oAP" : "\/usfs.html",
       "oF" : 0
     },
-    "\/whirlpool.html" : {
+    "\/work.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/whirlpool.html",
+      "oAP" : "\/work.html",
       "oF" : 0
     }
   },
@@ -922,8 +1091,8 @@
     "creationDate" : 654663290.48423505,
     "displayValue" : "luetger.com",
     "displayValueWasSetByUser" : 0,
-    "iconImageName" : "brackets-peach",
-    "iconImageWasSetByUser" : 0
+    "iconImageName" : "brackets-tar",
+    "iconImageWasSetByUser" : 1
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

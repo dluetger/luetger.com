@@ -1,0 +1,15 @@
+// _borders.scss
+
+@use 'colors';
+
+/*Border styles*/
+$border-link: 1px solid colors.$gray-2;
+$border-link-hover: 2px solid colors.$primary-70;
+$border-link-large: 4px solid colors.$primary-70;
+
+@mixin border-radius($radius){
+ 	-webkit-border-radius: $radius;
+ 	-moz-border-radius: $radius;
+  	-ms-border-radius: $radius;
+  	border-radius: $radius;
+}

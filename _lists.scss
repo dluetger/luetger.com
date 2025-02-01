@@ -1,0 +1,21 @@
+// _lists.scss
+
+@use 'type';
+@use 'layout';
+
+ul{
+	// @extend p; -> add this back in after I put p into a partial
+	list-style-type: disc;
+	list-style-position: oustide;
+	line-height: type.$line-height-medium;
+	margin-left: layout.$spacing-large;
+}
+
+li{
+	margin-bottom: layout.$spacing-medium;
+}
+
+.list-short li{
+	margin-left: (-(layout.$spacing-medium));
+	margin-bottom: layout.$spacing-x-small;
+}
