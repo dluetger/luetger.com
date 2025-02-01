@@ -7,18 +7,13 @@
 // @use 'animation'; -> put animation stuff here
 
 @use 'lists';
+@use 'img';
+
+@use 'work';
 
 @use 'projectDetails';
 
 @use 'footer';
-
-/*Border radii*/
-@mixin border-radius($radius){
- 	-webkit-border-radius: $radius;
- 	-moz-border-radius: $radius;
-  	-ms-border-radius: $radius;
-  	border-radius: $radius;
-}
 
 /*Animations and transitions*/
 //Makes it so that the page fades in all smooth like.
@@ -42,7 +37,7 @@
 /*-----Normal, boring stuff-----*/
 
 html{
-	background-color: colors.$gray-6;
+	background-color: #111;
 }
 
 body{
@@ -133,7 +128,7 @@ a{
   	color: colors.$gray-2;
   	// padding-bottom: -8px;
 	@include ease-in-out(.1s);
-	@include border-radius(1px);
+	@include borders.border-radius(1px);
 }
 
 a:hover{

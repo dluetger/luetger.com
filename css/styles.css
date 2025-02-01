@@ -25,6 +25,57 @@ li {
   margin-bottom: 4px;
 }
 
+figure {
+  margin: 0 0 64px 0;
+}
+
+img {
+  width: 100%;
+  margin: 0 0 16px 0;
+  border: none;
+}
+
+.case-study-img {
+  clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 40px 100%, 0 calc(100% - 40px));
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.case-study-hero {
+  margin-bottom: 64px;
+}
+
+figcaption {
+  font-size: 0.707em;
+  line-height: 1.5em;
+}
+
+.figure-image-container {
+  display: block;
+}
+
+.work-list {
+  list-style-type: none;
+}
+.work-list h3 {
+  margin-bottom: 4px;
+}
+.work-list p, .work-list a {
+  margin-top: 4px;
+  line-height: 1.4em;
+}
+.work-list li {
+  margin-left: -32px;
+  font-weight: 700;
+}
+.work-list a {
+  font-weight: 700;
+  color: hsl(194.33, 0%, 88.76%);
+  border: none;
+}
+
 .project-details h2 {
   font-size: 1.4143em;
 }
@@ -39,6 +90,7 @@ li {
 .project-details li {
   font-size: 0.707em;
   line-height: 1.2em;
+  font-family: "Courier";
 }
 
 footer {
@@ -59,11 +111,10 @@ footer .social-links {
   color: hsl(194.33, 0%, 96.6%);
 }
 
-/*Border radii*/
 /*Animations and transitions*/
 /*-----Normal, boring stuff-----*/
 html {
-  background-color: hsl(194.33, 0%, 13.15%);
+  background-color: #111;
 }
 
 body {

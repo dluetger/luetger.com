@@ -48,6 +48,19 @@
       "oS" : 1,
       "pg" : 0
     },
+    "\/_img.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/css\/_img.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
     "\/_layout.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -96,6 +109,19 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/css\/_type.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
+    "\/_work.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/css\/_work.css",
       "oF" : 0,
       "oS" : 1,
       "pg" : 0
@@ -245,22 +271,9 @@
       "oAP" : "\/footer.html",
       "oF" : 0
     },
-    "\/img\/about\/about.jpg" : {
-      "ft" : 16384,
-      "iS" : 1343080,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/img\/about\/about.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/img\/about\/about.png" : {
       "ft" : 32768,
-      "iS" : 2757930,
+      "iS" : 1178778,
       "oA" : 0,
       "oAP" : "\/img\/about\/about.png",
       "oF" : 0,
@@ -775,6 +788,32 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/img\/usfs\/usfs-hero-dark.png" : {
+      "ft" : 32768,
+      "iS" : 1136983,
+      "oA" : 0,
+      "oAP" : "\/img\/usfs\/usfs-hero-dark.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/img\/usfs\/usfs-hero.png" : {
+      "ft" : 32768,
+      "iS" : 1149586,
+      "oA" : 0,
+      "oAP" : "\/img\/usfs\/usfs-hero.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/img\/whirlpool\/ul-go-compare.png" : {
       "ft" : 32768,
       "iS" : 227865,
@@ -1018,6 +1057,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/whirlpool.html",
+      "oF" : 0
+    },
+    "\/work.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/work.html",
       "oF" : 0
     }
   },
