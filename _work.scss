@@ -9,6 +9,7 @@
 
 	h3{
 		margin-bottom: layout.$spacing-x-small;
+		font-size: type.$font-size-large;
 	}
 
 	p{
@@ -27,4 +28,10 @@
 		color: colors.$gray-2;
 		border: none;
 	}
+
+	a:focus{
+		font-weight: type.$font-weight-bold;
+		color: colors.$gray-6;
+	}
+	
 }
