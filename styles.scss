@@ -113,7 +113,6 @@ a{
 	text-decoration: none;
   	border-bottom: 1px solid colors.$gray-2;
   	color: colors.$gray-2;
-  	// padding-bottom: -8px;
 	@include animations.ease-in-out(.1s);
 	@include borders.border-radius(1px);
 }
@@ -121,21 +120,15 @@ a{
 a:hover{
 	background-color: colors.$gray-2;
 	border-bottom: 1px solid colors.$gray-2;
-	//border-bottom: 1px solid colors.$primary-30;
 	color: colors.$gray-6;
 }
 
 a:focus{
-	@extend a, :hover;
-	outline: 0;
-	// outline-radius: 1px;
-	// outline-offset: 6px;
+	background-color: colors.$gray-2;
+	border-bottom: 1px solid colors.$gray-2;
 	color: colors.$gray-6;
+	outline: none;
 
-}
-
-li{
-	line-height: type.$line-height-medium;
 }
 
 .skip-main:focus, .skip-main:active{

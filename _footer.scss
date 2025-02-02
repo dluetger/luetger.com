@@ -11,6 +11,7 @@ footer{
 
 	.social-links{
 		margin: 0 0 layout.$spacing-small (-(layout.$spacing-small));
+		font-size: type.$font-size-small;
 	}
 
 	.social-links a{
