@@ -1,0 +1,55 @@
+// _header.scss
+
+@use 'type';
+@use 'layout';
+@use 'colors';
+
+header{
+	padding: layout.$spacing-xx-large 0 0 0;
+	margin: 0 0 layout.$spacing-x-large 0;
+
+	a{
+		line-height: layout.$spacing-large;
+	}
+}
+
+.site-nav{
+	font-family: type.$secondary;
+}
+
+/*Temorarily adjusting the color this way until I get around to properly changing the svg*/
+.logo{
+  	-webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+    filter: invert(100%);
+}
+
+a.logo{
+	font-size: type.$font-size-large;
+	font-weight: type.$font-weight-x-bold;
+	margin: 0 layout.$spacing-large 0 0;
+}
+
+a.logo:hover{
+		border-bottom: none;
+		background-color: colors.$gray-6;
+	}
+
+a.logo:focus{
+		@extend a, .logo, :hover;
+	}
+
+.index-header{
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+.logo img{
+	background-color: transparent;
+	padding: 0 0 0 0;
+	margin: 0 0 -4px 0;
+	border-radius: 0;
+}
