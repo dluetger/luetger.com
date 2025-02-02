@@ -1,38 +1,27 @@
 // styles.css
 
+// For all the very basic, global, atomic things
 @use 'colors';
 @use 'type';
 @use 'layout';
 @use 'borders';
-// @use 'animation'; -> put animation stuff here
+@use 'animations';
 
+//For other basic html things
 @use 'lists';
 @use 'img';
 
+// For things specific to page types
 @use 'work';
+@use 'caseStudies';
 
-@use 'projectDetails';
-
+// For things specific to parts of the page
+@use 'header';
+@use 'pronunciation';
 @use 'footer';
 
-/*Animations and transitions*/
-//Makes it so that the page fades in all smooth like.
-@mixin fadein($time){
-	-webkit-animation: fadein $time;
-	-o-animation: fadein $time;
-	-moz-animation: fadein $time;
-	-ms-animation: fadein $time;
-	animation: fadein $time;
-}
-
-//Makes it so that elements change all smooth like.
-@mixin ease-in-out($time){
-	-o-transition: $time ease-in-out;
-  	-ms-transition: $time ease-in-out;
-  	-moz-transition: $time ease-in-out;
-  	-webkit-transition: $time ease-in-out;
-  	transition: $time ease-in-out;
-}
+//For things to make the page responsive
+@use 'responsive';
 
 /*-----Normal, boring stuff-----*/
 
@@ -44,9 +33,7 @@ body{
 	font-family: type.$primary;
 	font-size: 18px;
 	color: colors.$gray-2;
-	// background-image: url('../img/general/background-noise.png');
-	@include fadein(1s);
-	// border-top: 2px solid colors.$primary-70;
+	@include animations.fadein(1s);
 }
 
 .skip-main{
@@ -77,7 +64,7 @@ h1{
 	font-weight: type.$font-weight-x-bold;
 	line-height: type.$line-height-x-small;
 	margin: 0 0 layout.$spacing-medium 0;
-	@include ease-in-out(.2s);
+	@include animations.ease-in-out(.2s);
 }
 
 h2{
@@ -104,7 +91,7 @@ p{
 	line-height: type.$line-height-medium;
 	margin:0 0 layout.$spacing-medium 0;
 	max-width: 640px;
-	@include ease-in-out(.2s);
+	@include animations.ease-in-out(.2s);
 }
 
 strong{
@@ -127,7 +114,7 @@ a{
   	border-bottom: 1px solid colors.$gray-2;
   	color: colors.$gray-2;
   	// padding-bottom: -8px;
-	@include ease-in-out(.1s);
+	@include animations.ease-in-out(.1s);
 	@include borders.border-radius(1px);
 }
 
@@ -161,71 +148,6 @@ li{
 	padding: layout.$spacing-medium;	
 }
 
-.site-nav{
-	font-family: type.$secondary;
-}
-
-.masthead{
-	// background-color: colors.$gray-20;
-	padding-bottom: layout.$spacing-x-large;
-	margin-bottom: layout.$spacing-x-large;
-	// border-bottom: 1px solid rgb(200, 209, 224);
-}
-
-.hero-text-h{
-	font-size: type.$font-size-xxx-large;
-	margin-bottom: layout.$spacing-medium;
-}
-
-.hero-text{
-	font-size: type.$font-size-x-large;
-	font-weight: type.$font-weight-bold;
-	line-height: type.$line-height-small;
-	max-width: 100%;
-}
-
-.subtitle{
-	font-size: type.$font-size-large;
-	font-weight: type.$font-weight-light;
-	line-height: type.$line-height-small;
-	max-width: none;
-	margin: 0 0 layout.$spacing-large 0;
-}
-
-/* The part that shows how to pronounce my name */
-
-// span.last-name{
-// 	animation: shake 10s infinite;
-// 	background-color: white;
-// }
-
-@keyframes shake {
-  0% { transform: translateY(0) }
-  25% { transform: translateY(5px) }
-  50% { transform: translateY(-5px) }
-  75% { transform: translateY(5px) }
-  100% { transform: translateY(0) }
-}
-
-// .hero-text-h:hover span{
-//   display: none;
-// }
-
-// .hero-text-h:hover:after{
-// 	content: '(loot-grr).';
-// }
-
-// .social-links{
-// 	margin: layout.$spacing-x-large 0 0 (-(layout.$spacing-small));
-// }
-
-// .social-links a{
-// 	font-weight: bold;
-// 	padding: 0 layout.$spacing-small 0 layout.$spacing-small;
-// }
-
-
-
 /*-----Things for the part with all the links-----*/
 nav{
 	a{
@@ -247,180 +169,5 @@ nav{
 		outline: 0;
 		// outline-offset: 2px;
 		color: colors.$gray-6;
-	}
-}
-
-header{
-	padding: layout.$spacing-xx-large 0 0 0;
-	margin: 0 0 layout.$spacing-x-large 0;
-
-	a{
-		line-height: layout.$spacing-large;
-	}
-
-
-}
-
-/*The logo part*/
-
-/*Temorarily adjusting the color this way until I get around to properly changing the svg*/
-.logo{
-  	-webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
-    filter: invert(100%);
-}
-
-a.logo{
-	font-size: type.$font-size-large;
-	font-weight: type.$font-weight-x-bold;
-	margin: 0 layout.$spacing-large 0 0;
-}
-
-a.logo:hover{
-		border-bottom: none;
-		background-color: colors.$gray-6;
-	}
-
-a.logo:focus{
-		@extend a, .logo, :hover;
-	}
-
-.index-header{
-	position:absolute;
-	left:-10000px;
-	top:auto;
-	width:1px;
-	height:1px;
-	overflow:hidden;
-}
-
-.logo img{
-	background-color: transparent;
-	padding: 0 0 0 0;
-	margin: 0 0 -4px 0;
-	border-radius: 0;
-}
-
-/*-----Footer stuff-----*/
-
-// footer{
-// 	margin: layout.$spacing-medium 0 0 0;
-// 	// border-top: 1px solid rgb(200, 209, 224);
-// 	padding: layout.$spacing-x-large 0 layout.$spacing-x-large 0;
-// 	// background-color: colors.$gray-20;
-
-// 	a{
-// 		font-weight: type.$font-weight-x-bold;
-// 		color: colors.$gray-2;
-// 	}
-// }
-
-// .copyright{
-// 	font-size: type.$font-size-small;
-// 	margin: layout.$spacing-small 0 0 0;
-
-// 	a{
-// 		font-weight: type.$font-weight-regular;
-// 		border-bottom: $border-link;
-// 	}
-// }
-
-/*-----Stuff that hopefully makes the animations work-----*/
-
-/*-Stuff that makes the page fade in-*/
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/*-----Stuff that makes the site not too ugly on very big or very small screens-----*/
-
-@media (max-width: layout.$grid-tablet-large){
-	body{
-		padding: 0 layout.$spacing-small 0 layout.$spacing-small;
-	}
-
-	#about-image{
-		border: 8px solid white;
-		border-radius: 256px;
-		display: block;
-		margin: layout.$spacing-x-large auto 0 auto;
-	}
-}
-
-@media (max-width: layout.$grid-tablet-small){
-	body{
-		font-size: 16px;
-	}
-
-	.hero-text{
-		font-size: type.$font-size-large;
-		line-height: type.$line-height-small;
-	}
-
-	h1{
-		font-size: type.$font-size-xx-large;
-		font-weight: type.$font-weight-x-bold;
-		line-height: 1.1em;
-	}
-
-	#about-header{
-		margin: 0 0 layout.$spacing-large;
-	}
-
-	h2{
-		font-size: type.$font-size-large;
-		margin:0 0 layout.$spacing-large 0;
-	}
-
-	.subtitle{
-		font-size: type.$font-size-regular;
-		margin: 0 0 layout.$spacing-large 0;
-		line-height: 1.5em;
-	}
-
-	h3{
-		font-size: type.$font-size-regular;
-	}
-
-	h4{
-		font-size: 0.8em;
-	}
-
-	.masthead{
-		margin-bottom: layout.$spacing-x-large;
-		padding-bottom: layout.$spacing-large;
-	}
-
-	p{
-		margin-bottom: layout.$spacing-medium;
-	}
-
-	section{
-		margin-bottom: layout.$spacing-small;
-	}
-
-	blockquote{
-
-		p{
-			padding-left: layout.$spacing-medium;
-			font-size: type.$font-size-regular;
-		}
 	}
 }

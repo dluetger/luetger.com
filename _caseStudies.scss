@@ -1,0 +1,54 @@
+// _caseStudies.scss
+
+@use 'type';
+@use 'layout';
+
+.masthead{
+	padding-bottom: layout.$spacing-x-large;
+	margin-bottom: layout.$spacing-x-large;
+}
+
+.hero-text-h{
+	font-size: type.$font-size-xxx-large;
+	margin-bottom: layout.$spacing-medium;
+}
+
+.hero-text{
+	font-size: type.$font-size-x-large;
+	font-weight: type.$font-weight-bold;
+	line-height: type.$line-height-small;
+	max-width: 100%;
+}
+
+.subtitle{
+	font-size: type.$font-size-large;
+	font-weight: type.$font-weight-light;
+	line-height: type.$line-height-small;
+	max-width: none;
+	margin: 0 0 layout.$spacing-large 0;
+}
+
+.project-details {
+
+	h2{
+		font-size: type.$font-size-large;
+	}
+
+	h3{
+		font-size: type.$font-size-regular;
+		margin-top: layout.$spacing-medium;
+		margin-bottom: layout.$spacing-small;
+	}
+
+	p{
+		font-size: type.$font-size-small;
+	}
+
+	li{
+		font-size: type.$font-size-small;
+		line-height: type.$line-height-x-small;
+		font-family: type.$secondary;
+	}
+
+
+}

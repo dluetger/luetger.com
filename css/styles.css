@@ -7,8 +7,50 @@
 /*Font weights*/
 /*Line heights*/
 /*Spacing*/
-/*Breakpoints*/
 /*Border styles*/
+/*Animations and transitions*/
+/*-----Stuff that hopefully makes the animations work-----*/
+/*-Stuff that makes the page fade in-*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 ul {
   list-style-type: disc;
   list-style-position: oustide;
@@ -76,6 +118,31 @@ figcaption {
   border: none;
 }
 
+.masthead {
+  padding-bottom: 64px;
+  margin-bottom: 64px;
+}
+
+.hero-text-h {
+  font-size: 3.998em;
+  margin-bottom: 16px;
+}
+
+.hero-text {
+  font-size: 1.999em;
+  font-weight: 700;
+  line-height: 1.4em;
+  max-width: 100%;
+}
+
+.subtitle {
+  font-size: 1.4143em;
+  font-weight: 300;
+  line-height: 1.4em;
+  max-width: none;
+  margin: 0 0 32px 0;
+}
+
 .project-details h2 {
   font-size: 1.4143em;
 }
@@ -93,6 +160,52 @@ figcaption {
   font-family: "JetBrains Mono", "Courier", Helvetica, Arial, mono;
 }
 
+header {
+  padding: 128px 0 0 0;
+  margin: 0 0 64px 0;
+}
+header a, header a:focus, header a.logo:focus {
+  line-height: 32px;
+}
+
+.site-nav {
+  font-family: "JetBrains Mono", "Courier", Helvetica, Arial, mono;
+}
+
+/*Temorarily adjusting the color this way until I get around to properly changing the svg*/
+.logo, a.logo:focus {
+  -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+  filter: invert(100%);
+}
+
+a.logo, a.logo:focus {
+  font-size: 1.4143em;
+  font-weight: 800;
+  margin: 0 32px 0 0;
+}
+
+a.logo:hover, a.logo:focus {
+  border-bottom: none;
+  background-color: hsl(194.33, 0%, 13.15%);
+}
+
+.index-header {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.logo img, a.logo:focus img {
+  background-color: transparent;
+  padding: 0 0 0 0;
+  margin: 0 0 -4px 0;
+  border-radius: 0;
+}
+
+/* The part that shows how to pronounce my name */
 footer {
   margin: 16px 0 0 0;
   padding: 64px 0 64px 0;
@@ -115,7 +228,65 @@ footer .social-links a {
   color: hsl(194.33, 0%, 96.6%);
 }
 
-/*Animations and transitions*/
+/*-----Stuff that makes the site not too ugly on very big or very small screens-----*/
+/*Breakpoints*/
+@media (max-width: 768px) {
+  body {
+    padding: 0 8px 0 8px;
+  }
+  #about-image {
+    border: 8px solid white;
+    border-radius: 256px;
+    display: block;
+    margin: 64px auto 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+  .hero-text {
+    font-size: 1.4143em;
+    line-height: 1.4em;
+  }
+  h1, h2, h3, h4 {
+    font-size: 2.827em;
+    font-weight: 800;
+    line-height: 1.1em;
+  }
+  #about-header {
+    margin: 0 0 32px;
+  }
+  h2 {
+    font-size: 1.4143em;
+    margin: 0 0 32px 0;
+  }
+  .subtitle {
+    font-size: 1em;
+    margin: 0 0 32px 0;
+    line-height: 1.5em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  h4 {
+    font-size: 0.8em;
+  }
+  .masthead {
+    margin-bottom: 64px;
+    padding-bottom: 32px;
+  }
+  p, a, a:focus {
+    margin-bottom: 16px;
+  }
+  section {
+    margin-bottom: 8px;
+  }
+  blockquote p, blockquote a, blockquote a:focus {
+    padding-left: 16px;
+    font-size: 1em;
+  }
+}
 /*-----Normal, boring stuff-----*/
 html {
   background-color: #111;
@@ -181,7 +352,7 @@ h4 {
   margin: 32px 0 16px 0;
 }
 
-p, a, a.logo:focus, a:focus {
+p, a, a:focus {
   font-weight: 300;
   line-height: 1.7em;
   margin: 0 0 16px 0;
@@ -202,7 +373,7 @@ em {
 }
 
 /*-----Link stuff-----*/
-a, a.logo:focus, a:focus {
+a, a:focus {
   text-decoration: none;
   border-bottom: 1px solid hsl(194.33, 0%, 88.76%);
   color: hsl(194.33, 0%, 88.76%);
@@ -217,13 +388,13 @@ a, a.logo:focus, a:focus {
   border-radius: 1px;
 }
 
-a:hover, a:focus, a.logo:focus {
+a:hover, a:focus {
   background-color: hsl(194.33, 0%, 88.76%);
   border-bottom: 1px solid hsl(194.33, 0%, 88.76%);
   color: hsl(194.33, 0%, 13.15%);
 }
 
-a:focus, a.logo:focus {
+a:focus {
   outline: 0;
   color: hsl(194.33, 0%, 13.15%);
 }
@@ -242,211 +413,20 @@ li {
   padding: 16px;
 }
 
-.site-nav {
-  font-family: "JetBrains Mono", "Courier", Helvetica, Arial, mono;
-}
-
-.masthead {
-  padding-bottom: 64px;
-  margin-bottom: 64px;
-}
-
-.hero-text-h {
-  font-size: 3.998em;
-  margin-bottom: 16px;
-}
-
-.hero-text {
-  font-size: 1.999em;
-  font-weight: 700;
-  line-height: 1.4em;
-  max-width: 100%;
-}
-
-.subtitle {
-  font-size: 1.4143em;
-  font-weight: 300;
-  line-height: 1.4em;
-  max-width: none;
-  margin: 0 0 32px 0;
-}
-
-/* The part that shows how to pronounce my name */
-@keyframes shake {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(5px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  75% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 /*-----Things for the part with all the links-----*/
-nav a, nav a.logo:focus, nav a:focus {
+nav a, nav a:focus {
   display: inline-block;
   margin: 0 16px 0 0;
   color: hsl(194.33, 0%, 88.76%);
   border-bottom: none;
   padding: 0 8px 0 8px;
 }
-nav a:hover, nav a:focus, nav a.logo:focus {
+nav a:hover, nav a:focus {
   border-bottom: none;
   color: hsl(194.33, 0%, 13.15%);
 }
-nav a:focus, nav a.logo:focus {
+nav a:focus {
   border-bottom: none;
   outline: 0;
   color: hsl(194.33, 0%, 13.15%);
-}
-
-header {
-  padding: 128px 0 0 0;
-  margin: 0 0 64px 0;
-}
-header a, header a.logo:focus, header a:focus {
-  line-height: 32px;
-}
-
-/*The logo part*/
-/*Temorarily adjusting the color this way until I get around to properly changing the svg*/
-.logo, a.logo:focus {
-  -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
-  filter: invert(100%);
-}
-
-a.logo, a.logo:focus {
-  font-size: 1.4143em;
-  font-weight: 800;
-  margin: 0 32px 0 0;
-}
-
-a.logo:hover, a.logo:focus {
-  border-bottom: none;
-  background-color: hsl(194.33, 0%, 13.15%);
-}
-
-.index-header {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.logo img, a.logo:focus img {
-  background-color: transparent;
-  padding: 0 0 0 0;
-  margin: 0 0 -4px 0;
-  border-radius: 0;
-}
-
-/*-----Footer stuff-----*/
-/*-----Stuff that hopefully makes the animations work-----*/
-/*-Stuff that makes the page fade in-*/
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-moz-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-ms-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-o-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-/*-----Stuff that makes the site not too ugly on very big or very small screens-----*/
-@media (max-width: 768px) {
-  body {
-    padding: 0 8px 0 8px;
-  }
-  #about-image {
-    border: 8px solid white;
-    border-radius: 256px;
-    display: block;
-    margin: 64px auto 0 auto;
-  }
-}
-@media (max-width: 480px) {
-  body {
-    font-size: 16px;
-  }
-  .hero-text {
-    font-size: 1.4143em;
-    line-height: 1.4em;
-  }
-  h1, h2, h3, h4 {
-    font-size: 2.827em;
-    font-weight: 800;
-    line-height: 1.1em;
-  }
-  #about-header {
-    margin: 0 0 32px;
-  }
-  h2 {
-    font-size: 1.4143em;
-    margin: 0 0 32px 0;
-  }
-  .subtitle {
-    font-size: 1em;
-    margin: 0 0 32px 0;
-    line-height: 1.5em;
-  }
-  h3 {
-    font-size: 1em;
-  }
-  h4 {
-    font-size: 0.8em;
-  }
-  .masthead {
-    margin-bottom: 64px;
-    padding-bottom: 32px;
-  }
-  p, a, a:focus, a.logo:focus {
-    margin-bottom: 16px;
-  }
-  section {
-    margin-bottom: 8px;
-  }
-  blockquote p, blockquote a, blockquote a:focus, blockquote a.logo:focus {
-    padding-left: 16px;
-    font-size: 1em;
-  }
 }

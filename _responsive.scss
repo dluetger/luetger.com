@@ -1,0 +1,86 @@
+// _responsive.scss
+
+/*-----Stuff that makes the site not too ugly on very big or very small screens-----*/
+
+@use 'layout';
+@use 'type';
+
+/*Breakpoints*/
+$grid-mobile-small: 240px;
+$grid-mobile-large: 320px;
+$grid-tablet-small: 480px;
+$grid-tablet-large: 768px;
+
+@media (max-width: $grid-tablet-large){
+	body{
+		padding: 0 layout.$spacing-small 0 layout.$spacing-small;
+	}
+
+	#about-image{
+		border: 8px solid white;
+		border-radius: 256px;
+		display: block;
+		margin: layout.$spacing-x-large auto 0 auto;
+	}
+}
+
+@media (max-width: $grid-tablet-small){
+	body{
+		font-size: 16px;
+	}
+
+	.hero-text{
+		font-size: type.$font-size-large;
+		line-height: type.$line-height-small;
+	}
+
+	h1{
+		font-size: type.$font-size-xx-large;
+		font-weight: type.$font-weight-x-bold;
+		line-height: 1.1em;
+	}
+
+	#about-header{
+		margin: 0 0 layout.$spacing-large;
+	}
+
+	h2{
+		font-size: type.$font-size-large;
+		margin:0 0 layout.$spacing-large 0;
+	}
+
+	.subtitle{
+		font-size: type.$font-size-regular;
+		margin: 0 0 layout.$spacing-large 0;
+		line-height: 1.5em;
+	}
+
+	h3{
+		font-size: type.$font-size-regular;
+	}
+
+	h4{
+		font-size: 0.8em;
+	}
+
+	.masthead{
+		margin-bottom: layout.$spacing-x-large;
+		padding-bottom: layout.$spacing-large;
+	}
+
+	p{
+		margin-bottom: layout.$spacing-medium;
+	}
+
+	section{
+		margin-bottom: layout.$spacing-small;
+	}
+
+	blockquote{
+
+		p{
+			padding-left: layout.$spacing-medium;
+			font-size: type.$font-size-regular;
+		}
+	}
+}
